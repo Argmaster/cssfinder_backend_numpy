@@ -1,13 +1,13 @@
-# cssfinder_backend_numpy NumPy Backend
+# CSSFinder NumPy Backend
 
-Implementation of cssfinder_backend_numpy backend using NumPy library.
+Implementation of CSSFinder backend using NumPy library.
 
 ## Installing
 
-To install cssfinder_backend_numpy NumPy Backend from PyPI, use `pip` in terminal:
+To install CSSFinder NumPy Backend from PyPI, use `pip` in terminal:
 
 ```
-pip install cssfinder_backend_numpy_backend_numpy
+pip install cssfinder_backend_numpy
 ```
 
 If you want to use development version, traverse `Development` and `Packaging`
