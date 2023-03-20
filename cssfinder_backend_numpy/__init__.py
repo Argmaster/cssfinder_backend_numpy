@@ -65,6 +65,6 @@ def export_backend() -> dict[tuple[str, Precision], BackendBase]:
         backends[("numpy_cython", Precision.SINGLE)] = NumPyC64Cython
 
     if HAS_CYTHON_128:
-        backends[("numpy_cython", Precision.SINGLE)] = NumPyC128Cython
+        backends[("numpy_cython", Precision.DOUBLE)] = NumPyC128Cython
 
     return backends
