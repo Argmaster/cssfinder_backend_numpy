@@ -68,6 +68,8 @@ def main(
         ("_complex64.py", "np.float32", "np.complex64", OFF, OFF, dest / "numpy_jit"),
         ("_complex128.py", "np.float64", "np.complex128", ON, OFF, dest / "numpy"),
         ("_complex64.py", "np.float32", "np.complex64", ON, OFF, dest / "numpy"),
+        ("_complex128.py", "np.float64", "np.complex128", ON, OFF, dest / "_cython"),
+        ("_complex64.py", "np.float32", "np.complex64", ON, OFF, dest / "_cython"),
         ("_complex128.py", "np.float64", "np.complex128", ON, ON, dest / "numpy_debug"),
         ("_complex64.py", "np.float32", "np.complex64", ON, ON, dest / "numpy_debug"),
     ]:

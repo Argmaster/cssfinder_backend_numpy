@@ -23,6 +23,7 @@
 
 from __future__ import annotations
 
+import logging
 from typing import cast
 
 import numpy as np
@@ -32,6 +33,14 @@ from cssfinder_backend_numpy.impl import Implementation
 from cssfinder_backend_numpy.numpy import _complex64
 from cssfinder_backend_numpy.numpy_debug import _complex64 as _complex64_debug
 from cssfinder_backend_numpy.numpy_jit import _complex64 as _complex64_jit
+
+try:
+    from cssfinder_backend_numpy.cython import (  # type: ignore[attr-defined] # noqa: E501
+        _complex64 as _complex64_cython,
+    )
+except ImportError:
+    logging.critical("Failed to import Cython compiled single precision NumPy backend.")
+    _complex64_cython = _complex64  # type: ignore[misc]
 
 
 class NumPyC64(NumPyBase[np.complex64, np.float32]):
@@ -57,6 +66,17 @@ class NumPyC64Jit(NumPyBase[np.complex64, np.float32]):
 
 
 class NumPyC64Debug(NumPyBase[np.complex64, np.float32]):
+    """Concrete numpy based backend for Gilbert algorithm using complex128 type."""
+
+    impl: Implementation[np.complex64, np.float32] = cast(
+        Implementation[np.complex64, np.float32],
+        _complex64_debug,
+    )
+    primary_t: type[np.complex64] = np.complex64
+    secondary_t: type[np.float32] = np.float32
+
+
+class NumPyC64Cython(NumPyBase[np.complex64, np.float32]):
     """Concrete numpy based backend for Gilbert algorithm using complex128 type."""
 
     impl: Implementation[np.complex64, np.float32] = cast(

@@ -2393,7 +2393,7 @@ wcwidth = "*"
 name = "psutil"
 version = "5.9.4"
 description = "Cross-platform lib for process and system monitoring in Python."
-category = "main"
+category = "dev"
 optional = false
 python-versions = ">=2.7, !=3.0.*, !=3.1.*, !=3.2.*, !=3.3.*"
 files = [
@@ -3635,4 +3635,4 @@ test = ["pytest"]
 [metadata]
 lock-version = "2.0"
 python-versions = "^3.8"
-content-hash = "6acb0a07a6297c33749a4f84ce7029d3c5e81d25658faeadbe4c51c44fe247f9"
+content-hash = "ef345268341a1cea3e03b0426577e67b4e88a65a29709b36ea3094b4fd3d78a0"

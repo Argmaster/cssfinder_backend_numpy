@@ -30,8 +30,18 @@ from typing import TYPE_CHECKING
 
 from cssfinder.cssfproject import Precision
 
-from cssfinder_backend_numpy.complex64 import NumPyC64, NumPyC64Debug, NumPyC64Jit
-from cssfinder_backend_numpy.complex128 import NumPyC128, NumPyC128Debug, NumPyC128Jit
+from cssfinder_backend_numpy.complex64 import (
+    NumPyC64,
+    NumPyC64Cython,
+    NumPyC64Debug,
+    NumPyC64Jit,
+)
+from cssfinder_backend_numpy.complex128 import (
+    NumPyC128,
+    NumPyC128Cython,
+    NumPyC128Debug,
+    NumPyC128Jit,
+)
 
 if TYPE_CHECKING:
     from cssfinder.algorithm.backend import BackendBase
@@ -48,4 +58,6 @@ def export_backend() -> dict[tuple[str, Precision], BackendBase]:
         ("numpy", Precision.DOUBLE): NumPyC128,
         ("numpy_debug", Precision.SINGLE): NumPyC64Debug,
         ("numpy_debug", Precision.DOUBLE): NumPyC128Debug,
+        ("numpy_cython", Precision.SINGLE): NumPyC64Cython,
+        ("numpy_cython", Precision.DOUBLE): NumPyC128Cython,
     }
