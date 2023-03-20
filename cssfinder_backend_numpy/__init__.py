@@ -30,12 +30,14 @@ from typing import TYPE_CHECKING
 
 from cssfinder.cssfproject import Precision
 
+from cssfinder_backend_numpy.complex64 import HAS_CYTHON as HAS_CYTHON_64
 from cssfinder_backend_numpy.complex64 import (
     NumPyC64,
     NumPyC64Cython,
     NumPyC64Debug,
     NumPyC64Jit,
 )
+from cssfinder_backend_numpy.complex128 import HAS_CYTHON as HAS_CYTHON_128
 from cssfinder_backend_numpy.complex128 import (
     NumPyC128,
     NumPyC128Cython,
@@ -51,13 +53,18 @@ __version__ = "0.1.0"
 
 def export_backend() -> dict[tuple[str, Precision], BackendBase]:
     """Export mapping of available backends in this package."""
-    return {
+    backends = {
         ("numpy_jit", Precision.SINGLE): NumPyC64Jit,
         ("numpy_jit", Precision.DOUBLE): NumPyC128Jit,
         ("numpy", Precision.SINGLE): NumPyC64,
         ("numpy", Precision.DOUBLE): NumPyC128,
         ("numpy_debug", Precision.SINGLE): NumPyC64Debug,
         ("numpy_debug", Precision.DOUBLE): NumPyC128Debug,
-        ("numpy_cython", Precision.SINGLE): NumPyC64Cython,
-        ("numpy_cython", Precision.DOUBLE): NumPyC128Cython,
     }
+    if HAS_CYTHON_64:
+        backends[("numpy_cython", Precision.SINGLE)] = NumPyC64Cython
+
+    if HAS_CYTHON_128:
+        backends[("numpy_cython", Precision.DOUBLE)] = NumPyC128Cython
+
+    return backends

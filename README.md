@@ -34,9 +34,9 @@ poetry shell
 ```
 
 to spawn new shell with virtual environment activated. Virtual environment will
-be indicated by terminal prompt prefix `(cssfinder_backend_numpy-py3.10)`, version indicated
-in prefix depends on used version of Python interpreter. It is not necessary to
-use Python 3.10, however at least 3.8 is required.
+be indicated by terminal prompt prefix `(cssfinder_backend_numpy-py3.10)`,
+version indicated in prefix depends on used version of Python interpreter. It
+is not necessary to use Python 3.10, however at least 3.8 is required.
 
 Within shell with active virtual environment use:
 
@@ -71,7 +71,8 @@ poe build
 
 ![poe_build](https://user-images.githubusercontent.com/56170852/223251363-61fc4d00-68ad-429c-9fbb-8ab7f4712451.png)
 
-This will create `dist/` directory with `cssfinder_backend_numpy-0.1.0` or alike inside.
+This will create `dist/` directory with `cssfinder_backend_numpy-0.1.0` or
+alike inside.
 
 Wheel file can be installed with
 

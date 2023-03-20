@@ -74,7 +74,7 @@ class NumPyBase(Generic[PRIMARY, SECONDARY_co], BackendBase):
     ) -> None:
         super().__init__(initial, depth, quantity, mode, visibility, is_debug=is_debug)
 
-        self.initial = initial.astype(self.primary_t)
+        self.initial: npt.NDArray[PRIMARY] = initial.astype(self.primary_t)
 
         self._visibility = self._create_visibility_matrix()
         self._intermediate = self._create_intermediate_state()

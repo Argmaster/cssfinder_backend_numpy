@@ -6,9 +6,12 @@ astype
 autocopyright
 autoflake
 biseparable
+boundscheck
 cssfinder
 cssfinder_backend_numpy
 cssfproject
+Cython
+cythonize
 docformatter
 docstrings
 dtype
@@ -43,6 +46,8 @@ pango
 psutil
 pydantic
 pyjinja
+pypa
+PYPI
 pyplot
 pytest
 qualname

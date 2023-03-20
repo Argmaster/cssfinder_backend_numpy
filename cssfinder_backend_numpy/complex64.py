@@ -35,12 +35,15 @@ from cssfinder_backend_numpy.numpy_debug import _complex64 as _complex64_debug
 from cssfinder_backend_numpy.numpy_jit import _complex64 as _complex64_jit
 
 try:
-    from cssfinder_backend_numpy.cython import (  # type: ignore[attr-defined] # noqa: E501
+    from cssfinder_backend_numpy.cython import (  # type: ignore[attr-defined] # noqa: E501 I001 RUF100
         _complex64 as _complex64_cython,
     )
+
+    HAS_CYTHON = True
+
 except ImportError:
     logging.critical("Failed to import Cython compiled single precision NumPy backend.")
-    _complex64_cython = _complex64  # type: ignore[misc]
+    HAS_CYTHON = False
 
 
 class NumPyC64(NumPyBase[np.complex64, np.float32]):
@@ -76,12 +79,14 @@ class NumPyC64Debug(NumPyBase[np.complex64, np.float32]):
     secondary_t: type[np.float32] = np.float32
 
 
-class NumPyC64Cython(NumPyBase[np.complex64, np.float32]):
-    """Concrete numpy based backend for Gilbert algorithm using complex128 type."""
+if HAS_CYTHON:
 
-    impl: Implementation[np.complex64, np.float32] = cast(
-        Implementation[np.complex64, np.float32],
-        _complex64_debug,
-    )
-    primary_t: type[np.complex64] = np.complex64
-    secondary_t: type[np.float32] = np.float32
+    class NumPyC64Cython(NumPyBase[np.complex64, np.float32]):
+        """Concrete numpy based backend for Gilbert algorithm using complex128 type."""
+
+        impl: Implementation[np.complex64, np.float32] = cast(
+            Implementation[np.complex64, np.float32],
+            _complex64_cython,
+        )
+        primary_t: type[np.complex64] = np.complex64
+        secondary_t: type[np.float32] = np.float32
