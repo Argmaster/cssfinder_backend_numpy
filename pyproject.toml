@@ -1,6 +1,6 @@
 [tool.poetry] # ANCHOR: tool.poetry
 name = "cssfinder_backend_numpy"
-version = "0.1.0"
+version = "0.1.1"
 description = "Implementation of CSSFinder backend using NumPy library."
 authors = [
     "Krzysztof Wiśniewski <argmaster.world@gmail.com>",
