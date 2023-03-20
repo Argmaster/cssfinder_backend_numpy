@@ -36,7 +36,7 @@ jobs:
       - name: Publish distribution 📦 to PyPI
         run: |
           pip install twine
-          twine upload dist/*-u "__token__" -p "${{ secrets.PYPI_API_TOKEN }}"
+          twine upload "dist/*" -u "__token__" -p "${{ secrets.PYPI_API_TOKEN }}"
 
   deploy-wheel-to-pypi:
     strategy:
@@ -71,4 +71,4 @@ jobs:
       - name: Publish distribution 📦 to PyPI
         run: |
           pip install twine
-          twine upload dist/*-u "__token__" -p "${{ secrets.PYPI_API_TOKEN }}"
+          twine upload "dist/*" -u "__token__" -p "${{ secrets.PYPI_API_TOKEN }}"
