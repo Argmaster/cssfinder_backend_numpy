@@ -19,33 +19,7 @@
 # OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
 
-"""CSSFinder (Closest Separable State Finder) is a package containing implementation of
-Gilbert algorithm for finding an upper bound on the Hilbert-Schmidt distance between a
-given state and the set of separable states.
-"""
+"""Contains implementation of Gilbert created using numpy package."""
+
 
 from __future__ import annotations
-
-from typing import TYPE_CHECKING
-
-from cssfinder.cssfproject import Precision
-
-from cssfinder_backend_numpy.complex64 import NumPyC64, NumPyC64Debug, NumPyC64Jit
-from cssfinder_backend_numpy.complex128 import NumPyC128, NumPyC128Debug, NumPyC128Jit
-
-if TYPE_CHECKING:
-    from cssfinder.algorithm.backend import BackendBase
-
-__version__ = "0.1.0"
-
-
-def export_backend() -> dict[tuple[str, Precision], BackendBase]:
-    """Export mapping of available backends in this package."""
-    return {
-        ("numpy_jit", Precision.SINGLE): NumPyC64Jit,
-        ("numpy_jit", Precision.DOUBLE): NumPyC128Jit,
-        ("numpy", Precision.SINGLE): NumPyC64,
-        ("numpy", Precision.DOUBLE): NumPyC128,
-        ("numpy_debug", Precision.SINGLE): NumPyC64Debug,
-        ("numpy_debug", Precision.DOUBLE): NumPyC128Debug,
-    }

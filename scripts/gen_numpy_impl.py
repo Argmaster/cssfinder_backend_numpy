@@ -34,10 +34,10 @@ import click
 import jinja2
 
 TEMPLATES_DIR = Path(__file__).parent / "templates"
-DEFAULT_DEST = (
-    Path(__file__).parent.parent
-    / "cssfinder_backend_numpy/algorithm/backend/numpy/_impl"
-)
+DEFAULT_DEST = Path(__file__).parent.parent / "cssfinder_backend_numpy"
+
+OFF = False
+ON = True
 
 
 @click.command()
@@ -63,22 +63,26 @@ def main(
     )
     template = env.get_template("numpy.pyjinja2")
 
-    for name, floating, complex_ in [
-        ("_complex128.py", "np.float64", "np.complex128"),
-        ("_complex64.py", "np.float32", "np.complex64"),
+    for name, floating, complex_, is_disable_jit, is_dtype_checked, destination in [
+        ("_complex128.py", "np.float64", "np.complex128", OFF, OFF, dest / "numpy_jit"),
+        ("_complex64.py", "np.float32", "np.complex64", OFF, OFF, dest / "numpy_jit"),
+        ("_complex128.py", "np.float64", "np.complex128", ON, OFF, dest / "numpy"),
+        ("_complex64.py", "np.float32", "np.complex64", ON, OFF, dest / "numpy"),
+        ("_complex128.py", "np.float64", "np.complex128", ON, ON, dest / "numpy_debug"),
+        ("_complex64.py", "np.float32", "np.complex64", ON, ON, dest / "numpy_debug"),
     ]:
         logging.warning("Rendering %r %r %r", name, floating, complex_)
         source = template.render(
             floating=floating,
             complex=complex_,
-            disable_jit=disable_jit,
-            debug_dtype_checks=debug_dtype_checks,
+            disable_jit=disable_jit or is_disable_jit,
+            debug_dtype_checks=debug_dtype_checks or is_dtype_checked,
             use_normal_random=use_normal_random,
             is_64bit="64" in floating,
             is_32bit="32" in floating,
         )
         source = black.format_str(source, mode=black.mode.Mode())
-        dest_file: Path = dest / name
+        dest_file: Path = destination / name
         dest_file.write_text(source, "utf-8")
         subprocess.run([sys.executable, "-m", "ruff", dest_file.as_posix(), "--fix"])
 
