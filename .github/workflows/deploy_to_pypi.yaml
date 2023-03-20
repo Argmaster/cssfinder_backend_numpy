@@ -34,10 +34,9 @@ jobs:
         run: poetry build --format=sdist
 
       - name: Publish distribution 📦 to PyPI
-        # Executed only for version tag push event
-        uses: pypa/gh-action-pypi-publish@release/v1
-        with:
-          password: ${{ secrets.PYPI_API_TOKEN }}
+        run: |
+          pip install twine
+          twine upload dist/*-u "__token__" -p "${{ secrets.PYPI_API_TOKEN }}"
 
   deploy-wheel-to-pypi:
     strategy:
@@ -70,7 +69,6 @@ jobs:
         run: poetry build --format=wheel
 
       - name: Publish distribution 📦 to PyPI
-        # Executed only for version tag push event
-        uses: pypa/gh-action-pypi-publish@release/v1
-        with:
-          password: ${{ secrets.PYPI_API_TOKEN }}
+        run: |
+          pip install twine
+          twine upload dist/*-u "__token__" -p "${{ secrets.PYPI_API_TOKEN }}"
