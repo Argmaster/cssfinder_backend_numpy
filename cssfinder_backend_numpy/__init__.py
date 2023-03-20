@@ -19,10 +19,7 @@
 # OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
 
-"""CSSFinder (Closest Separable State Finder) is a package containing implementation of
-Gilbert algorithm for finding an upper bound on the Hilbert-Schmidt distance between a
-given state and the set of separable states.
-"""
+"""Implementation of CSSFinder backend using NumPy library."""
 
 from __future__ import annotations
 
@@ -31,24 +28,14 @@ from typing import TYPE_CHECKING
 from cssfinder.cssfproject import Precision
 
 from cssfinder_backend_numpy.complex64 import HAS_CYTHON as HAS_CYTHON_64
-from cssfinder_backend_numpy.complex64 import (
-    NumPyC64,
-    NumPyC64Cython,
-    NumPyC64Debug,
-    NumPyC64Jit,
-)
+from cssfinder_backend_numpy.complex64 import NumPyC64, NumPyC64Debug, NumPyC64Jit
 from cssfinder_backend_numpy.complex128 import HAS_CYTHON as HAS_CYTHON_128
-from cssfinder_backend_numpy.complex128 import (
-    NumPyC128,
-    NumPyC128Cython,
-    NumPyC128Debug,
-    NumPyC128Jit,
-)
+from cssfinder_backend_numpy.complex128 import NumPyC128, NumPyC128Debug, NumPyC128Jit
 
 if TYPE_CHECKING:
     from cssfinder.algorithm.backend import BackendBase
 
-__version__ = "0.1.1"
+__version__ = "0.2.0"
 
 
 def export_backend() -> dict[tuple[str, Precision], BackendBase]:
@@ -62,9 +49,13 @@ def export_backend() -> dict[tuple[str, Precision], BackendBase]:
         ("numpy_debug", Precision.DOUBLE): NumPyC128Debug,
     }
     if HAS_CYTHON_64:
+        from cssfinder_backend_numpy.complex64 import NumPyC64Cython
+
         backends[("numpy_cython", Precision.SINGLE)] = NumPyC64Cython
 
     if HAS_CYTHON_128:
+        from cssfinder_backend_numpy.complex128 import NumPyC128Cython
+
         backends[("numpy_cython", Precision.DOUBLE)] = NumPyC128Cython
 
     return backends

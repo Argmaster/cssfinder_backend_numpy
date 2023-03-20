@@ -1,6 +1,6 @@
 [tool.poetry] # ANCHOR: tool.poetry
 name = "cssfinder_backend_numpy"
-version = "0.1.1"
+version = "0.2.0"
 description = "Implementation of CSSFinder backend using NumPy library."
 authors = [
     "Krzysztof Wiśniewski <argmaster.world@gmail.com>",
@@ -9,7 +9,10 @@ authors = [
 repository = "https://github.com/argmaster/cssfinder_backend_numpy"
 readme = "README.md"
 build = 'build.py'
-include = [{ path = "cssfinder_backend_numpy/cython/*.so", format = "wheel" }]
+include = [
+    { path = "cssfinder_backend_numpy/cython/*.so", format = "wheel" },
+    { path = "cssfinder_backend_numpy/cython/*.pyd", format = "wheel" },
+]
 
 [tool.poetry.dependencies] # ANCHOR: tool.poetry.dependencies
 python = "^3.8"
