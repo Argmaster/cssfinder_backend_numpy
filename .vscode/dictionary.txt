@@ -6,6 +6,7 @@ astype
 autocopyright
 autoflake
 biseparable
+cssfinder
 cssfinder_backend_numpy
 cssfproject
 docformatter
@@ -41,6 +42,7 @@ offsetted
 pango
 psutil
 pydantic
+pyjinja
 pyplot
 pytest
 qualname
