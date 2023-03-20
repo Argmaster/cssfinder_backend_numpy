@@ -35,7 +35,7 @@ from cssfinder_backend_numpy.numpy_debug import _complex128 as _complex128_debug
 from cssfinder_backend_numpy.numpy_jit import _complex128 as _complex128_jit
 
 try:
-    from cssfinder_backend_numpy.cython import (  # type: ignore[attr-defined] # noqa: E501
+    from cssfinder_backend_numpy.cython import (  # type: ignore[attr-defined] # noqa: E501 I001 RUF100
         _complex128 as _complex128_cython,
     )
 

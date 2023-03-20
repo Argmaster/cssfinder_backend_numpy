@@ -35,6 +35,10 @@ from cssfinder_backend_numpy.numpy_debug import _complex64 as _complex64_debug
 from cssfinder_backend_numpy.numpy_jit import _complex64 as _complex64_jit
 
 try:
+    from cssfinder_backend_numpy.cython import (  # type: ignore[attr-defined] # noqa: E501 I001 RUF100
+        _complex64 as _complex64_cython,
+    )
+
     HAS_CYTHON = True
 
 except ImportError:
@@ -82,7 +86,7 @@ if HAS_CYTHON:
 
         impl: Implementation[np.complex64, np.float32] = cast(
             Implementation[np.complex64, np.float32],
-            _complex64_debug,
+            _complex64_cython,
         )
         primary_t: type[np.complex64] = np.complex64
         secondary_t: type[np.float32] = np.float32
