@@ -3,6 +3,10 @@
 NOTE: cssfinder_backend_numpy follows the [semver](https://semver.org/)
 versioning standard.
 
+### 0.3.0 - 21 Mar 2023
+
+- Loosen version requirement on CSSFinder.
+
 ### 0.2.0 - 20 Mar 2023
 
 - Fix Cython backend on Windows.

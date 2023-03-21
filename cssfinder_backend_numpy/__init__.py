@@ -35,7 +35,7 @@ from cssfinder_backend_numpy.complex128 import NumPyC128, NumPyC128Debug, NumPyC
 if TYPE_CHECKING:
     from cssfinder.algorithm.backend import BackendBase
 
-__version__ = "0.2.0"
+__version__ = "0.3.0"
 
 
 def export_backend() -> dict[tuple[str, Precision], BackendBase]:
