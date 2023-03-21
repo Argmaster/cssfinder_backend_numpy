@@ -19,7 +19,7 @@ python = "^3.8"
 numpy = "^1.23.0"
 numba = "^0.56.4"
 typing-extensions = "^4.5.0"
-cssfinder = "^0.4.0"
+cssfinder = ">=0.4.0"
 
 [tool.poetry.group.dev.dependencies] # ANCHOR: tool.poetry.dev-dependencies
 black = ">=22.12,<24.0"
