@@ -323,8 +323,8 @@ def optimize_d_fs(
             rotated_2 = rotate(new_state, unitary)
             {% if debug_dtype_checks %}assert_dtype(rotated_2, {{complex}}){% endif %}
 
-        while (new_product_2_3 := product_rot2_3) > product_2_3:
-            product_2_3 = new_product_2_3
+        while product_rot2_3 > product_2_3:
+            product_2_3 = product_rot2_3
             rotated_2 = rotate(rotated_2, unitary)
             {% if debug_dtype_checks %}assert_dtype(rotated_2, {{complex}}){% endif %}
 

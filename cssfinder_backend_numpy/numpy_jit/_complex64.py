@@ -218,8 +218,8 @@ def optimize_d_fs(
             unitary = unitary.conj().T
             rotated_2 = rotate(new_state, unitary)
 
-        while (new_product_2_3 := product_rot2_3) > product_2_3:
-            product_2_3 = new_product_2_3
+        while product_rot2_3 > product_2_3:
+            product_2_3 = product_rot2_3
             rotated_2 = rotate(rotated_2, unitary)
 
             product_rot2_3 = product(rotated_2, visibility_state)

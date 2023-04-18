@@ -258,8 +258,8 @@ def optimize_d_fs(
             rotated_2 = rotate(new_state, unitary)
             assert_dtype(rotated_2, np.complex128)
 
-        while (new_product_2_3 := product_rot2_3) > product_2_3:
-            product_2_3 = new_product_2_3
+        while product_rot2_3 > product_2_3:
+            product_2_3 = product_rot2_3
             rotated_2 = rotate(rotated_2, unitary)
             assert_dtype(rotated_2, np.complex128)
 
