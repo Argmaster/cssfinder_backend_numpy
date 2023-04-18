@@ -2923,15 +2923,15 @@ static int __pyx_m_traverse(PyObject *m, visitproc visit, void *arg) {
 /* #### Code section: module_code ### */
 
 /* "cssfinder_backend_numpy/_cython/_complex64.py":62
- * 
- * 
+ *
+ *
  * def product(             # <<<<<<<<<<<<<<
  *     matrix1: npt.NDArray[np.complex64], matrix2: npt.NDArray[np.complex64]
  * ) -> np.float32:
  */
 
 /* Python wrapper */
-static PyObject *__pyx_pw_23cssfinder_backend_numpy_6cython_10_complex64_1product(PyObject *__pyx_self, 
+static PyObject *__pyx_pw_23cssfinder_backend_numpy_6cython_10_complex64_1product(PyObject *__pyx_self,
 #if CYTHON_METH_FASTCALL
 PyObject *const *__pyx_args, Py_ssize_t __pyx_nargs, PyObject *__pyx_kwds
 #else
@@ -2940,7 +2940,7 @@ PyObject *__pyx_args, PyObject *__pyx_kwds
 ); /*proto*/
 PyDoc_STRVAR(__pyx_doc_23cssfinder_backend_numpy_6cython_10_complex64_product, "Calculate scalar product of two matrices.");
 static PyMethodDef __pyx_mdef_23cssfinder_backend_numpy_6cython_10_complex64_1product = {"product", (PyCFunction)(void*)(__Pyx_PyCFunction_FastCallWithKeywords)__pyx_pw_23cssfinder_backend_numpy_6cython_10_complex64_1product, __Pyx_METH_FASTCALL|METH_KEYWORDS, __pyx_doc_23cssfinder_backend_numpy_6cython_10_complex64_product};
-static PyObject *__pyx_pw_23cssfinder_backend_numpy_6cython_10_complex64_1product(PyObject *__pyx_self, 
+static PyObject *__pyx_pw_23cssfinder_backend_numpy_6cython_10_complex64_1product(PyObject *__pyx_self,
 #if CYTHON_METH_FASTCALL
 PyObject *const *__pyx_args, Py_ssize_t __pyx_nargs, PyObject *__pyx_kwds
 #else
@@ -3033,7 +3033,7 @@ static PyObject *__pyx_pf_23cssfinder_backend_numpy_6cython_10_complex64_product
  * ) -> np.float32:
  *     """Calculate scalar product of two matrices."""
  *     retval = np.trace(np.dot(matrix1, matrix2)).real             # <<<<<<<<<<<<<<
- * 
+ *
  *     return retval  # type: ignore[no-any-return]
  */
   __Pyx_GetModuleGlobalName(__pyx_t_2, __pyx_n_s_np); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 66, __pyx_L1_error)
@@ -3095,10 +3095,10 @@ static PyObject *__pyx_pf_23cssfinder_backend_numpy_6cython_10_complex64_product
 
   /* "cssfinder_backend_numpy/_cython/_complex64.py":68
  *     retval = np.trace(np.dot(matrix1, matrix2)).real
- * 
+ *
  *     return retval  # type: ignore[no-any-return]             # <<<<<<<<<<<<<<
- * 
- * 
+ *
+ *
  */
   __Pyx_XDECREF(__pyx_r);
   __Pyx_INCREF(__pyx_v_retval);
@@ -3106,8 +3106,8 @@ static PyObject *__pyx_pf_23cssfinder_backend_numpy_6cython_10_complex64_product
   goto __pyx_L0;
 
   /* "cssfinder_backend_numpy/_cython/_complex64.py":62
- * 
- * 
+ *
+ *
  * def product(             # <<<<<<<<<<<<<<
  *     matrix1: npt.NDArray[np.complex64], matrix2: npt.NDArray[np.complex64]
  * ) -> np.float32:
@@ -3130,15 +3130,15 @@ static PyObject *__pyx_pf_23cssfinder_backend_numpy_6cython_10_complex64_product
 }
 
 /* "cssfinder_backend_numpy/_cython/_complex64.py":71
- * 
- * 
+ *
+ *
  * def get_random_haar_1d(depth: int) -> npt.NDArray[np.complex64]:             # <<<<<<<<<<<<<<
  *     """Generate a random vector with Haar measure."""
  *     real = np.random.uniform(0, 1, depth)  # noqa: NPY002
  */
 
 /* Python wrapper */
-static PyObject *__pyx_pw_23cssfinder_backend_numpy_6cython_10_complex64_3get_random_haar_1d(PyObject *__pyx_self, 
+static PyObject *__pyx_pw_23cssfinder_backend_numpy_6cython_10_complex64_3get_random_haar_1d(PyObject *__pyx_self,
 #if CYTHON_METH_FASTCALL
 PyObject *const *__pyx_args, Py_ssize_t __pyx_nargs, PyObject *__pyx_kwds
 #else
@@ -3147,7 +3147,7 @@ PyObject *__pyx_args, PyObject *__pyx_kwds
 ); /*proto*/
 PyDoc_STRVAR(__pyx_doc_23cssfinder_backend_numpy_6cython_10_complex64_2get_random_haar_1d, "Generate a random vector with Haar measure.");
 static PyMethodDef __pyx_mdef_23cssfinder_backend_numpy_6cython_10_complex64_3get_random_haar_1d = {"get_random_haar_1d", (PyCFunction)(void*)(__Pyx_PyCFunction_FastCallWithKeywords)__pyx_pw_23cssfinder_backend_numpy_6cython_10_complex64_3get_random_haar_1d, __Pyx_METH_FASTCALL|METH_KEYWORDS, __pyx_doc_23cssfinder_backend_numpy_6cython_10_complex64_2get_random_haar_1d};
-static PyObject *__pyx_pw_23cssfinder_backend_numpy_6cython_10_complex64_3get_random_haar_1d(PyObject *__pyx_self, 
+static PyObject *__pyx_pw_23cssfinder_backend_numpy_6cython_10_complex64_3get_random_haar_1d(PyObject *__pyx_self,
 #if CYTHON_METH_FASTCALL
 PyObject *const *__pyx_args, Py_ssize_t __pyx_nargs, PyObject *__pyx_kwds
 #else
@@ -3237,7 +3237,7 @@ static PyObject *__pyx_pf_23cssfinder_backend_numpy_6cython_10_complex64_2get_ra
  *     """Generate a random vector with Haar measure."""
  *     real = np.random.uniform(0, 1, depth)  # noqa: NPY002             # <<<<<<<<<<<<<<
  *     imag = np.random.uniform(0, 1, depth)  # noqa: NPY002
- * 
+ *
  */
   __Pyx_GetModuleGlobalName(__pyx_t_2, __pyx_n_s_np); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 73, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
@@ -3274,7 +3274,7 @@ static PyObject *__pyx_pf_23cssfinder_backend_numpy_6cython_10_complex64_2get_ra
  *     """Generate a random vector with Haar measure."""
  *     real = np.random.uniform(0, 1, depth)  # noqa: NPY002
  *     imag = np.random.uniform(0, 1, depth)  # noqa: NPY002             # <<<<<<<<<<<<<<
- * 
+ *
  *     retval = np.exp(2 * np.pi * 1j * real) * np.sqrt(-np.log(imag))
  */
   __Pyx_GetModuleGlobalName(__pyx_t_2, __pyx_n_s_np); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 74, __pyx_L1_error)
@@ -3310,9 +3310,9 @@ static PyObject *__pyx_pf_23cssfinder_backend_numpy_6cython_10_complex64_2get_ra
 
   /* "cssfinder_backend_numpy/_cython/_complex64.py":76
  *     imag = np.random.uniform(0, 1, depth)  # noqa: NPY002
- * 
+ *
  *     retval = np.exp(2 * np.pi * 1j * real) * np.sqrt(-np.log(imag))             # <<<<<<<<<<<<<<
- * 
+ *
  *     retval = (retval).astype(np.complex64)
  */
   __Pyx_GetModuleGlobalName(__pyx_t_2, __pyx_n_s_np); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 76, __pyx_L1_error)
@@ -3421,9 +3421,9 @@ static PyObject *__pyx_pf_23cssfinder_backend_numpy_6cython_10_complex64_2get_ra
 
   /* "cssfinder_backend_numpy/_cython/_complex64.py":78
  *     retval = np.exp(2 * np.pi * 1j * real) * np.sqrt(-np.log(imag))
- * 
+ *
  *     retval = (retval).astype(np.complex64)             # <<<<<<<<<<<<<<
- * 
+ *
  *     return retval  # type: ignore[no-any-return]
  */
   __pyx_t_3 = __Pyx_PyObject_GetAttrStr(__pyx_v_retval, __pyx_n_s_astype); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 78, __pyx_L1_error)
@@ -3459,10 +3459,10 @@ static PyObject *__pyx_pf_23cssfinder_backend_numpy_6cython_10_complex64_2get_ra
 
   /* "cssfinder_backend_numpy/_cython/_complex64.py":80
  *     retval = (retval).astype(np.complex64)
- * 
+ *
  *     return retval  # type: ignore[no-any-return]             # <<<<<<<<<<<<<<
- * 
- * 
+ *
+ *
  */
   __Pyx_XDECREF(__pyx_r);
   __Pyx_INCREF(__pyx_v_retval);
@@ -3470,8 +3470,8 @@ static PyObject *__pyx_pf_23cssfinder_backend_numpy_6cython_10_complex64_2get_ra
   goto __pyx_L0;
 
   /* "cssfinder_backend_numpy/_cython/_complex64.py":71
- * 
- * 
+ *
+ *
  * def get_random_haar_1d(depth: int) -> npt.NDArray[np.complex64]:             # <<<<<<<<<<<<<<
  *     """Generate a random vector with Haar measure."""
  *     real = np.random.uniform(0, 1, depth)  # noqa: NPY002
@@ -3497,15 +3497,15 @@ static PyObject *__pyx_pf_23cssfinder_backend_numpy_6cython_10_complex64_2get_ra
 }
 
 /* "cssfinder_backend_numpy/_cython/_complex64.py":83
- * 
- * 
+ *
+ *
  * def get_random_haar_2d(depth: int, quantity: int) -> npt.NDArray[np.complex64]:             # <<<<<<<<<<<<<<
  *     """Generate multiple random vectors with Haar measure in form of matrix."""
  *     real = np.random.uniform(0, 1, (quantity, depth))  # noqa: NPY002
  */
 
 /* Python wrapper */
-static PyObject *__pyx_pw_23cssfinder_backend_numpy_6cython_10_complex64_5get_random_haar_2d(PyObject *__pyx_self, 
+static PyObject *__pyx_pw_23cssfinder_backend_numpy_6cython_10_complex64_5get_random_haar_2d(PyObject *__pyx_self,
 #if CYTHON_METH_FASTCALL
 PyObject *const *__pyx_args, Py_ssize_t __pyx_nargs, PyObject *__pyx_kwds
 #else
@@ -3514,7 +3514,7 @@ PyObject *__pyx_args, PyObject *__pyx_kwds
 ); /*proto*/
 PyDoc_STRVAR(__pyx_doc_23cssfinder_backend_numpy_6cython_10_complex64_4get_random_haar_2d, "Generate multiple random vectors with Haar measure in form of matrix.");
 static PyMethodDef __pyx_mdef_23cssfinder_backend_numpy_6cython_10_complex64_5get_random_haar_2d = {"get_random_haar_2d", (PyCFunction)(void*)(__Pyx_PyCFunction_FastCallWithKeywords)__pyx_pw_23cssfinder_backend_numpy_6cython_10_complex64_5get_random_haar_2d, __Pyx_METH_FASTCALL|METH_KEYWORDS, __pyx_doc_23cssfinder_backend_numpy_6cython_10_complex64_4get_random_haar_2d};
-static PyObject *__pyx_pw_23cssfinder_backend_numpy_6cython_10_complex64_5get_random_haar_2d(PyObject *__pyx_self, 
+static PyObject *__pyx_pw_23cssfinder_backend_numpy_6cython_10_complex64_5get_random_haar_2d(PyObject *__pyx_self,
 #if CYTHON_METH_FASTCALL
 PyObject *const *__pyx_args, Py_ssize_t __pyx_nargs, PyObject *__pyx_kwds
 #else
@@ -3617,7 +3617,7 @@ static PyObject *__pyx_pf_23cssfinder_backend_numpy_6cython_10_complex64_4get_ra
  *     """Generate multiple random vectors with Haar measure in form of matrix."""
  *     real = np.random.uniform(0, 1, (quantity, depth))  # noqa: NPY002             # <<<<<<<<<<<<<<
  *     imag = np.random.uniform(0, 1, (quantity, depth))  # noqa: NPY002
- * 
+ *
  */
   __Pyx_GetModuleGlobalName(__pyx_t_2, __pyx_n_s_np); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 85, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
@@ -3663,7 +3663,7 @@ static PyObject *__pyx_pf_23cssfinder_backend_numpy_6cython_10_complex64_4get_ra
  *     """Generate multiple random vectors with Haar measure in form of matrix."""
  *     real = np.random.uniform(0, 1, (quantity, depth))  # noqa: NPY002
  *     imag = np.random.uniform(0, 1, (quantity, depth))  # noqa: NPY002             # <<<<<<<<<<<<<<
- * 
+ *
  *     retval = np.exp(2 * np.pi * 1j * real) * np.sqrt(-np.log(imag))
  */
   __Pyx_GetModuleGlobalName(__pyx_t_2, __pyx_n_s_np); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 86, __pyx_L1_error)
@@ -3708,9 +3708,9 @@ static PyObject *__pyx_pf_23cssfinder_backend_numpy_6cython_10_complex64_4get_ra
 
   /* "cssfinder_backend_numpy/_cython/_complex64.py":88
  *     imag = np.random.uniform(0, 1, (quantity, depth))  # noqa: NPY002
- * 
+ *
  *     retval = np.exp(2 * np.pi * 1j * real) * np.sqrt(-np.log(imag))             # <<<<<<<<<<<<<<
- * 
+ *
  *     retval = (retval).astype(np.complex64)
  */
   __Pyx_GetModuleGlobalName(__pyx_t_2, __pyx_n_s_np); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 88, __pyx_L1_error)
@@ -3819,9 +3819,9 @@ static PyObject *__pyx_pf_23cssfinder_backend_numpy_6cython_10_complex64_4get_ra
 
   /* "cssfinder_backend_numpy/_cython/_complex64.py":90
  *     retval = np.exp(2 * np.pi * 1j * real) * np.sqrt(-np.log(imag))
- * 
+ *
  *     retval = (retval).astype(np.complex64)             # <<<<<<<<<<<<<<
- * 
+ *
  *     return retval  # type: ignore[no-any-return]
  */
   __pyx_t_3 = __Pyx_PyObject_GetAttrStr(__pyx_v_retval, __pyx_n_s_astype); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 90, __pyx_L1_error)
@@ -3857,10 +3857,10 @@ static PyObject *__pyx_pf_23cssfinder_backend_numpy_6cython_10_complex64_4get_ra
 
   /* "cssfinder_backend_numpy/_cython/_complex64.py":92
  *     retval = (retval).astype(np.complex64)
- * 
+ *
  *     return retval  # type: ignore[no-any-return]             # <<<<<<<<<<<<<<
- * 
- * 
+ *
+ *
  */
   __Pyx_XDECREF(__pyx_r);
   __Pyx_INCREF(__pyx_v_retval);
@@ -3868,8 +3868,8 @@ static PyObject *__pyx_pf_23cssfinder_backend_numpy_6cython_10_complex64_4get_ra
   goto __pyx_L0;
 
   /* "cssfinder_backend_numpy/_cython/_complex64.py":83
- * 
- * 
+ *
+ *
  * def get_random_haar_2d(depth: int, quantity: int) -> npt.NDArray[np.complex64]:             # <<<<<<<<<<<<<<
  *     """Generate multiple random vectors with Haar measure in form of matrix."""
  *     real = np.random.uniform(0, 1, (quantity, depth))  # noqa: NPY002
@@ -3895,15 +3895,15 @@ static PyObject *__pyx_pf_23cssfinder_backend_numpy_6cython_10_complex64_4get_ra
 }
 
 /* "cssfinder_backend_numpy/_cython/_complex64.py":95
- * 
- * 
+ *
+ *
  * def normalize(mtx: npt.NDArray[np.complex64]) -> npt.NDArray[np.complex64]:             # <<<<<<<<<<<<<<
  *     """Normalize a vector."""
  *     mtx2 = np.dot(mtx, np.conj(mtx))
  */
 
 /* Python wrapper */
-static PyObject *__pyx_pw_23cssfinder_backend_numpy_6cython_10_complex64_7normalize(PyObject *__pyx_self, 
+static PyObject *__pyx_pw_23cssfinder_backend_numpy_6cython_10_complex64_7normalize(PyObject *__pyx_self,
 #if CYTHON_METH_FASTCALL
 PyObject *const *__pyx_args, Py_ssize_t __pyx_nargs, PyObject *__pyx_kwds
 #else
@@ -3912,7 +3912,7 @@ PyObject *__pyx_args, PyObject *__pyx_kwds
 ); /*proto*/
 PyDoc_STRVAR(__pyx_doc_23cssfinder_backend_numpy_6cython_10_complex64_6normalize, "Normalize a vector.");
 static PyMethodDef __pyx_mdef_23cssfinder_backend_numpy_6cython_10_complex64_7normalize = {"normalize", (PyCFunction)(void*)(__Pyx_PyCFunction_FastCallWithKeywords)__pyx_pw_23cssfinder_backend_numpy_6cython_10_complex64_7normalize, __Pyx_METH_FASTCALL|METH_KEYWORDS, __pyx_doc_23cssfinder_backend_numpy_6cython_10_complex64_6normalize};
-static PyObject *__pyx_pw_23cssfinder_backend_numpy_6cython_10_complex64_7normalize(PyObject *__pyx_self, 
+static PyObject *__pyx_pw_23cssfinder_backend_numpy_6cython_10_complex64_7normalize(PyObject *__pyx_self,
 #if CYTHON_METH_FASTCALL
 PyObject *const *__pyx_args, Py_ssize_t __pyx_nargs, PyObject *__pyx_kwds
 #else
@@ -3995,7 +3995,7 @@ static PyObject *__pyx_pf_23cssfinder_backend_numpy_6cython_10_complex64_6normal
  * def normalize(mtx: npt.NDArray[np.complex64]) -> npt.NDArray[np.complex64]:
  *     """Normalize a vector."""
  *     mtx2 = np.dot(mtx, np.conj(mtx))             # <<<<<<<<<<<<<<
- * 
+ *
  *     val = np.sqrt(np.real(mtx2))
  */
   __Pyx_GetModuleGlobalName(__pyx_t_2, __pyx_n_s_np); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 97, __pyx_L1_error)
@@ -4054,9 +4054,9 @@ static PyObject *__pyx_pf_23cssfinder_backend_numpy_6cython_10_complex64_6normal
 
   /* "cssfinder_backend_numpy/_cython/_complex64.py":99
  *     mtx2 = np.dot(mtx, np.conj(mtx))
- * 
+ *
  *     val = np.sqrt(np.real(mtx2))             # <<<<<<<<<<<<<<
- * 
+ *
  *     retval = mtx / val
  */
   __Pyx_GetModuleGlobalName(__pyx_t_3, __pyx_n_s_np); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 99, __pyx_L1_error)
@@ -4115,9 +4115,9 @@ static PyObject *__pyx_pf_23cssfinder_backend_numpy_6cython_10_complex64_6normal
 
   /* "cssfinder_backend_numpy/_cython/_complex64.py":101
  *     val = np.sqrt(np.real(mtx2))
- * 
+ *
  *     retval = mtx / val             # <<<<<<<<<<<<<<
- * 
+ *
  *     return retval  # type: ignore[no-any-return]
  */
   __pyx_t_1 = __Pyx_PyNumber_Divide(__pyx_v_mtx, __pyx_v_val); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 101, __pyx_L1_error)
@@ -4127,10 +4127,10 @@ static PyObject *__pyx_pf_23cssfinder_backend_numpy_6cython_10_complex64_6normal
 
   /* "cssfinder_backend_numpy/_cython/_complex64.py":103
  *     retval = mtx / val
- * 
+ *
  *     return retval  # type: ignore[no-any-return]             # <<<<<<<<<<<<<<
- * 
- * 
+ *
+ *
  */
   __Pyx_XDECREF(__pyx_r);
   __Pyx_INCREF(__pyx_v_retval);
@@ -4138,8 +4138,8 @@ static PyObject *__pyx_pf_23cssfinder_backend_numpy_6cython_10_complex64_6normal
   goto __pyx_L0;
 
   /* "cssfinder_backend_numpy/_cython/_complex64.py":95
- * 
- * 
+ *
+ *
  * def normalize(mtx: npt.NDArray[np.complex64]) -> npt.NDArray[np.complex64]:             # <<<<<<<<<<<<<<
  *     """Normalize a vector."""
  *     mtx2 = np.dot(mtx, np.conj(mtx))
@@ -4164,15 +4164,15 @@ static PyObject *__pyx_pf_23cssfinder_backend_numpy_6cython_10_complex64_6normal
 }
 
 /* "cssfinder_backend_numpy/_cython/_complex64.py":106
- * 
- * 
+ *
+ *
  * def project(mtx1: npt.NDArray[np.complex64]) -> npt.NDArray[np.complex64]:             # <<<<<<<<<<<<<<
  *     """Build a projection from a vector."""
  *     retval = np.outer(mtx1, np.conj(mtx1))
  */
 
 /* Python wrapper */
-static PyObject *__pyx_pw_23cssfinder_backend_numpy_6cython_10_complex64_9project(PyObject *__pyx_self, 
+static PyObject *__pyx_pw_23cssfinder_backend_numpy_6cython_10_complex64_9project(PyObject *__pyx_self,
 #if CYTHON_METH_FASTCALL
 PyObject *const *__pyx_args, Py_ssize_t __pyx_nargs, PyObject *__pyx_kwds
 #else
@@ -4181,7 +4181,7 @@ PyObject *__pyx_args, PyObject *__pyx_kwds
 ); /*proto*/
 PyDoc_STRVAR(__pyx_doc_23cssfinder_backend_numpy_6cython_10_complex64_8project, "Build a projection from a vector.");
 static PyMethodDef __pyx_mdef_23cssfinder_backend_numpy_6cython_10_complex64_9project = {"project", (PyCFunction)(void*)(__Pyx_PyCFunction_FastCallWithKeywords)__pyx_pw_23cssfinder_backend_numpy_6cython_10_complex64_9project, __Pyx_METH_FASTCALL|METH_KEYWORDS, __pyx_doc_23cssfinder_backend_numpy_6cython_10_complex64_8project};
-static PyObject *__pyx_pw_23cssfinder_backend_numpy_6cython_10_complex64_9project(PyObject *__pyx_self, 
+static PyObject *__pyx_pw_23cssfinder_backend_numpy_6cython_10_complex64_9project(PyObject *__pyx_self,
 #if CYTHON_METH_FASTCALL
 PyObject *const *__pyx_args, Py_ssize_t __pyx_nargs, PyObject *__pyx_kwds
 #else
@@ -4262,7 +4262,7 @@ static PyObject *__pyx_pf_23cssfinder_backend_numpy_6cython_10_complex64_8projec
  * def project(mtx1: npt.NDArray[np.complex64]) -> npt.NDArray[np.complex64]:
  *     """Build a projection from a vector."""
  *     retval = np.outer(mtx1, np.conj(mtx1))             # <<<<<<<<<<<<<<
- * 
+ *
  *     return retval  # type: ignore[no-any-return]
  */
   __Pyx_GetModuleGlobalName(__pyx_t_2, __pyx_n_s_np); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 108, __pyx_L1_error)
@@ -4321,10 +4321,10 @@ static PyObject *__pyx_pf_23cssfinder_backend_numpy_6cython_10_complex64_8projec
 
   /* "cssfinder_backend_numpy/_cython/_complex64.py":110
  *     retval = np.outer(mtx1, np.conj(mtx1))
- * 
+ *
  *     return retval  # type: ignore[no-any-return]             # <<<<<<<<<<<<<<
- * 
- * 
+ *
+ *
  */
   __Pyx_XDECREF(__pyx_r);
   __Pyx_INCREF(__pyx_v_retval);
@@ -4332,8 +4332,8 @@ static PyObject *__pyx_pf_23cssfinder_backend_numpy_6cython_10_complex64_8projec
   goto __pyx_L0;
 
   /* "cssfinder_backend_numpy/_cython/_complex64.py":106
- * 
- * 
+ *
+ *
  * def project(mtx1: npt.NDArray[np.complex64]) -> npt.NDArray[np.complex64]:             # <<<<<<<<<<<<<<
  *     """Build a projection from a vector."""
  *     retval = np.outer(mtx1, np.conj(mtx1))
@@ -4356,15 +4356,15 @@ static PyObject *__pyx_pf_23cssfinder_backend_numpy_6cython_10_complex64_8projec
 }
 
 /* "cssfinder_backend_numpy/_cython/_complex64.py":113
- * 
- * 
+ *
+ *
  * def kronecker(             # <<<<<<<<<<<<<<
  *     mtx: npt.NDArray[np.complex64], mtx1: npt.NDArray[np.complex64]
  * ) -> npt.NDArray[np.complex64]:
  */
 
 /* Python wrapper */
-static PyObject *__pyx_pw_23cssfinder_backend_numpy_6cython_10_complex64_11kronecker(PyObject *__pyx_self, 
+static PyObject *__pyx_pw_23cssfinder_backend_numpy_6cython_10_complex64_11kronecker(PyObject *__pyx_self,
 #if CYTHON_METH_FASTCALL
 PyObject *const *__pyx_args, Py_ssize_t __pyx_nargs, PyObject *__pyx_kwds
 #else
@@ -4373,7 +4373,7 @@ PyObject *__pyx_args, PyObject *__pyx_kwds
 ); /*proto*/
 PyDoc_STRVAR(__pyx_doc_23cssfinder_backend_numpy_6cython_10_complex64_10kronecker, "Kronecker Product.");
 static PyMethodDef __pyx_mdef_23cssfinder_backend_numpy_6cython_10_complex64_11kronecker = {"kronecker", (PyCFunction)(void*)(__Pyx_PyCFunction_FastCallWithKeywords)__pyx_pw_23cssfinder_backend_numpy_6cython_10_complex64_11kronecker, __Pyx_METH_FASTCALL|METH_KEYWORDS, __pyx_doc_23cssfinder_backend_numpy_6cython_10_complex64_10kronecker};
-static PyObject *__pyx_pw_23cssfinder_backend_numpy_6cython_10_complex64_11kronecker(PyObject *__pyx_self, 
+static PyObject *__pyx_pw_23cssfinder_backend_numpy_6cython_10_complex64_11kronecker(PyObject *__pyx_self,
 #if CYTHON_METH_FASTCALL
 PyObject *const *__pyx_args, Py_ssize_t __pyx_nargs, PyObject *__pyx_kwds
 #else
@@ -4472,7 +4472,7 @@ static PyObject *__pyx_pf_23cssfinder_backend_numpy_6cython_10_complex64_10krone
  *     """Kronecker Product."""
  *     ddd1 = len(mtx)             # <<<<<<<<<<<<<<
  *     ddd2 = len(mtx1)
- * 
+ *
  */
   __pyx_t_1 = PyObject_Length(__pyx_v_mtx); if (unlikely(__pyx_t_1 == ((Py_ssize_t)-1))) __PYX_ERR(0, 117, __pyx_L1_error)
   __pyx_t_2 = PyInt_FromSsize_t(__pyx_t_1); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 117, __pyx_L1_error)
@@ -4484,7 +4484,7 @@ static PyObject *__pyx_pf_23cssfinder_backend_numpy_6cython_10_complex64_10krone
  *     """Kronecker Product."""
  *     ddd1 = len(mtx)
  *     ddd2 = len(mtx1)             # <<<<<<<<<<<<<<
- * 
+ *
  *     output_shape = (ddd1 * ddd2, ddd1 * ddd2)
  */
   __pyx_t_1 = PyObject_Length(__pyx_v_mtx1); if (unlikely(__pyx_t_1 == ((Py_ssize_t)-1))) __PYX_ERR(0, 118, __pyx_L1_error)
@@ -4495,9 +4495,9 @@ static PyObject *__pyx_pf_23cssfinder_backend_numpy_6cython_10_complex64_10krone
 
   /* "cssfinder_backend_numpy/_cython/_complex64.py":120
  *     ddd2 = len(mtx1)
- * 
+ *
  *     output_shape = (ddd1 * ddd2, ddd1 * ddd2)             # <<<<<<<<<<<<<<
- * 
+ *
  *     dot_0_1 = np.tensordot(mtx, mtx1, 0)
  */
   __pyx_t_2 = PyNumber_Multiply(__pyx_v_ddd1, __pyx_v_ddd2); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 120, __pyx_L1_error)
@@ -4517,9 +4517,9 @@ static PyObject *__pyx_pf_23cssfinder_backend_numpy_6cython_10_complex64_10krone
 
   /* "cssfinder_backend_numpy/_cython/_complex64.py":122
  *     output_shape = (ddd1 * ddd2, ddd1 * ddd2)
- * 
+ *
  *     dot_0_1 = np.tensordot(mtx, mtx1, 0)             # <<<<<<<<<<<<<<
- * 
+ *
  *     out_mtx = np.swapaxes(dot_0_1, 1, 2)
  */
   __Pyx_GetModuleGlobalName(__pyx_t_3, __pyx_n_s_np); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 122, __pyx_L1_error)
@@ -4552,9 +4552,9 @@ static PyObject *__pyx_pf_23cssfinder_backend_numpy_6cython_10_complex64_10krone
 
   /* "cssfinder_backend_numpy/_cython/_complex64.py":124
  *     dot_0_1 = np.tensordot(mtx, mtx1, 0)
- * 
+ *
  *     out_mtx = np.swapaxes(dot_0_1, 1, 2)             # <<<<<<<<<<<<<<
- * 
+ *
  *     retval = out_mtx.reshape(output_shape).astype(np.complex64, copy=False)
  */
   __Pyx_GetModuleGlobalName(__pyx_t_2, __pyx_n_s_np); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 124, __pyx_L1_error)
@@ -4587,9 +4587,9 @@ static PyObject *__pyx_pf_23cssfinder_backend_numpy_6cython_10_complex64_10krone
 
   /* "cssfinder_backend_numpy/_cython/_complex64.py":126
  *     out_mtx = np.swapaxes(dot_0_1, 1, 2)
- * 
+ *
  *     retval = out_mtx.reshape(output_shape).astype(np.complex64, copy=False)             # <<<<<<<<<<<<<<
- * 
+ *
  *     return retval  # type: ignore[no-any-return]
  */
   __pyx_t_3 = __Pyx_PyObject_GetAttrStr(__pyx_v_out_mtx, __pyx_n_s_reshape); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 126, __pyx_L1_error)
@@ -4640,10 +4640,10 @@ static PyObject *__pyx_pf_23cssfinder_backend_numpy_6cython_10_complex64_10krone
 
   /* "cssfinder_backend_numpy/_cython/_complex64.py":128
  *     retval = out_mtx.reshape(output_shape).astype(np.complex64, copy=False)
- * 
+ *
  *     return retval  # type: ignore[no-any-return]             # <<<<<<<<<<<<<<
- * 
- * 
+ *
+ *
  */
   __Pyx_XDECREF(__pyx_r);
   __Pyx_INCREF(__pyx_v_retval);
@@ -4651,8 +4651,8 @@ static PyObject *__pyx_pf_23cssfinder_backend_numpy_6cython_10_complex64_10krone
   goto __pyx_L0;
 
   /* "cssfinder_backend_numpy/_cython/_complex64.py":113
- * 
- * 
+ *
+ *
  * def kronecker(             # <<<<<<<<<<<<<<
  *     mtx: npt.NDArray[np.complex64], mtx1: npt.NDArray[np.complex64]
  * ) -> npt.NDArray[np.complex64]:
@@ -4679,15 +4679,15 @@ static PyObject *__pyx_pf_23cssfinder_backend_numpy_6cython_10_complex64_10krone
 }
 
 /* "cssfinder_backend_numpy/_cython/_complex64.py":131
- * 
- * 
+ *
+ *
  * def rotate(             # <<<<<<<<<<<<<<
  *     rho2: npt.NDArray[np.complex64], unitary: npt.NDArray[np.complex64]
  * ) -> npt.NDArray[np.complex64]:
  */
 
 /* Python wrapper */
-static PyObject *__pyx_pw_23cssfinder_backend_numpy_6cython_10_complex64_13rotate(PyObject *__pyx_self, 
+static PyObject *__pyx_pw_23cssfinder_backend_numpy_6cython_10_complex64_13rotate(PyObject *__pyx_self,
 #if CYTHON_METH_FASTCALL
 PyObject *const *__pyx_args, Py_ssize_t __pyx_nargs, PyObject *__pyx_kwds
 #else
@@ -4696,7 +4696,7 @@ PyObject *__pyx_args, PyObject *__pyx_kwds
 ); /*proto*/
 PyDoc_STRVAR(__pyx_doc_23cssfinder_backend_numpy_6cython_10_complex64_12rotate, "Sandwich an operator with a unitary.");
 static PyMethodDef __pyx_mdef_23cssfinder_backend_numpy_6cython_10_complex64_13rotate = {"rotate", (PyCFunction)(void*)(__Pyx_PyCFunction_FastCallWithKeywords)__pyx_pw_23cssfinder_backend_numpy_6cython_10_complex64_13rotate, __Pyx_METH_FASTCALL|METH_KEYWORDS, __pyx_doc_23cssfinder_backend_numpy_6cython_10_complex64_12rotate};
-static PyObject *__pyx_pw_23cssfinder_backend_numpy_6cython_10_complex64_13rotate(PyObject *__pyx_self, 
+static PyObject *__pyx_pw_23cssfinder_backend_numpy_6cython_10_complex64_13rotate(PyObject *__pyx_self,
 #if CYTHON_METH_FASTCALL
 PyObject *const *__pyx_args, Py_ssize_t __pyx_nargs, PyObject *__pyx_kwds
 #else
@@ -4789,7 +4789,7 @@ static PyObject *__pyx_pf_23cssfinder_backend_numpy_6cython_10_complex64_12rotat
  * ) -> npt.NDArray[np.complex64]:
  *     """Sandwich an operator with a unitary."""
  *     rho2a = np.dot(rho2, np.conj(unitary).T)  # matmul replaced with dot             # <<<<<<<<<<<<<<
- * 
+ *
  *     rho2a = np.dot(unitary, rho2a)  # matmul replaced with dot
  */
   __Pyx_GetModuleGlobalName(__pyx_t_2, __pyx_n_s_np); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 135, __pyx_L1_error)
@@ -4851,9 +4851,9 @@ static PyObject *__pyx_pf_23cssfinder_backend_numpy_6cython_10_complex64_12rotat
 
   /* "cssfinder_backend_numpy/_cython/_complex64.py":137
  *     rho2a = np.dot(rho2, np.conj(unitary).T)  # matmul replaced with dot
- * 
+ *
  *     rho2a = np.dot(unitary, rho2a)  # matmul replaced with dot             # <<<<<<<<<<<<<<
- * 
+ *
  *     return rho2a  # type: ignore[no-any-return]
  */
   __Pyx_GetModuleGlobalName(__pyx_t_3, __pyx_n_s_np); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 137, __pyx_L1_error)
@@ -4886,10 +4886,10 @@ static PyObject *__pyx_pf_23cssfinder_backend_numpy_6cython_10_complex64_12rotat
 
   /* "cssfinder_backend_numpy/_cython/_complex64.py":139
  *     rho2a = np.dot(unitary, rho2a)  # matmul replaced with dot
- * 
+ *
  *     return rho2a  # type: ignore[no-any-return]             # <<<<<<<<<<<<<<
- * 
- * 
+ *
+ *
  */
   __Pyx_XDECREF(__pyx_r);
   __Pyx_INCREF(__pyx_v_rho2a);
@@ -4897,8 +4897,8 @@ static PyObject *__pyx_pf_23cssfinder_backend_numpy_6cython_10_complex64_12rotat
   goto __pyx_L0;
 
   /* "cssfinder_backend_numpy/_cython/_complex64.py":131
- * 
- * 
+ *
+ *
  * def rotate(             # <<<<<<<<<<<<<<
  *     rho2: npt.NDArray[np.complex64], unitary: npt.NDArray[np.complex64]
  * ) -> npt.NDArray[np.complex64]:
@@ -4921,15 +4921,15 @@ static PyObject *__pyx_pf_23cssfinder_backend_numpy_6cython_10_complex64_12rotat
 }
 
 /* "cssfinder_backend_numpy/_cython/_complex64.py":142
- * 
- * 
+ *
+ *
  * def apply_symmetries(             # <<<<<<<<<<<<<<
  *     rho: npt.NDArray[np.complex64], symmetries: list[list[npt.NDArray[np.complex64]]]
  * ) -> npt.NDArray[np.complex64]:
  */
 
 /* Python wrapper */
-static PyObject *__pyx_pw_23cssfinder_backend_numpy_6cython_10_complex64_15apply_symmetries(PyObject *__pyx_self, 
+static PyObject *__pyx_pw_23cssfinder_backend_numpy_6cython_10_complex64_15apply_symmetries(PyObject *__pyx_self,
 #if CYTHON_METH_FASTCALL
 PyObject *const *__pyx_args, Py_ssize_t __pyx_nargs, PyObject *__pyx_kwds
 #else
@@ -4938,7 +4938,7 @@ PyObject *__pyx_args, PyObject *__pyx_kwds
 ); /*proto*/
 PyDoc_STRVAR(__pyx_doc_23cssfinder_backend_numpy_6cython_10_complex64_14apply_symmetries, "Apply symmetries to density matrix.\n\n    Parameters\n    ----------\n    rho : npt.NDArray[np.complex64]\n        Density matrix to which we want to apply symmetries.\n    symmetries : list[list[npt.NDArray[np.complex64]]]\n        List of matrices representing the symmetries.\n\n    Returns\n    -------\n    npt.NDArray[np.complex64]\n        The result of applying the symmetries to the given density matrix.\n\n    Notes\n    -----\n    The first input `rho` is modified by this function. If you don't want to modify the\n    original array, make a copy before passing it to this function.\n\n    This function calculates the trace of output density matrix and normalizes it before\n    returning.\n\n    ");
 static PyMethodDef __pyx_mdef_23cssfinder_backend_numpy_6cython_10_complex64_15apply_symmetries = {"apply_symmetries", (PyCFunction)(void*)(__Pyx_PyCFunction_FastCallWithKeywords)__pyx_pw_23cssfinder_backend_numpy_6cython_10_complex64_15apply_symmetries, __Pyx_METH_FASTCALL|METH_KEYWORDS, __pyx_doc_23cssfinder_backend_numpy_6cython_10_complex64_14apply_symmetries};
-static PyObject *__pyx_pw_23cssfinder_backend_numpy_6cython_10_complex64_15apply_symmetries(PyObject *__pyx_self, 
+static PyObject *__pyx_pw_23cssfinder_backend_numpy_6cython_10_complex64_15apply_symmetries(PyObject *__pyx_self,
 #if CYTHON_METH_FASTCALL
 PyObject *const *__pyx_args, Py_ssize_t __pyx_nargs, PyObject *__pyx_kwds
 #else
@@ -5038,7 +5038,7 @@ static PyObject *__pyx_pf_23cssfinder_backend_numpy_6cython_10_complex64_14apply
   __Pyx_RefNannySetupContext("apply_symmetries", 0);
 
   /* "cssfinder_backend_numpy/_cython/_complex64.py":168
- * 
+ *
  *     """
  *     output = rho             # <<<<<<<<<<<<<<
  *     for row in symmetries:
@@ -5071,7 +5071,7 @@ static PyObject *__pyx_pf_23cssfinder_backend_numpy_6cython_10_complex64_14apply
  *     for row in symmetries:
  *         for sym in row:             # <<<<<<<<<<<<<<
  *             output += rotate(output, sym)
- * 
+ *
  */
     if (likely(PyList_CheckExact(__pyx_v_row)) || PyTuple_CheckExact(__pyx_v_row)) {
       __pyx_t_3 = __pyx_v_row; __Pyx_INCREF(__pyx_t_3); __pyx_t_4 = 0;
@@ -5119,7 +5119,7 @@ static PyObject *__pyx_pf_23cssfinder_backend_numpy_6cython_10_complex64_14apply
  *     for row in symmetries:
  *         for sym in row:
  *             output += rotate(output, sym)             # <<<<<<<<<<<<<<
- * 
+ *
  *     output /= np.trace(output)
  */
       __Pyx_GetModuleGlobalName(__pyx_t_7, __pyx_n_s_rotate); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 171, __pyx_L1_error)
@@ -5155,7 +5155,7 @@ static PyObject *__pyx_pf_23cssfinder_backend_numpy_6cython_10_complex64_14apply
  *     for row in symmetries:
  *         for sym in row:             # <<<<<<<<<<<<<<
  *             output += rotate(output, sym)
- * 
+ *
  */
     }
     __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
@@ -5172,10 +5172,10 @@ static PyObject *__pyx_pf_23cssfinder_backend_numpy_6cython_10_complex64_14apply
 
   /* "cssfinder_backend_numpy/_cython/_complex64.py":173
  *             output += rotate(output, sym)
- * 
+ *
  *     output /= np.trace(output)             # <<<<<<<<<<<<<<
  *     return output
- * 
+ *
  */
   __Pyx_GetModuleGlobalName(__pyx_t_3, __pyx_n_s_np); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 173, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
@@ -5209,11 +5209,11 @@ static PyObject *__pyx_pf_23cssfinder_backend_numpy_6cython_10_complex64_14apply
   __pyx_t_7 = 0;
 
   /* "cssfinder_backend_numpy/_cython/_complex64.py":174
- * 
+ *
  *     output /= np.trace(output)
  *     return output             # <<<<<<<<<<<<<<
- * 
- * 
+ *
+ *
  */
   __Pyx_XDECREF(__pyx_r);
   __Pyx_INCREF(__pyx_v_output);
@@ -5221,8 +5221,8 @@ static PyObject *__pyx_pf_23cssfinder_backend_numpy_6cython_10_complex64_14apply
   goto __pyx_L0;
 
   /* "cssfinder_backend_numpy/_cython/_complex64.py":142
- * 
- * 
+ *
+ *
  * def apply_symmetries(             # <<<<<<<<<<<<<<
  *     rho: npt.NDArray[np.complex64], symmetries: list[list[npt.NDArray[np.complex64]]]
  * ) -> npt.NDArray[np.complex64]:
@@ -5247,15 +5247,15 @@ static PyObject *__pyx_pf_23cssfinder_backend_numpy_6cython_10_complex64_14apply
 }
 
 /* "cssfinder_backend_numpy/_cython/_complex64.py":184
- * 
- * 
+ *
+ *
  * def optimize_d_fs(             # <<<<<<<<<<<<<<
  *     new_state: npt.NDArray[np.complex64],
  *     visibility_state: npt.NDArray[np.complex64],
  */
 
 /* Python wrapper */
-static PyObject *__pyx_pw_23cssfinder_backend_numpy_6cython_10_complex64_17optimize_d_fs(PyObject *__pyx_self, 
+static PyObject *__pyx_pw_23cssfinder_backend_numpy_6cython_10_complex64_17optimize_d_fs(PyObject *__pyx_self,
 #if CYTHON_METH_FASTCALL
 PyObject *const *__pyx_args, Py_ssize_t __pyx_nargs, PyObject *__pyx_kwds
 #else
@@ -5264,7 +5264,7 @@ PyObject *__pyx_args, PyObject *__pyx_kwds
 ); /*proto*/
 PyDoc_STRVAR(__pyx_doc_23cssfinder_backend_numpy_6cython_10_complex64_16optimize_d_fs, "Optimize implementation for FSnQd mode.");
 static PyMethodDef __pyx_mdef_23cssfinder_backend_numpy_6cython_10_complex64_17optimize_d_fs = {"optimize_d_fs", (PyCFunction)(void*)(__Pyx_PyCFunction_FastCallWithKeywords)__pyx_pw_23cssfinder_backend_numpy_6cython_10_complex64_17optimize_d_fs, __Pyx_METH_FASTCALL|METH_KEYWORDS, __pyx_doc_23cssfinder_backend_numpy_6cython_10_complex64_16optimize_d_fs};
-static PyObject *__pyx_pw_23cssfinder_backend_numpy_6cython_10_complex64_17optimize_d_fs(PyObject *__pyx_self, 
+static PyObject *__pyx_pw_23cssfinder_backend_numpy_6cython_10_complex64_17optimize_d_fs(PyObject *__pyx_self,
 #if CYTHON_METH_FASTCALL
 PyObject *const *__pyx_args, Py_ssize_t __pyx_nargs, PyObject *__pyx_kwds
 #else
@@ -5407,7 +5407,7 @@ static PyObject *__pyx_pf_23cssfinder_backend_numpy_6cython_10_complex64_16optim
  * ) -> npt.NDArray[np.complex64]:
  *     """Optimize implementation for FSnQd mode."""
  *     product_2_3 = product(new_state, visibility_state)             # <<<<<<<<<<<<<<
- * 
+ *
  *     # To make sure rotated_2 is not unbound
  */
   __Pyx_GetModuleGlobalName(__pyx_t_2, __pyx_n_s_product); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 192, __pyx_L1_error)
@@ -5436,10 +5436,10 @@ static PyObject *__pyx_pf_23cssfinder_backend_numpy_6cython_10_complex64_16optim
   __pyx_t_1 = 0;
 
   /* "cssfinder_backend_numpy/_cython/_complex64.py":195
- * 
+ *
  *     # To make sure rotated_2 is not unbound
  *     unitary = random_unitary_d_fs(depth, quantity, 0)             # <<<<<<<<<<<<<<
- * 
+ *
  *     rotated_2 = rotate(new_state, unitary)
  */
   __Pyx_GetModuleGlobalName(__pyx_t_2, __pyx_n_s_random_unitary_d_fs); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 195, __pyx_L1_error)
@@ -5469,9 +5469,9 @@ static PyObject *__pyx_pf_23cssfinder_backend_numpy_6cython_10_complex64_16optim
 
   /* "cssfinder_backend_numpy/_cython/_complex64.py":197
  *     unitary = random_unitary_d_fs(depth, quantity, 0)
- * 
+ *
  *     rotated_2 = rotate(new_state, unitary)             # <<<<<<<<<<<<<<
- * 
+ *
  *     for idx in range(updates_count):
  */
   __Pyx_GetModuleGlobalName(__pyx_t_2, __pyx_n_s_rotate); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 197, __pyx_L1_error)
@@ -5501,7 +5501,7 @@ static PyObject *__pyx_pf_23cssfinder_backend_numpy_6cython_10_complex64_16optim
 
   /* "cssfinder_backend_numpy/_cython/_complex64.py":199
  *     rotated_2 = rotate(new_state, unitary)
- * 
+ *
  *     for idx in range(updates_count):             # <<<<<<<<<<<<<<
  *         idx_mod = idx % int(quantity)
  *         unitary = random_unitary_d_fs(depth, quantity, idx_mod)
@@ -5553,11 +5553,11 @@ static PyObject *__pyx_pf_23cssfinder_backend_numpy_6cython_10_complex64_16optim
     __pyx_t_1 = 0;
 
     /* "cssfinder_backend_numpy/_cython/_complex64.py":200
- * 
+ *
  *     for idx in range(updates_count):
  *         idx_mod = idx % int(quantity)             # <<<<<<<<<<<<<<
  *         unitary = random_unitary_d_fs(depth, quantity, idx_mod)
- * 
+ *
  */
     __pyx_t_1 = __Pyx_PyNumber_Int(__pyx_v_quantity); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 200, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_1);
@@ -5571,7 +5571,7 @@ static PyObject *__pyx_pf_23cssfinder_backend_numpy_6cython_10_complex64_16optim
  *     for idx in range(updates_count):
  *         idx_mod = idx % int(quantity)
  *         unitary = random_unitary_d_fs(depth, quantity, idx_mod)             # <<<<<<<<<<<<<<
- * 
+ *
  *         rotated_2 = rotate(new_state, unitary)
  */
     __Pyx_GetModuleGlobalName(__pyx_t_1, __pyx_n_s_random_unitary_d_fs); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 201, __pyx_L1_error)
@@ -5601,9 +5601,9 @@ static PyObject *__pyx_pf_23cssfinder_backend_numpy_6cython_10_complex64_16optim
 
     /* "cssfinder_backend_numpy/_cython/_complex64.py":203
  *         unitary = random_unitary_d_fs(depth, quantity, idx_mod)
- * 
+ *
  *         rotated_2 = rotate(new_state, unitary)             # <<<<<<<<<<<<<<
- * 
+ *
  *         product_rot2_3 = product(rotated_2, visibility_state)
  */
     __Pyx_GetModuleGlobalName(__pyx_t_1, __pyx_n_s_rotate); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 203, __pyx_L1_error)
@@ -5633,9 +5633,9 @@ static PyObject *__pyx_pf_23cssfinder_backend_numpy_6cython_10_complex64_16optim
 
     /* "cssfinder_backend_numpy/_cython/_complex64.py":205
  *         rotated_2 = rotate(new_state, unitary)
- * 
+ *
  *         product_rot2_3 = product(rotated_2, visibility_state)             # <<<<<<<<<<<<<<
- * 
+ *
  *         if product_2_3 > product_rot2_3:
  */
     __Pyx_GetModuleGlobalName(__pyx_t_1, __pyx_n_s_product); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 205, __pyx_L1_error)
@@ -5665,7 +5665,7 @@ static PyObject *__pyx_pf_23cssfinder_backend_numpy_6cython_10_complex64_16optim
 
     /* "cssfinder_backend_numpy/_cython/_complex64.py":207
  *         product_rot2_3 = product(rotated_2, visibility_state)
- * 
+ *
  *         if product_2_3 > product_rot2_3:             # <<<<<<<<<<<<<<
  *             unitary = unitary.conj().T
  *             rotated_2 = rotate(new_state, unitary)
@@ -5676,11 +5676,11 @@ static PyObject *__pyx_pf_23cssfinder_backend_numpy_6cython_10_complex64_16optim
     if (__pyx_t_8) {
 
       /* "cssfinder_backend_numpy/_cython/_complex64.py":208
- * 
+ *
  *         if product_2_3 > product_rot2_3:
  *             unitary = unitary.conj().T             # <<<<<<<<<<<<<<
  *             rotated_2 = rotate(new_state, unitary)
- * 
+ *
  */
       __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_v_unitary, __pyx_n_s_conj); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 208, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_1);
@@ -5714,7 +5714,7 @@ static PyObject *__pyx_pf_23cssfinder_backend_numpy_6cython_10_complex64_16optim
  *         if product_2_3 > product_rot2_3:
  *             unitary = unitary.conj().T
  *             rotated_2 = rotate(new_state, unitary)             # <<<<<<<<<<<<<<
- * 
+ *
  *         while product_rot2_3 > product_2_3:
  */
       __Pyx_GetModuleGlobalName(__pyx_t_3, __pyx_n_s_rotate); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 209, __pyx_L1_error)
@@ -5744,7 +5744,7 @@ static PyObject *__pyx_pf_23cssfinder_backend_numpy_6cython_10_complex64_16optim
 
       /* "cssfinder_backend_numpy/_cython/_complex64.py":207
  *         product_rot2_3 = product(rotated_2, visibility_state)
- * 
+ *
  *         if product_2_3 > product_rot2_3:             # <<<<<<<<<<<<<<
  *             unitary = unitary.conj().T
  *             rotated_2 = rotate(new_state, unitary)
@@ -5753,7 +5753,7 @@ static PyObject *__pyx_pf_23cssfinder_backend_numpy_6cython_10_complex64_16optim
 
     /* "cssfinder_backend_numpy/_cython/_complex64.py":211
  *             rotated_2 = rotate(new_state, unitary)
- * 
+ *
  *         while product_rot2_3 > product_2_3:             # <<<<<<<<<<<<<<
  *             product_2_3 = product_rot2_3
  *             rotated_2 = rotate(rotated_2, unitary)
@@ -5765,11 +5765,11 @@ static PyObject *__pyx_pf_23cssfinder_backend_numpy_6cython_10_complex64_16optim
       if (!__pyx_t_8) break;
 
       /* "cssfinder_backend_numpy/_cython/_complex64.py":212
- * 
+ *
  *         while product_rot2_3 > product_2_3:
  *             product_2_3 = product_rot2_3             # <<<<<<<<<<<<<<
  *             rotated_2 = rotate(rotated_2, unitary)
- * 
+ *
  */
       __Pyx_INCREF(__pyx_v_product_rot2_3);
       __Pyx_DECREF_SET(__pyx_v_product_2_3, __pyx_v_product_rot2_3);
@@ -5778,7 +5778,7 @@ static PyObject *__pyx_pf_23cssfinder_backend_numpy_6cython_10_complex64_16optim
  *         while product_rot2_3 > product_2_3:
  *             product_2_3 = product_rot2_3
  *             rotated_2 = rotate(rotated_2, unitary)             # <<<<<<<<<<<<<<
- * 
+ *
  *             product_rot2_3 = product(rotated_2, visibility_state)
  */
       __Pyx_GetModuleGlobalName(__pyx_t_3, __pyx_n_s_rotate); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 213, __pyx_L1_error)
@@ -5808,9 +5808,9 @@ static PyObject *__pyx_pf_23cssfinder_backend_numpy_6cython_10_complex64_16optim
 
       /* "cssfinder_backend_numpy/_cython/_complex64.py":215
  *             rotated_2 = rotate(rotated_2, unitary)
- * 
+ *
  *             product_rot2_3 = product(rotated_2, visibility_state)             # <<<<<<<<<<<<<<
- * 
+ *
  *     return rotated_2.astype(np.complex64, copy=False)  # type: ignore[no-any-return]
  */
       __Pyx_GetModuleGlobalName(__pyx_t_3, __pyx_n_s_product); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 215, __pyx_L1_error)
@@ -5841,7 +5841,7 @@ static PyObject *__pyx_pf_23cssfinder_backend_numpy_6cython_10_complex64_16optim
 
     /* "cssfinder_backend_numpy/_cython/_complex64.py":199
  *     rotated_2 = rotate(new_state, unitary)
- * 
+ *
  *     for idx in range(updates_count):             # <<<<<<<<<<<<<<
  *         idx_mod = idx % int(quantity)
  *         unitary = random_unitary_d_fs(depth, quantity, idx_mod)
@@ -5851,10 +5851,10 @@ static PyObject *__pyx_pf_23cssfinder_backend_numpy_6cython_10_complex64_16optim
 
   /* "cssfinder_backend_numpy/_cython/_complex64.py":217
  *             product_rot2_3 = product(rotated_2, visibility_state)
- * 
+ *
  *     return rotated_2.astype(np.complex64, copy=False)  # type: ignore[no-any-return]             # <<<<<<<<<<<<<<
- * 
- * 
+ *
+ *
  */
   __Pyx_XDECREF(__pyx_r);
   __pyx_t_2 = __Pyx_PyObject_GetAttrStr(__pyx_v_rotated_2, __pyx_n_s_astype); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 217, __pyx_L1_error)
@@ -5882,8 +5882,8 @@ static PyObject *__pyx_pf_23cssfinder_backend_numpy_6cython_10_complex64_16optim
   goto __pyx_L0;
 
   /* "cssfinder_backend_numpy/_cython/_complex64.py":184
- * 
- * 
+ *
+ *
  * def optimize_d_fs(             # <<<<<<<<<<<<<<
  *     new_state: npt.NDArray[np.complex64],
  *     visibility_state: npt.NDArray[np.complex64],
@@ -5910,15 +5910,15 @@ static PyObject *__pyx_pf_23cssfinder_backend_numpy_6cython_10_complex64_16optim
 }
 
 /* "cssfinder_backend_numpy/_cython/_complex64.py":220
- * 
- * 
+ *
+ *
  * def random_unitary_d_fs(             # <<<<<<<<<<<<<<
  *     depth: int, quantity: int, idx: int
  * ) -> npt.NDArray[np.complex64]:
  */
 
 /* Python wrapper */
-static PyObject *__pyx_pw_23cssfinder_backend_numpy_6cython_10_complex64_19random_unitary_d_fs(PyObject *__pyx_self, 
+static PyObject *__pyx_pw_23cssfinder_backend_numpy_6cython_10_complex64_19random_unitary_d_fs(PyObject *__pyx_self,
 #if CYTHON_METH_FASTCALL
 PyObject *const *__pyx_args, Py_ssize_t __pyx_nargs, PyObject *__pyx_kwds
 #else
@@ -5927,7 +5927,7 @@ PyObject *__pyx_args, PyObject *__pyx_kwds
 ); /*proto*/
 PyDoc_STRVAR(__pyx_doc_23cssfinder_backend_numpy_6cython_10_complex64_18random_unitary_d_fs, "N quDits.");
 static PyMethodDef __pyx_mdef_23cssfinder_backend_numpy_6cython_10_complex64_19random_unitary_d_fs = {"random_unitary_d_fs", (PyCFunction)(void*)(__Pyx_PyCFunction_FastCallWithKeywords)__pyx_pw_23cssfinder_backend_numpy_6cython_10_complex64_19random_unitary_d_fs, __Pyx_METH_FASTCALL|METH_KEYWORDS, __pyx_doc_23cssfinder_backend_numpy_6cython_10_complex64_18random_unitary_d_fs};
-static PyObject *__pyx_pw_23cssfinder_backend_numpy_6cython_10_complex64_19random_unitary_d_fs(PyObject *__pyx_self, 
+static PyObject *__pyx_pw_23cssfinder_backend_numpy_6cython_10_complex64_19random_unitary_d_fs(PyObject *__pyx_self,
 #if CYTHON_METH_FASTCALL
 PyObject *const *__pyx_args, Py_ssize_t __pyx_nargs, PyObject *__pyx_kwds
 #else
@@ -6038,7 +6038,7 @@ static PyObject *__pyx_pf_23cssfinder_backend_numpy_6cython_10_complex64_18rando
  * ) -> npt.NDArray[np.complex64]:
  *     """N quDits."""
  *     value = _random_unitary_d_fs(depth)             # <<<<<<<<<<<<<<
- * 
+ *
  *     mtx = expand_d_fs(value, depth, quantity, idx)
  */
   __Pyx_GetModuleGlobalName(__pyx_t_2, __pyx_n_s_random_unitary_d_fs_2); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 224, __pyx_L1_error)
@@ -6068,9 +6068,9 @@ static PyObject *__pyx_pf_23cssfinder_backend_numpy_6cython_10_complex64_18rando
 
   /* "cssfinder_backend_numpy/_cython/_complex64.py":226
  *     value = _random_unitary_d_fs(depth)
- * 
+ *
  *     mtx = expand_d_fs(value, depth, quantity, idx)             # <<<<<<<<<<<<<<
- * 
+ *
  *     return mtx  # type: ignore[no-any-return]
  */
   __Pyx_GetModuleGlobalName(__pyx_t_2, __pyx_n_s_expand_d_fs); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 226, __pyx_L1_error)
@@ -6100,10 +6100,10 @@ static PyObject *__pyx_pf_23cssfinder_backend_numpy_6cython_10_complex64_18rando
 
   /* "cssfinder_backend_numpy/_cython/_complex64.py":228
  *     mtx = expand_d_fs(value, depth, quantity, idx)
- * 
+ *
  *     return mtx  # type: ignore[no-any-return]             # <<<<<<<<<<<<<<
- * 
- * 
+ *
+ *
  */
   __Pyx_XDECREF(__pyx_r);
   __Pyx_INCREF(__pyx_v_mtx);
@@ -6111,8 +6111,8 @@ static PyObject *__pyx_pf_23cssfinder_backend_numpy_6cython_10_complex64_18rando
   goto __pyx_L0;
 
   /* "cssfinder_backend_numpy/_cython/_complex64.py":220
- * 
- * 
+ *
+ *
  * def random_unitary_d_fs(             # <<<<<<<<<<<<<<
  *     depth: int, quantity: int, idx: int
  * ) -> npt.NDArray[np.complex64]:
@@ -6134,15 +6134,15 @@ static PyObject *__pyx_pf_23cssfinder_backend_numpy_6cython_10_complex64_18rando
 }
 
 /* "cssfinder_backend_numpy/_cython/_complex64.py":231
- * 
- * 
+ *
+ *
  * def _random_unitary_d_fs(depth: int) -> npt.NDArray[np.complex64]:             # <<<<<<<<<<<<<<
  *     random_mtx = random_d_fs(depth, 1)
- * 
+ *
  */
 
 /* Python wrapper */
-static PyObject *__pyx_pw_23cssfinder_backend_numpy_6cython_10_complex64_21_random_unitary_d_fs(PyObject *__pyx_self, 
+static PyObject *__pyx_pw_23cssfinder_backend_numpy_6cython_10_complex64_21_random_unitary_d_fs(PyObject *__pyx_self,
 #if CYTHON_METH_FASTCALL
 PyObject *const *__pyx_args, Py_ssize_t __pyx_nargs, PyObject *__pyx_kwds
 #else
@@ -6150,7 +6150,7 @@ PyObject *__pyx_args, PyObject *__pyx_kwds
 #endif
 ); /*proto*/
 static PyMethodDef __pyx_mdef_23cssfinder_backend_numpy_6cython_10_complex64_21_random_unitary_d_fs = {"_random_unitary_d_fs", (PyCFunction)(void*)(__Pyx_PyCFunction_FastCallWithKeywords)__pyx_pw_23cssfinder_backend_numpy_6cython_10_complex64_21_random_unitary_d_fs, __Pyx_METH_FASTCALL|METH_KEYWORDS, 0};
-static PyObject *__pyx_pw_23cssfinder_backend_numpy_6cython_10_complex64_21_random_unitary_d_fs(PyObject *__pyx_self, 
+static PyObject *__pyx_pw_23cssfinder_backend_numpy_6cython_10_complex64_21_random_unitary_d_fs(PyObject *__pyx_self,
 #if CYTHON_METH_FASTCALL
 PyObject *const *__pyx_args, Py_ssize_t __pyx_nargs, PyObject *__pyx_kwds
 #else
@@ -6235,10 +6235,10 @@ static PyObject *__pyx_pf_23cssfinder_backend_numpy_6cython_10_complex64_20_rand
   __Pyx_RefNannySetupContext("_random_unitary_d_fs", 0);
 
   /* "cssfinder_backend_numpy/_cython/_complex64.py":232
- * 
+ *
  * def _random_unitary_d_fs(depth: int) -> npt.NDArray[np.complex64]:
  *     random_mtx = random_d_fs(depth, 1)             # <<<<<<<<<<<<<<
- * 
+ *
  *     identity_mtx = np.identity(depth).astype(np.complex64)
  */
   __Pyx_GetModuleGlobalName(__pyx_t_2, __pyx_n_s_random_d_fs); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 232, __pyx_L1_error)
@@ -6268,9 +6268,9 @@ static PyObject *__pyx_pf_23cssfinder_backend_numpy_6cython_10_complex64_20_rand
 
   /* "cssfinder_backend_numpy/_cython/_complex64.py":234
  *     random_mtx = random_d_fs(depth, 1)
- * 
+ *
  *     identity_mtx = np.identity(depth).astype(np.complex64)             # <<<<<<<<<<<<<<
- * 
+ *
  *     rand_mul = np.multiply(_VALUE, random_mtx)
  */
   __Pyx_GetModuleGlobalName(__pyx_t_3, __pyx_n_s_np); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 234, __pyx_L1_error)
@@ -6332,9 +6332,9 @@ static PyObject *__pyx_pf_23cssfinder_backend_numpy_6cython_10_complex64_20_rand
 
   /* "cssfinder_backend_numpy/_cython/_complex64.py":236
  *     identity_mtx = np.identity(depth).astype(np.complex64)
- * 
+ *
  *     rand_mul = np.multiply(_VALUE, random_mtx)             # <<<<<<<<<<<<<<
- * 
+ *
  *     value = np.add(rand_mul, identity_mtx)
  */
   __Pyx_GetModuleGlobalName(__pyx_t_5, __pyx_n_s_np); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 236, __pyx_L1_error)
@@ -6370,9 +6370,9 @@ static PyObject *__pyx_pf_23cssfinder_backend_numpy_6cython_10_complex64_20_rand
 
   /* "cssfinder_backend_numpy/_cython/_complex64.py":238
  *     rand_mul = np.multiply(_VALUE, random_mtx)
- * 
+ *
  *     value = np.add(rand_mul, identity_mtx)             # <<<<<<<<<<<<<<
- * 
+ *
  *     return value  # type: ignore[no-any-return]
  */
   __Pyx_GetModuleGlobalName(__pyx_t_3, __pyx_n_s_np); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 238, __pyx_L1_error)
@@ -6405,10 +6405,10 @@ static PyObject *__pyx_pf_23cssfinder_backend_numpy_6cython_10_complex64_20_rand
 
   /* "cssfinder_backend_numpy/_cython/_complex64.py":240
  *     value = np.add(rand_mul, identity_mtx)
- * 
+ *
  *     return value  # type: ignore[no-any-return]             # <<<<<<<<<<<<<<
- * 
- * 
+ *
+ *
  */
   __Pyx_XDECREF(__pyx_r);
   __Pyx_INCREF(__pyx_v_value);
@@ -6416,11 +6416,11 @@ static PyObject *__pyx_pf_23cssfinder_backend_numpy_6cython_10_complex64_20_rand
   goto __pyx_L0;
 
   /* "cssfinder_backend_numpy/_cython/_complex64.py":231
- * 
- * 
+ *
+ *
  * def _random_unitary_d_fs(depth: int) -> npt.NDArray[np.complex64]:             # <<<<<<<<<<<<<<
  *     random_mtx = random_d_fs(depth, 1)
- * 
+ *
  */
 
   /* function exit code */
@@ -6442,15 +6442,15 @@ static PyObject *__pyx_pf_23cssfinder_backend_numpy_6cython_10_complex64_20_rand
 }
 
 /* "cssfinder_backend_numpy/_cython/_complex64.py":243
- * 
- * 
+ *
+ *
  * def random_d_fs(depth: int, quantity: int) -> npt.NDArray[np.complex64]:             # <<<<<<<<<<<<<<
  *     """Random n quDit state."""
  *     rand_vectors = get_random_haar_2d(depth, quantity)
  */
 
 /* Python wrapper */
-static PyObject *__pyx_pw_23cssfinder_backend_numpy_6cython_10_complex64_23random_d_fs(PyObject *__pyx_self, 
+static PyObject *__pyx_pw_23cssfinder_backend_numpy_6cython_10_complex64_23random_d_fs(PyObject *__pyx_self,
 #if CYTHON_METH_FASTCALL
 PyObject *const *__pyx_args, Py_ssize_t __pyx_nargs, PyObject *__pyx_kwds
 #else
@@ -6459,7 +6459,7 @@ PyObject *__pyx_args, PyObject *__pyx_kwds
 ); /*proto*/
 PyDoc_STRVAR(__pyx_doc_23cssfinder_backend_numpy_6cython_10_complex64_22random_d_fs, "Random n quDit state.");
 static PyMethodDef __pyx_mdef_23cssfinder_backend_numpy_6cython_10_complex64_23random_d_fs = {"random_d_fs", (PyCFunction)(void*)(__Pyx_PyCFunction_FastCallWithKeywords)__pyx_pw_23cssfinder_backend_numpy_6cython_10_complex64_23random_d_fs, __Pyx_METH_FASTCALL|METH_KEYWORDS, __pyx_doc_23cssfinder_backend_numpy_6cython_10_complex64_22random_d_fs};
-static PyObject *__pyx_pw_23cssfinder_backend_numpy_6cython_10_complex64_23random_d_fs(PyObject *__pyx_self, 
+static PyObject *__pyx_pw_23cssfinder_backend_numpy_6cython_10_complex64_23random_d_fs(PyObject *__pyx_self,
 #if CYTHON_METH_FASTCALL
 PyObject *const *__pyx_args, Py_ssize_t __pyx_nargs, PyObject *__pyx_kwds
 #else
@@ -6564,7 +6564,7 @@ static PyObject *__pyx_pf_23cssfinder_backend_numpy_6cython_10_complex64_22rando
  *     """Random n quDit state."""
  *     rand_vectors = get_random_haar_2d(depth, quantity)             # <<<<<<<<<<<<<<
  *     vector = normalize(rand_vectors[0])
- * 
+ *
  */
   __Pyx_GetModuleGlobalName(__pyx_t_2, __pyx_n_s_get_random_haar_2d); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 245, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
@@ -6595,8 +6595,8 @@ static PyObject *__pyx_pf_23cssfinder_backend_numpy_6cython_10_complex64_22rando
  *     """Random n quDit state."""
  *     rand_vectors = get_random_haar_2d(depth, quantity)
  *     vector = normalize(rand_vectors[0])             # <<<<<<<<<<<<<<
- * 
- *     for i in range(quantity - 1):
+ *
+ *     for i in range(1, quantity):
  */
   __Pyx_GetModuleGlobalName(__pyx_t_2, __pyx_n_s_normalize); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 246, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
@@ -6628,14 +6628,20 @@ static PyObject *__pyx_pf_23cssfinder_backend_numpy_6cython_10_complex64_22rando
 
   /* "cssfinder_backend_numpy/_cython/_complex64.py":248
  *     vector = normalize(rand_vectors[0])
- * 
- *     for i in range(quantity - 1):             # <<<<<<<<<<<<<<
+ *
+ *     for i in range(1, quantity):             # <<<<<<<<<<<<<<
  *         idx_vector = normalize(rand_vectors[i])
- * 
+ *
  */
-  __pyx_t_1 = PyNumber_Subtract(__pyx_v_quantity, __pyx_int_1); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 248, __pyx_L1_error)
+  __pyx_t_1 = PyTuple_New(2); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 248, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
-  __pyx_t_2 = __Pyx_PyObject_CallOneArg(__pyx_builtin_range, __pyx_t_1); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 248, __pyx_L1_error)
+  __Pyx_INCREF(__pyx_int_1);
+  __Pyx_GIVEREF(__pyx_int_1);
+  PyTuple_SET_ITEM(__pyx_t_1, 0, __pyx_int_1);
+  __Pyx_INCREF(__pyx_v_quantity);
+  __Pyx_GIVEREF(__pyx_v_quantity);
+  PyTuple_SET_ITEM(__pyx_t_1, 1, __pyx_v_quantity);
+  __pyx_t_2 = __Pyx_PyObject_Call(__pyx_builtin_range, __pyx_t_1, NULL); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 248, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
   if (likely(PyList_CheckExact(__pyx_t_2)) || PyTuple_CheckExact(__pyx_t_2)) {
@@ -6682,10 +6688,10 @@ static PyObject *__pyx_pf_23cssfinder_backend_numpy_6cython_10_complex64_22rando
     __pyx_t_2 = 0;
 
     /* "cssfinder_backend_numpy/_cython/_complex64.py":249
- * 
- *     for i in range(quantity - 1):
+ *
+ *     for i in range(1, quantity):
  *         idx_vector = normalize(rand_vectors[i])             # <<<<<<<<<<<<<<
- * 
+ *
  *         vector = np.outer(vector, idx_vector).flatten()
  */
     __Pyx_GetModuleGlobalName(__pyx_t_3, __pyx_n_s_normalize); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 249, __pyx_L1_error)
@@ -6718,9 +6724,9 @@ static PyObject *__pyx_pf_23cssfinder_backend_numpy_6cython_10_complex64_22rando
 
     /* "cssfinder_backend_numpy/_cython/_complex64.py":251
  *         idx_vector = normalize(rand_vectors[i])
- * 
+ *
  *         vector = np.outer(vector, idx_vector).flatten()             # <<<<<<<<<<<<<<
- * 
+ *
  *     vector = project(vector)
  */
     __Pyx_GetModuleGlobalName(__pyx_t_5, __pyx_n_s_np); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 251, __pyx_L1_error)
@@ -6776,19 +6782,19 @@ static PyObject *__pyx_pf_23cssfinder_backend_numpy_6cython_10_complex64_22rando
 
     /* "cssfinder_backend_numpy/_cython/_complex64.py":248
  *     vector = normalize(rand_vectors[0])
- * 
- *     for i in range(quantity - 1):             # <<<<<<<<<<<<<<
+ *
+ *     for i in range(1, quantity):             # <<<<<<<<<<<<<<
  *         idx_vector = normalize(rand_vectors[i])
- * 
+ *
  */
   }
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
   /* "cssfinder_backend_numpy/_cython/_complex64.py":253
  *         vector = np.outer(vector, idx_vector).flatten()
- * 
+ *
  *     vector = project(vector)             # <<<<<<<<<<<<<<
- * 
+ *
  *     return vector  # type: ignore[no-any-return]
  */
   __Pyx_GetModuleGlobalName(__pyx_t_2, __pyx_n_s_project); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 253, __pyx_L1_error)
@@ -6818,10 +6824,10 @@ static PyObject *__pyx_pf_23cssfinder_backend_numpy_6cython_10_complex64_22rando
 
   /* "cssfinder_backend_numpy/_cython/_complex64.py":255
  *     vector = project(vector)
- * 
+ *
  *     return vector  # type: ignore[no-any-return]             # <<<<<<<<<<<<<<
- * 
- * 
+ *
+ *
  */
   __Pyx_XDECREF(__pyx_r);
   __Pyx_INCREF(__pyx_v_vector);
@@ -6829,8 +6835,8 @@ static PyObject *__pyx_pf_23cssfinder_backend_numpy_6cython_10_complex64_22rando
   goto __pyx_L0;
 
   /* "cssfinder_backend_numpy/_cython/_complex64.py":243
- * 
- * 
+ *
+ *
  * def random_d_fs(depth: int, quantity: int) -> npt.NDArray[np.complex64]:             # <<<<<<<<<<<<<<
  *     """Random n quDit state."""
  *     rand_vectors = get_random_haar_2d(depth, quantity)
@@ -6856,15 +6862,15 @@ static PyObject *__pyx_pf_23cssfinder_backend_numpy_6cython_10_complex64_22rando
 }
 
 /* "cssfinder_backend_numpy/_cython/_complex64.py":258
- * 
- * 
+ *
+ *
  * def expand_d_fs(             # <<<<<<<<<<<<<<
  *     value: npt.NDArray[np.complex64],
  *     depth: int,
  */
 
 /* Python wrapper */
-static PyObject *__pyx_pw_23cssfinder_backend_numpy_6cython_10_complex64_25expand_d_fs(PyObject *__pyx_self, 
+static PyObject *__pyx_pw_23cssfinder_backend_numpy_6cython_10_complex64_25expand_d_fs(PyObject *__pyx_self,
 #if CYTHON_METH_FASTCALL
 PyObject *const *__pyx_args, Py_ssize_t __pyx_nargs, PyObject *__pyx_kwds
 #else
@@ -6873,7 +6879,7 @@ PyObject *__pyx_args, PyObject *__pyx_kwds
 ); /*proto*/
 PyDoc_STRVAR(__pyx_doc_23cssfinder_backend_numpy_6cython_10_complex64_24expand_d_fs, "Expand an operator to n quDits.");
 static PyMethodDef __pyx_mdef_23cssfinder_backend_numpy_6cython_10_complex64_25expand_d_fs = {"expand_d_fs", (PyCFunction)(void*)(__Pyx_PyCFunction_FastCallWithKeywords)__pyx_pw_23cssfinder_backend_numpy_6cython_10_complex64_25expand_d_fs, __Pyx_METH_FASTCALL|METH_KEYWORDS, __pyx_doc_23cssfinder_backend_numpy_6cython_10_complex64_24expand_d_fs};
-static PyObject *__pyx_pw_23cssfinder_backend_numpy_6cython_10_complex64_25expand_d_fs(PyObject *__pyx_self, 
+static PyObject *__pyx_pw_23cssfinder_backend_numpy_6cython_10_complex64_25expand_d_fs(PyObject *__pyx_self,
 #if CYTHON_METH_FASTCALL
 PyObject *const *__pyx_args, Py_ssize_t __pyx_nargs, PyObject *__pyx_kwds
 #else
@@ -7003,7 +7009,7 @@ static PyObject *__pyx_pf_23cssfinder_backend_numpy_6cython_10_complex64_24expan
  *     """Expand an operator to n quDits."""
  *     depth_1 = int(depth**idx)             # <<<<<<<<<<<<<<
  *     identity_1 = np.identity(depth_1, dtype=np.complex64)
- * 
+ *
  */
   __pyx_t_1 = PyNumber_Power(__pyx_v_depth, __pyx_v_idx, Py_None); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 265, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
@@ -7017,7 +7023,7 @@ static PyObject *__pyx_pf_23cssfinder_backend_numpy_6cython_10_complex64_24expan
  *     """Expand an operator to n quDits."""
  *     depth_1 = int(depth**idx)
  *     identity_1 = np.identity(depth_1, dtype=np.complex64)             # <<<<<<<<<<<<<<
- * 
+ *
  *     depth_2 = int(depth ** (quantity - idx - 1))
  */
   __Pyx_GetModuleGlobalName(__pyx_t_2, __pyx_n_s_np); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 266, __pyx_L1_error)
@@ -7049,10 +7055,10 @@ static PyObject *__pyx_pf_23cssfinder_backend_numpy_6cython_10_complex64_24expan
 
   /* "cssfinder_backend_numpy/_cython/_complex64.py":268
  *     identity_1 = np.identity(depth_1, dtype=np.complex64)
- * 
+ *
  *     depth_2 = int(depth ** (quantity - idx - 1))             # <<<<<<<<<<<<<<
  *     identity_2 = np.identity(depth_2, dtype=np.complex64)
- * 
+ *
  */
   __pyx_t_5 = PyNumber_Subtract(__pyx_v_quantity, __pyx_v_idx); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 268, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_5);
@@ -7069,10 +7075,10 @@ static PyObject *__pyx_pf_23cssfinder_backend_numpy_6cython_10_complex64_24expan
   __pyx_t_3 = 0;
 
   /* "cssfinder_backend_numpy/_cython/_complex64.py":269
- * 
+ *
  *     depth_2 = int(depth ** (quantity - idx - 1))
  *     identity_2 = np.identity(depth_2, dtype=np.complex64)             # <<<<<<<<<<<<<<
- * 
+ *
  *     kronecker_1 = kronecker(identity_1, value)
  */
   __Pyx_GetModuleGlobalName(__pyx_t_3, __pyx_n_s_np); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 269, __pyx_L1_error)
@@ -7104,9 +7110,9 @@ static PyObject *__pyx_pf_23cssfinder_backend_numpy_6cython_10_complex64_24expan
 
   /* "cssfinder_backend_numpy/_cython/_complex64.py":271
  *     identity_2 = np.identity(depth_2, dtype=np.complex64)
- * 
+ *
  *     kronecker_1 = kronecker(identity_1, value)             # <<<<<<<<<<<<<<
- * 
+ *
  *     kronecker_2 = kronecker(kronecker_1, identity_2)
  */
   __Pyx_GetModuleGlobalName(__pyx_t_2, __pyx_n_s_kronecker); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 271, __pyx_L1_error)
@@ -7136,9 +7142,9 @@ static PyObject *__pyx_pf_23cssfinder_backend_numpy_6cython_10_complex64_24expan
 
   /* "cssfinder_backend_numpy/_cython/_complex64.py":273
  *     kronecker_1 = kronecker(identity_1, value)
- * 
+ *
  *     kronecker_2 = kronecker(kronecker_1, identity_2)             # <<<<<<<<<<<<<<
- * 
+ *
  *     return kronecker_2  # type: ignore[no-any-return]
  */
   __Pyx_GetModuleGlobalName(__pyx_t_2, __pyx_n_s_kronecker); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 273, __pyx_L1_error)
@@ -7168,10 +7174,10 @@ static PyObject *__pyx_pf_23cssfinder_backend_numpy_6cython_10_complex64_24expan
 
   /* "cssfinder_backend_numpy/_cython/_complex64.py":275
  *     kronecker_2 = kronecker(kronecker_1, identity_2)
- * 
+ *
  *     return kronecker_2  # type: ignore[no-any-return]             # <<<<<<<<<<<<<<
- * 
- * 
+ *
+ *
  */
   __Pyx_XDECREF(__pyx_r);
   __Pyx_INCREF(__pyx_v_kronecker_2);
@@ -7179,8 +7185,8 @@ static PyObject *__pyx_pf_23cssfinder_backend_numpy_6cython_10_complex64_24expan
   goto __pyx_L0;
 
   /* "cssfinder_backend_numpy/_cython/_complex64.py":258
- * 
- * 
+ *
+ *
  * def expand_d_fs(             # <<<<<<<<<<<<<<
  *     value: npt.NDArray[np.complex64],
  *     depth: int,
@@ -7208,15 +7214,15 @@ static PyObject *__pyx_pf_23cssfinder_backend_numpy_6cython_10_complex64_24expan
 }
 
 /* "cssfinder_backend_numpy/_cython/_complex64.py":285
- * 
- * 
+ *
+ *
  * def random_bs(depth: int, quantity: int) -> npt.NDArray[np.complex64]:             # <<<<<<<<<<<<<<
  *     """Draw random biseparable state."""
  *     random_vector_1 = normalize(get_random_haar_1d(depth))
  */
 
 /* Python wrapper */
-static PyObject *__pyx_pw_23cssfinder_backend_numpy_6cython_10_complex64_27random_bs(PyObject *__pyx_self, 
+static PyObject *__pyx_pw_23cssfinder_backend_numpy_6cython_10_complex64_27random_bs(PyObject *__pyx_self,
 #if CYTHON_METH_FASTCALL
 PyObject *const *__pyx_args, Py_ssize_t __pyx_nargs, PyObject *__pyx_kwds
 #else
@@ -7225,7 +7231,7 @@ PyObject *__pyx_args, PyObject *__pyx_kwds
 ); /*proto*/
 PyDoc_STRVAR(__pyx_doc_23cssfinder_backend_numpy_6cython_10_complex64_26random_bs, "Draw random biseparable state.");
 static PyMethodDef __pyx_mdef_23cssfinder_backend_numpy_6cython_10_complex64_27random_bs = {"random_bs", (PyCFunction)(void*)(__Pyx_PyCFunction_FastCallWithKeywords)__pyx_pw_23cssfinder_backend_numpy_6cython_10_complex64_27random_bs, __Pyx_METH_FASTCALL|METH_KEYWORDS, __pyx_doc_23cssfinder_backend_numpy_6cython_10_complex64_26random_bs};
-static PyObject *__pyx_pw_23cssfinder_backend_numpy_6cython_10_complex64_27random_bs(PyObject *__pyx_self, 
+static PyObject *__pyx_pw_23cssfinder_backend_numpy_6cython_10_complex64_27random_bs(PyObject *__pyx_self,
 #if CYTHON_METH_FASTCALL
 PyObject *const *__pyx_args, Py_ssize_t __pyx_nargs, PyObject *__pyx_kwds
 #else
@@ -7327,7 +7333,7 @@ static PyObject *__pyx_pf_23cssfinder_backend_numpy_6cython_10_complex64_26rando
  *     """Draw random biseparable state."""
  *     random_vector_1 = normalize(get_random_haar_1d(depth))             # <<<<<<<<<<<<<<
  *     random_vector_2 = normalize(get_random_haar_1d(quantity))
- * 
+ *
  */
   __Pyx_GetModuleGlobalName(__pyx_t_2, __pyx_n_s_normalize); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 287, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
@@ -7381,7 +7387,7 @@ static PyObject *__pyx_pf_23cssfinder_backend_numpy_6cython_10_complex64_26rando
  *     """Draw random biseparable state."""
  *     random_vector_1 = normalize(get_random_haar_1d(depth))
  *     random_vector_2 = normalize(get_random_haar_1d(quantity))             # <<<<<<<<<<<<<<
- * 
+ *
  *     vector = np.outer(random_vector_1, random_vector_2).flatten()
  */
   __Pyx_GetModuleGlobalName(__pyx_t_2, __pyx_n_s_normalize); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 288, __pyx_L1_error)
@@ -7434,9 +7440,9 @@ static PyObject *__pyx_pf_23cssfinder_backend_numpy_6cython_10_complex64_26rando
 
   /* "cssfinder_backend_numpy/_cython/_complex64.py":290
  *     random_vector_2 = normalize(get_random_haar_1d(quantity))
- * 
+ *
  *     vector = np.outer(random_vector_1, random_vector_2).flatten()             # <<<<<<<<<<<<<<
- * 
+ *
  *     vector = project(vector)
  */
   __Pyx_GetModuleGlobalName(__pyx_t_3, __pyx_n_s_np); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 290, __pyx_L1_error)
@@ -7492,9 +7498,9 @@ static PyObject *__pyx_pf_23cssfinder_backend_numpy_6cython_10_complex64_26rando
 
   /* "cssfinder_backend_numpy/_cython/_complex64.py":292
  *     vector = np.outer(random_vector_1, random_vector_2).flatten()
- * 
+ *
  *     vector = project(vector)             # <<<<<<<<<<<<<<
- * 
+ *
  *     return vector  # type: ignore[no-any-return]
  */
   __Pyx_GetModuleGlobalName(__pyx_t_4, __pyx_n_s_project); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 292, __pyx_L1_error)
@@ -7524,10 +7530,10 @@ static PyObject *__pyx_pf_23cssfinder_backend_numpy_6cython_10_complex64_26rando
 
   /* "cssfinder_backend_numpy/_cython/_complex64.py":294
  *     vector = project(vector)
- * 
+ *
  *     return vector  # type: ignore[no-any-return]             # <<<<<<<<<<<<<<
- * 
- * 
+ *
+ *
  */
   __Pyx_XDECREF(__pyx_r);
   __Pyx_INCREF(__pyx_v_vector);
@@ -7535,8 +7541,8 @@ static PyObject *__pyx_pf_23cssfinder_backend_numpy_6cython_10_complex64_26rando
   goto __pyx_L0;
 
   /* "cssfinder_backend_numpy/_cython/_complex64.py":285
- * 
- * 
+ *
+ *
  * def random_bs(depth: int, quantity: int) -> npt.NDArray[np.complex64]:             # <<<<<<<<<<<<<<
  *     """Draw random biseparable state."""
  *     random_vector_1 = normalize(get_random_haar_1d(depth))
@@ -7561,15 +7567,15 @@ static PyObject *__pyx_pf_23cssfinder_backend_numpy_6cython_10_complex64_26rando
 }
 
 /* "cssfinder_backend_numpy/_cython/_complex64.py":297
- * 
- * 
+ *
+ *
  * def random_unitary_bs(depth: int, quantity: int) -> npt.NDArray[np.complex64]:             # <<<<<<<<<<<<<<
  *     """Draw random unitary for biseparable state."""
  *     random_vector = normalize(get_random_haar_1d(depth))
  */
 
 /* Python wrapper */
-static PyObject *__pyx_pw_23cssfinder_backend_numpy_6cython_10_complex64_29random_unitary_bs(PyObject *__pyx_self, 
+static PyObject *__pyx_pw_23cssfinder_backend_numpy_6cython_10_complex64_29random_unitary_bs(PyObject *__pyx_self,
 #if CYTHON_METH_FASTCALL
 PyObject *const *__pyx_args, Py_ssize_t __pyx_nargs, PyObject *__pyx_kwds
 #else
@@ -7578,7 +7584,7 @@ PyObject *__pyx_args, PyObject *__pyx_kwds
 ); /*proto*/
 PyDoc_STRVAR(__pyx_doc_23cssfinder_backend_numpy_6cython_10_complex64_28random_unitary_bs, "Draw random unitary for biseparable state.");
 static PyMethodDef __pyx_mdef_23cssfinder_backend_numpy_6cython_10_complex64_29random_unitary_bs = {"random_unitary_bs", (PyCFunction)(void*)(__Pyx_PyCFunction_FastCallWithKeywords)__pyx_pw_23cssfinder_backend_numpy_6cython_10_complex64_29random_unitary_bs, __Pyx_METH_FASTCALL|METH_KEYWORDS, __pyx_doc_23cssfinder_backend_numpy_6cython_10_complex64_28random_unitary_bs};
-static PyObject *__pyx_pw_23cssfinder_backend_numpy_6cython_10_complex64_29random_unitary_bs(PyObject *__pyx_self, 
+static PyObject *__pyx_pw_23cssfinder_backend_numpy_6cython_10_complex64_29random_unitary_bs(PyObject *__pyx_self,
 #if CYTHON_METH_FASTCALL
 PyObject *const *__pyx_args, Py_ssize_t __pyx_nargs, PyObject *__pyx_kwds
 #else
@@ -7682,7 +7688,7 @@ static PyObject *__pyx_pf_23cssfinder_backend_numpy_6cython_10_complex64_28rando
  * def random_unitary_bs(depth: int, quantity: int) -> npt.NDArray[np.complex64]:
  *     """Draw random unitary for biseparable state."""
  *     random_vector = normalize(get_random_haar_1d(depth))             # <<<<<<<<<<<<<<
- * 
+ *
  *     random_matrix = project(random_vector)
  */
   __Pyx_GetModuleGlobalName(__pyx_t_2, __pyx_n_s_normalize); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 299, __pyx_L1_error)
@@ -7735,9 +7741,9 @@ static PyObject *__pyx_pf_23cssfinder_backend_numpy_6cython_10_complex64_28rando
 
   /* "cssfinder_backend_numpy/_cython/_complex64.py":301
  *     random_vector = normalize(get_random_haar_1d(depth))
- * 
+ *
  *     random_matrix = project(random_vector)             # <<<<<<<<<<<<<<
- * 
+ *
  *     identity_depth = np.identity(depth).astype(np.complex64)
  */
   __Pyx_GetModuleGlobalName(__pyx_t_2, __pyx_n_s_project); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 301, __pyx_L1_error)
@@ -7767,9 +7773,9 @@ static PyObject *__pyx_pf_23cssfinder_backend_numpy_6cython_10_complex64_28rando
 
   /* "cssfinder_backend_numpy/_cython/_complex64.py":303
  *     random_matrix = project(random_vector)
- * 
+ *
  *     identity_depth = np.identity(depth).astype(np.complex64)             # <<<<<<<<<<<<<<
- * 
+ *
  *     identity_quantity = np.identity(quantity).astype(np.complex64)
  */
   __Pyx_GetModuleGlobalName(__pyx_t_3, __pyx_n_s_np); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 303, __pyx_L1_error)
@@ -7831,9 +7837,9 @@ static PyObject *__pyx_pf_23cssfinder_backend_numpy_6cython_10_complex64_28rando
 
   /* "cssfinder_backend_numpy/_cython/_complex64.py":305
  *     identity_depth = np.identity(depth).astype(np.complex64)
- * 
+ *
  *     identity_quantity = np.identity(quantity).astype(np.complex64)             # <<<<<<<<<<<<<<
- * 
+ *
  *     unitary_biseparable = _VALUE * random_matrix + identity_depth
  */
   __Pyx_GetModuleGlobalName(__pyx_t_3, __pyx_n_s_np); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 305, __pyx_L1_error)
@@ -7895,9 +7901,9 @@ static PyObject *__pyx_pf_23cssfinder_backend_numpy_6cython_10_complex64_28rando
 
   /* "cssfinder_backend_numpy/_cython/_complex64.py":307
  *     identity_quantity = np.identity(quantity).astype(np.complex64)
- * 
+ *
  *     unitary_biseparable = _VALUE * random_matrix + identity_depth             # <<<<<<<<<<<<<<
- * 
+ *
  *     retval = kronecker(unitary_biseparable, identity_quantity)
  */
   __Pyx_GetModuleGlobalName(__pyx_t_1, __pyx_n_s_VALUE); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 307, __pyx_L1_error)
@@ -7913,9 +7919,9 @@ static PyObject *__pyx_pf_23cssfinder_backend_numpy_6cython_10_complex64_28rando
 
   /* "cssfinder_backend_numpy/_cython/_complex64.py":309
  *     unitary_biseparable = _VALUE * random_matrix + identity_depth
- * 
+ *
  *     retval = kronecker(unitary_biseparable, identity_quantity)             # <<<<<<<<<<<<<<
- * 
+ *
  *     return retval  # type: ignore[no-any-return]
  */
   __Pyx_GetModuleGlobalName(__pyx_t_2, __pyx_n_s_kronecker); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 309, __pyx_L1_error)
@@ -7945,10 +7951,10 @@ static PyObject *__pyx_pf_23cssfinder_backend_numpy_6cython_10_complex64_28rando
 
   /* "cssfinder_backend_numpy/_cython/_complex64.py":311
  *     retval = kronecker(unitary_biseparable, identity_quantity)
- * 
+ *
  *     return retval  # type: ignore[no-any-return]             # <<<<<<<<<<<<<<
- * 
- * 
+ *
+ *
  */
   __Pyx_XDECREF(__pyx_r);
   __Pyx_INCREF(__pyx_v_retval);
@@ -7956,8 +7962,8 @@ static PyObject *__pyx_pf_23cssfinder_backend_numpy_6cython_10_complex64_28rando
   goto __pyx_L0;
 
   /* "cssfinder_backend_numpy/_cython/_complex64.py":297
- * 
- * 
+ *
+ *
  * def random_unitary_bs(depth: int, quantity: int) -> npt.NDArray[np.complex64]:             # <<<<<<<<<<<<<<
  *     """Draw random unitary for biseparable state."""
  *     random_vector = normalize(get_random_haar_1d(depth))
@@ -7985,15 +7991,15 @@ static PyObject *__pyx_pf_23cssfinder_backend_numpy_6cython_10_complex64_28rando
 }
 
 /* "cssfinder_backend_numpy/_cython/_complex64.py":314
- * 
- * 
+ *
+ *
  * def random_unitary_bs_reverse(depth: int, quantity: int) -> npt.NDArray[np.complex64]:             # <<<<<<<<<<<<<<
  *     """Draw random unitary for biseparable state."""
  *     random_vector = normalize(get_random_haar_1d(depth))
  */
 
 /* Python wrapper */
-static PyObject *__pyx_pw_23cssfinder_backend_numpy_6cython_10_complex64_31random_unitary_bs_reverse(PyObject *__pyx_self, 
+static PyObject *__pyx_pw_23cssfinder_backend_numpy_6cython_10_complex64_31random_unitary_bs_reverse(PyObject *__pyx_self,
 #if CYTHON_METH_FASTCALL
 PyObject *const *__pyx_args, Py_ssize_t __pyx_nargs, PyObject *__pyx_kwds
 #else
@@ -8002,7 +8008,7 @@ PyObject *__pyx_args, PyObject *__pyx_kwds
 ); /*proto*/
 PyDoc_STRVAR(__pyx_doc_23cssfinder_backend_numpy_6cython_10_complex64_30random_unitary_bs_reverse, "Draw random unitary for biseparable state.");
 static PyMethodDef __pyx_mdef_23cssfinder_backend_numpy_6cython_10_complex64_31random_unitary_bs_reverse = {"random_unitary_bs_reverse", (PyCFunction)(void*)(__Pyx_PyCFunction_FastCallWithKeywords)__pyx_pw_23cssfinder_backend_numpy_6cython_10_complex64_31random_unitary_bs_reverse, __Pyx_METH_FASTCALL|METH_KEYWORDS, __pyx_doc_23cssfinder_backend_numpy_6cython_10_complex64_30random_unitary_bs_reverse};
-static PyObject *__pyx_pw_23cssfinder_backend_numpy_6cython_10_complex64_31random_unitary_bs_reverse(PyObject *__pyx_self, 
+static PyObject *__pyx_pw_23cssfinder_backend_numpy_6cython_10_complex64_31random_unitary_bs_reverse(PyObject *__pyx_self,
 #if CYTHON_METH_FASTCALL
 PyObject *const *__pyx_args, Py_ssize_t __pyx_nargs, PyObject *__pyx_kwds
 #else
@@ -8106,7 +8112,7 @@ static PyObject *__pyx_pf_23cssfinder_backend_numpy_6cython_10_complex64_30rando
  * def random_unitary_bs_reverse(depth: int, quantity: int) -> npt.NDArray[np.complex64]:
  *     """Draw random unitary for biseparable state."""
  *     random_vector = normalize(get_random_haar_1d(depth))             # <<<<<<<<<<<<<<
- * 
+ *
  *     random_matrix = project(random_vector)
  */
   __Pyx_GetModuleGlobalName(__pyx_t_2, __pyx_n_s_normalize); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 316, __pyx_L1_error)
@@ -8159,9 +8165,9 @@ static PyObject *__pyx_pf_23cssfinder_backend_numpy_6cython_10_complex64_30rando
 
   /* "cssfinder_backend_numpy/_cython/_complex64.py":318
  *     random_vector = normalize(get_random_haar_1d(depth))
- * 
+ *
  *     random_matrix = project(random_vector)             # <<<<<<<<<<<<<<
- * 
+ *
  *     identity_depth = np.identity(depth).astype(np.complex64)
  */
   __Pyx_GetModuleGlobalName(__pyx_t_2, __pyx_n_s_project); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 318, __pyx_L1_error)
@@ -8191,9 +8197,9 @@ static PyObject *__pyx_pf_23cssfinder_backend_numpy_6cython_10_complex64_30rando
 
   /* "cssfinder_backend_numpy/_cython/_complex64.py":320
  *     random_matrix = project(random_vector)
- * 
+ *
  *     identity_depth = np.identity(depth).astype(np.complex64)             # <<<<<<<<<<<<<<
- * 
+ *
  *     identity_quantity = np.identity(quantity).astype(np.complex64)
  */
   __Pyx_GetModuleGlobalName(__pyx_t_3, __pyx_n_s_np); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 320, __pyx_L1_error)
@@ -8255,9 +8261,9 @@ static PyObject *__pyx_pf_23cssfinder_backend_numpy_6cython_10_complex64_30rando
 
   /* "cssfinder_backend_numpy/_cython/_complex64.py":322
  *     identity_depth = np.identity(depth).astype(np.complex64)
- * 
+ *
  *     identity_quantity = np.identity(quantity).astype(np.complex64)             # <<<<<<<<<<<<<<
- * 
+ *
  *     unitary_biseparable = _VALUE * random_matrix + identity_depth
  */
   __Pyx_GetModuleGlobalName(__pyx_t_3, __pyx_n_s_np); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 322, __pyx_L1_error)
@@ -8319,9 +8325,9 @@ static PyObject *__pyx_pf_23cssfinder_backend_numpy_6cython_10_complex64_30rando
 
   /* "cssfinder_backend_numpy/_cython/_complex64.py":324
  *     identity_quantity = np.identity(quantity).astype(np.complex64)
- * 
+ *
  *     unitary_biseparable = _VALUE * random_matrix + identity_depth             # <<<<<<<<<<<<<<
- * 
+ *
  *     retval = kronecker(identity_quantity, unitary_biseparable)
  */
   __Pyx_GetModuleGlobalName(__pyx_t_1, __pyx_n_s_VALUE); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 324, __pyx_L1_error)
@@ -8337,9 +8343,9 @@ static PyObject *__pyx_pf_23cssfinder_backend_numpy_6cython_10_complex64_30rando
 
   /* "cssfinder_backend_numpy/_cython/_complex64.py":326
  *     unitary_biseparable = _VALUE * random_matrix + identity_depth
- * 
+ *
  *     retval = kronecker(identity_quantity, unitary_biseparable)             # <<<<<<<<<<<<<<
- * 
+ *
  *     return retval  # type: ignore[no-any-return]
  */
   __Pyx_GetModuleGlobalName(__pyx_t_2, __pyx_n_s_kronecker); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 326, __pyx_L1_error)
@@ -8369,10 +8375,10 @@ static PyObject *__pyx_pf_23cssfinder_backend_numpy_6cython_10_complex64_30rando
 
   /* "cssfinder_backend_numpy/_cython/_complex64.py":328
  *     retval = kronecker(identity_quantity, unitary_biseparable)
- * 
+ *
  *     return retval  # type: ignore[no-any-return]             # <<<<<<<<<<<<<<
- * 
- * 
+ *
+ *
  */
   __Pyx_XDECREF(__pyx_r);
   __Pyx_INCREF(__pyx_v_retval);
@@ -8380,8 +8386,8 @@ static PyObject *__pyx_pf_23cssfinder_backend_numpy_6cython_10_complex64_30rando
   goto __pyx_L0;
 
   /* "cssfinder_backend_numpy/_cython/_complex64.py":314
- * 
- * 
+ *
+ *
  * def random_unitary_bs_reverse(depth: int, quantity: int) -> npt.NDArray[np.complex64]:             # <<<<<<<<<<<<<<
  *     """Draw random unitary for biseparable state."""
  *     random_vector = normalize(get_random_haar_1d(depth))
@@ -8409,15 +8415,15 @@ static PyObject *__pyx_pf_23cssfinder_backend_numpy_6cython_10_complex64_30rando
 }
 
 /* "cssfinder_backend_numpy/_cython/_complex64.py":331
- * 
- * 
+ *
+ *
  * def optimize_bs(             # <<<<<<<<<<<<<<
  *     new_state: npt.NDArray[np.complex64],
  *     visibility_state: npt.NDArray[np.complex64],
  */
 
 /* Python wrapper */
-static PyObject *__pyx_pw_23cssfinder_backend_numpy_6cython_10_complex64_33optimize_bs(PyObject *__pyx_self, 
+static PyObject *__pyx_pw_23cssfinder_backend_numpy_6cython_10_complex64_33optimize_bs(PyObject *__pyx_self,
 #if CYTHON_METH_FASTCALL
 PyObject *const *__pyx_args, Py_ssize_t __pyx_nargs, PyObject *__pyx_kwds
 #else
@@ -8426,7 +8432,7 @@ PyObject *__pyx_args, PyObject *__pyx_kwds
 ); /*proto*/
 PyDoc_STRVAR(__pyx_doc_23cssfinder_backend_numpy_6cython_10_complex64_32optimize_bs, "Run the minimization algorithm to optimize the biseparable state.\n\n    Parameters\n    ----------\n    new_state : npt.NDArray[np.complex64]\n        Randomly drawn state to be optimized.\n    visibility_state : npt.NDArray[np.complex64]\n        Visibility matrix.\n    depth : int\n        Depth of analyzed system.\n    quantity : int\n        Quantity of quDits in system.\n    updates_count : int\n        Number of optimizer iterations to execute.\n\n    Returns\n    -------\n    npt.NDArray[np.complex64]\n        Optimized state.\n\n    ");
 static PyMethodDef __pyx_mdef_23cssfinder_backend_numpy_6cython_10_complex64_33optimize_bs = {"optimize_bs", (PyCFunction)(void*)(__Pyx_PyCFunction_FastCallWithKeywords)__pyx_pw_23cssfinder_backend_numpy_6cython_10_complex64_33optimize_bs, __Pyx_METH_FASTCALL|METH_KEYWORDS, __pyx_doc_23cssfinder_backend_numpy_6cython_10_complex64_32optimize_bs};
-static PyObject *__pyx_pw_23cssfinder_backend_numpy_6cython_10_complex64_33optimize_bs(PyObject *__pyx_self, 
+static PyObject *__pyx_pw_23cssfinder_backend_numpy_6cython_10_complex64_33optimize_bs(PyObject *__pyx_self,
 #if CYTHON_METH_FASTCALL
 PyObject *const *__pyx_args, Py_ssize_t __pyx_nargs, PyObject *__pyx_kwds
 #else
@@ -8565,10 +8571,10 @@ static PyObject *__pyx_pf_23cssfinder_backend_numpy_6cython_10_complex64_32optim
   __Pyx_RefNannySetupContext("optimize_bs", 0);
 
   /* "cssfinder_backend_numpy/_cython/_complex64.py":359
- * 
+ *
  *     """
  *     pp1 = product(new_state, visibility_state)             # <<<<<<<<<<<<<<
- * 
+ *
  *     return_state = new_state.copy()
  */
   __Pyx_GetModuleGlobalName(__pyx_t_2, __pyx_n_s_product); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 359, __pyx_L1_error)
@@ -8598,9 +8604,9 @@ static PyObject *__pyx_pf_23cssfinder_backend_numpy_6cython_10_complex64_32optim
 
   /* "cssfinder_backend_numpy/_cython/_complex64.py":361
  *     pp1 = product(new_state, visibility_state)
- * 
+ *
  *     return_state = new_state.copy()             # <<<<<<<<<<<<<<
- * 
+ *
  *     for index in range(updates_count):
  */
   __pyx_t_2 = __Pyx_PyObject_GetAttrStr(__pyx_v_new_state, __pyx_n_s_copy); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 361, __pyx_L1_error)
@@ -8630,7 +8636,7 @@ static PyObject *__pyx_pf_23cssfinder_backend_numpy_6cython_10_complex64_32optim
 
   /* "cssfinder_backend_numpy/_cython/_complex64.py":363
  *     return_state = new_state.copy()
- * 
+ *
  *     for index in range(updates_count):             # <<<<<<<<<<<<<<
  *         if index % 2:
  *             unitary = random_unitary_bs(depth, quantity)
@@ -8682,7 +8688,7 @@ static PyObject *__pyx_pf_23cssfinder_backend_numpy_6cython_10_complex64_32optim
     __pyx_t_1 = 0;
 
     /* "cssfinder_backend_numpy/_cython/_complex64.py":364
- * 
+ *
  *     for index in range(updates_count):
  *         if index % 2:             # <<<<<<<<<<<<<<
  *             unitary = random_unitary_bs(depth, quantity)
@@ -8727,7 +8733,7 @@ static PyObject *__pyx_pf_23cssfinder_backend_numpy_6cython_10_complex64_32optim
       __pyx_t_1 = 0;
 
       /* "cssfinder_backend_numpy/_cython/_complex64.py":364
- * 
+ *
  *     for index in range(updates_count):
  *         if index % 2:             # <<<<<<<<<<<<<<
  *             unitary = random_unitary_bs(depth, quantity)
@@ -8740,7 +8746,7 @@ static PyObject *__pyx_pf_23cssfinder_backend_numpy_6cython_10_complex64_32optim
  *             unitary = random_unitary_bs(depth, quantity)
  *         else:
  *             unitary = random_unitary_bs_reverse(depth, quantity)             # <<<<<<<<<<<<<<
- * 
+ *
  *         return_state = rotate(new_state, unitary)
  */
     /*else*/ {
@@ -8773,9 +8779,9 @@ static PyObject *__pyx_pf_23cssfinder_backend_numpy_6cython_10_complex64_32optim
 
     /* "cssfinder_backend_numpy/_cython/_complex64.py":369
  *             unitary = random_unitary_bs_reverse(depth, quantity)
- * 
+ *
  *         return_state = rotate(new_state, unitary)             # <<<<<<<<<<<<<<
- * 
+ *
  *         if pp1 > product(return_state, visibility_state):
  */
     __Pyx_GetModuleGlobalName(__pyx_t_3, __pyx_n_s_rotate); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 369, __pyx_L1_error)
@@ -8805,7 +8811,7 @@ static PyObject *__pyx_pf_23cssfinder_backend_numpy_6cython_10_complex64_32optim
 
     /* "cssfinder_backend_numpy/_cython/_complex64.py":371
  *         return_state = rotate(new_state, unitary)
- * 
+ *
  *         if pp1 > product(return_state, visibility_state):             # <<<<<<<<<<<<<<
  *             unitary = unitary.conj().T
  *             return_state = rotate(new_state, unitary)
@@ -8839,11 +8845,11 @@ static PyObject *__pyx_pf_23cssfinder_backend_numpy_6cython_10_complex64_32optim
     if (__pyx_t_7) {
 
       /* "cssfinder_backend_numpy/_cython/_complex64.py":372
- * 
+ *
  *         if pp1 > product(return_state, visibility_state):
  *             unitary = unitary.conj().T             # <<<<<<<<<<<<<<
  *             return_state = rotate(new_state, unitary)
- * 
+ *
  */
       __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_v_unitary, __pyx_n_s_conj); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 372, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_1);
@@ -8877,7 +8883,7 @@ static PyObject *__pyx_pf_23cssfinder_backend_numpy_6cython_10_complex64_32optim
  *         if pp1 > product(return_state, visibility_state):
  *             unitary = unitary.conj().T
  *             return_state = rotate(new_state, unitary)             # <<<<<<<<<<<<<<
- * 
+ *
  *         pp2 = product(return_state, visibility_state)
  */
       __Pyx_GetModuleGlobalName(__pyx_t_3, __pyx_n_s_rotate); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 373, __pyx_L1_error)
@@ -8907,7 +8913,7 @@ static PyObject *__pyx_pf_23cssfinder_backend_numpy_6cython_10_complex64_32optim
 
       /* "cssfinder_backend_numpy/_cython/_complex64.py":371
  *         return_state = rotate(new_state, unitary)
- * 
+ *
  *         if pp1 > product(return_state, visibility_state):             # <<<<<<<<<<<<<<
  *             unitary = unitary.conj().T
  *             return_state = rotate(new_state, unitary)
@@ -8916,9 +8922,9 @@ static PyObject *__pyx_pf_23cssfinder_backend_numpy_6cython_10_complex64_32optim
 
     /* "cssfinder_backend_numpy/_cython/_complex64.py":375
  *             return_state = rotate(new_state, unitary)
- * 
+ *
  *         pp2 = product(return_state, visibility_state)             # <<<<<<<<<<<<<<
- * 
+ *
  *         while pp2 > pp1:
  */
     __Pyx_GetModuleGlobalName(__pyx_t_3, __pyx_n_s_product); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 375, __pyx_L1_error)
@@ -8948,7 +8954,7 @@ static PyObject *__pyx_pf_23cssfinder_backend_numpy_6cython_10_complex64_32optim
 
     /* "cssfinder_backend_numpy/_cython/_complex64.py":377
  *         pp2 = product(return_state, visibility_state)
- * 
+ *
  *         while pp2 > pp1:             # <<<<<<<<<<<<<<
  *             pp1 = pp2
  *             return_state = rotate(return_state, unitary)
@@ -8960,7 +8966,7 @@ static PyObject *__pyx_pf_23cssfinder_backend_numpy_6cython_10_complex64_32optim
       if (!__pyx_t_7) break;
 
       /* "cssfinder_backend_numpy/_cython/_complex64.py":378
- * 
+ *
  *         while pp2 > pp1:
  *             pp1 = pp2             # <<<<<<<<<<<<<<
  *             return_state = rotate(return_state, unitary)
@@ -8974,7 +8980,7 @@ static PyObject *__pyx_pf_23cssfinder_backend_numpy_6cython_10_complex64_32optim
  *             pp1 = pp2
  *             return_state = rotate(return_state, unitary)             # <<<<<<<<<<<<<<
  *             pp2 = product(return_state, visibility_state)
- * 
+ *
  */
       __Pyx_GetModuleGlobalName(__pyx_t_3, __pyx_n_s_rotate); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 379, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_3);
@@ -9005,7 +9011,7 @@ static PyObject *__pyx_pf_23cssfinder_backend_numpy_6cython_10_complex64_32optim
  *             pp1 = pp2
  *             return_state = rotate(return_state, unitary)
  *             pp2 = product(return_state, visibility_state)             # <<<<<<<<<<<<<<
- * 
+ *
  *     return return_state
  */
       __Pyx_GetModuleGlobalName(__pyx_t_3, __pyx_n_s_product); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 380, __pyx_L1_error)
@@ -9036,7 +9042,7 @@ static PyObject *__pyx_pf_23cssfinder_backend_numpy_6cython_10_complex64_32optim
 
     /* "cssfinder_backend_numpy/_cython/_complex64.py":363
  *     return_state = new_state.copy()
- * 
+ *
  *     for index in range(updates_count):             # <<<<<<<<<<<<<<
  *         if index % 2:
  *             unitary = random_unitary_bs(depth, quantity)
@@ -9046,7 +9052,7 @@ static PyObject *__pyx_pf_23cssfinder_backend_numpy_6cython_10_complex64_32optim
 
   /* "cssfinder_backend_numpy/_cython/_complex64.py":382
  *             pp2 = product(return_state, visibility_state)
- * 
+ *
  *     return return_state             # <<<<<<<<<<<<<<
  */
   __Pyx_XDECREF(__pyx_r);
@@ -9055,8 +9061,8 @@ static PyObject *__pyx_pf_23cssfinder_backend_numpy_6cython_10_complex64_32optim
   goto __pyx_L0;
 
   /* "cssfinder_backend_numpy/_cython/_complex64.py":331
- * 
- * 
+ *
+ *
  * def optimize_bs(             # <<<<<<<<<<<<<<
  *     new_state: npt.NDArray[np.complex64],
  *     visibility_state: npt.NDArray[np.complex64],
@@ -9243,19 +9249,19 @@ static CYTHON_SMALL_CODE int __Pyx_InitCachedConstants(void) {
   __Pyx_RefNannySetupContext("__Pyx_InitCachedConstants", 0);
 
   /* "cssfinder_backend_numpy/_cython/_complex64.py":47
- * 
+ *
  * if TYPE_CHECKING:
  *     import numpy.typing as npt             # <<<<<<<<<<<<<<
- * 
- * 
+ *
+ *
  */
   __pyx_tuple__3 = PyTuple_Pack(2, __pyx_n_s_numpy, __pyx_n_s_typing); if (unlikely(!__pyx_tuple__3)) __PYX_ERR(0, 47, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_tuple__3);
   __Pyx_GIVEREF(__pyx_tuple__3);
 
   /* "cssfinder_backend_numpy/_cython/_complex64.py":62
- * 
- * 
+ *
+ *
  * def product(             # <<<<<<<<<<<<<<
  *     matrix1: npt.NDArray[np.complex64], matrix2: npt.NDArray[np.complex64]
  * ) -> np.float32:
@@ -9266,8 +9272,8 @@ static CYTHON_SMALL_CODE int __Pyx_InitCachedConstants(void) {
   __pyx_codeobj__5 = (PyObject*)__Pyx_PyCode_New(2, 0, 0, 3, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__4, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_cssfinder_backend_numpy__cython, __pyx_n_s_product, 62, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__5)) __PYX_ERR(0, 62, __pyx_L1_error)
 
   /* "cssfinder_backend_numpy/_cython/_complex64.py":71
- * 
- * 
+ *
+ *
  * def get_random_haar_1d(depth: int) -> npt.NDArray[np.complex64]:             # <<<<<<<<<<<<<<
  *     """Generate a random vector with Haar measure."""
  *     real = np.random.uniform(0, 1, depth)  # noqa: NPY002
@@ -9278,8 +9284,8 @@ static CYTHON_SMALL_CODE int __Pyx_InitCachedConstants(void) {
   __pyx_codeobj__7 = (PyObject*)__Pyx_PyCode_New(1, 0, 0, 4, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__6, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_cssfinder_backend_numpy__cython, __pyx_n_s_get_random_haar_1d, 71, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__7)) __PYX_ERR(0, 71, __pyx_L1_error)
 
   /* "cssfinder_backend_numpy/_cython/_complex64.py":83
- * 
- * 
+ *
+ *
  * def get_random_haar_2d(depth: int, quantity: int) -> npt.NDArray[np.complex64]:             # <<<<<<<<<<<<<<
  *     """Generate multiple random vectors with Haar measure in form of matrix."""
  *     real = np.random.uniform(0, 1, (quantity, depth))  # noqa: NPY002
@@ -9290,8 +9296,8 @@ static CYTHON_SMALL_CODE int __Pyx_InitCachedConstants(void) {
   __pyx_codeobj__9 = (PyObject*)__Pyx_PyCode_New(2, 0, 0, 5, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__8, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_cssfinder_backend_numpy__cython, __pyx_n_s_get_random_haar_2d, 83, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__9)) __PYX_ERR(0, 83, __pyx_L1_error)
 
   /* "cssfinder_backend_numpy/_cython/_complex64.py":95
- * 
- * 
+ *
+ *
  * def normalize(mtx: npt.NDArray[np.complex64]) -> npt.NDArray[np.complex64]:             # <<<<<<<<<<<<<<
  *     """Normalize a vector."""
  *     mtx2 = np.dot(mtx, np.conj(mtx))
@@ -9302,8 +9308,8 @@ static CYTHON_SMALL_CODE int __Pyx_InitCachedConstants(void) {
   __pyx_codeobj__11 = (PyObject*)__Pyx_PyCode_New(1, 0, 0, 4, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__10, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_cssfinder_backend_numpy__cython, __pyx_n_s_normalize, 95, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__11)) __PYX_ERR(0, 95, __pyx_L1_error)
 
   /* "cssfinder_backend_numpy/_cython/_complex64.py":106
- * 
- * 
+ *
+ *
  * def project(mtx1: npt.NDArray[np.complex64]) -> npt.NDArray[np.complex64]:             # <<<<<<<<<<<<<<
  *     """Build a projection from a vector."""
  *     retval = np.outer(mtx1, np.conj(mtx1))
@@ -9314,8 +9320,8 @@ static CYTHON_SMALL_CODE int __Pyx_InitCachedConstants(void) {
   __pyx_codeobj__13 = (PyObject*)__Pyx_PyCode_New(1, 0, 0, 2, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__12, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_cssfinder_backend_numpy__cython, __pyx_n_s_project, 106, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__13)) __PYX_ERR(0, 106, __pyx_L1_error)
 
   /* "cssfinder_backend_numpy/_cython/_complex64.py":113
- * 
- * 
+ *
+ *
  * def kronecker(             # <<<<<<<<<<<<<<
  *     mtx: npt.NDArray[np.complex64], mtx1: npt.NDArray[np.complex64]
  * ) -> npt.NDArray[np.complex64]:
@@ -9326,8 +9332,8 @@ static CYTHON_SMALL_CODE int __Pyx_InitCachedConstants(void) {
   __pyx_codeobj__15 = (PyObject*)__Pyx_PyCode_New(2, 0, 0, 8, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__14, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_cssfinder_backend_numpy__cython, __pyx_n_s_kronecker, 113, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__15)) __PYX_ERR(0, 113, __pyx_L1_error)
 
   /* "cssfinder_backend_numpy/_cython/_complex64.py":131
- * 
- * 
+ *
+ *
  * def rotate(             # <<<<<<<<<<<<<<
  *     rho2: npt.NDArray[np.complex64], unitary: npt.NDArray[np.complex64]
  * ) -> npt.NDArray[np.complex64]:
@@ -9338,8 +9344,8 @@ static CYTHON_SMALL_CODE int __Pyx_InitCachedConstants(void) {
   __pyx_codeobj__17 = (PyObject*)__Pyx_PyCode_New(2, 0, 0, 3, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__16, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_cssfinder_backend_numpy__cython, __pyx_n_s_rotate, 131, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__17)) __PYX_ERR(0, 131, __pyx_L1_error)
 
   /* "cssfinder_backend_numpy/_cython/_complex64.py":142
- * 
- * 
+ *
+ *
  * def apply_symmetries(             # <<<<<<<<<<<<<<
  *     rho: npt.NDArray[np.complex64], symmetries: list[list[npt.NDArray[np.complex64]]]
  * ) -> npt.NDArray[np.complex64]:
@@ -9350,8 +9356,8 @@ static CYTHON_SMALL_CODE int __Pyx_InitCachedConstants(void) {
   __pyx_codeobj__19 = (PyObject*)__Pyx_PyCode_New(2, 0, 0, 5, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__18, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_cssfinder_backend_numpy__cython, __pyx_n_s_apply_symmetries, 142, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__19)) __PYX_ERR(0, 142, __pyx_L1_error)
 
   /* "cssfinder_backend_numpy/_cython/_complex64.py":184
- * 
- * 
+ *
+ *
  * def optimize_d_fs(             # <<<<<<<<<<<<<<
  *     new_state: npt.NDArray[np.complex64],
  *     visibility_state: npt.NDArray[np.complex64],
@@ -9362,8 +9368,8 @@ static CYTHON_SMALL_CODE int __Pyx_InitCachedConstants(void) {
   __pyx_codeobj__21 = (PyObject*)__Pyx_PyCode_New(5, 0, 0, 11, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__20, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_cssfinder_backend_numpy__cython, __pyx_n_s_optimize_d_fs, 184, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__21)) __PYX_ERR(0, 184, __pyx_L1_error)
 
   /* "cssfinder_backend_numpy/_cython/_complex64.py":220
- * 
- * 
+ *
+ *
  * def random_unitary_d_fs(             # <<<<<<<<<<<<<<
  *     depth: int, quantity: int, idx: int
  * ) -> npt.NDArray[np.complex64]:
@@ -9374,11 +9380,11 @@ static CYTHON_SMALL_CODE int __Pyx_InitCachedConstants(void) {
   __pyx_codeobj__23 = (PyObject*)__Pyx_PyCode_New(3, 0, 0, 5, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__22, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_cssfinder_backend_numpy__cython, __pyx_n_s_random_unitary_d_fs, 220, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__23)) __PYX_ERR(0, 220, __pyx_L1_error)
 
   /* "cssfinder_backend_numpy/_cython/_complex64.py":231
- * 
- * 
+ *
+ *
  * def _random_unitary_d_fs(depth: int) -> npt.NDArray[np.complex64]:             # <<<<<<<<<<<<<<
  *     random_mtx = random_d_fs(depth, 1)
- * 
+ *
  */
   __pyx_tuple__24 = PyTuple_Pack(5, __pyx_n_s_depth, __pyx_n_s_random_mtx, __pyx_n_s_identity_mtx, __pyx_n_s_rand_mul, __pyx_n_s_value); if (unlikely(!__pyx_tuple__24)) __PYX_ERR(0, 231, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_tuple__24);
@@ -9386,8 +9392,8 @@ static CYTHON_SMALL_CODE int __Pyx_InitCachedConstants(void) {
   __pyx_codeobj__25 = (PyObject*)__Pyx_PyCode_New(1, 0, 0, 5, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__24, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_cssfinder_backend_numpy__cython, __pyx_n_s_random_unitary_d_fs_2, 231, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__25)) __PYX_ERR(0, 231, __pyx_L1_error)
 
   /* "cssfinder_backend_numpy/_cython/_complex64.py":243
- * 
- * 
+ *
+ *
  * def random_d_fs(depth: int, quantity: int) -> npt.NDArray[np.complex64]:             # <<<<<<<<<<<<<<
  *     """Random n quDit state."""
  *     rand_vectors = get_random_haar_2d(depth, quantity)
@@ -9398,8 +9404,8 @@ static CYTHON_SMALL_CODE int __Pyx_InitCachedConstants(void) {
   __pyx_codeobj__27 = (PyObject*)__Pyx_PyCode_New(2, 0, 0, 6, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__26, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_cssfinder_backend_numpy__cython, __pyx_n_s_random_d_fs, 243, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__27)) __PYX_ERR(0, 243, __pyx_L1_error)
 
   /* "cssfinder_backend_numpy/_cython/_complex64.py":258
- * 
- * 
+ *
+ *
  * def expand_d_fs(             # <<<<<<<<<<<<<<
  *     value: npt.NDArray[np.complex64],
  *     depth: int,
@@ -9410,8 +9416,8 @@ static CYTHON_SMALL_CODE int __Pyx_InitCachedConstants(void) {
   __pyx_codeobj__29 = (PyObject*)__Pyx_PyCode_New(4, 0, 0, 10, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__28, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_cssfinder_backend_numpy__cython, __pyx_n_s_expand_d_fs, 258, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__29)) __PYX_ERR(0, 258, __pyx_L1_error)
 
   /* "cssfinder_backend_numpy/_cython/_complex64.py":285
- * 
- * 
+ *
+ *
  * def random_bs(depth: int, quantity: int) -> npt.NDArray[np.complex64]:             # <<<<<<<<<<<<<<
  *     """Draw random biseparable state."""
  *     random_vector_1 = normalize(get_random_haar_1d(depth))
@@ -9422,8 +9428,8 @@ static CYTHON_SMALL_CODE int __Pyx_InitCachedConstants(void) {
   __pyx_codeobj__31 = (PyObject*)__Pyx_PyCode_New(2, 0, 0, 5, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__30, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_cssfinder_backend_numpy__cython, __pyx_n_s_random_bs, 285, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__31)) __PYX_ERR(0, 285, __pyx_L1_error)
 
   /* "cssfinder_backend_numpy/_cython/_complex64.py":297
- * 
- * 
+ *
+ *
  * def random_unitary_bs(depth: int, quantity: int) -> npt.NDArray[np.complex64]:             # <<<<<<<<<<<<<<
  *     """Draw random unitary for biseparable state."""
  *     random_vector = normalize(get_random_haar_1d(depth))
@@ -9434,8 +9440,8 @@ static CYTHON_SMALL_CODE int __Pyx_InitCachedConstants(void) {
   __pyx_codeobj__33 = (PyObject*)__Pyx_PyCode_New(2, 0, 0, 8, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__32, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_cssfinder_backend_numpy__cython, __pyx_n_s_random_unitary_bs, 297, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__33)) __PYX_ERR(0, 297, __pyx_L1_error)
 
   /* "cssfinder_backend_numpy/_cython/_complex64.py":314
- * 
- * 
+ *
+ *
  * def random_unitary_bs_reverse(depth: int, quantity: int) -> npt.NDArray[np.complex64]:             # <<<<<<<<<<<<<<
  *     """Draw random unitary for biseparable state."""
  *     random_vector = normalize(get_random_haar_1d(depth))
@@ -9443,8 +9449,8 @@ static CYTHON_SMALL_CODE int __Pyx_InitCachedConstants(void) {
   __pyx_codeobj__34 = (PyObject*)__Pyx_PyCode_New(2, 0, 0, 8, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__32, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_cssfinder_backend_numpy__cython, __pyx_n_s_random_unitary_bs_reverse, 314, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__34)) __PYX_ERR(0, 314, __pyx_L1_error)
 
   /* "cssfinder_backend_numpy/_cython/_complex64.py":331
- * 
- * 
+ *
+ *
  * def optimize_bs(             # <<<<<<<<<<<<<<
  *     new_state: npt.NDArray[np.complex64],
  *     visibility_state: npt.NDArray[np.complex64],
@@ -9828,9 +9834,9 @@ if (!__Pyx_RefNanny) {
 
   /* "cssfinder_backend_numpy/_cython/_complex64.py":42
  * from __future__ import annotations
- * 
+ *
  * from typing import TYPE_CHECKING             # <<<<<<<<<<<<<<
- * 
+ *
  * import numpy as np
  */
   __pyx_t_2 = PyList_New(1); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 42, __pyx_L1_error)
@@ -9849,9 +9855,9 @@ if (!__Pyx_RefNanny) {
 
   /* "cssfinder_backend_numpy/_cython/_complex64.py":44
  * from typing import TYPE_CHECKING
- * 
+ *
  * import numpy as np             # <<<<<<<<<<<<<<
- * 
+ *
  * if TYPE_CHECKING:
  */
   __pyx_t_3 = __Pyx_ImportDottedModule(__pyx_n_s_numpy, NULL); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 44, __pyx_L1_error)
@@ -9861,10 +9867,10 @@ if (!__Pyx_RefNanny) {
 
   /* "cssfinder_backend_numpy/_cython/_complex64.py":46
  * import numpy as np
- * 
+ *
  * if TYPE_CHECKING:             # <<<<<<<<<<<<<<
  *     import numpy.typing as npt
- * 
+ *
  */
   __Pyx_GetModuleGlobalName(__pyx_t_3, __pyx_n_s_TYPE_CHECKING); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 46, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
@@ -9873,11 +9879,11 @@ if (!__Pyx_RefNanny) {
   if (__pyx_t_4) {
 
     /* "cssfinder_backend_numpy/_cython/_complex64.py":47
- * 
+ *
  * if TYPE_CHECKING:
  *     import numpy.typing as npt             # <<<<<<<<<<<<<<
- * 
- * 
+ *
+ *
  */
     __pyx_t_3 = __Pyx_ImportDottedModule(__pyx_n_s_numpy_typing, __pyx_tuple__3); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 47, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_3);
@@ -9886,16 +9892,16 @@ if (!__Pyx_RefNanny) {
 
     /* "cssfinder_backend_numpy/_cython/_complex64.py":46
  * import numpy as np
- * 
+ *
  * if TYPE_CHECKING:             # <<<<<<<<<<<<<<
  *     import numpy.typing as npt
- * 
+ *
  */
   }
 
   /* "cssfinder_backend_numpy/_cython/_complex64.py":57
- * 
- * 
+ *
+ *
  * _REAL = np.cos(0.01 * np.pi)             # <<<<<<<<<<<<<<
  * _IMAG = 1j * np.sin(0.01 * np.pi)
  * _VALUE = (_REAL + _IMAG - 1).astype(np.complex64)
@@ -9921,11 +9927,11 @@ if (!__Pyx_RefNanny) {
   __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
 
   /* "cssfinder_backend_numpy/_cython/_complex64.py":58
- * 
+ *
  * _REAL = np.cos(0.01 * np.pi)
  * _IMAG = 1j * np.sin(0.01 * np.pi)             # <<<<<<<<<<<<<<
  * _VALUE = (_REAL + _IMAG - 1).astype(np.complex64)
- * 
+ *
  */
   __pyx_t_5 = PyComplex_FromDoubles(0.0, 1.0); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 58, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_5);
@@ -9957,8 +9963,8 @@ if (!__Pyx_RefNanny) {
  * _REAL = np.cos(0.01 * np.pi)
  * _IMAG = 1j * np.sin(0.01 * np.pi)
  * _VALUE = (_REAL + _IMAG - 1).astype(np.complex64)             # <<<<<<<<<<<<<<
- * 
- * 
+ *
+ *
  */
   __Pyx_GetModuleGlobalName(__pyx_t_3, __pyx_n_s_REAL); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 59, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
@@ -9987,8 +9993,8 @@ if (!__Pyx_RefNanny) {
   __Pyx_DECREF(__pyx_t_6); __pyx_t_6 = 0;
 
   /* "cssfinder_backend_numpy/_cython/_complex64.py":62
- * 
- * 
+ *
+ *
  * def product(             # <<<<<<<<<<<<<<
  *     matrix1: npt.NDArray[np.complex64], matrix2: npt.NDArray[np.complex64]
  * ) -> np.float32:
@@ -10006,8 +10012,8 @@ if (!__Pyx_RefNanny) {
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
 
   /* "cssfinder_backend_numpy/_cython/_complex64.py":71
- * 
- * 
+ *
+ *
  * def get_random_haar_1d(depth: int) -> npt.NDArray[np.complex64]:             # <<<<<<<<<<<<<<
  *     """Generate a random vector with Haar measure."""
  *     real = np.random.uniform(0, 1, depth)  # noqa: NPY002
@@ -10024,8 +10030,8 @@ if (!__Pyx_RefNanny) {
   __Pyx_DECREF(__pyx_t_6); __pyx_t_6 = 0;
 
   /* "cssfinder_backend_numpy/_cython/_complex64.py":83
- * 
- * 
+ *
+ *
  * def get_random_haar_2d(depth: int, quantity: int) -> npt.NDArray[np.complex64]:             # <<<<<<<<<<<<<<
  *     """Generate multiple random vectors with Haar measure in form of matrix."""
  *     real = np.random.uniform(0, 1, (quantity, depth))  # noqa: NPY002
@@ -10043,8 +10049,8 @@ if (!__Pyx_RefNanny) {
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
 
   /* "cssfinder_backend_numpy/_cython/_complex64.py":95
- * 
- * 
+ *
+ *
  * def normalize(mtx: npt.NDArray[np.complex64]) -> npt.NDArray[np.complex64]:             # <<<<<<<<<<<<<<
  *     """Normalize a vector."""
  *     mtx2 = np.dot(mtx, np.conj(mtx))
@@ -10061,8 +10067,8 @@ if (!__Pyx_RefNanny) {
   __Pyx_DECREF(__pyx_t_6); __pyx_t_6 = 0;
 
   /* "cssfinder_backend_numpy/_cython/_complex64.py":106
- * 
- * 
+ *
+ *
  * def project(mtx1: npt.NDArray[np.complex64]) -> npt.NDArray[np.complex64]:             # <<<<<<<<<<<<<<
  *     """Build a projection from a vector."""
  *     retval = np.outer(mtx1, np.conj(mtx1))
@@ -10079,8 +10085,8 @@ if (!__Pyx_RefNanny) {
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
 
   /* "cssfinder_backend_numpy/_cython/_complex64.py":113
- * 
- * 
+ *
+ *
  * def kronecker(             # <<<<<<<<<<<<<<
  *     mtx: npt.NDArray[np.complex64], mtx1: npt.NDArray[np.complex64]
  * ) -> npt.NDArray[np.complex64]:
@@ -10098,8 +10104,8 @@ if (!__Pyx_RefNanny) {
   __Pyx_DECREF(__pyx_t_6); __pyx_t_6 = 0;
 
   /* "cssfinder_backend_numpy/_cython/_complex64.py":131
- * 
- * 
+ *
+ *
  * def rotate(             # <<<<<<<<<<<<<<
  *     rho2: npt.NDArray[np.complex64], unitary: npt.NDArray[np.complex64]
  * ) -> npt.NDArray[np.complex64]:
@@ -10117,8 +10123,8 @@ if (!__Pyx_RefNanny) {
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
 
   /* "cssfinder_backend_numpy/_cython/_complex64.py":142
- * 
- * 
+ *
+ *
  * def apply_symmetries(             # <<<<<<<<<<<<<<
  *     rho: npt.NDArray[np.complex64], symmetries: list[list[npt.NDArray[np.complex64]]]
  * ) -> npt.NDArray[np.complex64]:
@@ -10136,8 +10142,8 @@ if (!__Pyx_RefNanny) {
   __Pyx_DECREF(__pyx_t_6); __pyx_t_6 = 0;
 
   /* "cssfinder_backend_numpy/_cython/_complex64.py":184
- * 
- * 
+ *
+ *
  * def optimize_d_fs(             # <<<<<<<<<<<<<<
  *     new_state: npt.NDArray[np.complex64],
  *     visibility_state: npt.NDArray[np.complex64],
@@ -10158,8 +10164,8 @@ if (!__Pyx_RefNanny) {
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
 
   /* "cssfinder_backend_numpy/_cython/_complex64.py":220
- * 
- * 
+ *
+ *
  * def random_unitary_d_fs(             # <<<<<<<<<<<<<<
  *     depth: int, quantity: int, idx: int
  * ) -> npt.NDArray[np.complex64]:
@@ -10178,11 +10184,11 @@ if (!__Pyx_RefNanny) {
   __Pyx_DECREF(__pyx_t_6); __pyx_t_6 = 0;
 
   /* "cssfinder_backend_numpy/_cython/_complex64.py":231
- * 
- * 
+ *
+ *
  * def _random_unitary_d_fs(depth: int) -> npt.NDArray[np.complex64]:             # <<<<<<<<<<<<<<
  *     random_mtx = random_d_fs(depth, 1)
- * 
+ *
  */
   __pyx_t_6 = __Pyx_PyDict_NewPresized(2); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 231, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_6);
@@ -10196,8 +10202,8 @@ if (!__Pyx_RefNanny) {
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
 
   /* "cssfinder_backend_numpy/_cython/_complex64.py":243
- * 
- * 
+ *
+ *
  * def random_d_fs(depth: int, quantity: int) -> npt.NDArray[np.complex64]:             # <<<<<<<<<<<<<<
  *     """Random n quDit state."""
  *     rand_vectors = get_random_haar_2d(depth, quantity)
@@ -10215,8 +10221,8 @@ if (!__Pyx_RefNanny) {
   __Pyx_DECREF(__pyx_t_6); __pyx_t_6 = 0;
 
   /* "cssfinder_backend_numpy/_cython/_complex64.py":258
- * 
- * 
+ *
+ *
  * def expand_d_fs(             # <<<<<<<<<<<<<<
  *     value: npt.NDArray[np.complex64],
  *     depth: int,
@@ -10236,8 +10242,8 @@ if (!__Pyx_RefNanny) {
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
 
   /* "cssfinder_backend_numpy/_cython/_complex64.py":285
- * 
- * 
+ *
+ *
  * def random_bs(depth: int, quantity: int) -> npt.NDArray[np.complex64]:             # <<<<<<<<<<<<<<
  *     """Draw random biseparable state."""
  *     random_vector_1 = normalize(get_random_haar_1d(depth))
@@ -10255,8 +10261,8 @@ if (!__Pyx_RefNanny) {
   __Pyx_DECREF(__pyx_t_6); __pyx_t_6 = 0;
 
   /* "cssfinder_backend_numpy/_cython/_complex64.py":297
- * 
- * 
+ *
+ *
  * def random_unitary_bs(depth: int, quantity: int) -> npt.NDArray[np.complex64]:             # <<<<<<<<<<<<<<
  *     """Draw random unitary for biseparable state."""
  *     random_vector = normalize(get_random_haar_1d(depth))
@@ -10274,8 +10280,8 @@ if (!__Pyx_RefNanny) {
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
 
   /* "cssfinder_backend_numpy/_cython/_complex64.py":314
- * 
- * 
+ *
+ *
  * def random_unitary_bs_reverse(depth: int, quantity: int) -> npt.NDArray[np.complex64]:             # <<<<<<<<<<<<<<
  *     """Draw random unitary for biseparable state."""
  *     random_vector = normalize(get_random_haar_1d(depth))
@@ -10293,8 +10299,8 @@ if (!__Pyx_RefNanny) {
   __Pyx_DECREF(__pyx_t_6); __pyx_t_6 = 0;
 
   /* "cssfinder_backend_numpy/_cython/_complex64.py":331
- * 
- * 
+ *
+ *
  * def optimize_bs(             # <<<<<<<<<<<<<<
  *     new_state: npt.NDArray[np.complex64],
  *     visibility_state: npt.NDArray[np.complex64],
@@ -11197,7 +11203,7 @@ static PyObject* __Pyx_PyInt_MultiplyCObj(PyObject *op1, PyObject *op2, long int
     if (likely(PyInt_CheckExact(op2))) {
         const long a = intval;
         long b = PyInt_AS_LONG(op2);
-        
+
 #ifdef HAVE_LONG_LONG
             if (sizeof(PY_LONG_LONG) > sizeof(long)) {
                 PY_LONG_LONG result = (PY_LONG_LONG)a * (PY_LONG_LONG)b;
@@ -11313,8 +11319,8 @@ static PyObject* __Pyx_PyInt_MultiplyCObj(PyObject *op1, PyObject *op2, long int
                 llx = lla * llb;
             return PyLong_FromLongLong(llx);
 #endif
-        
-        
+
+
     }
     #endif
     if (PyFloat_CheckExact(op2)) {
@@ -11325,7 +11331,7 @@ static PyObject* __Pyx_PyInt_MultiplyCObj(PyObject *op1, PyObject *op2, long int
         double b = PyFloat_AS_DOUBLE(op2);
 #endif
             double result;
-            
+
             PyFPE_START_PROTECT("multiply", return NULL)
             result = ((double)a) * (double)b;
             PyFPE_END_PROTECT(result)
@@ -11506,7 +11512,7 @@ static PyObject* __Pyx_PyInt_SubtractObjC(PyObject *op1, PyObject *op2, long int
         const long b = intval;
         long x;
         long a = PyInt_AS_LONG(op1);
-        
+
             x = (long)((unsigned long)a - b);
             if (likely((x^a) >= 0 || (x^~b) >= 0))
                 return PyInt_FromLong(x);
@@ -11607,8 +11613,8 @@ static PyObject* __Pyx_PyInt_SubtractObjC(PyObject *op1, PyObject *op2, long int
                 llx = lla - llb;
             return PyLong_FromLongLong(llx);
 #endif
-        
-        
+
+
     }
     #endif
     if (PyFloat_CheckExact(op1)) {
@@ -11619,7 +11625,7 @@ static PyObject* __Pyx_PyInt_SubtractObjC(PyObject *op1, PyObject *op2, long int
         double a = PyFloat_AS_DOUBLE(op1);
 #endif
             double result;
-            
+
             PyFPE_START_PROTECT("subtract", return NULL)
             result = ((double)a) - (double)b;
             PyFPE_END_PROTECT(result)

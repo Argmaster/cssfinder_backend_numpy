@@ -241,7 +241,7 @@ def random_d_fs(depth: int, quantity: int) -> npt.NDArray[np.complex128]:
     rand_vectors = get_random_haar_2d(depth, quantity)
     vector = normalize(rand_vectors[0])
 
-    for i in range(quantity - 1):
+    for i in range(1, quantity):
         idx_vector = normalize(rand_vectors[i])
 
         vector = np.outer(vector, idx_vector).flatten()

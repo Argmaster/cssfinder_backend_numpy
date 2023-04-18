@@ -302,7 +302,7 @@ def random_d_fs(depth: int, quantity: int) -> npt.NDArray[np.complex128]:
     vector = normalize(rand_vectors[0])
     assert_dtype(vector, np.complex128)
 
-    for i in range(quantity - 1):
+    for i in range(1, quantity):
         idx_vector = normalize(rand_vectors[i])
         assert_dtype(idx_vector, np.complex128)
 

@@ -370,7 +370,7 @@ def random_d_fs(depth: int, quantity: int) -> npt.NDArray[{{complex}}]:
     vector = normalize(rand_vectors[0])
     {% if debug_dtype_checks %}assert_dtype(vector, {{complex}}){% endif %}
 
-    for i in range(quantity - 1):
+    for i in range(1, quantity):
         idx_vector = normalize(rand_vectors[i])
         {% if debug_dtype_checks %}assert_dtype(idx_vector, {{complex}}){% endif %}
 
