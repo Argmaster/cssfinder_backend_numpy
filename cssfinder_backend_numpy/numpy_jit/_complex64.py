@@ -42,7 +42,7 @@ from __future__ import annotations
 from typing import TYPE_CHECKING
 
 import numpy as np
-from numba import jit
+from numba import jit, types
 
 if TYPE_CHECKING:
     import numpy.typing as npt
@@ -149,7 +149,8 @@ def rotate(
 
 @jit(nopython=True, nogil=True, cache=True)
 def apply_symmetries(
-    rho: npt.NDArray[np.complex64], symmetries: list[list[npt.NDArray[np.complex64]]]
+    rho: npt.NDArray[np.complex64],
+    symmetries: types.ListType[types.ListType[npt.NDArray[np.complex64]]],
 ) -> npt.NDArray[np.complex64]:
     """Apply symmetries to density matrix.
 

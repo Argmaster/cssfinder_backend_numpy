@@ -4924,8 +4924,8 @@ static PyObject *__pyx_pf_23cssfinder_backend_numpy_6cython_10_complex64_12rotat
  *
  *
  * def apply_symmetries(             # <<<<<<<<<<<<<<
- *     rho: npt.NDArray[np.complex64], symmetries: list[list[npt.NDArray[np.complex64]]]
- * ) -> npt.NDArray[np.complex64]:
+ *     rho: npt.NDArray[np.complex64],
+ *     symmetries: list[list[npt.NDArray[np.complex64]]],
  */
 
 /* Python wrapper */
@@ -5005,7 +5005,7 @@ PyObject *__pyx_args, PyObject *__pyx_kwds
   __Pyx_RefNannyFinishContext();
   return NULL;
   __pyx_L4_argument_unpacking_done:;
-  if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_symmetries), (&PyList_Type), 0, "symmetries", 1))) __PYX_ERR(0, 143, __pyx_L1_error)
+  if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_symmetries), (&PyList_Type), 0, "symmetries", 1))) __PYX_ERR(0, 144, __pyx_L1_error)
   __pyx_r = __pyx_pf_23cssfinder_backend_numpy_6cython_10_complex64_14apply_symmetries(__pyx_self, __pyx_v_rho, __pyx_v_symmetries);
 
   /* function exit code */
@@ -5037,7 +5037,7 @@ static PyObject *__pyx_pf_23cssfinder_backend_numpy_6cython_10_complex64_14apply
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("apply_symmetries", 0);
 
-  /* "cssfinder_backend_numpy/_cython/_complex64.py":168
+  /* "cssfinder_backend_numpy/_cython/_complex64.py":169
  *
  *     """
  *     output = rho             # <<<<<<<<<<<<<<
@@ -5047,7 +5047,7 @@ static PyObject *__pyx_pf_23cssfinder_backend_numpy_6cython_10_complex64_14apply
   __Pyx_INCREF(__pyx_v_rho);
   __pyx_v_output = __pyx_v_rho;
 
-  /* "cssfinder_backend_numpy/_cython/_complex64.py":169
+  /* "cssfinder_backend_numpy/_cython/_complex64.py":170
  *     """
  *     output = rho
  *     for row in symmetries:             # <<<<<<<<<<<<<<
@@ -5058,15 +5058,15 @@ static PyObject *__pyx_pf_23cssfinder_backend_numpy_6cython_10_complex64_14apply
   for (;;) {
     if (__pyx_t_2 >= PyList_GET_SIZE(__pyx_t_1)) break;
     #if CYTHON_ASSUME_SAFE_MACROS && !CYTHON_AVOID_BORROWED_REFS
-    __pyx_t_3 = PyList_GET_ITEM(__pyx_t_1, __pyx_t_2); __Pyx_INCREF(__pyx_t_3); __pyx_t_2++; if (unlikely((0 < 0))) __PYX_ERR(0, 169, __pyx_L1_error)
+    __pyx_t_3 = PyList_GET_ITEM(__pyx_t_1, __pyx_t_2); __Pyx_INCREF(__pyx_t_3); __pyx_t_2++; if (unlikely((0 < 0))) __PYX_ERR(0, 170, __pyx_L1_error)
     #else
-    __pyx_t_3 = PySequence_ITEM(__pyx_t_1, __pyx_t_2); __pyx_t_2++; if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 169, __pyx_L1_error)
+    __pyx_t_3 = PySequence_ITEM(__pyx_t_1, __pyx_t_2); __pyx_t_2++; if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 170, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_3);
     #endif
     __Pyx_XDECREF_SET(__pyx_v_row, __pyx_t_3);
     __pyx_t_3 = 0;
 
-    /* "cssfinder_backend_numpy/_cython/_complex64.py":170
+    /* "cssfinder_backend_numpy/_cython/_complex64.py":171
  *     output = rho
  *     for row in symmetries:
  *         for sym in row:             # <<<<<<<<<<<<<<
@@ -5077,26 +5077,26 @@ static PyObject *__pyx_pf_23cssfinder_backend_numpy_6cython_10_complex64_14apply
       __pyx_t_3 = __pyx_v_row; __Pyx_INCREF(__pyx_t_3); __pyx_t_4 = 0;
       __pyx_t_5 = NULL;
     } else {
-      __pyx_t_4 = -1; __pyx_t_3 = PyObject_GetIter(__pyx_v_row); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 170, __pyx_L1_error)
+      __pyx_t_4 = -1; __pyx_t_3 = PyObject_GetIter(__pyx_v_row); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 171, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_3);
-      __pyx_t_5 = __Pyx_PyObject_GetIterNextFunc(__pyx_t_3); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 170, __pyx_L1_error)
+      __pyx_t_5 = __Pyx_PyObject_GetIterNextFunc(__pyx_t_3); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 171, __pyx_L1_error)
     }
     for (;;) {
       if (likely(!__pyx_t_5)) {
         if (likely(PyList_CheckExact(__pyx_t_3))) {
           if (__pyx_t_4 >= PyList_GET_SIZE(__pyx_t_3)) break;
           #if CYTHON_ASSUME_SAFE_MACROS && !CYTHON_AVOID_BORROWED_REFS
-          __pyx_t_6 = PyList_GET_ITEM(__pyx_t_3, __pyx_t_4); __Pyx_INCREF(__pyx_t_6); __pyx_t_4++; if (unlikely((0 < 0))) __PYX_ERR(0, 170, __pyx_L1_error)
+          __pyx_t_6 = PyList_GET_ITEM(__pyx_t_3, __pyx_t_4); __Pyx_INCREF(__pyx_t_6); __pyx_t_4++; if (unlikely((0 < 0))) __PYX_ERR(0, 171, __pyx_L1_error)
           #else
-          __pyx_t_6 = PySequence_ITEM(__pyx_t_3, __pyx_t_4); __pyx_t_4++; if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 170, __pyx_L1_error)
+          __pyx_t_6 = PySequence_ITEM(__pyx_t_3, __pyx_t_4); __pyx_t_4++; if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 171, __pyx_L1_error)
           __Pyx_GOTREF(__pyx_t_6);
           #endif
         } else {
           if (__pyx_t_4 >= PyTuple_GET_SIZE(__pyx_t_3)) break;
           #if CYTHON_ASSUME_SAFE_MACROS && !CYTHON_AVOID_BORROWED_REFS
-          __pyx_t_6 = PyTuple_GET_ITEM(__pyx_t_3, __pyx_t_4); __Pyx_INCREF(__pyx_t_6); __pyx_t_4++; if (unlikely((0 < 0))) __PYX_ERR(0, 170, __pyx_L1_error)
+          __pyx_t_6 = PyTuple_GET_ITEM(__pyx_t_3, __pyx_t_4); __Pyx_INCREF(__pyx_t_6); __pyx_t_4++; if (unlikely((0 < 0))) __PYX_ERR(0, 171, __pyx_L1_error)
           #else
-          __pyx_t_6 = PySequence_ITEM(__pyx_t_3, __pyx_t_4); __pyx_t_4++; if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 170, __pyx_L1_error)
+          __pyx_t_6 = PySequence_ITEM(__pyx_t_3, __pyx_t_4); __pyx_t_4++; if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 171, __pyx_L1_error)
           __Pyx_GOTREF(__pyx_t_6);
           #endif
         }
@@ -5106,7 +5106,7 @@ static PyObject *__pyx_pf_23cssfinder_backend_numpy_6cython_10_complex64_14apply
           PyObject* exc_type = PyErr_Occurred();
           if (exc_type) {
             if (likely(__Pyx_PyErr_GivenExceptionMatches(exc_type, PyExc_StopIteration))) PyErr_Clear();
-            else __PYX_ERR(0, 170, __pyx_L1_error)
+            else __PYX_ERR(0, 171, __pyx_L1_error)
           }
           break;
         }
@@ -5115,14 +5115,14 @@ static PyObject *__pyx_pf_23cssfinder_backend_numpy_6cython_10_complex64_14apply
       __Pyx_XDECREF_SET(__pyx_v_sym, __pyx_t_6);
       __pyx_t_6 = 0;
 
-      /* "cssfinder_backend_numpy/_cython/_complex64.py":171
+      /* "cssfinder_backend_numpy/_cython/_complex64.py":172
  *     for row in symmetries:
  *         for sym in row:
  *             output += rotate(output, sym)             # <<<<<<<<<<<<<<
  *
  *     output /= np.trace(output)
  */
-      __Pyx_GetModuleGlobalName(__pyx_t_7, __pyx_n_s_rotate); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 171, __pyx_L1_error)
+      __Pyx_GetModuleGlobalName(__pyx_t_7, __pyx_n_s_rotate); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 172, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_7);
       __pyx_t_8 = NULL;
       __pyx_t_9 = 0;
@@ -5140,17 +5140,17 @@ static PyObject *__pyx_pf_23cssfinder_backend_numpy_6cython_10_complex64_14apply
         PyObject *__pyx_callargs[3] = {__pyx_t_8, __pyx_v_output, __pyx_v_sym};
         __pyx_t_6 = __Pyx_PyObject_FastCall(__pyx_t_7, __pyx_callargs+1-__pyx_t_9, 2+__pyx_t_9);
         __Pyx_XDECREF(__pyx_t_8); __pyx_t_8 = 0;
-        if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 171, __pyx_L1_error)
+        if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 172, __pyx_L1_error)
         __Pyx_GOTREF(__pyx_t_6);
         __Pyx_DECREF(__pyx_t_7); __pyx_t_7 = 0;
       }
-      __pyx_t_7 = PyNumber_InPlaceAdd(__pyx_v_output, __pyx_t_6); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 171, __pyx_L1_error)
+      __pyx_t_7 = PyNumber_InPlaceAdd(__pyx_v_output, __pyx_t_6); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 172, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_7);
       __Pyx_DECREF(__pyx_t_6); __pyx_t_6 = 0;
       __Pyx_DECREF_SET(__pyx_v_output, __pyx_t_7);
       __pyx_t_7 = 0;
 
-      /* "cssfinder_backend_numpy/_cython/_complex64.py":170
+      /* "cssfinder_backend_numpy/_cython/_complex64.py":171
  *     output = rho
  *     for row in symmetries:
  *         for sym in row:             # <<<<<<<<<<<<<<
@@ -5160,7 +5160,7 @@ static PyObject *__pyx_pf_23cssfinder_backend_numpy_6cython_10_complex64_14apply
     }
     __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
 
-    /* "cssfinder_backend_numpy/_cython/_complex64.py":169
+    /* "cssfinder_backend_numpy/_cython/_complex64.py":170
  *     """
  *     output = rho
  *     for row in symmetries:             # <<<<<<<<<<<<<<
@@ -5170,16 +5170,16 @@ static PyObject *__pyx_pf_23cssfinder_backend_numpy_6cython_10_complex64_14apply
   }
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "cssfinder_backend_numpy/_cython/_complex64.py":173
+  /* "cssfinder_backend_numpy/_cython/_complex64.py":174
  *             output += rotate(output, sym)
  *
  *     output /= np.trace(output)             # <<<<<<<<<<<<<<
  *     return output
  *
  */
-  __Pyx_GetModuleGlobalName(__pyx_t_3, __pyx_n_s_np); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 173, __pyx_L1_error)
+  __Pyx_GetModuleGlobalName(__pyx_t_3, __pyx_n_s_np); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 174, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
-  __pyx_t_7 = __Pyx_PyObject_GetAttrStr(__pyx_t_3, __pyx_n_s_trace); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 173, __pyx_L1_error)
+  __pyx_t_7 = __Pyx_PyObject_GetAttrStr(__pyx_t_3, __pyx_n_s_trace); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 174, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_7);
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
   __pyx_t_3 = NULL;
@@ -5198,17 +5198,17 @@ static PyObject *__pyx_pf_23cssfinder_backend_numpy_6cython_10_complex64_14apply
     PyObject *__pyx_callargs[2] = {__pyx_t_3, __pyx_v_output};
     __pyx_t_1 = __Pyx_PyObject_FastCall(__pyx_t_7, __pyx_callargs+1-__pyx_t_9, 1+__pyx_t_9);
     __Pyx_XDECREF(__pyx_t_3); __pyx_t_3 = 0;
-    if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 173, __pyx_L1_error)
+    if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 174, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_1);
     __Pyx_DECREF(__pyx_t_7); __pyx_t_7 = 0;
   }
-  __pyx_t_7 = __Pyx_PyNumber_InPlaceDivide(__pyx_v_output, __pyx_t_1); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 173, __pyx_L1_error)
+  __pyx_t_7 = __Pyx_PyNumber_InPlaceDivide(__pyx_v_output, __pyx_t_1); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 174, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_7);
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
   __Pyx_DECREF_SET(__pyx_v_output, __pyx_t_7);
   __pyx_t_7 = 0;
 
-  /* "cssfinder_backend_numpy/_cython/_complex64.py":174
+  /* "cssfinder_backend_numpy/_cython/_complex64.py":175
  *
  *     output /= np.trace(output)
  *     return output             # <<<<<<<<<<<<<<
@@ -5224,8 +5224,8 @@ static PyObject *__pyx_pf_23cssfinder_backend_numpy_6cython_10_complex64_14apply
  *
  *
  * def apply_symmetries(             # <<<<<<<<<<<<<<
- *     rho: npt.NDArray[np.complex64], symmetries: list[list[npt.NDArray[np.complex64]]]
- * ) -> npt.NDArray[np.complex64]:
+ *     rho: npt.NDArray[np.complex64],
+ *     symmetries: list[list[npt.NDArray[np.complex64]]],
  */
 
   /* function exit code */
@@ -5246,7 +5246,7 @@ static PyObject *__pyx_pf_23cssfinder_backend_numpy_6cython_10_complex64_14apply
   return __pyx_r;
 }
 
-/* "cssfinder_backend_numpy/_cython/_complex64.py":184
+/* "cssfinder_backend_numpy/_cython/_complex64.py":185
  *
  *
  * def optimize_d_fs(             # <<<<<<<<<<<<<<
@@ -5309,40 +5309,40 @@ PyObject *__pyx_args, PyObject *__pyx_kwds
       switch (__pyx_nargs) {
         case  0:
         if (likely((values[0] = __Pyx_GetKwValue_FASTCALL(__pyx_kwds, __pyx_kwvalues, __pyx_n_s_new_state)) != 0)) kw_args--;
-        else if (unlikely(PyErr_Occurred())) __PYX_ERR(0, 184, __pyx_L3_error)
+        else if (unlikely(PyErr_Occurred())) __PYX_ERR(0, 185, __pyx_L3_error)
         else goto __pyx_L5_argtuple_error;
         CYTHON_FALLTHROUGH;
         case  1:
         if (likely((values[1] = __Pyx_GetKwValue_FASTCALL(__pyx_kwds, __pyx_kwvalues, __pyx_n_s_visibility_state)) != 0)) kw_args--;
-        else if (unlikely(PyErr_Occurred())) __PYX_ERR(0, 184, __pyx_L3_error)
+        else if (unlikely(PyErr_Occurred())) __PYX_ERR(0, 185, __pyx_L3_error)
         else {
-          __Pyx_RaiseArgtupleInvalid("optimize_d_fs", 1, 5, 5, 1); __PYX_ERR(0, 184, __pyx_L3_error)
+          __Pyx_RaiseArgtupleInvalid("optimize_d_fs", 1, 5, 5, 1); __PYX_ERR(0, 185, __pyx_L3_error)
         }
         CYTHON_FALLTHROUGH;
         case  2:
         if (likely((values[2] = __Pyx_GetKwValue_FASTCALL(__pyx_kwds, __pyx_kwvalues, __pyx_n_s_depth)) != 0)) kw_args--;
-        else if (unlikely(PyErr_Occurred())) __PYX_ERR(0, 184, __pyx_L3_error)
+        else if (unlikely(PyErr_Occurred())) __PYX_ERR(0, 185, __pyx_L3_error)
         else {
-          __Pyx_RaiseArgtupleInvalid("optimize_d_fs", 1, 5, 5, 2); __PYX_ERR(0, 184, __pyx_L3_error)
+          __Pyx_RaiseArgtupleInvalid("optimize_d_fs", 1, 5, 5, 2); __PYX_ERR(0, 185, __pyx_L3_error)
         }
         CYTHON_FALLTHROUGH;
         case  3:
         if (likely((values[3] = __Pyx_GetKwValue_FASTCALL(__pyx_kwds, __pyx_kwvalues, __pyx_n_s_quantity)) != 0)) kw_args--;
-        else if (unlikely(PyErr_Occurred())) __PYX_ERR(0, 184, __pyx_L3_error)
+        else if (unlikely(PyErr_Occurred())) __PYX_ERR(0, 185, __pyx_L3_error)
         else {
-          __Pyx_RaiseArgtupleInvalid("optimize_d_fs", 1, 5, 5, 3); __PYX_ERR(0, 184, __pyx_L3_error)
+          __Pyx_RaiseArgtupleInvalid("optimize_d_fs", 1, 5, 5, 3); __PYX_ERR(0, 185, __pyx_L3_error)
         }
         CYTHON_FALLTHROUGH;
         case  4:
         if (likely((values[4] = __Pyx_GetKwValue_FASTCALL(__pyx_kwds, __pyx_kwvalues, __pyx_n_s_updates_count)) != 0)) kw_args--;
-        else if (unlikely(PyErr_Occurred())) __PYX_ERR(0, 184, __pyx_L3_error)
+        else if (unlikely(PyErr_Occurred())) __PYX_ERR(0, 185, __pyx_L3_error)
         else {
-          __Pyx_RaiseArgtupleInvalid("optimize_d_fs", 1, 5, 5, 4); __PYX_ERR(0, 184, __pyx_L3_error)
+          __Pyx_RaiseArgtupleInvalid("optimize_d_fs", 1, 5, 5, 4); __PYX_ERR(0, 185, __pyx_L3_error)
         }
       }
       if (unlikely(kw_args > 0)) {
         const Py_ssize_t kwd_pos_args = __pyx_nargs;
-        if (unlikely(__Pyx_ParseOptionalKeywords(__pyx_kwds, __pyx_kwvalues, __pyx_pyargnames, 0, values + 0, kwd_pos_args, "optimize_d_fs") < 0)) __PYX_ERR(0, 184, __pyx_L3_error)
+        if (unlikely(__Pyx_ParseOptionalKeywords(__pyx_kwds, __pyx_kwvalues, __pyx_pyargnames, 0, values + 0, kwd_pos_args, "optimize_d_fs") < 0)) __PYX_ERR(0, 185, __pyx_L3_error)
       }
     } else if (unlikely(__pyx_nargs != 5)) {
       goto __pyx_L5_argtuple_error;
@@ -5361,15 +5361,15 @@ PyObject *__pyx_args, PyObject *__pyx_kwds
   }
   goto __pyx_L4_argument_unpacking_done;
   __pyx_L5_argtuple_error:;
-  __Pyx_RaiseArgtupleInvalid("optimize_d_fs", 1, 5, 5, __pyx_nargs); __PYX_ERR(0, 184, __pyx_L3_error)
+  __Pyx_RaiseArgtupleInvalid("optimize_d_fs", 1, 5, 5, __pyx_nargs); __PYX_ERR(0, 185, __pyx_L3_error)
   __pyx_L3_error:;
   __Pyx_AddTraceback("cssfinder_backend_numpy.cython._complex64.optimize_d_fs", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __Pyx_RefNannyFinishContext();
   return NULL;
   __pyx_L4_argument_unpacking_done:;
-  if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_depth), (&PyInt_Type), 0, "depth", 1))) __PYX_ERR(0, 187, __pyx_L1_error)
-  if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_quantity), (&PyInt_Type), 0, "quantity", 1))) __PYX_ERR(0, 188, __pyx_L1_error)
-  if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_updates_count), (&PyInt_Type), 0, "updates_count", 1))) __PYX_ERR(0, 189, __pyx_L1_error)
+  if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_depth), (&PyInt_Type), 0, "depth", 1))) __PYX_ERR(0, 188, __pyx_L1_error)
+  if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_quantity), (&PyInt_Type), 0, "quantity", 1))) __PYX_ERR(0, 189, __pyx_L1_error)
+  if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_updates_count), (&PyInt_Type), 0, "updates_count", 1))) __PYX_ERR(0, 190, __pyx_L1_error)
   __pyx_r = __pyx_pf_23cssfinder_backend_numpy_6cython_10_complex64_16optimize_d_fs(__pyx_self, __pyx_v_new_state, __pyx_v_visibility_state, __pyx_v_depth, __pyx_v_quantity, __pyx_v_updates_count);
 
   /* function exit code */
@@ -5403,14 +5403,14 @@ static PyObject *__pyx_pf_23cssfinder_backend_numpy_6cython_10_complex64_16optim
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("optimize_d_fs", 0);
 
-  /* "cssfinder_backend_numpy/_cython/_complex64.py":192
+  /* "cssfinder_backend_numpy/_cython/_complex64.py":193
  * ) -> npt.NDArray[np.complex64]:
  *     """Optimize implementation for FSnQd mode."""
  *     product_2_3 = product(new_state, visibility_state)             # <<<<<<<<<<<<<<
  *
  *     # To make sure rotated_2 is not unbound
  */
-  __Pyx_GetModuleGlobalName(__pyx_t_2, __pyx_n_s_product); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 192, __pyx_L1_error)
+  __Pyx_GetModuleGlobalName(__pyx_t_2, __pyx_n_s_product); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 193, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
   __pyx_t_3 = NULL;
   __pyx_t_4 = 0;
@@ -5428,21 +5428,21 @@ static PyObject *__pyx_pf_23cssfinder_backend_numpy_6cython_10_complex64_16optim
     PyObject *__pyx_callargs[3] = {__pyx_t_3, __pyx_v_new_state, __pyx_v_visibility_state};
     __pyx_t_1 = __Pyx_PyObject_FastCall(__pyx_t_2, __pyx_callargs+1-__pyx_t_4, 2+__pyx_t_4);
     __Pyx_XDECREF(__pyx_t_3); __pyx_t_3 = 0;
-    if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 192, __pyx_L1_error)
+    if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 193, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_1);
     __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
   }
   __pyx_v_product_2_3 = __pyx_t_1;
   __pyx_t_1 = 0;
 
-  /* "cssfinder_backend_numpy/_cython/_complex64.py":195
+  /* "cssfinder_backend_numpy/_cython/_complex64.py":196
  *
  *     # To make sure rotated_2 is not unbound
  *     unitary = random_unitary_d_fs(depth, quantity, 0)             # <<<<<<<<<<<<<<
  *
  *     rotated_2 = rotate(new_state, unitary)
  */
-  __Pyx_GetModuleGlobalName(__pyx_t_2, __pyx_n_s_random_unitary_d_fs); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 195, __pyx_L1_error)
+  __Pyx_GetModuleGlobalName(__pyx_t_2, __pyx_n_s_random_unitary_d_fs); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 196, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
   __pyx_t_3 = NULL;
   __pyx_t_4 = 0;
@@ -5460,21 +5460,21 @@ static PyObject *__pyx_pf_23cssfinder_backend_numpy_6cython_10_complex64_16optim
     PyObject *__pyx_callargs[4] = {__pyx_t_3, __pyx_v_depth, __pyx_v_quantity, __pyx_int_0};
     __pyx_t_1 = __Pyx_PyObject_FastCall(__pyx_t_2, __pyx_callargs+1-__pyx_t_4, 3+__pyx_t_4);
     __Pyx_XDECREF(__pyx_t_3); __pyx_t_3 = 0;
-    if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 195, __pyx_L1_error)
+    if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 196, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_1);
     __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
   }
   __pyx_v_unitary = __pyx_t_1;
   __pyx_t_1 = 0;
 
-  /* "cssfinder_backend_numpy/_cython/_complex64.py":197
+  /* "cssfinder_backend_numpy/_cython/_complex64.py":198
  *     unitary = random_unitary_d_fs(depth, quantity, 0)
  *
  *     rotated_2 = rotate(new_state, unitary)             # <<<<<<<<<<<<<<
  *
  *     for idx in range(updates_count):
  */
-  __Pyx_GetModuleGlobalName(__pyx_t_2, __pyx_n_s_rotate); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 197, __pyx_L1_error)
+  __Pyx_GetModuleGlobalName(__pyx_t_2, __pyx_n_s_rotate); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 198, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
   __pyx_t_3 = NULL;
   __pyx_t_4 = 0;
@@ -5492,29 +5492,29 @@ static PyObject *__pyx_pf_23cssfinder_backend_numpy_6cython_10_complex64_16optim
     PyObject *__pyx_callargs[3] = {__pyx_t_3, __pyx_v_new_state, __pyx_v_unitary};
     __pyx_t_1 = __Pyx_PyObject_FastCall(__pyx_t_2, __pyx_callargs+1-__pyx_t_4, 2+__pyx_t_4);
     __Pyx_XDECREF(__pyx_t_3); __pyx_t_3 = 0;
-    if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 197, __pyx_L1_error)
+    if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 198, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_1);
     __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
   }
   __pyx_v_rotated_2 = __pyx_t_1;
   __pyx_t_1 = 0;
 
-  /* "cssfinder_backend_numpy/_cython/_complex64.py":199
+  /* "cssfinder_backend_numpy/_cython/_complex64.py":200
  *     rotated_2 = rotate(new_state, unitary)
  *
  *     for idx in range(updates_count):             # <<<<<<<<<<<<<<
  *         idx_mod = idx % int(quantity)
  *         unitary = random_unitary_d_fs(depth, quantity, idx_mod)
  */
-  __pyx_t_1 = __Pyx_PyObject_CallOneArg(__pyx_builtin_range, __pyx_v_updates_count); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 199, __pyx_L1_error)
+  __pyx_t_1 = __Pyx_PyObject_CallOneArg(__pyx_builtin_range, __pyx_v_updates_count); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 200, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   if (likely(PyList_CheckExact(__pyx_t_1)) || PyTuple_CheckExact(__pyx_t_1)) {
     __pyx_t_2 = __pyx_t_1; __Pyx_INCREF(__pyx_t_2); __pyx_t_5 = 0;
     __pyx_t_6 = NULL;
   } else {
-    __pyx_t_5 = -1; __pyx_t_2 = PyObject_GetIter(__pyx_t_1); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 199, __pyx_L1_error)
+    __pyx_t_5 = -1; __pyx_t_2 = PyObject_GetIter(__pyx_t_1); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 200, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_2);
-    __pyx_t_6 = __Pyx_PyObject_GetIterNextFunc(__pyx_t_2); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 199, __pyx_L1_error)
+    __pyx_t_6 = __Pyx_PyObject_GetIterNextFunc(__pyx_t_2); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 200, __pyx_L1_error)
   }
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
   for (;;) {
@@ -5522,17 +5522,17 @@ static PyObject *__pyx_pf_23cssfinder_backend_numpy_6cython_10_complex64_16optim
       if (likely(PyList_CheckExact(__pyx_t_2))) {
         if (__pyx_t_5 >= PyList_GET_SIZE(__pyx_t_2)) break;
         #if CYTHON_ASSUME_SAFE_MACROS && !CYTHON_AVOID_BORROWED_REFS
-        __pyx_t_1 = PyList_GET_ITEM(__pyx_t_2, __pyx_t_5); __Pyx_INCREF(__pyx_t_1); __pyx_t_5++; if (unlikely((0 < 0))) __PYX_ERR(0, 199, __pyx_L1_error)
+        __pyx_t_1 = PyList_GET_ITEM(__pyx_t_2, __pyx_t_5); __Pyx_INCREF(__pyx_t_1); __pyx_t_5++; if (unlikely((0 < 0))) __PYX_ERR(0, 200, __pyx_L1_error)
         #else
-        __pyx_t_1 = PySequence_ITEM(__pyx_t_2, __pyx_t_5); __pyx_t_5++; if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 199, __pyx_L1_error)
+        __pyx_t_1 = PySequence_ITEM(__pyx_t_2, __pyx_t_5); __pyx_t_5++; if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 200, __pyx_L1_error)
         __Pyx_GOTREF(__pyx_t_1);
         #endif
       } else {
         if (__pyx_t_5 >= PyTuple_GET_SIZE(__pyx_t_2)) break;
         #if CYTHON_ASSUME_SAFE_MACROS && !CYTHON_AVOID_BORROWED_REFS
-        __pyx_t_1 = PyTuple_GET_ITEM(__pyx_t_2, __pyx_t_5); __Pyx_INCREF(__pyx_t_1); __pyx_t_5++; if (unlikely((0 < 0))) __PYX_ERR(0, 199, __pyx_L1_error)
+        __pyx_t_1 = PyTuple_GET_ITEM(__pyx_t_2, __pyx_t_5); __Pyx_INCREF(__pyx_t_1); __pyx_t_5++; if (unlikely((0 < 0))) __PYX_ERR(0, 200, __pyx_L1_error)
         #else
-        __pyx_t_1 = PySequence_ITEM(__pyx_t_2, __pyx_t_5); __pyx_t_5++; if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 199, __pyx_L1_error)
+        __pyx_t_1 = PySequence_ITEM(__pyx_t_2, __pyx_t_5); __pyx_t_5++; if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 200, __pyx_L1_error)
         __Pyx_GOTREF(__pyx_t_1);
         #endif
       }
@@ -5542,39 +5542,39 @@ static PyObject *__pyx_pf_23cssfinder_backend_numpy_6cython_10_complex64_16optim
         PyObject* exc_type = PyErr_Occurred();
         if (exc_type) {
           if (likely(__Pyx_PyErr_GivenExceptionMatches(exc_type, PyExc_StopIteration))) PyErr_Clear();
-          else __PYX_ERR(0, 199, __pyx_L1_error)
+          else __PYX_ERR(0, 200, __pyx_L1_error)
         }
         break;
       }
       __Pyx_GOTREF(__pyx_t_1);
     }
-    if (!(likely(__Pyx_Py3Int_CheckExact(__pyx_t_1))||((__pyx_t_1) == Py_None) || __Pyx_RaiseUnexpectedTypeError("int", __pyx_t_1))) __PYX_ERR(0, 199, __pyx_L1_error)
+    if (!(likely(__Pyx_Py3Int_CheckExact(__pyx_t_1))||((__pyx_t_1) == Py_None) || __Pyx_RaiseUnexpectedTypeError("int", __pyx_t_1))) __PYX_ERR(0, 200, __pyx_L1_error)
     __Pyx_XDECREF_SET(__pyx_v_idx, ((PyObject*)__pyx_t_1));
     __pyx_t_1 = 0;
 
-    /* "cssfinder_backend_numpy/_cython/_complex64.py":200
+    /* "cssfinder_backend_numpy/_cython/_complex64.py":201
  *
  *     for idx in range(updates_count):
  *         idx_mod = idx % int(quantity)             # <<<<<<<<<<<<<<
  *         unitary = random_unitary_d_fs(depth, quantity, idx_mod)
  *
  */
-    __pyx_t_1 = __Pyx_PyNumber_Int(__pyx_v_quantity); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 200, __pyx_L1_error)
+    __pyx_t_1 = __Pyx_PyNumber_Int(__pyx_v_quantity); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 201, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_1);
-    __pyx_t_3 = PyNumber_Remainder(__pyx_v_idx, __pyx_t_1); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 200, __pyx_L1_error)
+    __pyx_t_3 = PyNumber_Remainder(__pyx_v_idx, __pyx_t_1); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 201, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_3);
     __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
     __Pyx_XDECREF_SET(__pyx_v_idx_mod, __pyx_t_3);
     __pyx_t_3 = 0;
 
-    /* "cssfinder_backend_numpy/_cython/_complex64.py":201
+    /* "cssfinder_backend_numpy/_cython/_complex64.py":202
  *     for idx in range(updates_count):
  *         idx_mod = idx % int(quantity)
  *         unitary = random_unitary_d_fs(depth, quantity, idx_mod)             # <<<<<<<<<<<<<<
  *
  *         rotated_2 = rotate(new_state, unitary)
  */
-    __Pyx_GetModuleGlobalName(__pyx_t_1, __pyx_n_s_random_unitary_d_fs); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 201, __pyx_L1_error)
+    __Pyx_GetModuleGlobalName(__pyx_t_1, __pyx_n_s_random_unitary_d_fs); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 202, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_1);
     __pyx_t_7 = NULL;
     __pyx_t_4 = 0;
@@ -5592,21 +5592,21 @@ static PyObject *__pyx_pf_23cssfinder_backend_numpy_6cython_10_complex64_16optim
       PyObject *__pyx_callargs[4] = {__pyx_t_7, __pyx_v_depth, __pyx_v_quantity, __pyx_v_idx_mod};
       __pyx_t_3 = __Pyx_PyObject_FastCall(__pyx_t_1, __pyx_callargs+1-__pyx_t_4, 3+__pyx_t_4);
       __Pyx_XDECREF(__pyx_t_7); __pyx_t_7 = 0;
-      if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 201, __pyx_L1_error)
+      if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 202, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_3);
       __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
     }
     __Pyx_DECREF_SET(__pyx_v_unitary, __pyx_t_3);
     __pyx_t_3 = 0;
 
-    /* "cssfinder_backend_numpy/_cython/_complex64.py":203
+    /* "cssfinder_backend_numpy/_cython/_complex64.py":204
  *         unitary = random_unitary_d_fs(depth, quantity, idx_mod)
  *
  *         rotated_2 = rotate(new_state, unitary)             # <<<<<<<<<<<<<<
  *
  *         product_rot2_3 = product(rotated_2, visibility_state)
  */
-    __Pyx_GetModuleGlobalName(__pyx_t_1, __pyx_n_s_rotate); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 203, __pyx_L1_error)
+    __Pyx_GetModuleGlobalName(__pyx_t_1, __pyx_n_s_rotate); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 204, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_1);
     __pyx_t_7 = NULL;
     __pyx_t_4 = 0;
@@ -5624,21 +5624,21 @@ static PyObject *__pyx_pf_23cssfinder_backend_numpy_6cython_10_complex64_16optim
       PyObject *__pyx_callargs[3] = {__pyx_t_7, __pyx_v_new_state, __pyx_v_unitary};
       __pyx_t_3 = __Pyx_PyObject_FastCall(__pyx_t_1, __pyx_callargs+1-__pyx_t_4, 2+__pyx_t_4);
       __Pyx_XDECREF(__pyx_t_7); __pyx_t_7 = 0;
-      if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 203, __pyx_L1_error)
+      if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 204, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_3);
       __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
     }
     __Pyx_DECREF_SET(__pyx_v_rotated_2, __pyx_t_3);
     __pyx_t_3 = 0;
 
-    /* "cssfinder_backend_numpy/_cython/_complex64.py":205
+    /* "cssfinder_backend_numpy/_cython/_complex64.py":206
  *         rotated_2 = rotate(new_state, unitary)
  *
  *         product_rot2_3 = product(rotated_2, visibility_state)             # <<<<<<<<<<<<<<
  *
  *         if product_2_3 > product_rot2_3:
  */
-    __Pyx_GetModuleGlobalName(__pyx_t_1, __pyx_n_s_product); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 205, __pyx_L1_error)
+    __Pyx_GetModuleGlobalName(__pyx_t_1, __pyx_n_s_product); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 206, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_1);
     __pyx_t_7 = NULL;
     __pyx_t_4 = 0;
@@ -5656,33 +5656,33 @@ static PyObject *__pyx_pf_23cssfinder_backend_numpy_6cython_10_complex64_16optim
       PyObject *__pyx_callargs[3] = {__pyx_t_7, __pyx_v_rotated_2, __pyx_v_visibility_state};
       __pyx_t_3 = __Pyx_PyObject_FastCall(__pyx_t_1, __pyx_callargs+1-__pyx_t_4, 2+__pyx_t_4);
       __Pyx_XDECREF(__pyx_t_7); __pyx_t_7 = 0;
-      if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 205, __pyx_L1_error)
+      if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 206, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_3);
       __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
     }
     __Pyx_XDECREF_SET(__pyx_v_product_rot2_3, __pyx_t_3);
     __pyx_t_3 = 0;
 
-    /* "cssfinder_backend_numpy/_cython/_complex64.py":207
+    /* "cssfinder_backend_numpy/_cython/_complex64.py":208
  *         product_rot2_3 = product(rotated_2, visibility_state)
  *
  *         if product_2_3 > product_rot2_3:             # <<<<<<<<<<<<<<
  *             unitary = unitary.conj().T
  *             rotated_2 = rotate(new_state, unitary)
  */
-    __pyx_t_3 = PyObject_RichCompare(__pyx_v_product_2_3, __pyx_v_product_rot2_3, Py_GT); __Pyx_XGOTREF(__pyx_t_3); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 207, __pyx_L1_error)
-    __pyx_t_8 = __Pyx_PyObject_IsTrue(__pyx_t_3); if (unlikely((__pyx_t_8 < 0))) __PYX_ERR(0, 207, __pyx_L1_error)
+    __pyx_t_3 = PyObject_RichCompare(__pyx_v_product_2_3, __pyx_v_product_rot2_3, Py_GT); __Pyx_XGOTREF(__pyx_t_3); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 208, __pyx_L1_error)
+    __pyx_t_8 = __Pyx_PyObject_IsTrue(__pyx_t_3); if (unlikely((__pyx_t_8 < 0))) __PYX_ERR(0, 208, __pyx_L1_error)
     __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
     if (__pyx_t_8) {
 
-      /* "cssfinder_backend_numpy/_cython/_complex64.py":208
+      /* "cssfinder_backend_numpy/_cython/_complex64.py":209
  *
  *         if product_2_3 > product_rot2_3:
  *             unitary = unitary.conj().T             # <<<<<<<<<<<<<<
  *             rotated_2 = rotate(new_state, unitary)
  *
  */
-      __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_v_unitary, __pyx_n_s_conj); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 208, __pyx_L1_error)
+      __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_v_unitary, __pyx_n_s_conj); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 209, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_1);
       __pyx_t_7 = NULL;
       __pyx_t_4 = 0;
@@ -5700,24 +5700,24 @@ static PyObject *__pyx_pf_23cssfinder_backend_numpy_6cython_10_complex64_16optim
         PyObject *__pyx_callargs[1] = {__pyx_t_7, };
         __pyx_t_3 = __Pyx_PyObject_FastCall(__pyx_t_1, __pyx_callargs+1-__pyx_t_4, 0+__pyx_t_4);
         __Pyx_XDECREF(__pyx_t_7); __pyx_t_7 = 0;
-        if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 208, __pyx_L1_error)
+        if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 209, __pyx_L1_error)
         __Pyx_GOTREF(__pyx_t_3);
         __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
       }
-      __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_t_3, __pyx_n_s_T); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 208, __pyx_L1_error)
+      __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_t_3, __pyx_n_s_T); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 209, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_1);
       __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
       __Pyx_DECREF_SET(__pyx_v_unitary, __pyx_t_1);
       __pyx_t_1 = 0;
 
-      /* "cssfinder_backend_numpy/_cython/_complex64.py":209
+      /* "cssfinder_backend_numpy/_cython/_complex64.py":210
  *         if product_2_3 > product_rot2_3:
  *             unitary = unitary.conj().T
  *             rotated_2 = rotate(new_state, unitary)             # <<<<<<<<<<<<<<
  *
  *         while product_rot2_3 > product_2_3:
  */
-      __Pyx_GetModuleGlobalName(__pyx_t_3, __pyx_n_s_rotate); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 209, __pyx_L1_error)
+      __Pyx_GetModuleGlobalName(__pyx_t_3, __pyx_n_s_rotate); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 210, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_3);
       __pyx_t_7 = NULL;
       __pyx_t_4 = 0;
@@ -5735,14 +5735,14 @@ static PyObject *__pyx_pf_23cssfinder_backend_numpy_6cython_10_complex64_16optim
         PyObject *__pyx_callargs[3] = {__pyx_t_7, __pyx_v_new_state, __pyx_v_unitary};
         __pyx_t_1 = __Pyx_PyObject_FastCall(__pyx_t_3, __pyx_callargs+1-__pyx_t_4, 2+__pyx_t_4);
         __Pyx_XDECREF(__pyx_t_7); __pyx_t_7 = 0;
-        if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 209, __pyx_L1_error)
+        if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 210, __pyx_L1_error)
         __Pyx_GOTREF(__pyx_t_1);
         __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
       }
       __Pyx_DECREF_SET(__pyx_v_rotated_2, __pyx_t_1);
       __pyx_t_1 = 0;
 
-      /* "cssfinder_backend_numpy/_cython/_complex64.py":207
+      /* "cssfinder_backend_numpy/_cython/_complex64.py":208
  *         product_rot2_3 = product(rotated_2, visibility_state)
  *
  *         if product_2_3 > product_rot2_3:             # <<<<<<<<<<<<<<
@@ -5751,7 +5751,7 @@ static PyObject *__pyx_pf_23cssfinder_backend_numpy_6cython_10_complex64_16optim
  */
     }
 
-    /* "cssfinder_backend_numpy/_cython/_complex64.py":211
+    /* "cssfinder_backend_numpy/_cython/_complex64.py":212
  *             rotated_2 = rotate(new_state, unitary)
  *
  *         while product_rot2_3 > product_2_3:             # <<<<<<<<<<<<<<
@@ -5759,12 +5759,12 @@ static PyObject *__pyx_pf_23cssfinder_backend_numpy_6cython_10_complex64_16optim
  *             rotated_2 = rotate(rotated_2, unitary)
  */
     while (1) {
-      __pyx_t_1 = PyObject_RichCompare(__pyx_v_product_rot2_3, __pyx_v_product_2_3, Py_GT); __Pyx_XGOTREF(__pyx_t_1); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 211, __pyx_L1_error)
-      __pyx_t_8 = __Pyx_PyObject_IsTrue(__pyx_t_1); if (unlikely((__pyx_t_8 < 0))) __PYX_ERR(0, 211, __pyx_L1_error)
+      __pyx_t_1 = PyObject_RichCompare(__pyx_v_product_rot2_3, __pyx_v_product_2_3, Py_GT); __Pyx_XGOTREF(__pyx_t_1); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 212, __pyx_L1_error)
+      __pyx_t_8 = __Pyx_PyObject_IsTrue(__pyx_t_1); if (unlikely((__pyx_t_8 < 0))) __PYX_ERR(0, 212, __pyx_L1_error)
       __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
       if (!__pyx_t_8) break;
 
-      /* "cssfinder_backend_numpy/_cython/_complex64.py":212
+      /* "cssfinder_backend_numpy/_cython/_complex64.py":213
  *
  *         while product_rot2_3 > product_2_3:
  *             product_2_3 = product_rot2_3             # <<<<<<<<<<<<<<
@@ -5774,14 +5774,14 @@ static PyObject *__pyx_pf_23cssfinder_backend_numpy_6cython_10_complex64_16optim
       __Pyx_INCREF(__pyx_v_product_rot2_3);
       __Pyx_DECREF_SET(__pyx_v_product_2_3, __pyx_v_product_rot2_3);
 
-      /* "cssfinder_backend_numpy/_cython/_complex64.py":213
+      /* "cssfinder_backend_numpy/_cython/_complex64.py":214
  *         while product_rot2_3 > product_2_3:
  *             product_2_3 = product_rot2_3
  *             rotated_2 = rotate(rotated_2, unitary)             # <<<<<<<<<<<<<<
  *
  *             product_rot2_3 = product(rotated_2, visibility_state)
  */
-      __Pyx_GetModuleGlobalName(__pyx_t_3, __pyx_n_s_rotate); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 213, __pyx_L1_error)
+      __Pyx_GetModuleGlobalName(__pyx_t_3, __pyx_n_s_rotate); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 214, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_3);
       __pyx_t_7 = NULL;
       __pyx_t_4 = 0;
@@ -5799,21 +5799,21 @@ static PyObject *__pyx_pf_23cssfinder_backend_numpy_6cython_10_complex64_16optim
         PyObject *__pyx_callargs[3] = {__pyx_t_7, __pyx_v_rotated_2, __pyx_v_unitary};
         __pyx_t_1 = __Pyx_PyObject_FastCall(__pyx_t_3, __pyx_callargs+1-__pyx_t_4, 2+__pyx_t_4);
         __Pyx_XDECREF(__pyx_t_7); __pyx_t_7 = 0;
-        if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 213, __pyx_L1_error)
+        if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 214, __pyx_L1_error)
         __Pyx_GOTREF(__pyx_t_1);
         __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
       }
       __Pyx_DECREF_SET(__pyx_v_rotated_2, __pyx_t_1);
       __pyx_t_1 = 0;
 
-      /* "cssfinder_backend_numpy/_cython/_complex64.py":215
+      /* "cssfinder_backend_numpy/_cython/_complex64.py":216
  *             rotated_2 = rotate(rotated_2, unitary)
  *
  *             product_rot2_3 = product(rotated_2, visibility_state)             # <<<<<<<<<<<<<<
  *
  *     return rotated_2.astype(np.complex64, copy=False)  # type: ignore[no-any-return]
  */
-      __Pyx_GetModuleGlobalName(__pyx_t_3, __pyx_n_s_product); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 215, __pyx_L1_error)
+      __Pyx_GetModuleGlobalName(__pyx_t_3, __pyx_n_s_product); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 216, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_3);
       __pyx_t_7 = NULL;
       __pyx_t_4 = 0;
@@ -5831,7 +5831,7 @@ static PyObject *__pyx_pf_23cssfinder_backend_numpy_6cython_10_complex64_16optim
         PyObject *__pyx_callargs[3] = {__pyx_t_7, __pyx_v_rotated_2, __pyx_v_visibility_state};
         __pyx_t_1 = __Pyx_PyObject_FastCall(__pyx_t_3, __pyx_callargs+1-__pyx_t_4, 2+__pyx_t_4);
         __Pyx_XDECREF(__pyx_t_7); __pyx_t_7 = 0;
-        if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 215, __pyx_L1_error)
+        if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 216, __pyx_L1_error)
         __Pyx_GOTREF(__pyx_t_1);
         __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
       }
@@ -5839,7 +5839,7 @@ static PyObject *__pyx_pf_23cssfinder_backend_numpy_6cython_10_complex64_16optim
       __pyx_t_1 = 0;
     }
 
-    /* "cssfinder_backend_numpy/_cython/_complex64.py":199
+    /* "cssfinder_backend_numpy/_cython/_complex64.py":200
  *     rotated_2 = rotate(new_state, unitary)
  *
  *     for idx in range(updates_count):             # <<<<<<<<<<<<<<
@@ -5849,7 +5849,7 @@ static PyObject *__pyx_pf_23cssfinder_backend_numpy_6cython_10_complex64_16optim
   }
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
 
-  /* "cssfinder_backend_numpy/_cython/_complex64.py":217
+  /* "cssfinder_backend_numpy/_cython/_complex64.py":218
  *             product_rot2_3 = product(rotated_2, visibility_state)
  *
  *     return rotated_2.astype(np.complex64, copy=False)  # type: ignore[no-any-return]             # <<<<<<<<<<<<<<
@@ -5857,22 +5857,22 @@ static PyObject *__pyx_pf_23cssfinder_backend_numpy_6cython_10_complex64_16optim
  *
  */
   __Pyx_XDECREF(__pyx_r);
-  __pyx_t_2 = __Pyx_PyObject_GetAttrStr(__pyx_v_rotated_2, __pyx_n_s_astype); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 217, __pyx_L1_error)
+  __pyx_t_2 = __Pyx_PyObject_GetAttrStr(__pyx_v_rotated_2, __pyx_n_s_astype); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 218, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
-  __Pyx_GetModuleGlobalName(__pyx_t_1, __pyx_n_s_np); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 217, __pyx_L1_error)
+  __Pyx_GetModuleGlobalName(__pyx_t_1, __pyx_n_s_np); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 218, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
-  __pyx_t_3 = __Pyx_PyObject_GetAttrStr(__pyx_t_1, __pyx_n_s_complex64); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 217, __pyx_L1_error)
+  __pyx_t_3 = __Pyx_PyObject_GetAttrStr(__pyx_t_1, __pyx_n_s_complex64); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 218, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
-  __pyx_t_1 = PyTuple_New(1); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 217, __pyx_L1_error)
+  __pyx_t_1 = PyTuple_New(1); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 218, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __Pyx_GIVEREF(__pyx_t_3);
   PyTuple_SET_ITEM(__pyx_t_1, 0, __pyx_t_3);
   __pyx_t_3 = 0;
-  __pyx_t_3 = __Pyx_PyDict_NewPresized(1); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 217, __pyx_L1_error)
+  __pyx_t_3 = __Pyx_PyDict_NewPresized(1); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 218, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
-  if (PyDict_SetItem(__pyx_t_3, __pyx_n_s_copy, Py_False) < 0) __PYX_ERR(0, 217, __pyx_L1_error)
-  __pyx_t_7 = __Pyx_PyObject_Call(__pyx_t_2, __pyx_t_1, __pyx_t_3); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 217, __pyx_L1_error)
+  if (PyDict_SetItem(__pyx_t_3, __pyx_n_s_copy, Py_False) < 0) __PYX_ERR(0, 218, __pyx_L1_error)
+  __pyx_t_7 = __Pyx_PyObject_Call(__pyx_t_2, __pyx_t_1, __pyx_t_3); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 218, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_7);
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
@@ -5881,7 +5881,7 @@ static PyObject *__pyx_pf_23cssfinder_backend_numpy_6cython_10_complex64_16optim
   __pyx_t_7 = 0;
   goto __pyx_L0;
 
-  /* "cssfinder_backend_numpy/_cython/_complex64.py":184
+  /* "cssfinder_backend_numpy/_cython/_complex64.py":185
  *
  *
  * def optimize_d_fs(             # <<<<<<<<<<<<<<
@@ -5909,7 +5909,7 @@ static PyObject *__pyx_pf_23cssfinder_backend_numpy_6cython_10_complex64_16optim
   return __pyx_r;
 }
 
-/* "cssfinder_backend_numpy/_cython/_complex64.py":220
+/* "cssfinder_backend_numpy/_cython/_complex64.py":221
  *
  *
  * def random_unitary_d_fs(             # <<<<<<<<<<<<<<
@@ -5966,26 +5966,26 @@ PyObject *__pyx_args, PyObject *__pyx_kwds
       switch (__pyx_nargs) {
         case  0:
         if (likely((values[0] = __Pyx_GetKwValue_FASTCALL(__pyx_kwds, __pyx_kwvalues, __pyx_n_s_depth)) != 0)) kw_args--;
-        else if (unlikely(PyErr_Occurred())) __PYX_ERR(0, 220, __pyx_L3_error)
+        else if (unlikely(PyErr_Occurred())) __PYX_ERR(0, 221, __pyx_L3_error)
         else goto __pyx_L5_argtuple_error;
         CYTHON_FALLTHROUGH;
         case  1:
         if (likely((values[1] = __Pyx_GetKwValue_FASTCALL(__pyx_kwds, __pyx_kwvalues, __pyx_n_s_quantity)) != 0)) kw_args--;
-        else if (unlikely(PyErr_Occurred())) __PYX_ERR(0, 220, __pyx_L3_error)
+        else if (unlikely(PyErr_Occurred())) __PYX_ERR(0, 221, __pyx_L3_error)
         else {
-          __Pyx_RaiseArgtupleInvalid("random_unitary_d_fs", 1, 3, 3, 1); __PYX_ERR(0, 220, __pyx_L3_error)
+          __Pyx_RaiseArgtupleInvalid("random_unitary_d_fs", 1, 3, 3, 1); __PYX_ERR(0, 221, __pyx_L3_error)
         }
         CYTHON_FALLTHROUGH;
         case  2:
         if (likely((values[2] = __Pyx_GetKwValue_FASTCALL(__pyx_kwds, __pyx_kwvalues, __pyx_n_s_idx)) != 0)) kw_args--;
-        else if (unlikely(PyErr_Occurred())) __PYX_ERR(0, 220, __pyx_L3_error)
+        else if (unlikely(PyErr_Occurred())) __PYX_ERR(0, 221, __pyx_L3_error)
         else {
-          __Pyx_RaiseArgtupleInvalid("random_unitary_d_fs", 1, 3, 3, 2); __PYX_ERR(0, 220, __pyx_L3_error)
+          __Pyx_RaiseArgtupleInvalid("random_unitary_d_fs", 1, 3, 3, 2); __PYX_ERR(0, 221, __pyx_L3_error)
         }
       }
       if (unlikely(kw_args > 0)) {
         const Py_ssize_t kwd_pos_args = __pyx_nargs;
-        if (unlikely(__Pyx_ParseOptionalKeywords(__pyx_kwds, __pyx_kwvalues, __pyx_pyargnames, 0, values + 0, kwd_pos_args, "random_unitary_d_fs") < 0)) __PYX_ERR(0, 220, __pyx_L3_error)
+        if (unlikely(__Pyx_ParseOptionalKeywords(__pyx_kwds, __pyx_kwvalues, __pyx_pyargnames, 0, values + 0, kwd_pos_args, "random_unitary_d_fs") < 0)) __PYX_ERR(0, 221, __pyx_L3_error)
       }
     } else if (unlikely(__pyx_nargs != 3)) {
       goto __pyx_L5_argtuple_error;
@@ -6000,15 +6000,15 @@ PyObject *__pyx_args, PyObject *__pyx_kwds
   }
   goto __pyx_L4_argument_unpacking_done;
   __pyx_L5_argtuple_error:;
-  __Pyx_RaiseArgtupleInvalid("random_unitary_d_fs", 1, 3, 3, __pyx_nargs); __PYX_ERR(0, 220, __pyx_L3_error)
+  __Pyx_RaiseArgtupleInvalid("random_unitary_d_fs", 1, 3, 3, __pyx_nargs); __PYX_ERR(0, 221, __pyx_L3_error)
   __pyx_L3_error:;
   __Pyx_AddTraceback("cssfinder_backend_numpy.cython._complex64.random_unitary_d_fs", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __Pyx_RefNannyFinishContext();
   return NULL;
   __pyx_L4_argument_unpacking_done:;
-  if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_depth), (&PyInt_Type), 0, "depth", 1))) __PYX_ERR(0, 221, __pyx_L1_error)
-  if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_quantity), (&PyInt_Type), 0, "quantity", 1))) __PYX_ERR(0, 221, __pyx_L1_error)
-  if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_idx), (&PyInt_Type), 0, "idx", 1))) __PYX_ERR(0, 221, __pyx_L1_error)
+  if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_depth), (&PyInt_Type), 0, "depth", 1))) __PYX_ERR(0, 222, __pyx_L1_error)
+  if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_quantity), (&PyInt_Type), 0, "quantity", 1))) __PYX_ERR(0, 222, __pyx_L1_error)
+  if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_idx), (&PyInt_Type), 0, "idx", 1))) __PYX_ERR(0, 222, __pyx_L1_error)
   __pyx_r = __pyx_pf_23cssfinder_backend_numpy_6cython_10_complex64_18random_unitary_d_fs(__pyx_self, __pyx_v_depth, __pyx_v_quantity, __pyx_v_idx);
 
   /* function exit code */
@@ -6034,14 +6034,14 @@ static PyObject *__pyx_pf_23cssfinder_backend_numpy_6cython_10_complex64_18rando
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("random_unitary_d_fs", 0);
 
-  /* "cssfinder_backend_numpy/_cython/_complex64.py":224
+  /* "cssfinder_backend_numpy/_cython/_complex64.py":225
  * ) -> npt.NDArray[np.complex64]:
  *     """N quDits."""
  *     value = _random_unitary_d_fs(depth)             # <<<<<<<<<<<<<<
  *
  *     mtx = expand_d_fs(value, depth, quantity, idx)
  */
-  __Pyx_GetModuleGlobalName(__pyx_t_2, __pyx_n_s_random_unitary_d_fs_2); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 224, __pyx_L1_error)
+  __Pyx_GetModuleGlobalName(__pyx_t_2, __pyx_n_s_random_unitary_d_fs_2); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 225, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
   __pyx_t_3 = NULL;
   __pyx_t_4 = 0;
@@ -6059,21 +6059,21 @@ static PyObject *__pyx_pf_23cssfinder_backend_numpy_6cython_10_complex64_18rando
     PyObject *__pyx_callargs[2] = {__pyx_t_3, __pyx_v_depth};
     __pyx_t_1 = __Pyx_PyObject_FastCall(__pyx_t_2, __pyx_callargs+1-__pyx_t_4, 1+__pyx_t_4);
     __Pyx_XDECREF(__pyx_t_3); __pyx_t_3 = 0;
-    if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 224, __pyx_L1_error)
+    if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 225, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_1);
     __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
   }
   __pyx_v_value = __pyx_t_1;
   __pyx_t_1 = 0;
 
-  /* "cssfinder_backend_numpy/_cython/_complex64.py":226
+  /* "cssfinder_backend_numpy/_cython/_complex64.py":227
  *     value = _random_unitary_d_fs(depth)
  *
  *     mtx = expand_d_fs(value, depth, quantity, idx)             # <<<<<<<<<<<<<<
  *
  *     return mtx  # type: ignore[no-any-return]
  */
-  __Pyx_GetModuleGlobalName(__pyx_t_2, __pyx_n_s_expand_d_fs); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 226, __pyx_L1_error)
+  __Pyx_GetModuleGlobalName(__pyx_t_2, __pyx_n_s_expand_d_fs); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 227, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
   __pyx_t_3 = NULL;
   __pyx_t_4 = 0;
@@ -6091,14 +6091,14 @@ static PyObject *__pyx_pf_23cssfinder_backend_numpy_6cython_10_complex64_18rando
     PyObject *__pyx_callargs[5] = {__pyx_t_3, __pyx_v_value, __pyx_v_depth, __pyx_v_quantity, __pyx_v_idx};
     __pyx_t_1 = __Pyx_PyObject_FastCall(__pyx_t_2, __pyx_callargs+1-__pyx_t_4, 4+__pyx_t_4);
     __Pyx_XDECREF(__pyx_t_3); __pyx_t_3 = 0;
-    if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 226, __pyx_L1_error)
+    if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 227, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_1);
     __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
   }
   __pyx_v_mtx = __pyx_t_1;
   __pyx_t_1 = 0;
 
-  /* "cssfinder_backend_numpy/_cython/_complex64.py":228
+  /* "cssfinder_backend_numpy/_cython/_complex64.py":229
  *     mtx = expand_d_fs(value, depth, quantity, idx)
  *
  *     return mtx  # type: ignore[no-any-return]             # <<<<<<<<<<<<<<
@@ -6110,7 +6110,7 @@ static PyObject *__pyx_pf_23cssfinder_backend_numpy_6cython_10_complex64_18rando
   __pyx_r = __pyx_v_mtx;
   goto __pyx_L0;
 
-  /* "cssfinder_backend_numpy/_cython/_complex64.py":220
+  /* "cssfinder_backend_numpy/_cython/_complex64.py":221
  *
  *
  * def random_unitary_d_fs(             # <<<<<<<<<<<<<<
@@ -6133,7 +6133,7 @@ static PyObject *__pyx_pf_23cssfinder_backend_numpy_6cython_10_complex64_18rando
   return __pyx_r;
 }
 
-/* "cssfinder_backend_numpy/_cython/_complex64.py":231
+/* "cssfinder_backend_numpy/_cython/_complex64.py":232
  *
  *
  * def _random_unitary_d_fs(depth: int) -> npt.NDArray[np.complex64]:             # <<<<<<<<<<<<<<
@@ -6183,12 +6183,12 @@ PyObject *__pyx_args, PyObject *__pyx_kwds
       switch (__pyx_nargs) {
         case  0:
         if (likely((values[0] = __Pyx_GetKwValue_FASTCALL(__pyx_kwds, __pyx_kwvalues, __pyx_n_s_depth)) != 0)) kw_args--;
-        else if (unlikely(PyErr_Occurred())) __PYX_ERR(0, 231, __pyx_L3_error)
+        else if (unlikely(PyErr_Occurred())) __PYX_ERR(0, 232, __pyx_L3_error)
         else goto __pyx_L5_argtuple_error;
       }
       if (unlikely(kw_args > 0)) {
         const Py_ssize_t kwd_pos_args = __pyx_nargs;
-        if (unlikely(__Pyx_ParseOptionalKeywords(__pyx_kwds, __pyx_kwvalues, __pyx_pyargnames, 0, values + 0, kwd_pos_args, "_random_unitary_d_fs") < 0)) __PYX_ERR(0, 231, __pyx_L3_error)
+        if (unlikely(__Pyx_ParseOptionalKeywords(__pyx_kwds, __pyx_kwvalues, __pyx_pyargnames, 0, values + 0, kwd_pos_args, "_random_unitary_d_fs") < 0)) __PYX_ERR(0, 232, __pyx_L3_error)
       }
     } else if (unlikely(__pyx_nargs != 1)) {
       goto __pyx_L5_argtuple_error;
@@ -6199,13 +6199,13 @@ PyObject *__pyx_args, PyObject *__pyx_kwds
   }
   goto __pyx_L4_argument_unpacking_done;
   __pyx_L5_argtuple_error:;
-  __Pyx_RaiseArgtupleInvalid("_random_unitary_d_fs", 1, 1, 1, __pyx_nargs); __PYX_ERR(0, 231, __pyx_L3_error)
+  __Pyx_RaiseArgtupleInvalid("_random_unitary_d_fs", 1, 1, 1, __pyx_nargs); __PYX_ERR(0, 232, __pyx_L3_error)
   __pyx_L3_error:;
   __Pyx_AddTraceback("cssfinder_backend_numpy.cython._complex64._random_unitary_d_fs", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __Pyx_RefNannyFinishContext();
   return NULL;
   __pyx_L4_argument_unpacking_done:;
-  if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_depth), (&PyInt_Type), 0, "depth", 1))) __PYX_ERR(0, 231, __pyx_L1_error)
+  if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_depth), (&PyInt_Type), 0, "depth", 1))) __PYX_ERR(0, 232, __pyx_L1_error)
   __pyx_r = __pyx_pf_23cssfinder_backend_numpy_6cython_10_complex64_20_random_unitary_d_fs(__pyx_self, __pyx_v_depth);
 
   /* function exit code */
@@ -6234,14 +6234,14 @@ static PyObject *__pyx_pf_23cssfinder_backend_numpy_6cython_10_complex64_20_rand
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("_random_unitary_d_fs", 0);
 
-  /* "cssfinder_backend_numpy/_cython/_complex64.py":232
+  /* "cssfinder_backend_numpy/_cython/_complex64.py":233
  *
  * def _random_unitary_d_fs(depth: int) -> npt.NDArray[np.complex64]:
  *     random_mtx = random_d_fs(depth, 1)             # <<<<<<<<<<<<<<
  *
  *     identity_mtx = np.identity(depth).astype(np.complex64)
  */
-  __Pyx_GetModuleGlobalName(__pyx_t_2, __pyx_n_s_random_d_fs); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 232, __pyx_L1_error)
+  __Pyx_GetModuleGlobalName(__pyx_t_2, __pyx_n_s_random_d_fs); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 233, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
   __pyx_t_3 = NULL;
   __pyx_t_4 = 0;
@@ -6259,23 +6259,23 @@ static PyObject *__pyx_pf_23cssfinder_backend_numpy_6cython_10_complex64_20_rand
     PyObject *__pyx_callargs[3] = {__pyx_t_3, __pyx_v_depth, __pyx_int_1};
     __pyx_t_1 = __Pyx_PyObject_FastCall(__pyx_t_2, __pyx_callargs+1-__pyx_t_4, 2+__pyx_t_4);
     __Pyx_XDECREF(__pyx_t_3); __pyx_t_3 = 0;
-    if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 232, __pyx_L1_error)
+    if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 233, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_1);
     __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
   }
   __pyx_v_random_mtx = __pyx_t_1;
   __pyx_t_1 = 0;
 
-  /* "cssfinder_backend_numpy/_cython/_complex64.py":234
+  /* "cssfinder_backend_numpy/_cython/_complex64.py":235
  *     random_mtx = random_d_fs(depth, 1)
  *
  *     identity_mtx = np.identity(depth).astype(np.complex64)             # <<<<<<<<<<<<<<
  *
  *     rand_mul = np.multiply(_VALUE, random_mtx)
  */
-  __Pyx_GetModuleGlobalName(__pyx_t_3, __pyx_n_s_np); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 234, __pyx_L1_error)
+  __Pyx_GetModuleGlobalName(__pyx_t_3, __pyx_n_s_np); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 235, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
-  __pyx_t_5 = __Pyx_PyObject_GetAttrStr(__pyx_t_3, __pyx_n_s_identity); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 234, __pyx_L1_error)
+  __pyx_t_5 = __Pyx_PyObject_GetAttrStr(__pyx_t_3, __pyx_n_s_identity); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 235, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_5);
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
   __pyx_t_3 = NULL;
@@ -6294,16 +6294,16 @@ static PyObject *__pyx_pf_23cssfinder_backend_numpy_6cython_10_complex64_20_rand
     PyObject *__pyx_callargs[2] = {__pyx_t_3, __pyx_v_depth};
     __pyx_t_2 = __Pyx_PyObject_FastCall(__pyx_t_5, __pyx_callargs+1-__pyx_t_4, 1+__pyx_t_4);
     __Pyx_XDECREF(__pyx_t_3); __pyx_t_3 = 0;
-    if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 234, __pyx_L1_error)
+    if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 235, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_2);
     __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
   }
-  __pyx_t_5 = __Pyx_PyObject_GetAttrStr(__pyx_t_2, __pyx_n_s_astype); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 234, __pyx_L1_error)
+  __pyx_t_5 = __Pyx_PyObject_GetAttrStr(__pyx_t_2, __pyx_n_s_astype); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 235, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_5);
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
-  __Pyx_GetModuleGlobalName(__pyx_t_2, __pyx_n_s_np); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 234, __pyx_L1_error)
+  __Pyx_GetModuleGlobalName(__pyx_t_2, __pyx_n_s_np); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 235, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
-  __pyx_t_3 = __Pyx_PyObject_GetAttrStr(__pyx_t_2, __pyx_n_s_complex64); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 234, __pyx_L1_error)
+  __pyx_t_3 = __Pyx_PyObject_GetAttrStr(__pyx_t_2, __pyx_n_s_complex64); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 235, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
   __pyx_t_2 = NULL;
@@ -6323,26 +6323,26 @@ static PyObject *__pyx_pf_23cssfinder_backend_numpy_6cython_10_complex64_20_rand
     __pyx_t_1 = __Pyx_PyObject_FastCall(__pyx_t_5, __pyx_callargs+1-__pyx_t_4, 1+__pyx_t_4);
     __Pyx_XDECREF(__pyx_t_2); __pyx_t_2 = 0;
     __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
-    if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 234, __pyx_L1_error)
+    if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 235, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_1);
     __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
   }
   __pyx_v_identity_mtx = __pyx_t_1;
   __pyx_t_1 = 0;
 
-  /* "cssfinder_backend_numpy/_cython/_complex64.py":236
+  /* "cssfinder_backend_numpy/_cython/_complex64.py":237
  *     identity_mtx = np.identity(depth).astype(np.complex64)
  *
  *     rand_mul = np.multiply(_VALUE, random_mtx)             # <<<<<<<<<<<<<<
  *
  *     value = np.add(rand_mul, identity_mtx)
  */
-  __Pyx_GetModuleGlobalName(__pyx_t_5, __pyx_n_s_np); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 236, __pyx_L1_error)
+  __Pyx_GetModuleGlobalName(__pyx_t_5, __pyx_n_s_np); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 237, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_5);
-  __pyx_t_3 = __Pyx_PyObject_GetAttrStr(__pyx_t_5, __pyx_n_s_multiply); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 236, __pyx_L1_error)
+  __pyx_t_3 = __Pyx_PyObject_GetAttrStr(__pyx_t_5, __pyx_n_s_multiply); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 237, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
   __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
-  __Pyx_GetModuleGlobalName(__pyx_t_5, __pyx_n_s_VALUE); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 236, __pyx_L1_error)
+  __Pyx_GetModuleGlobalName(__pyx_t_5, __pyx_n_s_VALUE); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 237, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_5);
   __pyx_t_2 = NULL;
   __pyx_t_4 = 0;
@@ -6361,23 +6361,23 @@ static PyObject *__pyx_pf_23cssfinder_backend_numpy_6cython_10_complex64_20_rand
     __pyx_t_1 = __Pyx_PyObject_FastCall(__pyx_t_3, __pyx_callargs+1-__pyx_t_4, 2+__pyx_t_4);
     __Pyx_XDECREF(__pyx_t_2); __pyx_t_2 = 0;
     __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
-    if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 236, __pyx_L1_error)
+    if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 237, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_1);
     __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
   }
   __pyx_v_rand_mul = __pyx_t_1;
   __pyx_t_1 = 0;
 
-  /* "cssfinder_backend_numpy/_cython/_complex64.py":238
+  /* "cssfinder_backend_numpy/_cython/_complex64.py":239
  *     rand_mul = np.multiply(_VALUE, random_mtx)
  *
  *     value = np.add(rand_mul, identity_mtx)             # <<<<<<<<<<<<<<
  *
  *     return value  # type: ignore[no-any-return]
  */
-  __Pyx_GetModuleGlobalName(__pyx_t_3, __pyx_n_s_np); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 238, __pyx_L1_error)
+  __Pyx_GetModuleGlobalName(__pyx_t_3, __pyx_n_s_np); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 239, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
-  __pyx_t_5 = __Pyx_PyObject_GetAttrStr(__pyx_t_3, __pyx_n_s_add); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 238, __pyx_L1_error)
+  __pyx_t_5 = __Pyx_PyObject_GetAttrStr(__pyx_t_3, __pyx_n_s_add); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 239, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_5);
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
   __pyx_t_3 = NULL;
@@ -6396,14 +6396,14 @@ static PyObject *__pyx_pf_23cssfinder_backend_numpy_6cython_10_complex64_20_rand
     PyObject *__pyx_callargs[3] = {__pyx_t_3, __pyx_v_rand_mul, __pyx_v_identity_mtx};
     __pyx_t_1 = __Pyx_PyObject_FastCall(__pyx_t_5, __pyx_callargs+1-__pyx_t_4, 2+__pyx_t_4);
     __Pyx_XDECREF(__pyx_t_3); __pyx_t_3 = 0;
-    if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 238, __pyx_L1_error)
+    if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 239, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_1);
     __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
   }
   __pyx_v_value = __pyx_t_1;
   __pyx_t_1 = 0;
 
-  /* "cssfinder_backend_numpy/_cython/_complex64.py":240
+  /* "cssfinder_backend_numpy/_cython/_complex64.py":241
  *     value = np.add(rand_mul, identity_mtx)
  *
  *     return value  # type: ignore[no-any-return]             # <<<<<<<<<<<<<<
@@ -6415,7 +6415,7 @@ static PyObject *__pyx_pf_23cssfinder_backend_numpy_6cython_10_complex64_20_rand
   __pyx_r = __pyx_v_value;
   goto __pyx_L0;
 
-  /* "cssfinder_backend_numpy/_cython/_complex64.py":231
+  /* "cssfinder_backend_numpy/_cython/_complex64.py":232
  *
  *
  * def _random_unitary_d_fs(depth: int) -> npt.NDArray[np.complex64]:             # <<<<<<<<<<<<<<
@@ -6441,7 +6441,7 @@ static PyObject *__pyx_pf_23cssfinder_backend_numpy_6cython_10_complex64_20_rand
   return __pyx_r;
 }
 
-/* "cssfinder_backend_numpy/_cython/_complex64.py":243
+/* "cssfinder_backend_numpy/_cython/_complex64.py":244
  *
  *
  * def random_d_fs(depth: int, quantity: int) -> npt.NDArray[np.complex64]:             # <<<<<<<<<<<<<<
@@ -6495,19 +6495,19 @@ PyObject *__pyx_args, PyObject *__pyx_kwds
       switch (__pyx_nargs) {
         case  0:
         if (likely((values[0] = __Pyx_GetKwValue_FASTCALL(__pyx_kwds, __pyx_kwvalues, __pyx_n_s_depth)) != 0)) kw_args--;
-        else if (unlikely(PyErr_Occurred())) __PYX_ERR(0, 243, __pyx_L3_error)
+        else if (unlikely(PyErr_Occurred())) __PYX_ERR(0, 244, __pyx_L3_error)
         else goto __pyx_L5_argtuple_error;
         CYTHON_FALLTHROUGH;
         case  1:
         if (likely((values[1] = __Pyx_GetKwValue_FASTCALL(__pyx_kwds, __pyx_kwvalues, __pyx_n_s_quantity)) != 0)) kw_args--;
-        else if (unlikely(PyErr_Occurred())) __PYX_ERR(0, 243, __pyx_L3_error)
+        else if (unlikely(PyErr_Occurred())) __PYX_ERR(0, 244, __pyx_L3_error)
         else {
-          __Pyx_RaiseArgtupleInvalid("random_d_fs", 1, 2, 2, 1); __PYX_ERR(0, 243, __pyx_L3_error)
+          __Pyx_RaiseArgtupleInvalid("random_d_fs", 1, 2, 2, 1); __PYX_ERR(0, 244, __pyx_L3_error)
         }
       }
       if (unlikely(kw_args > 0)) {
         const Py_ssize_t kwd_pos_args = __pyx_nargs;
-        if (unlikely(__Pyx_ParseOptionalKeywords(__pyx_kwds, __pyx_kwvalues, __pyx_pyargnames, 0, values + 0, kwd_pos_args, "random_d_fs") < 0)) __PYX_ERR(0, 243, __pyx_L3_error)
+        if (unlikely(__Pyx_ParseOptionalKeywords(__pyx_kwds, __pyx_kwvalues, __pyx_pyargnames, 0, values + 0, kwd_pos_args, "random_d_fs") < 0)) __PYX_ERR(0, 244, __pyx_L3_error)
       }
     } else if (unlikely(__pyx_nargs != 2)) {
       goto __pyx_L5_argtuple_error;
@@ -6520,14 +6520,14 @@ PyObject *__pyx_args, PyObject *__pyx_kwds
   }
   goto __pyx_L4_argument_unpacking_done;
   __pyx_L5_argtuple_error:;
-  __Pyx_RaiseArgtupleInvalid("random_d_fs", 1, 2, 2, __pyx_nargs); __PYX_ERR(0, 243, __pyx_L3_error)
+  __Pyx_RaiseArgtupleInvalid("random_d_fs", 1, 2, 2, __pyx_nargs); __PYX_ERR(0, 244, __pyx_L3_error)
   __pyx_L3_error:;
   __Pyx_AddTraceback("cssfinder_backend_numpy.cython._complex64.random_d_fs", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __Pyx_RefNannyFinishContext();
   return NULL;
   __pyx_L4_argument_unpacking_done:;
-  if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_depth), (&PyInt_Type), 0, "depth", 1))) __PYX_ERR(0, 243, __pyx_L1_error)
-  if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_quantity), (&PyInt_Type), 0, "quantity", 1))) __PYX_ERR(0, 243, __pyx_L1_error)
+  if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_depth), (&PyInt_Type), 0, "depth", 1))) __PYX_ERR(0, 244, __pyx_L1_error)
+  if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_quantity), (&PyInt_Type), 0, "quantity", 1))) __PYX_ERR(0, 244, __pyx_L1_error)
   __pyx_r = __pyx_pf_23cssfinder_backend_numpy_6cython_10_complex64_22random_d_fs(__pyx_self, __pyx_v_depth, __pyx_v_quantity);
 
   /* function exit code */
@@ -6559,14 +6559,14 @@ static PyObject *__pyx_pf_23cssfinder_backend_numpy_6cython_10_complex64_22rando
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("random_d_fs", 0);
 
-  /* "cssfinder_backend_numpy/_cython/_complex64.py":245
+  /* "cssfinder_backend_numpy/_cython/_complex64.py":246
  * def random_d_fs(depth: int, quantity: int) -> npt.NDArray[np.complex64]:
  *     """Random n quDit state."""
  *     rand_vectors = get_random_haar_2d(depth, quantity)             # <<<<<<<<<<<<<<
  *     vector = normalize(rand_vectors[0])
  *
  */
-  __Pyx_GetModuleGlobalName(__pyx_t_2, __pyx_n_s_get_random_haar_2d); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 245, __pyx_L1_error)
+  __Pyx_GetModuleGlobalName(__pyx_t_2, __pyx_n_s_get_random_haar_2d); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 246, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
   __pyx_t_3 = NULL;
   __pyx_t_4 = 0;
@@ -6584,23 +6584,23 @@ static PyObject *__pyx_pf_23cssfinder_backend_numpy_6cython_10_complex64_22rando
     PyObject *__pyx_callargs[3] = {__pyx_t_3, __pyx_v_depth, __pyx_v_quantity};
     __pyx_t_1 = __Pyx_PyObject_FastCall(__pyx_t_2, __pyx_callargs+1-__pyx_t_4, 2+__pyx_t_4);
     __Pyx_XDECREF(__pyx_t_3); __pyx_t_3 = 0;
-    if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 245, __pyx_L1_error)
+    if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 246, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_1);
     __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
   }
   __pyx_v_rand_vectors = __pyx_t_1;
   __pyx_t_1 = 0;
 
-  /* "cssfinder_backend_numpy/_cython/_complex64.py":246
+  /* "cssfinder_backend_numpy/_cython/_complex64.py":247
  *     """Random n quDit state."""
  *     rand_vectors = get_random_haar_2d(depth, quantity)
  *     vector = normalize(rand_vectors[0])             # <<<<<<<<<<<<<<
  *
  *     for i in range(1, quantity):
  */
-  __Pyx_GetModuleGlobalName(__pyx_t_2, __pyx_n_s_normalize); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 246, __pyx_L1_error)
+  __Pyx_GetModuleGlobalName(__pyx_t_2, __pyx_n_s_normalize); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 247, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
-  __pyx_t_3 = __Pyx_GetItemInt(__pyx_v_rand_vectors, 0, long, 1, __Pyx_PyInt_From_long, 0, 0, 1); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 246, __pyx_L1_error)
+  __pyx_t_3 = __Pyx_GetItemInt(__pyx_v_rand_vectors, 0, long, 1, __Pyx_PyInt_From_long, 0, 0, 1); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 247, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
   __pyx_t_5 = NULL;
   __pyx_t_4 = 0;
@@ -6619,21 +6619,21 @@ static PyObject *__pyx_pf_23cssfinder_backend_numpy_6cython_10_complex64_22rando
     __pyx_t_1 = __Pyx_PyObject_FastCall(__pyx_t_2, __pyx_callargs+1-__pyx_t_4, 1+__pyx_t_4);
     __Pyx_XDECREF(__pyx_t_5); __pyx_t_5 = 0;
     __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
-    if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 246, __pyx_L1_error)
+    if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 247, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_1);
     __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
   }
   __pyx_v_vector = __pyx_t_1;
   __pyx_t_1 = 0;
 
-  /* "cssfinder_backend_numpy/_cython/_complex64.py":248
+  /* "cssfinder_backend_numpy/_cython/_complex64.py":249
  *     vector = normalize(rand_vectors[0])
  *
  *     for i in range(1, quantity):             # <<<<<<<<<<<<<<
  *         idx_vector = normalize(rand_vectors[i])
  *
  */
-  __pyx_t_1 = PyTuple_New(2); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 248, __pyx_L1_error)
+  __pyx_t_1 = PyTuple_New(2); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 249, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __Pyx_INCREF(__pyx_int_1);
   __Pyx_GIVEREF(__pyx_int_1);
@@ -6641,16 +6641,16 @@ static PyObject *__pyx_pf_23cssfinder_backend_numpy_6cython_10_complex64_22rando
   __Pyx_INCREF(__pyx_v_quantity);
   __Pyx_GIVEREF(__pyx_v_quantity);
   PyTuple_SET_ITEM(__pyx_t_1, 1, __pyx_v_quantity);
-  __pyx_t_2 = __Pyx_PyObject_Call(__pyx_builtin_range, __pyx_t_1, NULL); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 248, __pyx_L1_error)
+  __pyx_t_2 = __Pyx_PyObject_Call(__pyx_builtin_range, __pyx_t_1, NULL); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 249, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
   if (likely(PyList_CheckExact(__pyx_t_2)) || PyTuple_CheckExact(__pyx_t_2)) {
     __pyx_t_1 = __pyx_t_2; __Pyx_INCREF(__pyx_t_1); __pyx_t_6 = 0;
     __pyx_t_7 = NULL;
   } else {
-    __pyx_t_6 = -1; __pyx_t_1 = PyObject_GetIter(__pyx_t_2); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 248, __pyx_L1_error)
+    __pyx_t_6 = -1; __pyx_t_1 = PyObject_GetIter(__pyx_t_2); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 249, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_1);
-    __pyx_t_7 = __Pyx_PyObject_GetIterNextFunc(__pyx_t_1); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 248, __pyx_L1_error)
+    __pyx_t_7 = __Pyx_PyObject_GetIterNextFunc(__pyx_t_1); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 249, __pyx_L1_error)
   }
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
   for (;;) {
@@ -6658,17 +6658,17 @@ static PyObject *__pyx_pf_23cssfinder_backend_numpy_6cython_10_complex64_22rando
       if (likely(PyList_CheckExact(__pyx_t_1))) {
         if (__pyx_t_6 >= PyList_GET_SIZE(__pyx_t_1)) break;
         #if CYTHON_ASSUME_SAFE_MACROS && !CYTHON_AVOID_BORROWED_REFS
-        __pyx_t_2 = PyList_GET_ITEM(__pyx_t_1, __pyx_t_6); __Pyx_INCREF(__pyx_t_2); __pyx_t_6++; if (unlikely((0 < 0))) __PYX_ERR(0, 248, __pyx_L1_error)
+        __pyx_t_2 = PyList_GET_ITEM(__pyx_t_1, __pyx_t_6); __Pyx_INCREF(__pyx_t_2); __pyx_t_6++; if (unlikely((0 < 0))) __PYX_ERR(0, 249, __pyx_L1_error)
         #else
-        __pyx_t_2 = PySequence_ITEM(__pyx_t_1, __pyx_t_6); __pyx_t_6++; if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 248, __pyx_L1_error)
+        __pyx_t_2 = PySequence_ITEM(__pyx_t_1, __pyx_t_6); __pyx_t_6++; if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 249, __pyx_L1_error)
         __Pyx_GOTREF(__pyx_t_2);
         #endif
       } else {
         if (__pyx_t_6 >= PyTuple_GET_SIZE(__pyx_t_1)) break;
         #if CYTHON_ASSUME_SAFE_MACROS && !CYTHON_AVOID_BORROWED_REFS
-        __pyx_t_2 = PyTuple_GET_ITEM(__pyx_t_1, __pyx_t_6); __Pyx_INCREF(__pyx_t_2); __pyx_t_6++; if (unlikely((0 < 0))) __PYX_ERR(0, 248, __pyx_L1_error)
+        __pyx_t_2 = PyTuple_GET_ITEM(__pyx_t_1, __pyx_t_6); __Pyx_INCREF(__pyx_t_2); __pyx_t_6++; if (unlikely((0 < 0))) __PYX_ERR(0, 249, __pyx_L1_error)
         #else
-        __pyx_t_2 = PySequence_ITEM(__pyx_t_1, __pyx_t_6); __pyx_t_6++; if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 248, __pyx_L1_error)
+        __pyx_t_2 = PySequence_ITEM(__pyx_t_1, __pyx_t_6); __pyx_t_6++; if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 249, __pyx_L1_error)
         __Pyx_GOTREF(__pyx_t_2);
         #endif
       }
@@ -6678,7 +6678,7 @@ static PyObject *__pyx_pf_23cssfinder_backend_numpy_6cython_10_complex64_22rando
         PyObject* exc_type = PyErr_Occurred();
         if (exc_type) {
           if (likely(__Pyx_PyErr_GivenExceptionMatches(exc_type, PyExc_StopIteration))) PyErr_Clear();
-          else __PYX_ERR(0, 248, __pyx_L1_error)
+          else __PYX_ERR(0, 249, __pyx_L1_error)
         }
         break;
       }
@@ -6687,16 +6687,16 @@ static PyObject *__pyx_pf_23cssfinder_backend_numpy_6cython_10_complex64_22rando
     __Pyx_XDECREF_SET(__pyx_v_i, __pyx_t_2);
     __pyx_t_2 = 0;
 
-    /* "cssfinder_backend_numpy/_cython/_complex64.py":249
+    /* "cssfinder_backend_numpy/_cython/_complex64.py":250
  *
  *     for i in range(1, quantity):
  *         idx_vector = normalize(rand_vectors[i])             # <<<<<<<<<<<<<<
  *
  *         vector = np.outer(vector, idx_vector).flatten()
  */
-    __Pyx_GetModuleGlobalName(__pyx_t_3, __pyx_n_s_normalize); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 249, __pyx_L1_error)
+    __Pyx_GetModuleGlobalName(__pyx_t_3, __pyx_n_s_normalize); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 250, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_3);
-    __pyx_t_5 = __Pyx_PyObject_GetItem(__pyx_v_rand_vectors, __pyx_v_i); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 249, __pyx_L1_error)
+    __pyx_t_5 = __Pyx_PyObject_GetItem(__pyx_v_rand_vectors, __pyx_v_i); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 250, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_5);
     __pyx_t_8 = NULL;
     __pyx_t_4 = 0;
@@ -6715,23 +6715,23 @@ static PyObject *__pyx_pf_23cssfinder_backend_numpy_6cython_10_complex64_22rando
       __pyx_t_2 = __Pyx_PyObject_FastCall(__pyx_t_3, __pyx_callargs+1-__pyx_t_4, 1+__pyx_t_4);
       __Pyx_XDECREF(__pyx_t_8); __pyx_t_8 = 0;
       __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
-      if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 249, __pyx_L1_error)
+      if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 250, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_2);
       __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
     }
     __Pyx_XDECREF_SET(__pyx_v_idx_vector, __pyx_t_2);
     __pyx_t_2 = 0;
 
-    /* "cssfinder_backend_numpy/_cython/_complex64.py":251
+    /* "cssfinder_backend_numpy/_cython/_complex64.py":252
  *         idx_vector = normalize(rand_vectors[i])
  *
  *         vector = np.outer(vector, idx_vector).flatten()             # <<<<<<<<<<<<<<
  *
  *     vector = project(vector)
  */
-    __Pyx_GetModuleGlobalName(__pyx_t_5, __pyx_n_s_np); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 251, __pyx_L1_error)
+    __Pyx_GetModuleGlobalName(__pyx_t_5, __pyx_n_s_np); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 252, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_5);
-    __pyx_t_8 = __Pyx_PyObject_GetAttrStr(__pyx_t_5, __pyx_n_s_outer); if (unlikely(!__pyx_t_8)) __PYX_ERR(0, 251, __pyx_L1_error)
+    __pyx_t_8 = __Pyx_PyObject_GetAttrStr(__pyx_t_5, __pyx_n_s_outer); if (unlikely(!__pyx_t_8)) __PYX_ERR(0, 252, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_8);
     __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
     __pyx_t_5 = NULL;
@@ -6750,11 +6750,11 @@ static PyObject *__pyx_pf_23cssfinder_backend_numpy_6cython_10_complex64_22rando
       PyObject *__pyx_callargs[3] = {__pyx_t_5, __pyx_v_vector, __pyx_v_idx_vector};
       __pyx_t_3 = __Pyx_PyObject_FastCall(__pyx_t_8, __pyx_callargs+1-__pyx_t_4, 2+__pyx_t_4);
       __Pyx_XDECREF(__pyx_t_5); __pyx_t_5 = 0;
-      if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 251, __pyx_L1_error)
+      if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 252, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_3);
       __Pyx_DECREF(__pyx_t_8); __pyx_t_8 = 0;
     }
-    __pyx_t_8 = __Pyx_PyObject_GetAttrStr(__pyx_t_3, __pyx_n_s_flatten); if (unlikely(!__pyx_t_8)) __PYX_ERR(0, 251, __pyx_L1_error)
+    __pyx_t_8 = __Pyx_PyObject_GetAttrStr(__pyx_t_3, __pyx_n_s_flatten); if (unlikely(!__pyx_t_8)) __PYX_ERR(0, 252, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_8);
     __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
     __pyx_t_3 = NULL;
@@ -6773,14 +6773,14 @@ static PyObject *__pyx_pf_23cssfinder_backend_numpy_6cython_10_complex64_22rando
       PyObject *__pyx_callargs[1] = {__pyx_t_3, };
       __pyx_t_2 = __Pyx_PyObject_FastCall(__pyx_t_8, __pyx_callargs+1-__pyx_t_4, 0+__pyx_t_4);
       __Pyx_XDECREF(__pyx_t_3); __pyx_t_3 = 0;
-      if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 251, __pyx_L1_error)
+      if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 252, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_2);
       __Pyx_DECREF(__pyx_t_8); __pyx_t_8 = 0;
     }
     __Pyx_DECREF_SET(__pyx_v_vector, __pyx_t_2);
     __pyx_t_2 = 0;
 
-    /* "cssfinder_backend_numpy/_cython/_complex64.py":248
+    /* "cssfinder_backend_numpy/_cython/_complex64.py":249
  *     vector = normalize(rand_vectors[0])
  *
  *     for i in range(1, quantity):             # <<<<<<<<<<<<<<
@@ -6790,14 +6790,14 @@ static PyObject *__pyx_pf_23cssfinder_backend_numpy_6cython_10_complex64_22rando
   }
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "cssfinder_backend_numpy/_cython/_complex64.py":253
+  /* "cssfinder_backend_numpy/_cython/_complex64.py":254
  *         vector = np.outer(vector, idx_vector).flatten()
  *
  *     vector = project(vector)             # <<<<<<<<<<<<<<
  *
  *     return vector  # type: ignore[no-any-return]
  */
-  __Pyx_GetModuleGlobalName(__pyx_t_2, __pyx_n_s_project); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 253, __pyx_L1_error)
+  __Pyx_GetModuleGlobalName(__pyx_t_2, __pyx_n_s_project); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 254, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
   __pyx_t_8 = NULL;
   __pyx_t_4 = 0;
@@ -6815,14 +6815,14 @@ static PyObject *__pyx_pf_23cssfinder_backend_numpy_6cython_10_complex64_22rando
     PyObject *__pyx_callargs[2] = {__pyx_t_8, __pyx_v_vector};
     __pyx_t_1 = __Pyx_PyObject_FastCall(__pyx_t_2, __pyx_callargs+1-__pyx_t_4, 1+__pyx_t_4);
     __Pyx_XDECREF(__pyx_t_8); __pyx_t_8 = 0;
-    if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 253, __pyx_L1_error)
+    if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 254, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_1);
     __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
   }
   __Pyx_DECREF_SET(__pyx_v_vector, __pyx_t_1);
   __pyx_t_1 = 0;
 
-  /* "cssfinder_backend_numpy/_cython/_complex64.py":255
+  /* "cssfinder_backend_numpy/_cython/_complex64.py":256
  *     vector = project(vector)
  *
  *     return vector  # type: ignore[no-any-return]             # <<<<<<<<<<<<<<
@@ -6834,7 +6834,7 @@ static PyObject *__pyx_pf_23cssfinder_backend_numpy_6cython_10_complex64_22rando
   __pyx_r = __pyx_v_vector;
   goto __pyx_L0;
 
-  /* "cssfinder_backend_numpy/_cython/_complex64.py":243
+  /* "cssfinder_backend_numpy/_cython/_complex64.py":244
  *
  *
  * def random_d_fs(depth: int, quantity: int) -> npt.NDArray[np.complex64]:             # <<<<<<<<<<<<<<
@@ -6861,7 +6861,7 @@ static PyObject *__pyx_pf_23cssfinder_backend_numpy_6cython_10_complex64_22rando
   return __pyx_r;
 }
 
-/* "cssfinder_backend_numpy/_cython/_complex64.py":258
+/* "cssfinder_backend_numpy/_cython/_complex64.py":259
  *
  *
  * def expand_d_fs(             # <<<<<<<<<<<<<<
@@ -6921,33 +6921,33 @@ PyObject *__pyx_args, PyObject *__pyx_kwds
       switch (__pyx_nargs) {
         case  0:
         if (likely((values[0] = __Pyx_GetKwValue_FASTCALL(__pyx_kwds, __pyx_kwvalues, __pyx_n_s_value)) != 0)) kw_args--;
-        else if (unlikely(PyErr_Occurred())) __PYX_ERR(0, 258, __pyx_L3_error)
+        else if (unlikely(PyErr_Occurred())) __PYX_ERR(0, 259, __pyx_L3_error)
         else goto __pyx_L5_argtuple_error;
         CYTHON_FALLTHROUGH;
         case  1:
         if (likely((values[1] = __Pyx_GetKwValue_FASTCALL(__pyx_kwds, __pyx_kwvalues, __pyx_n_s_depth)) != 0)) kw_args--;
-        else if (unlikely(PyErr_Occurred())) __PYX_ERR(0, 258, __pyx_L3_error)
+        else if (unlikely(PyErr_Occurred())) __PYX_ERR(0, 259, __pyx_L3_error)
         else {
-          __Pyx_RaiseArgtupleInvalid("expand_d_fs", 1, 4, 4, 1); __PYX_ERR(0, 258, __pyx_L3_error)
+          __Pyx_RaiseArgtupleInvalid("expand_d_fs", 1, 4, 4, 1); __PYX_ERR(0, 259, __pyx_L3_error)
         }
         CYTHON_FALLTHROUGH;
         case  2:
         if (likely((values[2] = __Pyx_GetKwValue_FASTCALL(__pyx_kwds, __pyx_kwvalues, __pyx_n_s_quantity)) != 0)) kw_args--;
-        else if (unlikely(PyErr_Occurred())) __PYX_ERR(0, 258, __pyx_L3_error)
+        else if (unlikely(PyErr_Occurred())) __PYX_ERR(0, 259, __pyx_L3_error)
         else {
-          __Pyx_RaiseArgtupleInvalid("expand_d_fs", 1, 4, 4, 2); __PYX_ERR(0, 258, __pyx_L3_error)
+          __Pyx_RaiseArgtupleInvalid("expand_d_fs", 1, 4, 4, 2); __PYX_ERR(0, 259, __pyx_L3_error)
         }
         CYTHON_FALLTHROUGH;
         case  3:
         if (likely((values[3] = __Pyx_GetKwValue_FASTCALL(__pyx_kwds, __pyx_kwvalues, __pyx_n_s_idx)) != 0)) kw_args--;
-        else if (unlikely(PyErr_Occurred())) __PYX_ERR(0, 258, __pyx_L3_error)
+        else if (unlikely(PyErr_Occurred())) __PYX_ERR(0, 259, __pyx_L3_error)
         else {
-          __Pyx_RaiseArgtupleInvalid("expand_d_fs", 1, 4, 4, 3); __PYX_ERR(0, 258, __pyx_L3_error)
+          __Pyx_RaiseArgtupleInvalid("expand_d_fs", 1, 4, 4, 3); __PYX_ERR(0, 259, __pyx_L3_error)
         }
       }
       if (unlikely(kw_args > 0)) {
         const Py_ssize_t kwd_pos_args = __pyx_nargs;
-        if (unlikely(__Pyx_ParseOptionalKeywords(__pyx_kwds, __pyx_kwvalues, __pyx_pyargnames, 0, values + 0, kwd_pos_args, "expand_d_fs") < 0)) __PYX_ERR(0, 258, __pyx_L3_error)
+        if (unlikely(__Pyx_ParseOptionalKeywords(__pyx_kwds, __pyx_kwvalues, __pyx_pyargnames, 0, values + 0, kwd_pos_args, "expand_d_fs") < 0)) __PYX_ERR(0, 259, __pyx_L3_error)
       }
     } else if (unlikely(__pyx_nargs != 4)) {
       goto __pyx_L5_argtuple_error;
@@ -6964,15 +6964,15 @@ PyObject *__pyx_args, PyObject *__pyx_kwds
   }
   goto __pyx_L4_argument_unpacking_done;
   __pyx_L5_argtuple_error:;
-  __Pyx_RaiseArgtupleInvalid("expand_d_fs", 1, 4, 4, __pyx_nargs); __PYX_ERR(0, 258, __pyx_L3_error)
+  __Pyx_RaiseArgtupleInvalid("expand_d_fs", 1, 4, 4, __pyx_nargs); __PYX_ERR(0, 259, __pyx_L3_error)
   __pyx_L3_error:;
   __Pyx_AddTraceback("cssfinder_backend_numpy.cython._complex64.expand_d_fs", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __Pyx_RefNannyFinishContext();
   return NULL;
   __pyx_L4_argument_unpacking_done:;
-  if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_depth), (&PyInt_Type), 0, "depth", 1))) __PYX_ERR(0, 260, __pyx_L1_error)
-  if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_quantity), (&PyInt_Type), 0, "quantity", 1))) __PYX_ERR(0, 261, __pyx_L1_error)
-  if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_idx), (&PyInt_Type), 0, "idx", 1))) __PYX_ERR(0, 262, __pyx_L1_error)
+  if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_depth), (&PyInt_Type), 0, "depth", 1))) __PYX_ERR(0, 261, __pyx_L1_error)
+  if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_quantity), (&PyInt_Type), 0, "quantity", 1))) __PYX_ERR(0, 262, __pyx_L1_error)
+  if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_idx), (&PyInt_Type), 0, "idx", 1))) __PYX_ERR(0, 263, __pyx_L1_error)
   __pyx_r = __pyx_pf_23cssfinder_backend_numpy_6cython_10_complex64_24expand_d_fs(__pyx_self, __pyx_v_value, __pyx_v_depth, __pyx_v_quantity, __pyx_v_idx);
 
   /* function exit code */
@@ -7004,48 +7004,48 @@ static PyObject *__pyx_pf_23cssfinder_backend_numpy_6cython_10_complex64_24expan
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("expand_d_fs", 0);
 
-  /* "cssfinder_backend_numpy/_cython/_complex64.py":265
+  /* "cssfinder_backend_numpy/_cython/_complex64.py":266
  * ) -> npt.NDArray[np.complex64]:
  *     """Expand an operator to n quDits."""
  *     depth_1 = int(depth**idx)             # <<<<<<<<<<<<<<
  *     identity_1 = np.identity(depth_1, dtype=np.complex64)
  *
  */
-  __pyx_t_1 = PyNumber_Power(__pyx_v_depth, __pyx_v_idx, Py_None); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 265, __pyx_L1_error)
+  __pyx_t_1 = PyNumber_Power(__pyx_v_depth, __pyx_v_idx, Py_None); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 266, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
-  __pyx_t_2 = __Pyx_PyNumber_Int(__pyx_t_1); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 265, __pyx_L1_error)
+  __pyx_t_2 = __Pyx_PyNumber_Int(__pyx_t_1); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 266, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
   __pyx_v_depth_1 = __pyx_t_2;
   __pyx_t_2 = 0;
 
-  /* "cssfinder_backend_numpy/_cython/_complex64.py":266
+  /* "cssfinder_backend_numpy/_cython/_complex64.py":267
  *     """Expand an operator to n quDits."""
  *     depth_1 = int(depth**idx)
  *     identity_1 = np.identity(depth_1, dtype=np.complex64)             # <<<<<<<<<<<<<<
  *
  *     depth_2 = int(depth ** (quantity - idx - 1))
  */
-  __Pyx_GetModuleGlobalName(__pyx_t_2, __pyx_n_s_np); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 266, __pyx_L1_error)
+  __Pyx_GetModuleGlobalName(__pyx_t_2, __pyx_n_s_np); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 267, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
-  __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_t_2, __pyx_n_s_identity); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 266, __pyx_L1_error)
+  __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_t_2, __pyx_n_s_identity); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 267, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
-  __pyx_t_2 = PyTuple_New(1); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 266, __pyx_L1_error)
+  __pyx_t_2 = PyTuple_New(1); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 267, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
   __Pyx_INCREF(__pyx_v_depth_1);
   __Pyx_GIVEREF(__pyx_v_depth_1);
   PyTuple_SET_ITEM(__pyx_t_2, 0, __pyx_v_depth_1);
-  __pyx_t_3 = __Pyx_PyDict_NewPresized(1); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 266, __pyx_L1_error)
+  __pyx_t_3 = __Pyx_PyDict_NewPresized(1); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 267, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
-  __Pyx_GetModuleGlobalName(__pyx_t_4, __pyx_n_s_np); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 266, __pyx_L1_error)
+  __Pyx_GetModuleGlobalName(__pyx_t_4, __pyx_n_s_np); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 267, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_4);
-  __pyx_t_5 = __Pyx_PyObject_GetAttrStr(__pyx_t_4, __pyx_n_s_complex64); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 266, __pyx_L1_error)
+  __pyx_t_5 = __Pyx_PyObject_GetAttrStr(__pyx_t_4, __pyx_n_s_complex64); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 267, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_5);
   __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
-  if (PyDict_SetItem(__pyx_t_3, __pyx_n_s_dtype, __pyx_t_5) < 0) __PYX_ERR(0, 266, __pyx_L1_error)
+  if (PyDict_SetItem(__pyx_t_3, __pyx_n_s_dtype, __pyx_t_5) < 0) __PYX_ERR(0, 267, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
-  __pyx_t_5 = __Pyx_PyObject_Call(__pyx_t_1, __pyx_t_2, __pyx_t_3); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 266, __pyx_L1_error)
+  __pyx_t_5 = __Pyx_PyObject_Call(__pyx_t_1, __pyx_t_2, __pyx_t_3); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 267, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_5);
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
@@ -7053,54 +7053,54 @@ static PyObject *__pyx_pf_23cssfinder_backend_numpy_6cython_10_complex64_24expan
   __pyx_v_identity_1 = __pyx_t_5;
   __pyx_t_5 = 0;
 
-  /* "cssfinder_backend_numpy/_cython/_complex64.py":268
+  /* "cssfinder_backend_numpy/_cython/_complex64.py":269
  *     identity_1 = np.identity(depth_1, dtype=np.complex64)
  *
  *     depth_2 = int(depth ** (quantity - idx - 1))             # <<<<<<<<<<<<<<
  *     identity_2 = np.identity(depth_2, dtype=np.complex64)
  *
  */
-  __pyx_t_5 = PyNumber_Subtract(__pyx_v_quantity, __pyx_v_idx); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 268, __pyx_L1_error)
+  __pyx_t_5 = PyNumber_Subtract(__pyx_v_quantity, __pyx_v_idx); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 269, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_5);
-  __pyx_t_3 = __Pyx_PyInt_SubtractObjC(__pyx_t_5, __pyx_int_1, 1, 0, 0); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 268, __pyx_L1_error)
+  __pyx_t_3 = __Pyx_PyInt_SubtractObjC(__pyx_t_5, __pyx_int_1, 1, 0, 0); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 269, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
   __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
-  __pyx_t_5 = PyNumber_Power(__pyx_v_depth, __pyx_t_3, Py_None); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 268, __pyx_L1_error)
+  __pyx_t_5 = PyNumber_Power(__pyx_v_depth, __pyx_t_3, Py_None); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 269, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_5);
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
-  __pyx_t_3 = __Pyx_PyNumber_Int(__pyx_t_5); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 268, __pyx_L1_error)
+  __pyx_t_3 = __Pyx_PyNumber_Int(__pyx_t_5); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 269, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
   __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
   __pyx_v_depth_2 = __pyx_t_3;
   __pyx_t_3 = 0;
 
-  /* "cssfinder_backend_numpy/_cython/_complex64.py":269
+  /* "cssfinder_backend_numpy/_cython/_complex64.py":270
  *
  *     depth_2 = int(depth ** (quantity - idx - 1))
  *     identity_2 = np.identity(depth_2, dtype=np.complex64)             # <<<<<<<<<<<<<<
  *
  *     kronecker_1 = kronecker(identity_1, value)
  */
-  __Pyx_GetModuleGlobalName(__pyx_t_3, __pyx_n_s_np); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 269, __pyx_L1_error)
+  __Pyx_GetModuleGlobalName(__pyx_t_3, __pyx_n_s_np); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 270, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
-  __pyx_t_5 = __Pyx_PyObject_GetAttrStr(__pyx_t_3, __pyx_n_s_identity); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 269, __pyx_L1_error)
+  __pyx_t_5 = __Pyx_PyObject_GetAttrStr(__pyx_t_3, __pyx_n_s_identity); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 270, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_5);
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
-  __pyx_t_3 = PyTuple_New(1); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 269, __pyx_L1_error)
+  __pyx_t_3 = PyTuple_New(1); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 270, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
   __Pyx_INCREF(__pyx_v_depth_2);
   __Pyx_GIVEREF(__pyx_v_depth_2);
   PyTuple_SET_ITEM(__pyx_t_3, 0, __pyx_v_depth_2);
-  __pyx_t_2 = __Pyx_PyDict_NewPresized(1); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 269, __pyx_L1_error)
+  __pyx_t_2 = __Pyx_PyDict_NewPresized(1); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 270, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
-  __Pyx_GetModuleGlobalName(__pyx_t_1, __pyx_n_s_np); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 269, __pyx_L1_error)
+  __Pyx_GetModuleGlobalName(__pyx_t_1, __pyx_n_s_np); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 270, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
-  __pyx_t_4 = __Pyx_PyObject_GetAttrStr(__pyx_t_1, __pyx_n_s_complex64); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 269, __pyx_L1_error)
+  __pyx_t_4 = __Pyx_PyObject_GetAttrStr(__pyx_t_1, __pyx_n_s_complex64); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 270, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_4);
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
-  if (PyDict_SetItem(__pyx_t_2, __pyx_n_s_dtype, __pyx_t_4) < 0) __PYX_ERR(0, 269, __pyx_L1_error)
+  if (PyDict_SetItem(__pyx_t_2, __pyx_n_s_dtype, __pyx_t_4) < 0) __PYX_ERR(0, 270, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
-  __pyx_t_4 = __Pyx_PyObject_Call(__pyx_t_5, __pyx_t_3, __pyx_t_2); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 269, __pyx_L1_error)
+  __pyx_t_4 = __Pyx_PyObject_Call(__pyx_t_5, __pyx_t_3, __pyx_t_2); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 270, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_4);
   __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
@@ -7108,14 +7108,14 @@ static PyObject *__pyx_pf_23cssfinder_backend_numpy_6cython_10_complex64_24expan
   __pyx_v_identity_2 = __pyx_t_4;
   __pyx_t_4 = 0;
 
-  /* "cssfinder_backend_numpy/_cython/_complex64.py":271
+  /* "cssfinder_backend_numpy/_cython/_complex64.py":272
  *     identity_2 = np.identity(depth_2, dtype=np.complex64)
  *
  *     kronecker_1 = kronecker(identity_1, value)             # <<<<<<<<<<<<<<
  *
  *     kronecker_2 = kronecker(kronecker_1, identity_2)
  */
-  __Pyx_GetModuleGlobalName(__pyx_t_2, __pyx_n_s_kronecker); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 271, __pyx_L1_error)
+  __Pyx_GetModuleGlobalName(__pyx_t_2, __pyx_n_s_kronecker); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 272, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
   __pyx_t_3 = NULL;
   __pyx_t_6 = 0;
@@ -7133,21 +7133,21 @@ static PyObject *__pyx_pf_23cssfinder_backend_numpy_6cython_10_complex64_24expan
     PyObject *__pyx_callargs[3] = {__pyx_t_3, __pyx_v_identity_1, __pyx_v_value};
     __pyx_t_4 = __Pyx_PyObject_FastCall(__pyx_t_2, __pyx_callargs+1-__pyx_t_6, 2+__pyx_t_6);
     __Pyx_XDECREF(__pyx_t_3); __pyx_t_3 = 0;
-    if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 271, __pyx_L1_error)
+    if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 272, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_4);
     __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
   }
   __pyx_v_kronecker_1 = __pyx_t_4;
   __pyx_t_4 = 0;
 
-  /* "cssfinder_backend_numpy/_cython/_complex64.py":273
+  /* "cssfinder_backend_numpy/_cython/_complex64.py":274
  *     kronecker_1 = kronecker(identity_1, value)
  *
  *     kronecker_2 = kronecker(kronecker_1, identity_2)             # <<<<<<<<<<<<<<
  *
  *     return kronecker_2  # type: ignore[no-any-return]
  */
-  __Pyx_GetModuleGlobalName(__pyx_t_2, __pyx_n_s_kronecker); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 273, __pyx_L1_error)
+  __Pyx_GetModuleGlobalName(__pyx_t_2, __pyx_n_s_kronecker); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 274, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
   __pyx_t_3 = NULL;
   __pyx_t_6 = 0;
@@ -7165,14 +7165,14 @@ static PyObject *__pyx_pf_23cssfinder_backend_numpy_6cython_10_complex64_24expan
     PyObject *__pyx_callargs[3] = {__pyx_t_3, __pyx_v_kronecker_1, __pyx_v_identity_2};
     __pyx_t_4 = __Pyx_PyObject_FastCall(__pyx_t_2, __pyx_callargs+1-__pyx_t_6, 2+__pyx_t_6);
     __Pyx_XDECREF(__pyx_t_3); __pyx_t_3 = 0;
-    if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 273, __pyx_L1_error)
+    if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 274, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_4);
     __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
   }
   __pyx_v_kronecker_2 = __pyx_t_4;
   __pyx_t_4 = 0;
 
-  /* "cssfinder_backend_numpy/_cython/_complex64.py":275
+  /* "cssfinder_backend_numpy/_cython/_complex64.py":276
  *     kronecker_2 = kronecker(kronecker_1, identity_2)
  *
  *     return kronecker_2  # type: ignore[no-any-return]             # <<<<<<<<<<<<<<
@@ -7184,7 +7184,7 @@ static PyObject *__pyx_pf_23cssfinder_backend_numpy_6cython_10_complex64_24expan
   __pyx_r = __pyx_v_kronecker_2;
   goto __pyx_L0;
 
-  /* "cssfinder_backend_numpy/_cython/_complex64.py":258
+  /* "cssfinder_backend_numpy/_cython/_complex64.py":259
  *
  *
  * def expand_d_fs(             # <<<<<<<<<<<<<<
@@ -7213,7 +7213,7 @@ static PyObject *__pyx_pf_23cssfinder_backend_numpy_6cython_10_complex64_24expan
   return __pyx_r;
 }
 
-/* "cssfinder_backend_numpy/_cython/_complex64.py":285
+/* "cssfinder_backend_numpy/_cython/_complex64.py":286
  *
  *
  * def random_bs(depth: int, quantity: int) -> npt.NDArray[np.complex64]:             # <<<<<<<<<<<<<<
@@ -7267,19 +7267,19 @@ PyObject *__pyx_args, PyObject *__pyx_kwds
       switch (__pyx_nargs) {
         case  0:
         if (likely((values[0] = __Pyx_GetKwValue_FASTCALL(__pyx_kwds, __pyx_kwvalues, __pyx_n_s_depth)) != 0)) kw_args--;
-        else if (unlikely(PyErr_Occurred())) __PYX_ERR(0, 285, __pyx_L3_error)
+        else if (unlikely(PyErr_Occurred())) __PYX_ERR(0, 286, __pyx_L3_error)
         else goto __pyx_L5_argtuple_error;
         CYTHON_FALLTHROUGH;
         case  1:
         if (likely((values[1] = __Pyx_GetKwValue_FASTCALL(__pyx_kwds, __pyx_kwvalues, __pyx_n_s_quantity)) != 0)) kw_args--;
-        else if (unlikely(PyErr_Occurred())) __PYX_ERR(0, 285, __pyx_L3_error)
+        else if (unlikely(PyErr_Occurred())) __PYX_ERR(0, 286, __pyx_L3_error)
         else {
-          __Pyx_RaiseArgtupleInvalid("random_bs", 1, 2, 2, 1); __PYX_ERR(0, 285, __pyx_L3_error)
+          __Pyx_RaiseArgtupleInvalid("random_bs", 1, 2, 2, 1); __PYX_ERR(0, 286, __pyx_L3_error)
         }
       }
       if (unlikely(kw_args > 0)) {
         const Py_ssize_t kwd_pos_args = __pyx_nargs;
-        if (unlikely(__Pyx_ParseOptionalKeywords(__pyx_kwds, __pyx_kwvalues, __pyx_pyargnames, 0, values + 0, kwd_pos_args, "random_bs") < 0)) __PYX_ERR(0, 285, __pyx_L3_error)
+        if (unlikely(__Pyx_ParseOptionalKeywords(__pyx_kwds, __pyx_kwvalues, __pyx_pyargnames, 0, values + 0, kwd_pos_args, "random_bs") < 0)) __PYX_ERR(0, 286, __pyx_L3_error)
       }
     } else if (unlikely(__pyx_nargs != 2)) {
       goto __pyx_L5_argtuple_error;
@@ -7292,14 +7292,14 @@ PyObject *__pyx_args, PyObject *__pyx_kwds
   }
   goto __pyx_L4_argument_unpacking_done;
   __pyx_L5_argtuple_error:;
-  __Pyx_RaiseArgtupleInvalid("random_bs", 1, 2, 2, __pyx_nargs); __PYX_ERR(0, 285, __pyx_L3_error)
+  __Pyx_RaiseArgtupleInvalid("random_bs", 1, 2, 2, __pyx_nargs); __PYX_ERR(0, 286, __pyx_L3_error)
   __pyx_L3_error:;
   __Pyx_AddTraceback("cssfinder_backend_numpy.cython._complex64.random_bs", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __Pyx_RefNannyFinishContext();
   return NULL;
   __pyx_L4_argument_unpacking_done:;
-  if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_depth), (&PyInt_Type), 0, "depth", 1))) __PYX_ERR(0, 285, __pyx_L1_error)
-  if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_quantity), (&PyInt_Type), 0, "quantity", 1))) __PYX_ERR(0, 285, __pyx_L1_error)
+  if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_depth), (&PyInt_Type), 0, "depth", 1))) __PYX_ERR(0, 286, __pyx_L1_error)
+  if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_quantity), (&PyInt_Type), 0, "quantity", 1))) __PYX_ERR(0, 286, __pyx_L1_error)
   __pyx_r = __pyx_pf_23cssfinder_backend_numpy_6cython_10_complex64_26random_bs(__pyx_self, __pyx_v_depth, __pyx_v_quantity);
 
   /* function exit code */
@@ -7328,67 +7328,12 @@ static PyObject *__pyx_pf_23cssfinder_backend_numpy_6cython_10_complex64_26rando
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("random_bs", 0);
 
-  /* "cssfinder_backend_numpy/_cython/_complex64.py":287
+  /* "cssfinder_backend_numpy/_cython/_complex64.py":288
  * def random_bs(depth: int, quantity: int) -> npt.NDArray[np.complex64]:
  *     """Draw random biseparable state."""
  *     random_vector_1 = normalize(get_random_haar_1d(depth))             # <<<<<<<<<<<<<<
  *     random_vector_2 = normalize(get_random_haar_1d(quantity))
  *
- */
-  __Pyx_GetModuleGlobalName(__pyx_t_2, __pyx_n_s_normalize); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 287, __pyx_L1_error)
-  __Pyx_GOTREF(__pyx_t_2);
-  __Pyx_GetModuleGlobalName(__pyx_t_4, __pyx_n_s_get_random_haar_1d); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 287, __pyx_L1_error)
-  __Pyx_GOTREF(__pyx_t_4);
-  __pyx_t_5 = NULL;
-  __pyx_t_6 = 0;
-  if (CYTHON_UNPACK_METHODS && unlikely(PyMethod_Check(__pyx_t_4))) {
-    __pyx_t_5 = PyMethod_GET_SELF(__pyx_t_4);
-    if (likely(__pyx_t_5)) {
-      PyObject* function = PyMethod_GET_FUNCTION(__pyx_t_4);
-      __Pyx_INCREF(__pyx_t_5);
-      __Pyx_INCREF(function);
-      __Pyx_DECREF_SET(__pyx_t_4, function);
-      __pyx_t_6 = 1;
-    }
-  }
-  {
-    PyObject *__pyx_callargs[2] = {__pyx_t_5, __pyx_v_depth};
-    __pyx_t_3 = __Pyx_PyObject_FastCall(__pyx_t_4, __pyx_callargs+1-__pyx_t_6, 1+__pyx_t_6);
-    __Pyx_XDECREF(__pyx_t_5); __pyx_t_5 = 0;
-    if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 287, __pyx_L1_error)
-    __Pyx_GOTREF(__pyx_t_3);
-    __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
-  }
-  __pyx_t_4 = NULL;
-  __pyx_t_6 = 0;
-  if (CYTHON_UNPACK_METHODS && unlikely(PyMethod_Check(__pyx_t_2))) {
-    __pyx_t_4 = PyMethod_GET_SELF(__pyx_t_2);
-    if (likely(__pyx_t_4)) {
-      PyObject* function = PyMethod_GET_FUNCTION(__pyx_t_2);
-      __Pyx_INCREF(__pyx_t_4);
-      __Pyx_INCREF(function);
-      __Pyx_DECREF_SET(__pyx_t_2, function);
-      __pyx_t_6 = 1;
-    }
-  }
-  {
-    PyObject *__pyx_callargs[2] = {__pyx_t_4, __pyx_t_3};
-    __pyx_t_1 = __Pyx_PyObject_FastCall(__pyx_t_2, __pyx_callargs+1-__pyx_t_6, 1+__pyx_t_6);
-    __Pyx_XDECREF(__pyx_t_4); __pyx_t_4 = 0;
-    __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
-    if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 287, __pyx_L1_error)
-    __Pyx_GOTREF(__pyx_t_1);
-    __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
-  }
-  __pyx_v_random_vector_1 = __pyx_t_1;
-  __pyx_t_1 = 0;
-
-  /* "cssfinder_backend_numpy/_cython/_complex64.py":288
- *     """Draw random biseparable state."""
- *     random_vector_1 = normalize(get_random_haar_1d(depth))
- *     random_vector_2 = normalize(get_random_haar_1d(quantity))             # <<<<<<<<<<<<<<
- *
- *     vector = np.outer(random_vector_1, random_vector_2).flatten()
  */
   __Pyx_GetModuleGlobalName(__pyx_t_2, __pyx_n_s_normalize); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 288, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
@@ -7407,7 +7352,7 @@ static PyObject *__pyx_pf_23cssfinder_backend_numpy_6cython_10_complex64_26rando
     }
   }
   {
-    PyObject *__pyx_callargs[2] = {__pyx_t_5, __pyx_v_quantity};
+    PyObject *__pyx_callargs[2] = {__pyx_t_5, __pyx_v_depth};
     __pyx_t_3 = __Pyx_PyObject_FastCall(__pyx_t_4, __pyx_callargs+1-__pyx_t_6, 1+__pyx_t_6);
     __Pyx_XDECREF(__pyx_t_5); __pyx_t_5 = 0;
     if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 288, __pyx_L1_error)
@@ -7435,19 +7380,74 @@ static PyObject *__pyx_pf_23cssfinder_backend_numpy_6cython_10_complex64_26rando
     __Pyx_GOTREF(__pyx_t_1);
     __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
   }
+  __pyx_v_random_vector_1 = __pyx_t_1;
+  __pyx_t_1 = 0;
+
+  /* "cssfinder_backend_numpy/_cython/_complex64.py":289
+ *     """Draw random biseparable state."""
+ *     random_vector_1 = normalize(get_random_haar_1d(depth))
+ *     random_vector_2 = normalize(get_random_haar_1d(quantity))             # <<<<<<<<<<<<<<
+ *
+ *     vector = np.outer(random_vector_1, random_vector_2).flatten()
+ */
+  __Pyx_GetModuleGlobalName(__pyx_t_2, __pyx_n_s_normalize); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 289, __pyx_L1_error)
+  __Pyx_GOTREF(__pyx_t_2);
+  __Pyx_GetModuleGlobalName(__pyx_t_4, __pyx_n_s_get_random_haar_1d); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 289, __pyx_L1_error)
+  __Pyx_GOTREF(__pyx_t_4);
+  __pyx_t_5 = NULL;
+  __pyx_t_6 = 0;
+  if (CYTHON_UNPACK_METHODS && unlikely(PyMethod_Check(__pyx_t_4))) {
+    __pyx_t_5 = PyMethod_GET_SELF(__pyx_t_4);
+    if (likely(__pyx_t_5)) {
+      PyObject* function = PyMethod_GET_FUNCTION(__pyx_t_4);
+      __Pyx_INCREF(__pyx_t_5);
+      __Pyx_INCREF(function);
+      __Pyx_DECREF_SET(__pyx_t_4, function);
+      __pyx_t_6 = 1;
+    }
+  }
+  {
+    PyObject *__pyx_callargs[2] = {__pyx_t_5, __pyx_v_quantity};
+    __pyx_t_3 = __Pyx_PyObject_FastCall(__pyx_t_4, __pyx_callargs+1-__pyx_t_6, 1+__pyx_t_6);
+    __Pyx_XDECREF(__pyx_t_5); __pyx_t_5 = 0;
+    if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 289, __pyx_L1_error)
+    __Pyx_GOTREF(__pyx_t_3);
+    __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
+  }
+  __pyx_t_4 = NULL;
+  __pyx_t_6 = 0;
+  if (CYTHON_UNPACK_METHODS && unlikely(PyMethod_Check(__pyx_t_2))) {
+    __pyx_t_4 = PyMethod_GET_SELF(__pyx_t_2);
+    if (likely(__pyx_t_4)) {
+      PyObject* function = PyMethod_GET_FUNCTION(__pyx_t_2);
+      __Pyx_INCREF(__pyx_t_4);
+      __Pyx_INCREF(function);
+      __Pyx_DECREF_SET(__pyx_t_2, function);
+      __pyx_t_6 = 1;
+    }
+  }
+  {
+    PyObject *__pyx_callargs[2] = {__pyx_t_4, __pyx_t_3};
+    __pyx_t_1 = __Pyx_PyObject_FastCall(__pyx_t_2, __pyx_callargs+1-__pyx_t_6, 1+__pyx_t_6);
+    __Pyx_XDECREF(__pyx_t_4); __pyx_t_4 = 0;
+    __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
+    if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 289, __pyx_L1_error)
+    __Pyx_GOTREF(__pyx_t_1);
+    __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
+  }
   __pyx_v_random_vector_2 = __pyx_t_1;
   __pyx_t_1 = 0;
 
-  /* "cssfinder_backend_numpy/_cython/_complex64.py":290
+  /* "cssfinder_backend_numpy/_cython/_complex64.py":291
  *     random_vector_2 = normalize(get_random_haar_1d(quantity))
  *
  *     vector = np.outer(random_vector_1, random_vector_2).flatten()             # <<<<<<<<<<<<<<
  *
  *     vector = project(vector)
  */
-  __Pyx_GetModuleGlobalName(__pyx_t_3, __pyx_n_s_np); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 290, __pyx_L1_error)
+  __Pyx_GetModuleGlobalName(__pyx_t_3, __pyx_n_s_np); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 291, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
-  __pyx_t_4 = __Pyx_PyObject_GetAttrStr(__pyx_t_3, __pyx_n_s_outer); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 290, __pyx_L1_error)
+  __pyx_t_4 = __Pyx_PyObject_GetAttrStr(__pyx_t_3, __pyx_n_s_outer); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 291, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_4);
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
   __pyx_t_3 = NULL;
@@ -7466,11 +7466,11 @@ static PyObject *__pyx_pf_23cssfinder_backend_numpy_6cython_10_complex64_26rando
     PyObject *__pyx_callargs[3] = {__pyx_t_3, __pyx_v_random_vector_1, __pyx_v_random_vector_2};
     __pyx_t_2 = __Pyx_PyObject_FastCall(__pyx_t_4, __pyx_callargs+1-__pyx_t_6, 2+__pyx_t_6);
     __Pyx_XDECREF(__pyx_t_3); __pyx_t_3 = 0;
-    if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 290, __pyx_L1_error)
+    if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 291, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_2);
     __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
   }
-  __pyx_t_4 = __Pyx_PyObject_GetAttrStr(__pyx_t_2, __pyx_n_s_flatten); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 290, __pyx_L1_error)
+  __pyx_t_4 = __Pyx_PyObject_GetAttrStr(__pyx_t_2, __pyx_n_s_flatten); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 291, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_4);
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
   __pyx_t_2 = NULL;
@@ -7489,21 +7489,21 @@ static PyObject *__pyx_pf_23cssfinder_backend_numpy_6cython_10_complex64_26rando
     PyObject *__pyx_callargs[1] = {__pyx_t_2, };
     __pyx_t_1 = __Pyx_PyObject_FastCall(__pyx_t_4, __pyx_callargs+1-__pyx_t_6, 0+__pyx_t_6);
     __Pyx_XDECREF(__pyx_t_2); __pyx_t_2 = 0;
-    if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 290, __pyx_L1_error)
+    if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 291, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_1);
     __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
   }
   __pyx_v_vector = __pyx_t_1;
   __pyx_t_1 = 0;
 
-  /* "cssfinder_backend_numpy/_cython/_complex64.py":292
+  /* "cssfinder_backend_numpy/_cython/_complex64.py":293
  *     vector = np.outer(random_vector_1, random_vector_2).flatten()
  *
  *     vector = project(vector)             # <<<<<<<<<<<<<<
  *
  *     return vector  # type: ignore[no-any-return]
  */
-  __Pyx_GetModuleGlobalName(__pyx_t_4, __pyx_n_s_project); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 292, __pyx_L1_error)
+  __Pyx_GetModuleGlobalName(__pyx_t_4, __pyx_n_s_project); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 293, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_4);
   __pyx_t_2 = NULL;
   __pyx_t_6 = 0;
@@ -7521,14 +7521,14 @@ static PyObject *__pyx_pf_23cssfinder_backend_numpy_6cython_10_complex64_26rando
     PyObject *__pyx_callargs[2] = {__pyx_t_2, __pyx_v_vector};
     __pyx_t_1 = __Pyx_PyObject_FastCall(__pyx_t_4, __pyx_callargs+1-__pyx_t_6, 1+__pyx_t_6);
     __Pyx_XDECREF(__pyx_t_2); __pyx_t_2 = 0;
-    if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 292, __pyx_L1_error)
+    if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 293, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_1);
     __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
   }
   __Pyx_DECREF_SET(__pyx_v_vector, __pyx_t_1);
   __pyx_t_1 = 0;
 
-  /* "cssfinder_backend_numpy/_cython/_complex64.py":294
+  /* "cssfinder_backend_numpy/_cython/_complex64.py":295
  *     vector = project(vector)
  *
  *     return vector  # type: ignore[no-any-return]             # <<<<<<<<<<<<<<
@@ -7540,7 +7540,7 @@ static PyObject *__pyx_pf_23cssfinder_backend_numpy_6cython_10_complex64_26rando
   __pyx_r = __pyx_v_vector;
   goto __pyx_L0;
 
-  /* "cssfinder_backend_numpy/_cython/_complex64.py":285
+  /* "cssfinder_backend_numpy/_cython/_complex64.py":286
  *
  *
  * def random_bs(depth: int, quantity: int) -> npt.NDArray[np.complex64]:             # <<<<<<<<<<<<<<
@@ -7566,7 +7566,7 @@ static PyObject *__pyx_pf_23cssfinder_backend_numpy_6cython_10_complex64_26rando
   return __pyx_r;
 }
 
-/* "cssfinder_backend_numpy/_cython/_complex64.py":297
+/* "cssfinder_backend_numpy/_cython/_complex64.py":298
  *
  *
  * def random_unitary_bs(depth: int, quantity: int) -> npt.NDArray[np.complex64]:             # <<<<<<<<<<<<<<
@@ -7620,19 +7620,19 @@ PyObject *__pyx_args, PyObject *__pyx_kwds
       switch (__pyx_nargs) {
         case  0:
         if (likely((values[0] = __Pyx_GetKwValue_FASTCALL(__pyx_kwds, __pyx_kwvalues, __pyx_n_s_depth)) != 0)) kw_args--;
-        else if (unlikely(PyErr_Occurred())) __PYX_ERR(0, 297, __pyx_L3_error)
+        else if (unlikely(PyErr_Occurred())) __PYX_ERR(0, 298, __pyx_L3_error)
         else goto __pyx_L5_argtuple_error;
         CYTHON_FALLTHROUGH;
         case  1:
         if (likely((values[1] = __Pyx_GetKwValue_FASTCALL(__pyx_kwds, __pyx_kwvalues, __pyx_n_s_quantity)) != 0)) kw_args--;
-        else if (unlikely(PyErr_Occurred())) __PYX_ERR(0, 297, __pyx_L3_error)
+        else if (unlikely(PyErr_Occurred())) __PYX_ERR(0, 298, __pyx_L3_error)
         else {
-          __Pyx_RaiseArgtupleInvalid("random_unitary_bs", 1, 2, 2, 1); __PYX_ERR(0, 297, __pyx_L3_error)
+          __Pyx_RaiseArgtupleInvalid("random_unitary_bs", 1, 2, 2, 1); __PYX_ERR(0, 298, __pyx_L3_error)
         }
       }
       if (unlikely(kw_args > 0)) {
         const Py_ssize_t kwd_pos_args = __pyx_nargs;
-        if (unlikely(__Pyx_ParseOptionalKeywords(__pyx_kwds, __pyx_kwvalues, __pyx_pyargnames, 0, values + 0, kwd_pos_args, "random_unitary_bs") < 0)) __PYX_ERR(0, 297, __pyx_L3_error)
+        if (unlikely(__Pyx_ParseOptionalKeywords(__pyx_kwds, __pyx_kwvalues, __pyx_pyargnames, 0, values + 0, kwd_pos_args, "random_unitary_bs") < 0)) __PYX_ERR(0, 298, __pyx_L3_error)
       }
     } else if (unlikely(__pyx_nargs != 2)) {
       goto __pyx_L5_argtuple_error;
@@ -7645,14 +7645,14 @@ PyObject *__pyx_args, PyObject *__pyx_kwds
   }
   goto __pyx_L4_argument_unpacking_done;
   __pyx_L5_argtuple_error:;
-  __Pyx_RaiseArgtupleInvalid("random_unitary_bs", 1, 2, 2, __pyx_nargs); __PYX_ERR(0, 297, __pyx_L3_error)
+  __Pyx_RaiseArgtupleInvalid("random_unitary_bs", 1, 2, 2, __pyx_nargs); __PYX_ERR(0, 298, __pyx_L3_error)
   __pyx_L3_error:;
   __Pyx_AddTraceback("cssfinder_backend_numpy.cython._complex64.random_unitary_bs", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __Pyx_RefNannyFinishContext();
   return NULL;
   __pyx_L4_argument_unpacking_done:;
-  if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_depth), (&PyInt_Type), 0, "depth", 1))) __PYX_ERR(0, 297, __pyx_L1_error)
-  if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_quantity), (&PyInt_Type), 0, "quantity", 1))) __PYX_ERR(0, 297, __pyx_L1_error)
+  if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_depth), (&PyInt_Type), 0, "depth", 1))) __PYX_ERR(0, 298, __pyx_L1_error)
+  if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_quantity), (&PyInt_Type), 0, "quantity", 1))) __PYX_ERR(0, 298, __pyx_L1_error)
   __pyx_r = __pyx_pf_23cssfinder_backend_numpy_6cython_10_complex64_28random_unitary_bs(__pyx_self, __pyx_v_depth, __pyx_v_quantity);
 
   /* function exit code */
@@ -7684,16 +7684,16 @@ static PyObject *__pyx_pf_23cssfinder_backend_numpy_6cython_10_complex64_28rando
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("random_unitary_bs", 0);
 
-  /* "cssfinder_backend_numpy/_cython/_complex64.py":299
+  /* "cssfinder_backend_numpy/_cython/_complex64.py":300
  * def random_unitary_bs(depth: int, quantity: int) -> npt.NDArray[np.complex64]:
  *     """Draw random unitary for biseparable state."""
  *     random_vector = normalize(get_random_haar_1d(depth))             # <<<<<<<<<<<<<<
  *
  *     random_matrix = project(random_vector)
  */
-  __Pyx_GetModuleGlobalName(__pyx_t_2, __pyx_n_s_normalize); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 299, __pyx_L1_error)
+  __Pyx_GetModuleGlobalName(__pyx_t_2, __pyx_n_s_normalize); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 300, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
-  __Pyx_GetModuleGlobalName(__pyx_t_4, __pyx_n_s_get_random_haar_1d); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 299, __pyx_L1_error)
+  __Pyx_GetModuleGlobalName(__pyx_t_4, __pyx_n_s_get_random_haar_1d); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 300, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_4);
   __pyx_t_5 = NULL;
   __pyx_t_6 = 0;
@@ -7711,7 +7711,7 @@ static PyObject *__pyx_pf_23cssfinder_backend_numpy_6cython_10_complex64_28rando
     PyObject *__pyx_callargs[2] = {__pyx_t_5, __pyx_v_depth};
     __pyx_t_3 = __Pyx_PyObject_FastCall(__pyx_t_4, __pyx_callargs+1-__pyx_t_6, 1+__pyx_t_6);
     __Pyx_XDECREF(__pyx_t_5); __pyx_t_5 = 0;
-    if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 299, __pyx_L1_error)
+    if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 300, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_3);
     __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
   }
@@ -7732,21 +7732,21 @@ static PyObject *__pyx_pf_23cssfinder_backend_numpy_6cython_10_complex64_28rando
     __pyx_t_1 = __Pyx_PyObject_FastCall(__pyx_t_2, __pyx_callargs+1-__pyx_t_6, 1+__pyx_t_6);
     __Pyx_XDECREF(__pyx_t_4); __pyx_t_4 = 0;
     __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
-    if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 299, __pyx_L1_error)
+    if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 300, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_1);
     __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
   }
   __pyx_v_random_vector = __pyx_t_1;
   __pyx_t_1 = 0;
 
-  /* "cssfinder_backend_numpy/_cython/_complex64.py":301
+  /* "cssfinder_backend_numpy/_cython/_complex64.py":302
  *     random_vector = normalize(get_random_haar_1d(depth))
  *
  *     random_matrix = project(random_vector)             # <<<<<<<<<<<<<<
  *
  *     identity_depth = np.identity(depth).astype(np.complex64)
  */
-  __Pyx_GetModuleGlobalName(__pyx_t_2, __pyx_n_s_project); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 301, __pyx_L1_error)
+  __Pyx_GetModuleGlobalName(__pyx_t_2, __pyx_n_s_project); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 302, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
   __pyx_t_3 = NULL;
   __pyx_t_6 = 0;
@@ -7764,23 +7764,23 @@ static PyObject *__pyx_pf_23cssfinder_backend_numpy_6cython_10_complex64_28rando
     PyObject *__pyx_callargs[2] = {__pyx_t_3, __pyx_v_random_vector};
     __pyx_t_1 = __Pyx_PyObject_FastCall(__pyx_t_2, __pyx_callargs+1-__pyx_t_6, 1+__pyx_t_6);
     __Pyx_XDECREF(__pyx_t_3); __pyx_t_3 = 0;
-    if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 301, __pyx_L1_error)
+    if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 302, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_1);
     __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
   }
   __pyx_v_random_matrix = __pyx_t_1;
   __pyx_t_1 = 0;
 
-  /* "cssfinder_backend_numpy/_cython/_complex64.py":303
+  /* "cssfinder_backend_numpy/_cython/_complex64.py":304
  *     random_matrix = project(random_vector)
  *
  *     identity_depth = np.identity(depth).astype(np.complex64)             # <<<<<<<<<<<<<<
  *
  *     identity_quantity = np.identity(quantity).astype(np.complex64)
  */
-  __Pyx_GetModuleGlobalName(__pyx_t_3, __pyx_n_s_np); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 303, __pyx_L1_error)
+  __Pyx_GetModuleGlobalName(__pyx_t_3, __pyx_n_s_np); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 304, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
-  __pyx_t_4 = __Pyx_PyObject_GetAttrStr(__pyx_t_3, __pyx_n_s_identity); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 303, __pyx_L1_error)
+  __pyx_t_4 = __Pyx_PyObject_GetAttrStr(__pyx_t_3, __pyx_n_s_identity); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 304, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_4);
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
   __pyx_t_3 = NULL;
@@ -7799,16 +7799,16 @@ static PyObject *__pyx_pf_23cssfinder_backend_numpy_6cython_10_complex64_28rando
     PyObject *__pyx_callargs[2] = {__pyx_t_3, __pyx_v_depth};
     __pyx_t_2 = __Pyx_PyObject_FastCall(__pyx_t_4, __pyx_callargs+1-__pyx_t_6, 1+__pyx_t_6);
     __Pyx_XDECREF(__pyx_t_3); __pyx_t_3 = 0;
-    if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 303, __pyx_L1_error)
+    if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 304, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_2);
     __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
   }
-  __pyx_t_4 = __Pyx_PyObject_GetAttrStr(__pyx_t_2, __pyx_n_s_astype); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 303, __pyx_L1_error)
+  __pyx_t_4 = __Pyx_PyObject_GetAttrStr(__pyx_t_2, __pyx_n_s_astype); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 304, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_4);
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
-  __Pyx_GetModuleGlobalName(__pyx_t_2, __pyx_n_s_np); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 303, __pyx_L1_error)
+  __Pyx_GetModuleGlobalName(__pyx_t_2, __pyx_n_s_np); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 304, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
-  __pyx_t_3 = __Pyx_PyObject_GetAttrStr(__pyx_t_2, __pyx_n_s_complex64); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 303, __pyx_L1_error)
+  __pyx_t_3 = __Pyx_PyObject_GetAttrStr(__pyx_t_2, __pyx_n_s_complex64); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 304, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
   __pyx_t_2 = NULL;
@@ -7828,23 +7828,23 @@ static PyObject *__pyx_pf_23cssfinder_backend_numpy_6cython_10_complex64_28rando
     __pyx_t_1 = __Pyx_PyObject_FastCall(__pyx_t_4, __pyx_callargs+1-__pyx_t_6, 1+__pyx_t_6);
     __Pyx_XDECREF(__pyx_t_2); __pyx_t_2 = 0;
     __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
-    if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 303, __pyx_L1_error)
+    if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 304, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_1);
     __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
   }
   __pyx_v_identity_depth = __pyx_t_1;
   __pyx_t_1 = 0;
 
-  /* "cssfinder_backend_numpy/_cython/_complex64.py":305
+  /* "cssfinder_backend_numpy/_cython/_complex64.py":306
  *     identity_depth = np.identity(depth).astype(np.complex64)
  *
  *     identity_quantity = np.identity(quantity).astype(np.complex64)             # <<<<<<<<<<<<<<
  *
  *     unitary_biseparable = _VALUE * random_matrix + identity_depth
  */
-  __Pyx_GetModuleGlobalName(__pyx_t_3, __pyx_n_s_np); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 305, __pyx_L1_error)
+  __Pyx_GetModuleGlobalName(__pyx_t_3, __pyx_n_s_np); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 306, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
-  __pyx_t_2 = __Pyx_PyObject_GetAttrStr(__pyx_t_3, __pyx_n_s_identity); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 305, __pyx_L1_error)
+  __pyx_t_2 = __Pyx_PyObject_GetAttrStr(__pyx_t_3, __pyx_n_s_identity); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 306, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
   __pyx_t_3 = NULL;
@@ -7863,16 +7863,16 @@ static PyObject *__pyx_pf_23cssfinder_backend_numpy_6cython_10_complex64_28rando
     PyObject *__pyx_callargs[2] = {__pyx_t_3, __pyx_v_quantity};
     __pyx_t_4 = __Pyx_PyObject_FastCall(__pyx_t_2, __pyx_callargs+1-__pyx_t_6, 1+__pyx_t_6);
     __Pyx_XDECREF(__pyx_t_3); __pyx_t_3 = 0;
-    if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 305, __pyx_L1_error)
+    if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 306, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_4);
     __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
   }
-  __pyx_t_2 = __Pyx_PyObject_GetAttrStr(__pyx_t_4, __pyx_n_s_astype); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 305, __pyx_L1_error)
+  __pyx_t_2 = __Pyx_PyObject_GetAttrStr(__pyx_t_4, __pyx_n_s_astype); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 306, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
   __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
-  __Pyx_GetModuleGlobalName(__pyx_t_4, __pyx_n_s_np); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 305, __pyx_L1_error)
+  __Pyx_GetModuleGlobalName(__pyx_t_4, __pyx_n_s_np); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 306, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_4);
-  __pyx_t_3 = __Pyx_PyObject_GetAttrStr(__pyx_t_4, __pyx_n_s_complex64); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 305, __pyx_L1_error)
+  __pyx_t_3 = __Pyx_PyObject_GetAttrStr(__pyx_t_4, __pyx_n_s_complex64); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 306, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
   __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
   __pyx_t_4 = NULL;
@@ -7892,39 +7892,39 @@ static PyObject *__pyx_pf_23cssfinder_backend_numpy_6cython_10_complex64_28rando
     __pyx_t_1 = __Pyx_PyObject_FastCall(__pyx_t_2, __pyx_callargs+1-__pyx_t_6, 1+__pyx_t_6);
     __Pyx_XDECREF(__pyx_t_4); __pyx_t_4 = 0;
     __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
-    if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 305, __pyx_L1_error)
+    if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 306, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_1);
     __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
   }
   __pyx_v_identity_quantity = __pyx_t_1;
   __pyx_t_1 = 0;
 
-  /* "cssfinder_backend_numpy/_cython/_complex64.py":307
+  /* "cssfinder_backend_numpy/_cython/_complex64.py":308
  *     identity_quantity = np.identity(quantity).astype(np.complex64)
  *
  *     unitary_biseparable = _VALUE * random_matrix + identity_depth             # <<<<<<<<<<<<<<
  *
  *     retval = kronecker(unitary_biseparable, identity_quantity)
  */
-  __Pyx_GetModuleGlobalName(__pyx_t_1, __pyx_n_s_VALUE); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 307, __pyx_L1_error)
+  __Pyx_GetModuleGlobalName(__pyx_t_1, __pyx_n_s_VALUE); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 308, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
-  __pyx_t_2 = PyNumber_Multiply(__pyx_t_1, __pyx_v_random_matrix); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 307, __pyx_L1_error)
+  __pyx_t_2 = PyNumber_Multiply(__pyx_t_1, __pyx_v_random_matrix); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 308, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
-  __pyx_t_1 = PyNumber_Add(__pyx_t_2, __pyx_v_identity_depth); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 307, __pyx_L1_error)
+  __pyx_t_1 = PyNumber_Add(__pyx_t_2, __pyx_v_identity_depth); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 308, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
   __pyx_v_unitary_biseparable = __pyx_t_1;
   __pyx_t_1 = 0;
 
-  /* "cssfinder_backend_numpy/_cython/_complex64.py":309
+  /* "cssfinder_backend_numpy/_cython/_complex64.py":310
  *     unitary_biseparable = _VALUE * random_matrix + identity_depth
  *
  *     retval = kronecker(unitary_biseparable, identity_quantity)             # <<<<<<<<<<<<<<
  *
  *     return retval  # type: ignore[no-any-return]
  */
-  __Pyx_GetModuleGlobalName(__pyx_t_2, __pyx_n_s_kronecker); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 309, __pyx_L1_error)
+  __Pyx_GetModuleGlobalName(__pyx_t_2, __pyx_n_s_kronecker); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 310, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
   __pyx_t_3 = NULL;
   __pyx_t_6 = 0;
@@ -7942,14 +7942,14 @@ static PyObject *__pyx_pf_23cssfinder_backend_numpy_6cython_10_complex64_28rando
     PyObject *__pyx_callargs[3] = {__pyx_t_3, __pyx_v_unitary_biseparable, __pyx_v_identity_quantity};
     __pyx_t_1 = __Pyx_PyObject_FastCall(__pyx_t_2, __pyx_callargs+1-__pyx_t_6, 2+__pyx_t_6);
     __Pyx_XDECREF(__pyx_t_3); __pyx_t_3 = 0;
-    if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 309, __pyx_L1_error)
+    if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 310, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_1);
     __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
   }
   __pyx_v_retval = __pyx_t_1;
   __pyx_t_1 = 0;
 
-  /* "cssfinder_backend_numpy/_cython/_complex64.py":311
+  /* "cssfinder_backend_numpy/_cython/_complex64.py":312
  *     retval = kronecker(unitary_biseparable, identity_quantity)
  *
  *     return retval  # type: ignore[no-any-return]             # <<<<<<<<<<<<<<
@@ -7961,7 +7961,7 @@ static PyObject *__pyx_pf_23cssfinder_backend_numpy_6cython_10_complex64_28rando
   __pyx_r = __pyx_v_retval;
   goto __pyx_L0;
 
-  /* "cssfinder_backend_numpy/_cython/_complex64.py":297
+  /* "cssfinder_backend_numpy/_cython/_complex64.py":298
  *
  *
  * def random_unitary_bs(depth: int, quantity: int) -> npt.NDArray[np.complex64]:             # <<<<<<<<<<<<<<
@@ -7990,7 +7990,7 @@ static PyObject *__pyx_pf_23cssfinder_backend_numpy_6cython_10_complex64_28rando
   return __pyx_r;
 }
 
-/* "cssfinder_backend_numpy/_cython/_complex64.py":314
+/* "cssfinder_backend_numpy/_cython/_complex64.py":315
  *
  *
  * def random_unitary_bs_reverse(depth: int, quantity: int) -> npt.NDArray[np.complex64]:             # <<<<<<<<<<<<<<
@@ -8044,19 +8044,19 @@ PyObject *__pyx_args, PyObject *__pyx_kwds
       switch (__pyx_nargs) {
         case  0:
         if (likely((values[0] = __Pyx_GetKwValue_FASTCALL(__pyx_kwds, __pyx_kwvalues, __pyx_n_s_depth)) != 0)) kw_args--;
-        else if (unlikely(PyErr_Occurred())) __PYX_ERR(0, 314, __pyx_L3_error)
+        else if (unlikely(PyErr_Occurred())) __PYX_ERR(0, 315, __pyx_L3_error)
         else goto __pyx_L5_argtuple_error;
         CYTHON_FALLTHROUGH;
         case  1:
         if (likely((values[1] = __Pyx_GetKwValue_FASTCALL(__pyx_kwds, __pyx_kwvalues, __pyx_n_s_quantity)) != 0)) kw_args--;
-        else if (unlikely(PyErr_Occurred())) __PYX_ERR(0, 314, __pyx_L3_error)
+        else if (unlikely(PyErr_Occurred())) __PYX_ERR(0, 315, __pyx_L3_error)
         else {
-          __Pyx_RaiseArgtupleInvalid("random_unitary_bs_reverse", 1, 2, 2, 1); __PYX_ERR(0, 314, __pyx_L3_error)
+          __Pyx_RaiseArgtupleInvalid("random_unitary_bs_reverse", 1, 2, 2, 1); __PYX_ERR(0, 315, __pyx_L3_error)
         }
       }
       if (unlikely(kw_args > 0)) {
         const Py_ssize_t kwd_pos_args = __pyx_nargs;
-        if (unlikely(__Pyx_ParseOptionalKeywords(__pyx_kwds, __pyx_kwvalues, __pyx_pyargnames, 0, values + 0, kwd_pos_args, "random_unitary_bs_reverse") < 0)) __PYX_ERR(0, 314, __pyx_L3_error)
+        if (unlikely(__Pyx_ParseOptionalKeywords(__pyx_kwds, __pyx_kwvalues, __pyx_pyargnames, 0, values + 0, kwd_pos_args, "random_unitary_bs_reverse") < 0)) __PYX_ERR(0, 315, __pyx_L3_error)
       }
     } else if (unlikely(__pyx_nargs != 2)) {
       goto __pyx_L5_argtuple_error;
@@ -8069,14 +8069,14 @@ PyObject *__pyx_args, PyObject *__pyx_kwds
   }
   goto __pyx_L4_argument_unpacking_done;
   __pyx_L5_argtuple_error:;
-  __Pyx_RaiseArgtupleInvalid("random_unitary_bs_reverse", 1, 2, 2, __pyx_nargs); __PYX_ERR(0, 314, __pyx_L3_error)
+  __Pyx_RaiseArgtupleInvalid("random_unitary_bs_reverse", 1, 2, 2, __pyx_nargs); __PYX_ERR(0, 315, __pyx_L3_error)
   __pyx_L3_error:;
   __Pyx_AddTraceback("cssfinder_backend_numpy.cython._complex64.random_unitary_bs_reverse", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __Pyx_RefNannyFinishContext();
   return NULL;
   __pyx_L4_argument_unpacking_done:;
-  if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_depth), (&PyInt_Type), 0, "depth", 1))) __PYX_ERR(0, 314, __pyx_L1_error)
-  if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_quantity), (&PyInt_Type), 0, "quantity", 1))) __PYX_ERR(0, 314, __pyx_L1_error)
+  if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_depth), (&PyInt_Type), 0, "depth", 1))) __PYX_ERR(0, 315, __pyx_L1_error)
+  if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_quantity), (&PyInt_Type), 0, "quantity", 1))) __PYX_ERR(0, 315, __pyx_L1_error)
   __pyx_r = __pyx_pf_23cssfinder_backend_numpy_6cython_10_complex64_30random_unitary_bs_reverse(__pyx_self, __pyx_v_depth, __pyx_v_quantity);
 
   /* function exit code */
@@ -8108,16 +8108,16 @@ static PyObject *__pyx_pf_23cssfinder_backend_numpy_6cython_10_complex64_30rando
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("random_unitary_bs_reverse", 0);
 
-  /* "cssfinder_backend_numpy/_cython/_complex64.py":316
+  /* "cssfinder_backend_numpy/_cython/_complex64.py":317
  * def random_unitary_bs_reverse(depth: int, quantity: int) -> npt.NDArray[np.complex64]:
  *     """Draw random unitary for biseparable state."""
  *     random_vector = normalize(get_random_haar_1d(depth))             # <<<<<<<<<<<<<<
  *
  *     random_matrix = project(random_vector)
  */
-  __Pyx_GetModuleGlobalName(__pyx_t_2, __pyx_n_s_normalize); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 316, __pyx_L1_error)
+  __Pyx_GetModuleGlobalName(__pyx_t_2, __pyx_n_s_normalize); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 317, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
-  __Pyx_GetModuleGlobalName(__pyx_t_4, __pyx_n_s_get_random_haar_1d); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 316, __pyx_L1_error)
+  __Pyx_GetModuleGlobalName(__pyx_t_4, __pyx_n_s_get_random_haar_1d); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 317, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_4);
   __pyx_t_5 = NULL;
   __pyx_t_6 = 0;
@@ -8135,7 +8135,7 @@ static PyObject *__pyx_pf_23cssfinder_backend_numpy_6cython_10_complex64_30rando
     PyObject *__pyx_callargs[2] = {__pyx_t_5, __pyx_v_depth};
     __pyx_t_3 = __Pyx_PyObject_FastCall(__pyx_t_4, __pyx_callargs+1-__pyx_t_6, 1+__pyx_t_6);
     __Pyx_XDECREF(__pyx_t_5); __pyx_t_5 = 0;
-    if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 316, __pyx_L1_error)
+    if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 317, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_3);
     __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
   }
@@ -8156,21 +8156,21 @@ static PyObject *__pyx_pf_23cssfinder_backend_numpy_6cython_10_complex64_30rando
     __pyx_t_1 = __Pyx_PyObject_FastCall(__pyx_t_2, __pyx_callargs+1-__pyx_t_6, 1+__pyx_t_6);
     __Pyx_XDECREF(__pyx_t_4); __pyx_t_4 = 0;
     __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
-    if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 316, __pyx_L1_error)
+    if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 317, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_1);
     __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
   }
   __pyx_v_random_vector = __pyx_t_1;
   __pyx_t_1 = 0;
 
-  /* "cssfinder_backend_numpy/_cython/_complex64.py":318
+  /* "cssfinder_backend_numpy/_cython/_complex64.py":319
  *     random_vector = normalize(get_random_haar_1d(depth))
  *
  *     random_matrix = project(random_vector)             # <<<<<<<<<<<<<<
  *
  *     identity_depth = np.identity(depth).astype(np.complex64)
  */
-  __Pyx_GetModuleGlobalName(__pyx_t_2, __pyx_n_s_project); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 318, __pyx_L1_error)
+  __Pyx_GetModuleGlobalName(__pyx_t_2, __pyx_n_s_project); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 319, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
   __pyx_t_3 = NULL;
   __pyx_t_6 = 0;
@@ -8188,23 +8188,23 @@ static PyObject *__pyx_pf_23cssfinder_backend_numpy_6cython_10_complex64_30rando
     PyObject *__pyx_callargs[2] = {__pyx_t_3, __pyx_v_random_vector};
     __pyx_t_1 = __Pyx_PyObject_FastCall(__pyx_t_2, __pyx_callargs+1-__pyx_t_6, 1+__pyx_t_6);
     __Pyx_XDECREF(__pyx_t_3); __pyx_t_3 = 0;
-    if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 318, __pyx_L1_error)
+    if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 319, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_1);
     __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
   }
   __pyx_v_random_matrix = __pyx_t_1;
   __pyx_t_1 = 0;
 
-  /* "cssfinder_backend_numpy/_cython/_complex64.py":320
+  /* "cssfinder_backend_numpy/_cython/_complex64.py":321
  *     random_matrix = project(random_vector)
  *
  *     identity_depth = np.identity(depth).astype(np.complex64)             # <<<<<<<<<<<<<<
  *
  *     identity_quantity = np.identity(quantity).astype(np.complex64)
  */
-  __Pyx_GetModuleGlobalName(__pyx_t_3, __pyx_n_s_np); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 320, __pyx_L1_error)
+  __Pyx_GetModuleGlobalName(__pyx_t_3, __pyx_n_s_np); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 321, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
-  __pyx_t_4 = __Pyx_PyObject_GetAttrStr(__pyx_t_3, __pyx_n_s_identity); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 320, __pyx_L1_error)
+  __pyx_t_4 = __Pyx_PyObject_GetAttrStr(__pyx_t_3, __pyx_n_s_identity); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 321, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_4);
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
   __pyx_t_3 = NULL;
@@ -8223,16 +8223,16 @@ static PyObject *__pyx_pf_23cssfinder_backend_numpy_6cython_10_complex64_30rando
     PyObject *__pyx_callargs[2] = {__pyx_t_3, __pyx_v_depth};
     __pyx_t_2 = __Pyx_PyObject_FastCall(__pyx_t_4, __pyx_callargs+1-__pyx_t_6, 1+__pyx_t_6);
     __Pyx_XDECREF(__pyx_t_3); __pyx_t_3 = 0;
-    if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 320, __pyx_L1_error)
+    if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 321, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_2);
     __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
   }
-  __pyx_t_4 = __Pyx_PyObject_GetAttrStr(__pyx_t_2, __pyx_n_s_astype); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 320, __pyx_L1_error)
+  __pyx_t_4 = __Pyx_PyObject_GetAttrStr(__pyx_t_2, __pyx_n_s_astype); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 321, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_4);
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
-  __Pyx_GetModuleGlobalName(__pyx_t_2, __pyx_n_s_np); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 320, __pyx_L1_error)
+  __Pyx_GetModuleGlobalName(__pyx_t_2, __pyx_n_s_np); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 321, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
-  __pyx_t_3 = __Pyx_PyObject_GetAttrStr(__pyx_t_2, __pyx_n_s_complex64); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 320, __pyx_L1_error)
+  __pyx_t_3 = __Pyx_PyObject_GetAttrStr(__pyx_t_2, __pyx_n_s_complex64); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 321, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
   __pyx_t_2 = NULL;
@@ -8252,23 +8252,23 @@ static PyObject *__pyx_pf_23cssfinder_backend_numpy_6cython_10_complex64_30rando
     __pyx_t_1 = __Pyx_PyObject_FastCall(__pyx_t_4, __pyx_callargs+1-__pyx_t_6, 1+__pyx_t_6);
     __Pyx_XDECREF(__pyx_t_2); __pyx_t_2 = 0;
     __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
-    if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 320, __pyx_L1_error)
+    if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 321, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_1);
     __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
   }
   __pyx_v_identity_depth = __pyx_t_1;
   __pyx_t_1 = 0;
 
-  /* "cssfinder_backend_numpy/_cython/_complex64.py":322
+  /* "cssfinder_backend_numpy/_cython/_complex64.py":323
  *     identity_depth = np.identity(depth).astype(np.complex64)
  *
  *     identity_quantity = np.identity(quantity).astype(np.complex64)             # <<<<<<<<<<<<<<
  *
  *     unitary_biseparable = _VALUE * random_matrix + identity_depth
  */
-  __Pyx_GetModuleGlobalName(__pyx_t_3, __pyx_n_s_np); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 322, __pyx_L1_error)
+  __Pyx_GetModuleGlobalName(__pyx_t_3, __pyx_n_s_np); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 323, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
-  __pyx_t_2 = __Pyx_PyObject_GetAttrStr(__pyx_t_3, __pyx_n_s_identity); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 322, __pyx_L1_error)
+  __pyx_t_2 = __Pyx_PyObject_GetAttrStr(__pyx_t_3, __pyx_n_s_identity); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 323, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
   __pyx_t_3 = NULL;
@@ -8287,16 +8287,16 @@ static PyObject *__pyx_pf_23cssfinder_backend_numpy_6cython_10_complex64_30rando
     PyObject *__pyx_callargs[2] = {__pyx_t_3, __pyx_v_quantity};
     __pyx_t_4 = __Pyx_PyObject_FastCall(__pyx_t_2, __pyx_callargs+1-__pyx_t_6, 1+__pyx_t_6);
     __Pyx_XDECREF(__pyx_t_3); __pyx_t_3 = 0;
-    if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 322, __pyx_L1_error)
+    if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 323, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_4);
     __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
   }
-  __pyx_t_2 = __Pyx_PyObject_GetAttrStr(__pyx_t_4, __pyx_n_s_astype); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 322, __pyx_L1_error)
+  __pyx_t_2 = __Pyx_PyObject_GetAttrStr(__pyx_t_4, __pyx_n_s_astype); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 323, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
   __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
-  __Pyx_GetModuleGlobalName(__pyx_t_4, __pyx_n_s_np); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 322, __pyx_L1_error)
+  __Pyx_GetModuleGlobalName(__pyx_t_4, __pyx_n_s_np); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 323, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_4);
-  __pyx_t_3 = __Pyx_PyObject_GetAttrStr(__pyx_t_4, __pyx_n_s_complex64); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 322, __pyx_L1_error)
+  __pyx_t_3 = __Pyx_PyObject_GetAttrStr(__pyx_t_4, __pyx_n_s_complex64); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 323, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
   __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
   __pyx_t_4 = NULL;
@@ -8316,39 +8316,39 @@ static PyObject *__pyx_pf_23cssfinder_backend_numpy_6cython_10_complex64_30rando
     __pyx_t_1 = __Pyx_PyObject_FastCall(__pyx_t_2, __pyx_callargs+1-__pyx_t_6, 1+__pyx_t_6);
     __Pyx_XDECREF(__pyx_t_4); __pyx_t_4 = 0;
     __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
-    if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 322, __pyx_L1_error)
+    if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 323, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_1);
     __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
   }
   __pyx_v_identity_quantity = __pyx_t_1;
   __pyx_t_1 = 0;
 
-  /* "cssfinder_backend_numpy/_cython/_complex64.py":324
+  /* "cssfinder_backend_numpy/_cython/_complex64.py":325
  *     identity_quantity = np.identity(quantity).astype(np.complex64)
  *
  *     unitary_biseparable = _VALUE * random_matrix + identity_depth             # <<<<<<<<<<<<<<
  *
  *     retval = kronecker(identity_quantity, unitary_biseparable)
  */
-  __Pyx_GetModuleGlobalName(__pyx_t_1, __pyx_n_s_VALUE); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 324, __pyx_L1_error)
+  __Pyx_GetModuleGlobalName(__pyx_t_1, __pyx_n_s_VALUE); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 325, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
-  __pyx_t_2 = PyNumber_Multiply(__pyx_t_1, __pyx_v_random_matrix); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 324, __pyx_L1_error)
+  __pyx_t_2 = PyNumber_Multiply(__pyx_t_1, __pyx_v_random_matrix); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 325, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
-  __pyx_t_1 = PyNumber_Add(__pyx_t_2, __pyx_v_identity_depth); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 324, __pyx_L1_error)
+  __pyx_t_1 = PyNumber_Add(__pyx_t_2, __pyx_v_identity_depth); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 325, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
   __pyx_v_unitary_biseparable = __pyx_t_1;
   __pyx_t_1 = 0;
 
-  /* "cssfinder_backend_numpy/_cython/_complex64.py":326
+  /* "cssfinder_backend_numpy/_cython/_complex64.py":327
  *     unitary_biseparable = _VALUE * random_matrix + identity_depth
  *
  *     retval = kronecker(identity_quantity, unitary_biseparable)             # <<<<<<<<<<<<<<
  *
  *     return retval  # type: ignore[no-any-return]
  */
-  __Pyx_GetModuleGlobalName(__pyx_t_2, __pyx_n_s_kronecker); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 326, __pyx_L1_error)
+  __Pyx_GetModuleGlobalName(__pyx_t_2, __pyx_n_s_kronecker); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 327, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
   __pyx_t_3 = NULL;
   __pyx_t_6 = 0;
@@ -8366,14 +8366,14 @@ static PyObject *__pyx_pf_23cssfinder_backend_numpy_6cython_10_complex64_30rando
     PyObject *__pyx_callargs[3] = {__pyx_t_3, __pyx_v_identity_quantity, __pyx_v_unitary_biseparable};
     __pyx_t_1 = __Pyx_PyObject_FastCall(__pyx_t_2, __pyx_callargs+1-__pyx_t_6, 2+__pyx_t_6);
     __Pyx_XDECREF(__pyx_t_3); __pyx_t_3 = 0;
-    if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 326, __pyx_L1_error)
+    if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 327, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_1);
     __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
   }
   __pyx_v_retval = __pyx_t_1;
   __pyx_t_1 = 0;
 
-  /* "cssfinder_backend_numpy/_cython/_complex64.py":328
+  /* "cssfinder_backend_numpy/_cython/_complex64.py":329
  *     retval = kronecker(identity_quantity, unitary_biseparable)
  *
  *     return retval  # type: ignore[no-any-return]             # <<<<<<<<<<<<<<
@@ -8385,7 +8385,7 @@ static PyObject *__pyx_pf_23cssfinder_backend_numpy_6cython_10_complex64_30rando
   __pyx_r = __pyx_v_retval;
   goto __pyx_L0;
 
-  /* "cssfinder_backend_numpy/_cython/_complex64.py":314
+  /* "cssfinder_backend_numpy/_cython/_complex64.py":315
  *
  *
  * def random_unitary_bs_reverse(depth: int, quantity: int) -> npt.NDArray[np.complex64]:             # <<<<<<<<<<<<<<
@@ -8414,7 +8414,7 @@ static PyObject *__pyx_pf_23cssfinder_backend_numpy_6cython_10_complex64_30rando
   return __pyx_r;
 }
 
-/* "cssfinder_backend_numpy/_cython/_complex64.py":331
+/* "cssfinder_backend_numpy/_cython/_complex64.py":332
  *
  *
  * def optimize_bs(             # <<<<<<<<<<<<<<
@@ -8477,40 +8477,40 @@ PyObject *__pyx_args, PyObject *__pyx_kwds
       switch (__pyx_nargs) {
         case  0:
         if (likely((values[0] = __Pyx_GetKwValue_FASTCALL(__pyx_kwds, __pyx_kwvalues, __pyx_n_s_new_state)) != 0)) kw_args--;
-        else if (unlikely(PyErr_Occurred())) __PYX_ERR(0, 331, __pyx_L3_error)
+        else if (unlikely(PyErr_Occurred())) __PYX_ERR(0, 332, __pyx_L3_error)
         else goto __pyx_L5_argtuple_error;
         CYTHON_FALLTHROUGH;
         case  1:
         if (likely((values[1] = __Pyx_GetKwValue_FASTCALL(__pyx_kwds, __pyx_kwvalues, __pyx_n_s_visibility_state)) != 0)) kw_args--;
-        else if (unlikely(PyErr_Occurred())) __PYX_ERR(0, 331, __pyx_L3_error)
+        else if (unlikely(PyErr_Occurred())) __PYX_ERR(0, 332, __pyx_L3_error)
         else {
-          __Pyx_RaiseArgtupleInvalid("optimize_bs", 1, 5, 5, 1); __PYX_ERR(0, 331, __pyx_L3_error)
+          __Pyx_RaiseArgtupleInvalid("optimize_bs", 1, 5, 5, 1); __PYX_ERR(0, 332, __pyx_L3_error)
         }
         CYTHON_FALLTHROUGH;
         case  2:
         if (likely((values[2] = __Pyx_GetKwValue_FASTCALL(__pyx_kwds, __pyx_kwvalues, __pyx_n_s_depth)) != 0)) kw_args--;
-        else if (unlikely(PyErr_Occurred())) __PYX_ERR(0, 331, __pyx_L3_error)
+        else if (unlikely(PyErr_Occurred())) __PYX_ERR(0, 332, __pyx_L3_error)
         else {
-          __Pyx_RaiseArgtupleInvalid("optimize_bs", 1, 5, 5, 2); __PYX_ERR(0, 331, __pyx_L3_error)
+          __Pyx_RaiseArgtupleInvalid("optimize_bs", 1, 5, 5, 2); __PYX_ERR(0, 332, __pyx_L3_error)
         }
         CYTHON_FALLTHROUGH;
         case  3:
         if (likely((values[3] = __Pyx_GetKwValue_FASTCALL(__pyx_kwds, __pyx_kwvalues, __pyx_n_s_quantity)) != 0)) kw_args--;
-        else if (unlikely(PyErr_Occurred())) __PYX_ERR(0, 331, __pyx_L3_error)
+        else if (unlikely(PyErr_Occurred())) __PYX_ERR(0, 332, __pyx_L3_error)
         else {
-          __Pyx_RaiseArgtupleInvalid("optimize_bs", 1, 5, 5, 3); __PYX_ERR(0, 331, __pyx_L3_error)
+          __Pyx_RaiseArgtupleInvalid("optimize_bs", 1, 5, 5, 3); __PYX_ERR(0, 332, __pyx_L3_error)
         }
         CYTHON_FALLTHROUGH;
         case  4:
         if (likely((values[4] = __Pyx_GetKwValue_FASTCALL(__pyx_kwds, __pyx_kwvalues, __pyx_n_s_updates_count)) != 0)) kw_args--;
-        else if (unlikely(PyErr_Occurred())) __PYX_ERR(0, 331, __pyx_L3_error)
+        else if (unlikely(PyErr_Occurred())) __PYX_ERR(0, 332, __pyx_L3_error)
         else {
-          __Pyx_RaiseArgtupleInvalid("optimize_bs", 1, 5, 5, 4); __PYX_ERR(0, 331, __pyx_L3_error)
+          __Pyx_RaiseArgtupleInvalid("optimize_bs", 1, 5, 5, 4); __PYX_ERR(0, 332, __pyx_L3_error)
         }
       }
       if (unlikely(kw_args > 0)) {
         const Py_ssize_t kwd_pos_args = __pyx_nargs;
-        if (unlikely(__Pyx_ParseOptionalKeywords(__pyx_kwds, __pyx_kwvalues, __pyx_pyargnames, 0, values + 0, kwd_pos_args, "optimize_bs") < 0)) __PYX_ERR(0, 331, __pyx_L3_error)
+        if (unlikely(__Pyx_ParseOptionalKeywords(__pyx_kwds, __pyx_kwvalues, __pyx_pyargnames, 0, values + 0, kwd_pos_args, "optimize_bs") < 0)) __PYX_ERR(0, 332, __pyx_L3_error)
       }
     } else if (unlikely(__pyx_nargs != 5)) {
       goto __pyx_L5_argtuple_error;
@@ -8529,15 +8529,15 @@ PyObject *__pyx_args, PyObject *__pyx_kwds
   }
   goto __pyx_L4_argument_unpacking_done;
   __pyx_L5_argtuple_error:;
-  __Pyx_RaiseArgtupleInvalid("optimize_bs", 1, 5, 5, __pyx_nargs); __PYX_ERR(0, 331, __pyx_L3_error)
+  __Pyx_RaiseArgtupleInvalid("optimize_bs", 1, 5, 5, __pyx_nargs); __PYX_ERR(0, 332, __pyx_L3_error)
   __pyx_L3_error:;
   __Pyx_AddTraceback("cssfinder_backend_numpy.cython._complex64.optimize_bs", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __Pyx_RefNannyFinishContext();
   return NULL;
   __pyx_L4_argument_unpacking_done:;
-  if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_depth), (&PyInt_Type), 0, "depth", 1))) __PYX_ERR(0, 334, __pyx_L1_error)
-  if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_quantity), (&PyInt_Type), 0, "quantity", 1))) __PYX_ERR(0, 335, __pyx_L1_error)
-  if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_updates_count), (&PyInt_Type), 0, "updates_count", 1))) __PYX_ERR(0, 336, __pyx_L1_error)
+  if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_depth), (&PyInt_Type), 0, "depth", 1))) __PYX_ERR(0, 335, __pyx_L1_error)
+  if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_quantity), (&PyInt_Type), 0, "quantity", 1))) __PYX_ERR(0, 336, __pyx_L1_error)
+  if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_updates_count), (&PyInt_Type), 0, "updates_count", 1))) __PYX_ERR(0, 337, __pyx_L1_error)
   __pyx_r = __pyx_pf_23cssfinder_backend_numpy_6cython_10_complex64_32optimize_bs(__pyx_self, __pyx_v_new_state, __pyx_v_visibility_state, __pyx_v_depth, __pyx_v_quantity, __pyx_v_updates_count);
 
   /* function exit code */
@@ -8570,14 +8570,14 @@ static PyObject *__pyx_pf_23cssfinder_backend_numpy_6cython_10_complex64_32optim
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("optimize_bs", 0);
 
-  /* "cssfinder_backend_numpy/_cython/_complex64.py":359
+  /* "cssfinder_backend_numpy/_cython/_complex64.py":360
  *
  *     """
  *     pp1 = product(new_state, visibility_state)             # <<<<<<<<<<<<<<
  *
  *     return_state = new_state.copy()
  */
-  __Pyx_GetModuleGlobalName(__pyx_t_2, __pyx_n_s_product); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 359, __pyx_L1_error)
+  __Pyx_GetModuleGlobalName(__pyx_t_2, __pyx_n_s_product); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 360, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
   __pyx_t_3 = NULL;
   __pyx_t_4 = 0;
@@ -8595,21 +8595,21 @@ static PyObject *__pyx_pf_23cssfinder_backend_numpy_6cython_10_complex64_32optim
     PyObject *__pyx_callargs[3] = {__pyx_t_3, __pyx_v_new_state, __pyx_v_visibility_state};
     __pyx_t_1 = __Pyx_PyObject_FastCall(__pyx_t_2, __pyx_callargs+1-__pyx_t_4, 2+__pyx_t_4);
     __Pyx_XDECREF(__pyx_t_3); __pyx_t_3 = 0;
-    if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 359, __pyx_L1_error)
+    if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 360, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_1);
     __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
   }
   __pyx_v_pp1 = __pyx_t_1;
   __pyx_t_1 = 0;
 
-  /* "cssfinder_backend_numpy/_cython/_complex64.py":361
+  /* "cssfinder_backend_numpy/_cython/_complex64.py":362
  *     pp1 = product(new_state, visibility_state)
  *
  *     return_state = new_state.copy()             # <<<<<<<<<<<<<<
  *
  *     for index in range(updates_count):
  */
-  __pyx_t_2 = __Pyx_PyObject_GetAttrStr(__pyx_v_new_state, __pyx_n_s_copy); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 361, __pyx_L1_error)
+  __pyx_t_2 = __Pyx_PyObject_GetAttrStr(__pyx_v_new_state, __pyx_n_s_copy); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 362, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
   __pyx_t_3 = NULL;
   __pyx_t_4 = 0;
@@ -8627,29 +8627,29 @@ static PyObject *__pyx_pf_23cssfinder_backend_numpy_6cython_10_complex64_32optim
     PyObject *__pyx_callargs[1] = {__pyx_t_3, };
     __pyx_t_1 = __Pyx_PyObject_FastCall(__pyx_t_2, __pyx_callargs+1-__pyx_t_4, 0+__pyx_t_4);
     __Pyx_XDECREF(__pyx_t_3); __pyx_t_3 = 0;
-    if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 361, __pyx_L1_error)
+    if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 362, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_1);
     __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
   }
   __pyx_v_return_state = __pyx_t_1;
   __pyx_t_1 = 0;
 
-  /* "cssfinder_backend_numpy/_cython/_complex64.py":363
+  /* "cssfinder_backend_numpy/_cython/_complex64.py":364
  *     return_state = new_state.copy()
  *
  *     for index in range(updates_count):             # <<<<<<<<<<<<<<
  *         if index % 2:
  *             unitary = random_unitary_bs(depth, quantity)
  */
-  __pyx_t_1 = __Pyx_PyObject_CallOneArg(__pyx_builtin_range, __pyx_v_updates_count); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 363, __pyx_L1_error)
+  __pyx_t_1 = __Pyx_PyObject_CallOneArg(__pyx_builtin_range, __pyx_v_updates_count); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 364, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   if (likely(PyList_CheckExact(__pyx_t_1)) || PyTuple_CheckExact(__pyx_t_1)) {
     __pyx_t_2 = __pyx_t_1; __Pyx_INCREF(__pyx_t_2); __pyx_t_5 = 0;
     __pyx_t_6 = NULL;
   } else {
-    __pyx_t_5 = -1; __pyx_t_2 = PyObject_GetIter(__pyx_t_1); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 363, __pyx_L1_error)
+    __pyx_t_5 = -1; __pyx_t_2 = PyObject_GetIter(__pyx_t_1); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 364, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_2);
-    __pyx_t_6 = __Pyx_PyObject_GetIterNextFunc(__pyx_t_2); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 363, __pyx_L1_error)
+    __pyx_t_6 = __Pyx_PyObject_GetIterNextFunc(__pyx_t_2); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 364, __pyx_L1_error)
   }
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
   for (;;) {
@@ -8657,17 +8657,17 @@ static PyObject *__pyx_pf_23cssfinder_backend_numpy_6cython_10_complex64_32optim
       if (likely(PyList_CheckExact(__pyx_t_2))) {
         if (__pyx_t_5 >= PyList_GET_SIZE(__pyx_t_2)) break;
         #if CYTHON_ASSUME_SAFE_MACROS && !CYTHON_AVOID_BORROWED_REFS
-        __pyx_t_1 = PyList_GET_ITEM(__pyx_t_2, __pyx_t_5); __Pyx_INCREF(__pyx_t_1); __pyx_t_5++; if (unlikely((0 < 0))) __PYX_ERR(0, 363, __pyx_L1_error)
+        __pyx_t_1 = PyList_GET_ITEM(__pyx_t_2, __pyx_t_5); __Pyx_INCREF(__pyx_t_1); __pyx_t_5++; if (unlikely((0 < 0))) __PYX_ERR(0, 364, __pyx_L1_error)
         #else
-        __pyx_t_1 = PySequence_ITEM(__pyx_t_2, __pyx_t_5); __pyx_t_5++; if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 363, __pyx_L1_error)
+        __pyx_t_1 = PySequence_ITEM(__pyx_t_2, __pyx_t_5); __pyx_t_5++; if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 364, __pyx_L1_error)
         __Pyx_GOTREF(__pyx_t_1);
         #endif
       } else {
         if (__pyx_t_5 >= PyTuple_GET_SIZE(__pyx_t_2)) break;
         #if CYTHON_ASSUME_SAFE_MACROS && !CYTHON_AVOID_BORROWED_REFS
-        __pyx_t_1 = PyTuple_GET_ITEM(__pyx_t_2, __pyx_t_5); __Pyx_INCREF(__pyx_t_1); __pyx_t_5++; if (unlikely((0 < 0))) __PYX_ERR(0, 363, __pyx_L1_error)
+        __pyx_t_1 = PyTuple_GET_ITEM(__pyx_t_2, __pyx_t_5); __Pyx_INCREF(__pyx_t_1); __pyx_t_5++; if (unlikely((0 < 0))) __PYX_ERR(0, 364, __pyx_L1_error)
         #else
-        __pyx_t_1 = PySequence_ITEM(__pyx_t_2, __pyx_t_5); __pyx_t_5++; if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 363, __pyx_L1_error)
+        __pyx_t_1 = PySequence_ITEM(__pyx_t_2, __pyx_t_5); __pyx_t_5++; if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 364, __pyx_L1_error)
         __Pyx_GOTREF(__pyx_t_1);
         #endif
       }
@@ -8677,37 +8677,37 @@ static PyObject *__pyx_pf_23cssfinder_backend_numpy_6cython_10_complex64_32optim
         PyObject* exc_type = PyErr_Occurred();
         if (exc_type) {
           if (likely(__Pyx_PyErr_GivenExceptionMatches(exc_type, PyExc_StopIteration))) PyErr_Clear();
-          else __PYX_ERR(0, 363, __pyx_L1_error)
+          else __PYX_ERR(0, 364, __pyx_L1_error)
         }
         break;
       }
       __Pyx_GOTREF(__pyx_t_1);
     }
-    if (!(likely(__Pyx_Py3Int_CheckExact(__pyx_t_1))||((__pyx_t_1) == Py_None) || __Pyx_RaiseUnexpectedTypeError("int", __pyx_t_1))) __PYX_ERR(0, 363, __pyx_L1_error)
+    if (!(likely(__Pyx_Py3Int_CheckExact(__pyx_t_1))||((__pyx_t_1) == Py_None) || __Pyx_RaiseUnexpectedTypeError("int", __pyx_t_1))) __PYX_ERR(0, 364, __pyx_L1_error)
     __Pyx_XDECREF_SET(__pyx_v_index, ((PyObject*)__pyx_t_1));
     __pyx_t_1 = 0;
 
-    /* "cssfinder_backend_numpy/_cython/_complex64.py":364
+    /* "cssfinder_backend_numpy/_cython/_complex64.py":365
  *
  *     for index in range(updates_count):
  *         if index % 2:             # <<<<<<<<<<<<<<
  *             unitary = random_unitary_bs(depth, quantity)
  *         else:
  */
-    __pyx_t_1 = PyNumber_Remainder(__pyx_v_index, __pyx_int_2); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 364, __pyx_L1_error)
+    __pyx_t_1 = PyNumber_Remainder(__pyx_v_index, __pyx_int_2); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 365, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_1);
-    __pyx_t_7 = __Pyx_PyObject_IsTrue(__pyx_t_1); if (unlikely((__pyx_t_7 < 0))) __PYX_ERR(0, 364, __pyx_L1_error)
+    __pyx_t_7 = __Pyx_PyObject_IsTrue(__pyx_t_1); if (unlikely((__pyx_t_7 < 0))) __PYX_ERR(0, 365, __pyx_L1_error)
     __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
     if (__pyx_t_7) {
 
-      /* "cssfinder_backend_numpy/_cython/_complex64.py":365
+      /* "cssfinder_backend_numpy/_cython/_complex64.py":366
  *     for index in range(updates_count):
  *         if index % 2:
  *             unitary = random_unitary_bs(depth, quantity)             # <<<<<<<<<<<<<<
  *         else:
  *             unitary = random_unitary_bs_reverse(depth, quantity)
  */
-      __Pyx_GetModuleGlobalName(__pyx_t_3, __pyx_n_s_random_unitary_bs); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 365, __pyx_L1_error)
+      __Pyx_GetModuleGlobalName(__pyx_t_3, __pyx_n_s_random_unitary_bs); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 366, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_3);
       __pyx_t_8 = NULL;
       __pyx_t_4 = 0;
@@ -8725,14 +8725,14 @@ static PyObject *__pyx_pf_23cssfinder_backend_numpy_6cython_10_complex64_32optim
         PyObject *__pyx_callargs[3] = {__pyx_t_8, __pyx_v_depth, __pyx_v_quantity};
         __pyx_t_1 = __Pyx_PyObject_FastCall(__pyx_t_3, __pyx_callargs+1-__pyx_t_4, 2+__pyx_t_4);
         __Pyx_XDECREF(__pyx_t_8); __pyx_t_8 = 0;
-        if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 365, __pyx_L1_error)
+        if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 366, __pyx_L1_error)
         __Pyx_GOTREF(__pyx_t_1);
         __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
       }
       __Pyx_XDECREF_SET(__pyx_v_unitary, __pyx_t_1);
       __pyx_t_1 = 0;
 
-      /* "cssfinder_backend_numpy/_cython/_complex64.py":364
+      /* "cssfinder_backend_numpy/_cython/_complex64.py":365
  *
  *     for index in range(updates_count):
  *         if index % 2:             # <<<<<<<<<<<<<<
@@ -8742,7 +8742,7 @@ static PyObject *__pyx_pf_23cssfinder_backend_numpy_6cython_10_complex64_32optim
       goto __pyx_L5;
     }
 
-    /* "cssfinder_backend_numpy/_cython/_complex64.py":367
+    /* "cssfinder_backend_numpy/_cython/_complex64.py":368
  *             unitary = random_unitary_bs(depth, quantity)
  *         else:
  *             unitary = random_unitary_bs_reverse(depth, quantity)             # <<<<<<<<<<<<<<
@@ -8750,7 +8750,7 @@ static PyObject *__pyx_pf_23cssfinder_backend_numpy_6cython_10_complex64_32optim
  *         return_state = rotate(new_state, unitary)
  */
     /*else*/ {
-      __Pyx_GetModuleGlobalName(__pyx_t_3, __pyx_n_s_random_unitary_bs_reverse); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 367, __pyx_L1_error)
+      __Pyx_GetModuleGlobalName(__pyx_t_3, __pyx_n_s_random_unitary_bs_reverse); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 368, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_3);
       __pyx_t_8 = NULL;
       __pyx_t_4 = 0;
@@ -8768,7 +8768,7 @@ static PyObject *__pyx_pf_23cssfinder_backend_numpy_6cython_10_complex64_32optim
         PyObject *__pyx_callargs[3] = {__pyx_t_8, __pyx_v_depth, __pyx_v_quantity};
         __pyx_t_1 = __Pyx_PyObject_FastCall(__pyx_t_3, __pyx_callargs+1-__pyx_t_4, 2+__pyx_t_4);
         __Pyx_XDECREF(__pyx_t_8); __pyx_t_8 = 0;
-        if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 367, __pyx_L1_error)
+        if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 368, __pyx_L1_error)
         __Pyx_GOTREF(__pyx_t_1);
         __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
       }
@@ -8777,14 +8777,14 @@ static PyObject *__pyx_pf_23cssfinder_backend_numpy_6cython_10_complex64_32optim
     }
     __pyx_L5:;
 
-    /* "cssfinder_backend_numpy/_cython/_complex64.py":369
+    /* "cssfinder_backend_numpy/_cython/_complex64.py":370
  *             unitary = random_unitary_bs_reverse(depth, quantity)
  *
  *         return_state = rotate(new_state, unitary)             # <<<<<<<<<<<<<<
  *
  *         if pp1 > product(return_state, visibility_state):
  */
-    __Pyx_GetModuleGlobalName(__pyx_t_3, __pyx_n_s_rotate); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 369, __pyx_L1_error)
+    __Pyx_GetModuleGlobalName(__pyx_t_3, __pyx_n_s_rotate); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 370, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_3);
     __pyx_t_8 = NULL;
     __pyx_t_4 = 0;
@@ -8802,21 +8802,21 @@ static PyObject *__pyx_pf_23cssfinder_backend_numpy_6cython_10_complex64_32optim
       PyObject *__pyx_callargs[3] = {__pyx_t_8, __pyx_v_new_state, __pyx_v_unitary};
       __pyx_t_1 = __Pyx_PyObject_FastCall(__pyx_t_3, __pyx_callargs+1-__pyx_t_4, 2+__pyx_t_4);
       __Pyx_XDECREF(__pyx_t_8); __pyx_t_8 = 0;
-      if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 369, __pyx_L1_error)
+      if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 370, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_1);
       __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
     }
     __Pyx_DECREF_SET(__pyx_v_return_state, __pyx_t_1);
     __pyx_t_1 = 0;
 
-    /* "cssfinder_backend_numpy/_cython/_complex64.py":371
+    /* "cssfinder_backend_numpy/_cython/_complex64.py":372
  *         return_state = rotate(new_state, unitary)
  *
  *         if pp1 > product(return_state, visibility_state):             # <<<<<<<<<<<<<<
  *             unitary = unitary.conj().T
  *             return_state = rotate(new_state, unitary)
  */
-    __Pyx_GetModuleGlobalName(__pyx_t_3, __pyx_n_s_product); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 371, __pyx_L1_error)
+    __Pyx_GetModuleGlobalName(__pyx_t_3, __pyx_n_s_product); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 372, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_3);
     __pyx_t_8 = NULL;
     __pyx_t_4 = 0;
@@ -8834,24 +8834,24 @@ static PyObject *__pyx_pf_23cssfinder_backend_numpy_6cython_10_complex64_32optim
       PyObject *__pyx_callargs[3] = {__pyx_t_8, __pyx_v_return_state, __pyx_v_visibility_state};
       __pyx_t_1 = __Pyx_PyObject_FastCall(__pyx_t_3, __pyx_callargs+1-__pyx_t_4, 2+__pyx_t_4);
       __Pyx_XDECREF(__pyx_t_8); __pyx_t_8 = 0;
-      if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 371, __pyx_L1_error)
+      if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 372, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_1);
       __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
     }
-    __pyx_t_3 = PyObject_RichCompare(__pyx_v_pp1, __pyx_t_1, Py_GT); __Pyx_XGOTREF(__pyx_t_3); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 371, __pyx_L1_error)
+    __pyx_t_3 = PyObject_RichCompare(__pyx_v_pp1, __pyx_t_1, Py_GT); __Pyx_XGOTREF(__pyx_t_3); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 372, __pyx_L1_error)
     __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
-    __pyx_t_7 = __Pyx_PyObject_IsTrue(__pyx_t_3); if (unlikely((__pyx_t_7 < 0))) __PYX_ERR(0, 371, __pyx_L1_error)
+    __pyx_t_7 = __Pyx_PyObject_IsTrue(__pyx_t_3); if (unlikely((__pyx_t_7 < 0))) __PYX_ERR(0, 372, __pyx_L1_error)
     __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
     if (__pyx_t_7) {
 
-      /* "cssfinder_backend_numpy/_cython/_complex64.py":372
+      /* "cssfinder_backend_numpy/_cython/_complex64.py":373
  *
  *         if pp1 > product(return_state, visibility_state):
  *             unitary = unitary.conj().T             # <<<<<<<<<<<<<<
  *             return_state = rotate(new_state, unitary)
  *
  */
-      __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_v_unitary, __pyx_n_s_conj); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 372, __pyx_L1_error)
+      __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_v_unitary, __pyx_n_s_conj); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 373, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_1);
       __pyx_t_8 = NULL;
       __pyx_t_4 = 0;
@@ -8869,24 +8869,24 @@ static PyObject *__pyx_pf_23cssfinder_backend_numpy_6cython_10_complex64_32optim
         PyObject *__pyx_callargs[1] = {__pyx_t_8, };
         __pyx_t_3 = __Pyx_PyObject_FastCall(__pyx_t_1, __pyx_callargs+1-__pyx_t_4, 0+__pyx_t_4);
         __Pyx_XDECREF(__pyx_t_8); __pyx_t_8 = 0;
-        if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 372, __pyx_L1_error)
+        if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 373, __pyx_L1_error)
         __Pyx_GOTREF(__pyx_t_3);
         __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
       }
-      __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_t_3, __pyx_n_s_T); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 372, __pyx_L1_error)
+      __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_t_3, __pyx_n_s_T); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 373, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_1);
       __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
       __Pyx_DECREF_SET(__pyx_v_unitary, __pyx_t_1);
       __pyx_t_1 = 0;
 
-      /* "cssfinder_backend_numpy/_cython/_complex64.py":373
+      /* "cssfinder_backend_numpy/_cython/_complex64.py":374
  *         if pp1 > product(return_state, visibility_state):
  *             unitary = unitary.conj().T
  *             return_state = rotate(new_state, unitary)             # <<<<<<<<<<<<<<
  *
  *         pp2 = product(return_state, visibility_state)
  */
-      __Pyx_GetModuleGlobalName(__pyx_t_3, __pyx_n_s_rotate); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 373, __pyx_L1_error)
+      __Pyx_GetModuleGlobalName(__pyx_t_3, __pyx_n_s_rotate); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 374, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_3);
       __pyx_t_8 = NULL;
       __pyx_t_4 = 0;
@@ -8904,14 +8904,14 @@ static PyObject *__pyx_pf_23cssfinder_backend_numpy_6cython_10_complex64_32optim
         PyObject *__pyx_callargs[3] = {__pyx_t_8, __pyx_v_new_state, __pyx_v_unitary};
         __pyx_t_1 = __Pyx_PyObject_FastCall(__pyx_t_3, __pyx_callargs+1-__pyx_t_4, 2+__pyx_t_4);
         __Pyx_XDECREF(__pyx_t_8); __pyx_t_8 = 0;
-        if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 373, __pyx_L1_error)
+        if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 374, __pyx_L1_error)
         __Pyx_GOTREF(__pyx_t_1);
         __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
       }
       __Pyx_DECREF_SET(__pyx_v_return_state, __pyx_t_1);
       __pyx_t_1 = 0;
 
-      /* "cssfinder_backend_numpy/_cython/_complex64.py":371
+      /* "cssfinder_backend_numpy/_cython/_complex64.py":372
  *         return_state = rotate(new_state, unitary)
  *
  *         if pp1 > product(return_state, visibility_state):             # <<<<<<<<<<<<<<
@@ -8920,14 +8920,14 @@ static PyObject *__pyx_pf_23cssfinder_backend_numpy_6cython_10_complex64_32optim
  */
     }
 
-    /* "cssfinder_backend_numpy/_cython/_complex64.py":375
+    /* "cssfinder_backend_numpy/_cython/_complex64.py":376
  *             return_state = rotate(new_state, unitary)
  *
  *         pp2 = product(return_state, visibility_state)             # <<<<<<<<<<<<<<
  *
  *         while pp2 > pp1:
  */
-    __Pyx_GetModuleGlobalName(__pyx_t_3, __pyx_n_s_product); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 375, __pyx_L1_error)
+    __Pyx_GetModuleGlobalName(__pyx_t_3, __pyx_n_s_product); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 376, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_3);
     __pyx_t_8 = NULL;
     __pyx_t_4 = 0;
@@ -8945,14 +8945,14 @@ static PyObject *__pyx_pf_23cssfinder_backend_numpy_6cython_10_complex64_32optim
       PyObject *__pyx_callargs[3] = {__pyx_t_8, __pyx_v_return_state, __pyx_v_visibility_state};
       __pyx_t_1 = __Pyx_PyObject_FastCall(__pyx_t_3, __pyx_callargs+1-__pyx_t_4, 2+__pyx_t_4);
       __Pyx_XDECREF(__pyx_t_8); __pyx_t_8 = 0;
-      if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 375, __pyx_L1_error)
+      if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 376, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_1);
       __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
     }
     __Pyx_XDECREF_SET(__pyx_v_pp2, __pyx_t_1);
     __pyx_t_1 = 0;
 
-    /* "cssfinder_backend_numpy/_cython/_complex64.py":377
+    /* "cssfinder_backend_numpy/_cython/_complex64.py":378
  *         pp2 = product(return_state, visibility_state)
  *
  *         while pp2 > pp1:             # <<<<<<<<<<<<<<
@@ -8960,12 +8960,12 @@ static PyObject *__pyx_pf_23cssfinder_backend_numpy_6cython_10_complex64_32optim
  *             return_state = rotate(return_state, unitary)
  */
     while (1) {
-      __pyx_t_1 = PyObject_RichCompare(__pyx_v_pp2, __pyx_v_pp1, Py_GT); __Pyx_XGOTREF(__pyx_t_1); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 377, __pyx_L1_error)
-      __pyx_t_7 = __Pyx_PyObject_IsTrue(__pyx_t_1); if (unlikely((__pyx_t_7 < 0))) __PYX_ERR(0, 377, __pyx_L1_error)
+      __pyx_t_1 = PyObject_RichCompare(__pyx_v_pp2, __pyx_v_pp1, Py_GT); __Pyx_XGOTREF(__pyx_t_1); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 378, __pyx_L1_error)
+      __pyx_t_7 = __Pyx_PyObject_IsTrue(__pyx_t_1); if (unlikely((__pyx_t_7 < 0))) __PYX_ERR(0, 378, __pyx_L1_error)
       __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
       if (!__pyx_t_7) break;
 
-      /* "cssfinder_backend_numpy/_cython/_complex64.py":378
+      /* "cssfinder_backend_numpy/_cython/_complex64.py":379
  *
  *         while pp2 > pp1:
  *             pp1 = pp2             # <<<<<<<<<<<<<<
@@ -8975,14 +8975,14 @@ static PyObject *__pyx_pf_23cssfinder_backend_numpy_6cython_10_complex64_32optim
       __Pyx_INCREF(__pyx_v_pp2);
       __Pyx_DECREF_SET(__pyx_v_pp1, __pyx_v_pp2);
 
-      /* "cssfinder_backend_numpy/_cython/_complex64.py":379
+      /* "cssfinder_backend_numpy/_cython/_complex64.py":380
  *         while pp2 > pp1:
  *             pp1 = pp2
  *             return_state = rotate(return_state, unitary)             # <<<<<<<<<<<<<<
  *             pp2 = product(return_state, visibility_state)
  *
  */
-      __Pyx_GetModuleGlobalName(__pyx_t_3, __pyx_n_s_rotate); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 379, __pyx_L1_error)
+      __Pyx_GetModuleGlobalName(__pyx_t_3, __pyx_n_s_rotate); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 380, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_3);
       __pyx_t_8 = NULL;
       __pyx_t_4 = 0;
@@ -9000,21 +9000,21 @@ static PyObject *__pyx_pf_23cssfinder_backend_numpy_6cython_10_complex64_32optim
         PyObject *__pyx_callargs[3] = {__pyx_t_8, __pyx_v_return_state, __pyx_v_unitary};
         __pyx_t_1 = __Pyx_PyObject_FastCall(__pyx_t_3, __pyx_callargs+1-__pyx_t_4, 2+__pyx_t_4);
         __Pyx_XDECREF(__pyx_t_8); __pyx_t_8 = 0;
-        if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 379, __pyx_L1_error)
+        if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 380, __pyx_L1_error)
         __Pyx_GOTREF(__pyx_t_1);
         __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
       }
       __Pyx_DECREF_SET(__pyx_v_return_state, __pyx_t_1);
       __pyx_t_1 = 0;
 
-      /* "cssfinder_backend_numpy/_cython/_complex64.py":380
+      /* "cssfinder_backend_numpy/_cython/_complex64.py":381
  *             pp1 = pp2
  *             return_state = rotate(return_state, unitary)
  *             pp2 = product(return_state, visibility_state)             # <<<<<<<<<<<<<<
  *
  *     return return_state
  */
-      __Pyx_GetModuleGlobalName(__pyx_t_3, __pyx_n_s_product); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 380, __pyx_L1_error)
+      __Pyx_GetModuleGlobalName(__pyx_t_3, __pyx_n_s_product); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 381, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_3);
       __pyx_t_8 = NULL;
       __pyx_t_4 = 0;
@@ -9032,7 +9032,7 @@ static PyObject *__pyx_pf_23cssfinder_backend_numpy_6cython_10_complex64_32optim
         PyObject *__pyx_callargs[3] = {__pyx_t_8, __pyx_v_return_state, __pyx_v_visibility_state};
         __pyx_t_1 = __Pyx_PyObject_FastCall(__pyx_t_3, __pyx_callargs+1-__pyx_t_4, 2+__pyx_t_4);
         __Pyx_XDECREF(__pyx_t_8); __pyx_t_8 = 0;
-        if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 380, __pyx_L1_error)
+        if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 381, __pyx_L1_error)
         __Pyx_GOTREF(__pyx_t_1);
         __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
       }
@@ -9040,7 +9040,7 @@ static PyObject *__pyx_pf_23cssfinder_backend_numpy_6cython_10_complex64_32optim
       __pyx_t_1 = 0;
     }
 
-    /* "cssfinder_backend_numpy/_cython/_complex64.py":363
+    /* "cssfinder_backend_numpy/_cython/_complex64.py":364
  *     return_state = new_state.copy()
  *
  *     for index in range(updates_count):             # <<<<<<<<<<<<<<
@@ -9050,7 +9050,7 @@ static PyObject *__pyx_pf_23cssfinder_backend_numpy_6cython_10_complex64_32optim
   }
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
 
-  /* "cssfinder_backend_numpy/_cython/_complex64.py":382
+  /* "cssfinder_backend_numpy/_cython/_complex64.py":383
  *             pp2 = product(return_state, visibility_state)
  *
  *     return return_state             # <<<<<<<<<<<<<<
@@ -9060,7 +9060,7 @@ static PyObject *__pyx_pf_23cssfinder_backend_numpy_6cython_10_complex64_32optim
   __pyx_r = __pyx_v_return_state;
   goto __pyx_L0;
 
-  /* "cssfinder_backend_numpy/_cython/_complex64.py":331
+  /* "cssfinder_backend_numpy/_cython/_complex64.py":332
  *
  *
  * def optimize_bs(             # <<<<<<<<<<<<<<
@@ -9237,7 +9237,7 @@ static int __Pyx_CreateStringTabAndInitStrings(void) {
 }
 /* #### Code section: cached_builtins ### */
 static CYTHON_SMALL_CODE int __Pyx_InitCachedBuiltins(void) {
-  __pyx_builtin_range = __Pyx_GetBuiltinName(__pyx_n_s_range); if (!__pyx_builtin_range) __PYX_ERR(0, 199, __pyx_L1_error)
+  __pyx_builtin_range = __Pyx_GetBuiltinName(__pyx_n_s_range); if (!__pyx_builtin_range) __PYX_ERR(0, 200, __pyx_L1_error)
   return 0;
   __pyx_L1_error:;
   return -1;
@@ -9347,118 +9347,118 @@ static CYTHON_SMALL_CODE int __Pyx_InitCachedConstants(void) {
  *
  *
  * def apply_symmetries(             # <<<<<<<<<<<<<<
- *     rho: npt.NDArray[np.complex64], symmetries: list[list[npt.NDArray[np.complex64]]]
- * ) -> npt.NDArray[np.complex64]:
+ *     rho: npt.NDArray[np.complex64],
+ *     symmetries: list[list[npt.NDArray[np.complex64]]],
  */
   __pyx_tuple__18 = PyTuple_Pack(5, __pyx_n_s_rho, __pyx_n_s_symmetries, __pyx_n_s_output, __pyx_n_s_row, __pyx_n_s_sym); if (unlikely(!__pyx_tuple__18)) __PYX_ERR(0, 142, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_tuple__18);
   __Pyx_GIVEREF(__pyx_tuple__18);
   __pyx_codeobj__19 = (PyObject*)__Pyx_PyCode_New(2, 0, 0, 5, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__18, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_cssfinder_backend_numpy__cython, __pyx_n_s_apply_symmetries, 142, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__19)) __PYX_ERR(0, 142, __pyx_L1_error)
 
-  /* "cssfinder_backend_numpy/_cython/_complex64.py":184
+  /* "cssfinder_backend_numpy/_cython/_complex64.py":185
  *
  *
  * def optimize_d_fs(             # <<<<<<<<<<<<<<
  *     new_state: npt.NDArray[np.complex64],
  *     visibility_state: npt.NDArray[np.complex64],
  */
-  __pyx_tuple__20 = PyTuple_Pack(11, __pyx_n_s_new_state, __pyx_n_s_visibility_state, __pyx_n_s_depth, __pyx_n_s_quantity, __pyx_n_s_updates_count, __pyx_n_s_product_2_3, __pyx_n_s_unitary, __pyx_n_s_rotated_2, __pyx_n_s_idx, __pyx_n_s_idx_mod, __pyx_n_s_product_rot2_3); if (unlikely(!__pyx_tuple__20)) __PYX_ERR(0, 184, __pyx_L1_error)
+  __pyx_tuple__20 = PyTuple_Pack(11, __pyx_n_s_new_state, __pyx_n_s_visibility_state, __pyx_n_s_depth, __pyx_n_s_quantity, __pyx_n_s_updates_count, __pyx_n_s_product_2_3, __pyx_n_s_unitary, __pyx_n_s_rotated_2, __pyx_n_s_idx, __pyx_n_s_idx_mod, __pyx_n_s_product_rot2_3); if (unlikely(!__pyx_tuple__20)) __PYX_ERR(0, 185, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_tuple__20);
   __Pyx_GIVEREF(__pyx_tuple__20);
-  __pyx_codeobj__21 = (PyObject*)__Pyx_PyCode_New(5, 0, 0, 11, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__20, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_cssfinder_backend_numpy__cython, __pyx_n_s_optimize_d_fs, 184, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__21)) __PYX_ERR(0, 184, __pyx_L1_error)
+  __pyx_codeobj__21 = (PyObject*)__Pyx_PyCode_New(5, 0, 0, 11, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__20, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_cssfinder_backend_numpy__cython, __pyx_n_s_optimize_d_fs, 185, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__21)) __PYX_ERR(0, 185, __pyx_L1_error)
 
-  /* "cssfinder_backend_numpy/_cython/_complex64.py":220
+  /* "cssfinder_backend_numpy/_cython/_complex64.py":221
  *
  *
  * def random_unitary_d_fs(             # <<<<<<<<<<<<<<
  *     depth: int, quantity: int, idx: int
  * ) -> npt.NDArray[np.complex64]:
  */
-  __pyx_tuple__22 = PyTuple_Pack(5, __pyx_n_s_depth, __pyx_n_s_quantity, __pyx_n_s_idx, __pyx_n_s_value, __pyx_n_s_mtx); if (unlikely(!__pyx_tuple__22)) __PYX_ERR(0, 220, __pyx_L1_error)
+  __pyx_tuple__22 = PyTuple_Pack(5, __pyx_n_s_depth, __pyx_n_s_quantity, __pyx_n_s_idx, __pyx_n_s_value, __pyx_n_s_mtx); if (unlikely(!__pyx_tuple__22)) __PYX_ERR(0, 221, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_tuple__22);
   __Pyx_GIVEREF(__pyx_tuple__22);
-  __pyx_codeobj__23 = (PyObject*)__Pyx_PyCode_New(3, 0, 0, 5, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__22, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_cssfinder_backend_numpy__cython, __pyx_n_s_random_unitary_d_fs, 220, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__23)) __PYX_ERR(0, 220, __pyx_L1_error)
+  __pyx_codeobj__23 = (PyObject*)__Pyx_PyCode_New(3, 0, 0, 5, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__22, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_cssfinder_backend_numpy__cython, __pyx_n_s_random_unitary_d_fs, 221, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__23)) __PYX_ERR(0, 221, __pyx_L1_error)
 
-  /* "cssfinder_backend_numpy/_cython/_complex64.py":231
+  /* "cssfinder_backend_numpy/_cython/_complex64.py":232
  *
  *
  * def _random_unitary_d_fs(depth: int) -> npt.NDArray[np.complex64]:             # <<<<<<<<<<<<<<
  *     random_mtx = random_d_fs(depth, 1)
  *
  */
-  __pyx_tuple__24 = PyTuple_Pack(5, __pyx_n_s_depth, __pyx_n_s_random_mtx, __pyx_n_s_identity_mtx, __pyx_n_s_rand_mul, __pyx_n_s_value); if (unlikely(!__pyx_tuple__24)) __PYX_ERR(0, 231, __pyx_L1_error)
+  __pyx_tuple__24 = PyTuple_Pack(5, __pyx_n_s_depth, __pyx_n_s_random_mtx, __pyx_n_s_identity_mtx, __pyx_n_s_rand_mul, __pyx_n_s_value); if (unlikely(!__pyx_tuple__24)) __PYX_ERR(0, 232, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_tuple__24);
   __Pyx_GIVEREF(__pyx_tuple__24);
-  __pyx_codeobj__25 = (PyObject*)__Pyx_PyCode_New(1, 0, 0, 5, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__24, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_cssfinder_backend_numpy__cython, __pyx_n_s_random_unitary_d_fs_2, 231, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__25)) __PYX_ERR(0, 231, __pyx_L1_error)
+  __pyx_codeobj__25 = (PyObject*)__Pyx_PyCode_New(1, 0, 0, 5, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__24, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_cssfinder_backend_numpy__cython, __pyx_n_s_random_unitary_d_fs_2, 232, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__25)) __PYX_ERR(0, 232, __pyx_L1_error)
 
-  /* "cssfinder_backend_numpy/_cython/_complex64.py":243
+  /* "cssfinder_backend_numpy/_cython/_complex64.py":244
  *
  *
  * def random_d_fs(depth: int, quantity: int) -> npt.NDArray[np.complex64]:             # <<<<<<<<<<<<<<
  *     """Random n quDit state."""
  *     rand_vectors = get_random_haar_2d(depth, quantity)
  */
-  __pyx_tuple__26 = PyTuple_Pack(6, __pyx_n_s_depth, __pyx_n_s_quantity, __pyx_n_s_rand_vectors, __pyx_n_s_vector, __pyx_n_s_i, __pyx_n_s_idx_vector); if (unlikely(!__pyx_tuple__26)) __PYX_ERR(0, 243, __pyx_L1_error)
+  __pyx_tuple__26 = PyTuple_Pack(6, __pyx_n_s_depth, __pyx_n_s_quantity, __pyx_n_s_rand_vectors, __pyx_n_s_vector, __pyx_n_s_i, __pyx_n_s_idx_vector); if (unlikely(!__pyx_tuple__26)) __PYX_ERR(0, 244, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_tuple__26);
   __Pyx_GIVEREF(__pyx_tuple__26);
-  __pyx_codeobj__27 = (PyObject*)__Pyx_PyCode_New(2, 0, 0, 6, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__26, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_cssfinder_backend_numpy__cython, __pyx_n_s_random_d_fs, 243, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__27)) __PYX_ERR(0, 243, __pyx_L1_error)
+  __pyx_codeobj__27 = (PyObject*)__Pyx_PyCode_New(2, 0, 0, 6, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__26, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_cssfinder_backend_numpy__cython, __pyx_n_s_random_d_fs, 244, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__27)) __PYX_ERR(0, 244, __pyx_L1_error)
 
-  /* "cssfinder_backend_numpy/_cython/_complex64.py":258
+  /* "cssfinder_backend_numpy/_cython/_complex64.py":259
  *
  *
  * def expand_d_fs(             # <<<<<<<<<<<<<<
  *     value: npt.NDArray[np.complex64],
  *     depth: int,
  */
-  __pyx_tuple__28 = PyTuple_Pack(10, __pyx_n_s_value, __pyx_n_s_depth, __pyx_n_s_quantity, __pyx_n_s_idx, __pyx_n_s_depth_1, __pyx_n_s_identity_1, __pyx_n_s_depth_2, __pyx_n_s_identity_2, __pyx_n_s_kronecker_1, __pyx_n_s_kronecker_2); if (unlikely(!__pyx_tuple__28)) __PYX_ERR(0, 258, __pyx_L1_error)
+  __pyx_tuple__28 = PyTuple_Pack(10, __pyx_n_s_value, __pyx_n_s_depth, __pyx_n_s_quantity, __pyx_n_s_idx, __pyx_n_s_depth_1, __pyx_n_s_identity_1, __pyx_n_s_depth_2, __pyx_n_s_identity_2, __pyx_n_s_kronecker_1, __pyx_n_s_kronecker_2); if (unlikely(!__pyx_tuple__28)) __PYX_ERR(0, 259, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_tuple__28);
   __Pyx_GIVEREF(__pyx_tuple__28);
-  __pyx_codeobj__29 = (PyObject*)__Pyx_PyCode_New(4, 0, 0, 10, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__28, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_cssfinder_backend_numpy__cython, __pyx_n_s_expand_d_fs, 258, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__29)) __PYX_ERR(0, 258, __pyx_L1_error)
+  __pyx_codeobj__29 = (PyObject*)__Pyx_PyCode_New(4, 0, 0, 10, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__28, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_cssfinder_backend_numpy__cython, __pyx_n_s_expand_d_fs, 259, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__29)) __PYX_ERR(0, 259, __pyx_L1_error)
 
-  /* "cssfinder_backend_numpy/_cython/_complex64.py":285
+  /* "cssfinder_backend_numpy/_cython/_complex64.py":286
  *
  *
  * def random_bs(depth: int, quantity: int) -> npt.NDArray[np.complex64]:             # <<<<<<<<<<<<<<
  *     """Draw random biseparable state."""
  *     random_vector_1 = normalize(get_random_haar_1d(depth))
  */
-  __pyx_tuple__30 = PyTuple_Pack(5, __pyx_n_s_depth, __pyx_n_s_quantity, __pyx_n_s_random_vector_1, __pyx_n_s_random_vector_2, __pyx_n_s_vector); if (unlikely(!__pyx_tuple__30)) __PYX_ERR(0, 285, __pyx_L1_error)
+  __pyx_tuple__30 = PyTuple_Pack(5, __pyx_n_s_depth, __pyx_n_s_quantity, __pyx_n_s_random_vector_1, __pyx_n_s_random_vector_2, __pyx_n_s_vector); if (unlikely(!__pyx_tuple__30)) __PYX_ERR(0, 286, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_tuple__30);
   __Pyx_GIVEREF(__pyx_tuple__30);
-  __pyx_codeobj__31 = (PyObject*)__Pyx_PyCode_New(2, 0, 0, 5, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__30, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_cssfinder_backend_numpy__cython, __pyx_n_s_random_bs, 285, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__31)) __PYX_ERR(0, 285, __pyx_L1_error)
+  __pyx_codeobj__31 = (PyObject*)__Pyx_PyCode_New(2, 0, 0, 5, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__30, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_cssfinder_backend_numpy__cython, __pyx_n_s_random_bs, 286, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__31)) __PYX_ERR(0, 286, __pyx_L1_error)
 
-  /* "cssfinder_backend_numpy/_cython/_complex64.py":297
+  /* "cssfinder_backend_numpy/_cython/_complex64.py":298
  *
  *
  * def random_unitary_bs(depth: int, quantity: int) -> npt.NDArray[np.complex64]:             # <<<<<<<<<<<<<<
  *     """Draw random unitary for biseparable state."""
  *     random_vector = normalize(get_random_haar_1d(depth))
  */
-  __pyx_tuple__32 = PyTuple_Pack(8, __pyx_n_s_depth, __pyx_n_s_quantity, __pyx_n_s_random_vector, __pyx_n_s_random_matrix, __pyx_n_s_identity_depth, __pyx_n_s_identity_quantity, __pyx_n_s_unitary_biseparable, __pyx_n_s_retval); if (unlikely(!__pyx_tuple__32)) __PYX_ERR(0, 297, __pyx_L1_error)
+  __pyx_tuple__32 = PyTuple_Pack(8, __pyx_n_s_depth, __pyx_n_s_quantity, __pyx_n_s_random_vector, __pyx_n_s_random_matrix, __pyx_n_s_identity_depth, __pyx_n_s_identity_quantity, __pyx_n_s_unitary_biseparable, __pyx_n_s_retval); if (unlikely(!__pyx_tuple__32)) __PYX_ERR(0, 298, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_tuple__32);
   __Pyx_GIVEREF(__pyx_tuple__32);
-  __pyx_codeobj__33 = (PyObject*)__Pyx_PyCode_New(2, 0, 0, 8, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__32, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_cssfinder_backend_numpy__cython, __pyx_n_s_random_unitary_bs, 297, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__33)) __PYX_ERR(0, 297, __pyx_L1_error)
+  __pyx_codeobj__33 = (PyObject*)__Pyx_PyCode_New(2, 0, 0, 8, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__32, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_cssfinder_backend_numpy__cython, __pyx_n_s_random_unitary_bs, 298, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__33)) __PYX_ERR(0, 298, __pyx_L1_error)
 
-  /* "cssfinder_backend_numpy/_cython/_complex64.py":314
+  /* "cssfinder_backend_numpy/_cython/_complex64.py":315
  *
  *
  * def random_unitary_bs_reverse(depth: int, quantity: int) -> npt.NDArray[np.complex64]:             # <<<<<<<<<<<<<<
  *     """Draw random unitary for biseparable state."""
  *     random_vector = normalize(get_random_haar_1d(depth))
  */
-  __pyx_codeobj__34 = (PyObject*)__Pyx_PyCode_New(2, 0, 0, 8, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__32, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_cssfinder_backend_numpy__cython, __pyx_n_s_random_unitary_bs_reverse, 314, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__34)) __PYX_ERR(0, 314, __pyx_L1_error)
+  __pyx_codeobj__34 = (PyObject*)__Pyx_PyCode_New(2, 0, 0, 8, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__32, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_cssfinder_backend_numpy__cython, __pyx_n_s_random_unitary_bs_reverse, 315, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__34)) __PYX_ERR(0, 315, __pyx_L1_error)
 
-  /* "cssfinder_backend_numpy/_cython/_complex64.py":331
+  /* "cssfinder_backend_numpy/_cython/_complex64.py":332
  *
  *
  * def optimize_bs(             # <<<<<<<<<<<<<<
  *     new_state: npt.NDArray[np.complex64],
  *     visibility_state: npt.NDArray[np.complex64],
  */
-  __pyx_tuple__35 = PyTuple_Pack(10, __pyx_n_s_new_state, __pyx_n_s_visibility_state, __pyx_n_s_depth, __pyx_n_s_quantity, __pyx_n_s_updates_count, __pyx_n_s_pp1, __pyx_n_s_return_state, __pyx_n_s_index, __pyx_n_s_unitary, __pyx_n_s_pp2); if (unlikely(!__pyx_tuple__35)) __PYX_ERR(0, 331, __pyx_L1_error)
+  __pyx_tuple__35 = PyTuple_Pack(10, __pyx_n_s_new_state, __pyx_n_s_visibility_state, __pyx_n_s_depth, __pyx_n_s_quantity, __pyx_n_s_updates_count, __pyx_n_s_pp1, __pyx_n_s_return_state, __pyx_n_s_index, __pyx_n_s_unitary, __pyx_n_s_pp2); if (unlikely(!__pyx_tuple__35)) __PYX_ERR(0, 332, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_tuple__35);
   __Pyx_GIVEREF(__pyx_tuple__35);
-  __pyx_codeobj__36 = (PyObject*)__Pyx_PyCode_New(5, 0, 0, 10, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__35, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_cssfinder_backend_numpy__cython, __pyx_n_s_optimize_bs, 331, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__36)) __PYX_ERR(0, 331, __pyx_L1_error)
+  __pyx_codeobj__36 = (PyObject*)__Pyx_PyCode_New(5, 0, 0, 10, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__35, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_cssfinder_backend_numpy__cython, __pyx_n_s_optimize_bs, 332, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__36)) __PYX_ERR(0, 332, __pyx_L1_error)
   __Pyx_RefNannyFinishContext();
   return 0;
   __pyx_L1_error:;
@@ -10126,8 +10126,8 @@ if (!__Pyx_RefNanny) {
  *
  *
  * def apply_symmetries(             # <<<<<<<<<<<<<<
- *     rho: npt.NDArray[np.complex64], symmetries: list[list[npt.NDArray[np.complex64]]]
- * ) -> npt.NDArray[np.complex64]:
+ *     rho: npt.NDArray[np.complex64],
+ *     symmetries: list[list[npt.NDArray[np.complex64]]],
  */
   __pyx_t_3 = __Pyx_PyDict_NewPresized(3); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 142, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
@@ -10141,183 +10141,183 @@ if (!__Pyx_RefNanny) {
   if (PyDict_SetItem(__pyx_d, __pyx_n_s_apply_symmetries, __pyx_t_6) < 0) __PYX_ERR(0, 142, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_6); __pyx_t_6 = 0;
 
-  /* "cssfinder_backend_numpy/_cython/_complex64.py":184
+  /* "cssfinder_backend_numpy/_cython/_complex64.py":185
  *
  *
  * def optimize_d_fs(             # <<<<<<<<<<<<<<
  *     new_state: npt.NDArray[np.complex64],
  *     visibility_state: npt.NDArray[np.complex64],
  */
-  __pyx_t_6 = __Pyx_PyDict_NewPresized(6); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 184, __pyx_L1_error)
+  __pyx_t_6 = __Pyx_PyDict_NewPresized(6); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 185, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_6);
-  if (PyDict_SetItem(__pyx_t_6, __pyx_n_s_new_state, __pyx_kp_s_npt_NDArray_np_complex64) < 0) __PYX_ERR(0, 184, __pyx_L1_error)
-  if (PyDict_SetItem(__pyx_t_6, __pyx_n_s_visibility_state, __pyx_kp_s_npt_NDArray_np_complex64) < 0) __PYX_ERR(0, 184, __pyx_L1_error)
-  if (PyDict_SetItem(__pyx_t_6, __pyx_n_s_depth, __pyx_n_s_int) < 0) __PYX_ERR(0, 184, __pyx_L1_error)
-  if (PyDict_SetItem(__pyx_t_6, __pyx_n_s_quantity, __pyx_n_s_int) < 0) __PYX_ERR(0, 184, __pyx_L1_error)
-  if (PyDict_SetItem(__pyx_t_6, __pyx_n_s_updates_count, __pyx_n_s_int) < 0) __PYX_ERR(0, 184, __pyx_L1_error)
-  if (PyDict_SetItem(__pyx_t_6, __pyx_n_s_return, __pyx_kp_s_npt_NDArray_np_complex64) < 0) __PYX_ERR(0, 184, __pyx_L1_error)
-  __pyx_t_3 = __Pyx_CyFunction_New(&__pyx_mdef_23cssfinder_backend_numpy_6cython_10_complex64_17optimize_d_fs, 0, __pyx_n_s_optimize_d_fs, NULL, __pyx_n_s_cssfinder_backend_numpy_cython, __pyx_d, ((PyObject *)__pyx_codeobj__21)); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 184, __pyx_L1_error)
+  if (PyDict_SetItem(__pyx_t_6, __pyx_n_s_new_state, __pyx_kp_s_npt_NDArray_np_complex64) < 0) __PYX_ERR(0, 185, __pyx_L1_error)
+  if (PyDict_SetItem(__pyx_t_6, __pyx_n_s_visibility_state, __pyx_kp_s_npt_NDArray_np_complex64) < 0) __PYX_ERR(0, 185, __pyx_L1_error)
+  if (PyDict_SetItem(__pyx_t_6, __pyx_n_s_depth, __pyx_n_s_int) < 0) __PYX_ERR(0, 185, __pyx_L1_error)
+  if (PyDict_SetItem(__pyx_t_6, __pyx_n_s_quantity, __pyx_n_s_int) < 0) __PYX_ERR(0, 185, __pyx_L1_error)
+  if (PyDict_SetItem(__pyx_t_6, __pyx_n_s_updates_count, __pyx_n_s_int) < 0) __PYX_ERR(0, 185, __pyx_L1_error)
+  if (PyDict_SetItem(__pyx_t_6, __pyx_n_s_return, __pyx_kp_s_npt_NDArray_np_complex64) < 0) __PYX_ERR(0, 185, __pyx_L1_error)
+  __pyx_t_3 = __Pyx_CyFunction_New(&__pyx_mdef_23cssfinder_backend_numpy_6cython_10_complex64_17optimize_d_fs, 0, __pyx_n_s_optimize_d_fs, NULL, __pyx_n_s_cssfinder_backend_numpy_cython, __pyx_d, ((PyObject *)__pyx_codeobj__21)); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 185, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
   __Pyx_CyFunction_SetAnnotationsDict(__pyx_t_3, __pyx_t_6);
   __Pyx_DECREF(__pyx_t_6); __pyx_t_6 = 0;
-  if (PyDict_SetItem(__pyx_d, __pyx_n_s_optimize_d_fs, __pyx_t_3) < 0) __PYX_ERR(0, 184, __pyx_L1_error)
+  if (PyDict_SetItem(__pyx_d, __pyx_n_s_optimize_d_fs, __pyx_t_3) < 0) __PYX_ERR(0, 185, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
 
-  /* "cssfinder_backend_numpy/_cython/_complex64.py":220
+  /* "cssfinder_backend_numpy/_cython/_complex64.py":221
  *
  *
  * def random_unitary_d_fs(             # <<<<<<<<<<<<<<
  *     depth: int, quantity: int, idx: int
  * ) -> npt.NDArray[np.complex64]:
  */
-  __pyx_t_3 = __Pyx_PyDict_NewPresized(4); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 220, __pyx_L1_error)
+  __pyx_t_3 = __Pyx_PyDict_NewPresized(4); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 221, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
-  if (PyDict_SetItem(__pyx_t_3, __pyx_n_s_depth, __pyx_n_s_int) < 0) __PYX_ERR(0, 220, __pyx_L1_error)
-  if (PyDict_SetItem(__pyx_t_3, __pyx_n_s_quantity, __pyx_n_s_int) < 0) __PYX_ERR(0, 220, __pyx_L1_error)
-  if (PyDict_SetItem(__pyx_t_3, __pyx_n_s_idx, __pyx_n_s_int) < 0) __PYX_ERR(0, 220, __pyx_L1_error)
-  if (PyDict_SetItem(__pyx_t_3, __pyx_n_s_return, __pyx_kp_s_npt_NDArray_np_complex64) < 0) __PYX_ERR(0, 220, __pyx_L1_error)
-  __pyx_t_6 = __Pyx_CyFunction_New(&__pyx_mdef_23cssfinder_backend_numpy_6cython_10_complex64_19random_unitary_d_fs, 0, __pyx_n_s_random_unitary_d_fs, NULL, __pyx_n_s_cssfinder_backend_numpy_cython, __pyx_d, ((PyObject *)__pyx_codeobj__23)); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 220, __pyx_L1_error)
+  if (PyDict_SetItem(__pyx_t_3, __pyx_n_s_depth, __pyx_n_s_int) < 0) __PYX_ERR(0, 221, __pyx_L1_error)
+  if (PyDict_SetItem(__pyx_t_3, __pyx_n_s_quantity, __pyx_n_s_int) < 0) __PYX_ERR(0, 221, __pyx_L1_error)
+  if (PyDict_SetItem(__pyx_t_3, __pyx_n_s_idx, __pyx_n_s_int) < 0) __PYX_ERR(0, 221, __pyx_L1_error)
+  if (PyDict_SetItem(__pyx_t_3, __pyx_n_s_return, __pyx_kp_s_npt_NDArray_np_complex64) < 0) __PYX_ERR(0, 221, __pyx_L1_error)
+  __pyx_t_6 = __Pyx_CyFunction_New(&__pyx_mdef_23cssfinder_backend_numpy_6cython_10_complex64_19random_unitary_d_fs, 0, __pyx_n_s_random_unitary_d_fs, NULL, __pyx_n_s_cssfinder_backend_numpy_cython, __pyx_d, ((PyObject *)__pyx_codeobj__23)); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 221, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_6);
   __Pyx_CyFunction_SetAnnotationsDict(__pyx_t_6, __pyx_t_3);
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
-  if (PyDict_SetItem(__pyx_d, __pyx_n_s_random_unitary_d_fs, __pyx_t_6) < 0) __PYX_ERR(0, 220, __pyx_L1_error)
+  if (PyDict_SetItem(__pyx_d, __pyx_n_s_random_unitary_d_fs, __pyx_t_6) < 0) __PYX_ERR(0, 221, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_6); __pyx_t_6 = 0;
 
-  /* "cssfinder_backend_numpy/_cython/_complex64.py":231
+  /* "cssfinder_backend_numpy/_cython/_complex64.py":232
  *
  *
  * def _random_unitary_d_fs(depth: int) -> npt.NDArray[np.complex64]:             # <<<<<<<<<<<<<<
  *     random_mtx = random_d_fs(depth, 1)
  *
  */
-  __pyx_t_6 = __Pyx_PyDict_NewPresized(2); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 231, __pyx_L1_error)
+  __pyx_t_6 = __Pyx_PyDict_NewPresized(2); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 232, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_6);
-  if (PyDict_SetItem(__pyx_t_6, __pyx_n_s_depth, __pyx_n_s_int) < 0) __PYX_ERR(0, 231, __pyx_L1_error)
-  if (PyDict_SetItem(__pyx_t_6, __pyx_n_s_return, __pyx_kp_s_npt_NDArray_np_complex64) < 0) __PYX_ERR(0, 231, __pyx_L1_error)
-  __pyx_t_3 = __Pyx_CyFunction_New(&__pyx_mdef_23cssfinder_backend_numpy_6cython_10_complex64_21_random_unitary_d_fs, 0, __pyx_n_s_random_unitary_d_fs_2, NULL, __pyx_n_s_cssfinder_backend_numpy_cython, __pyx_d, ((PyObject *)__pyx_codeobj__25)); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 231, __pyx_L1_error)
+  if (PyDict_SetItem(__pyx_t_6, __pyx_n_s_depth, __pyx_n_s_int) < 0) __PYX_ERR(0, 232, __pyx_L1_error)
+  if (PyDict_SetItem(__pyx_t_6, __pyx_n_s_return, __pyx_kp_s_npt_NDArray_np_complex64) < 0) __PYX_ERR(0, 232, __pyx_L1_error)
+  __pyx_t_3 = __Pyx_CyFunction_New(&__pyx_mdef_23cssfinder_backend_numpy_6cython_10_complex64_21_random_unitary_d_fs, 0, __pyx_n_s_random_unitary_d_fs_2, NULL, __pyx_n_s_cssfinder_backend_numpy_cython, __pyx_d, ((PyObject *)__pyx_codeobj__25)); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 232, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
   __Pyx_CyFunction_SetAnnotationsDict(__pyx_t_3, __pyx_t_6);
   __Pyx_DECREF(__pyx_t_6); __pyx_t_6 = 0;
-  if (PyDict_SetItem(__pyx_d, __pyx_n_s_random_unitary_d_fs_2, __pyx_t_3) < 0) __PYX_ERR(0, 231, __pyx_L1_error)
+  if (PyDict_SetItem(__pyx_d, __pyx_n_s_random_unitary_d_fs_2, __pyx_t_3) < 0) __PYX_ERR(0, 232, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
 
-  /* "cssfinder_backend_numpy/_cython/_complex64.py":243
+  /* "cssfinder_backend_numpy/_cython/_complex64.py":244
  *
  *
  * def random_d_fs(depth: int, quantity: int) -> npt.NDArray[np.complex64]:             # <<<<<<<<<<<<<<
  *     """Random n quDit state."""
  *     rand_vectors = get_random_haar_2d(depth, quantity)
  */
-  __pyx_t_3 = __Pyx_PyDict_NewPresized(3); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 243, __pyx_L1_error)
+  __pyx_t_3 = __Pyx_PyDict_NewPresized(3); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 244, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
-  if (PyDict_SetItem(__pyx_t_3, __pyx_n_s_depth, __pyx_n_s_int) < 0) __PYX_ERR(0, 243, __pyx_L1_error)
-  if (PyDict_SetItem(__pyx_t_3, __pyx_n_s_quantity, __pyx_n_s_int) < 0) __PYX_ERR(0, 243, __pyx_L1_error)
-  if (PyDict_SetItem(__pyx_t_3, __pyx_n_s_return, __pyx_kp_s_npt_NDArray_np_complex64) < 0) __PYX_ERR(0, 243, __pyx_L1_error)
-  __pyx_t_6 = __Pyx_CyFunction_New(&__pyx_mdef_23cssfinder_backend_numpy_6cython_10_complex64_23random_d_fs, 0, __pyx_n_s_random_d_fs, NULL, __pyx_n_s_cssfinder_backend_numpy_cython, __pyx_d, ((PyObject *)__pyx_codeobj__27)); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 243, __pyx_L1_error)
+  if (PyDict_SetItem(__pyx_t_3, __pyx_n_s_depth, __pyx_n_s_int) < 0) __PYX_ERR(0, 244, __pyx_L1_error)
+  if (PyDict_SetItem(__pyx_t_3, __pyx_n_s_quantity, __pyx_n_s_int) < 0) __PYX_ERR(0, 244, __pyx_L1_error)
+  if (PyDict_SetItem(__pyx_t_3, __pyx_n_s_return, __pyx_kp_s_npt_NDArray_np_complex64) < 0) __PYX_ERR(0, 244, __pyx_L1_error)
+  __pyx_t_6 = __Pyx_CyFunction_New(&__pyx_mdef_23cssfinder_backend_numpy_6cython_10_complex64_23random_d_fs, 0, __pyx_n_s_random_d_fs, NULL, __pyx_n_s_cssfinder_backend_numpy_cython, __pyx_d, ((PyObject *)__pyx_codeobj__27)); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 244, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_6);
   __Pyx_CyFunction_SetAnnotationsDict(__pyx_t_6, __pyx_t_3);
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
-  if (PyDict_SetItem(__pyx_d, __pyx_n_s_random_d_fs, __pyx_t_6) < 0) __PYX_ERR(0, 243, __pyx_L1_error)
+  if (PyDict_SetItem(__pyx_d, __pyx_n_s_random_d_fs, __pyx_t_6) < 0) __PYX_ERR(0, 244, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_6); __pyx_t_6 = 0;
 
-  /* "cssfinder_backend_numpy/_cython/_complex64.py":258
+  /* "cssfinder_backend_numpy/_cython/_complex64.py":259
  *
  *
  * def expand_d_fs(             # <<<<<<<<<<<<<<
  *     value: npt.NDArray[np.complex64],
  *     depth: int,
  */
-  __pyx_t_6 = __Pyx_PyDict_NewPresized(5); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 258, __pyx_L1_error)
+  __pyx_t_6 = __Pyx_PyDict_NewPresized(5); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 259, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_6);
-  if (PyDict_SetItem(__pyx_t_6, __pyx_n_s_value, __pyx_kp_s_npt_NDArray_np_complex64) < 0) __PYX_ERR(0, 258, __pyx_L1_error)
-  if (PyDict_SetItem(__pyx_t_6, __pyx_n_s_depth, __pyx_n_s_int) < 0) __PYX_ERR(0, 258, __pyx_L1_error)
-  if (PyDict_SetItem(__pyx_t_6, __pyx_n_s_quantity, __pyx_n_s_int) < 0) __PYX_ERR(0, 258, __pyx_L1_error)
-  if (PyDict_SetItem(__pyx_t_6, __pyx_n_s_idx, __pyx_n_s_int) < 0) __PYX_ERR(0, 258, __pyx_L1_error)
-  if (PyDict_SetItem(__pyx_t_6, __pyx_n_s_return, __pyx_kp_s_npt_NDArray_np_complex64) < 0) __PYX_ERR(0, 258, __pyx_L1_error)
-  __pyx_t_3 = __Pyx_CyFunction_New(&__pyx_mdef_23cssfinder_backend_numpy_6cython_10_complex64_25expand_d_fs, 0, __pyx_n_s_expand_d_fs, NULL, __pyx_n_s_cssfinder_backend_numpy_cython, __pyx_d, ((PyObject *)__pyx_codeobj__29)); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 258, __pyx_L1_error)
+  if (PyDict_SetItem(__pyx_t_6, __pyx_n_s_value, __pyx_kp_s_npt_NDArray_np_complex64) < 0) __PYX_ERR(0, 259, __pyx_L1_error)
+  if (PyDict_SetItem(__pyx_t_6, __pyx_n_s_depth, __pyx_n_s_int) < 0) __PYX_ERR(0, 259, __pyx_L1_error)
+  if (PyDict_SetItem(__pyx_t_6, __pyx_n_s_quantity, __pyx_n_s_int) < 0) __PYX_ERR(0, 259, __pyx_L1_error)
+  if (PyDict_SetItem(__pyx_t_6, __pyx_n_s_idx, __pyx_n_s_int) < 0) __PYX_ERR(0, 259, __pyx_L1_error)
+  if (PyDict_SetItem(__pyx_t_6, __pyx_n_s_return, __pyx_kp_s_npt_NDArray_np_complex64) < 0) __PYX_ERR(0, 259, __pyx_L1_error)
+  __pyx_t_3 = __Pyx_CyFunction_New(&__pyx_mdef_23cssfinder_backend_numpy_6cython_10_complex64_25expand_d_fs, 0, __pyx_n_s_expand_d_fs, NULL, __pyx_n_s_cssfinder_backend_numpy_cython, __pyx_d, ((PyObject *)__pyx_codeobj__29)); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 259, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
   __Pyx_CyFunction_SetAnnotationsDict(__pyx_t_3, __pyx_t_6);
   __Pyx_DECREF(__pyx_t_6); __pyx_t_6 = 0;
-  if (PyDict_SetItem(__pyx_d, __pyx_n_s_expand_d_fs, __pyx_t_3) < 0) __PYX_ERR(0, 258, __pyx_L1_error)
+  if (PyDict_SetItem(__pyx_d, __pyx_n_s_expand_d_fs, __pyx_t_3) < 0) __PYX_ERR(0, 259, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
 
-  /* "cssfinder_backend_numpy/_cython/_complex64.py":285
+  /* "cssfinder_backend_numpy/_cython/_complex64.py":286
  *
  *
  * def random_bs(depth: int, quantity: int) -> npt.NDArray[np.complex64]:             # <<<<<<<<<<<<<<
  *     """Draw random biseparable state."""
  *     random_vector_1 = normalize(get_random_haar_1d(depth))
  */
-  __pyx_t_3 = __Pyx_PyDict_NewPresized(3); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 285, __pyx_L1_error)
+  __pyx_t_3 = __Pyx_PyDict_NewPresized(3); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 286, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
-  if (PyDict_SetItem(__pyx_t_3, __pyx_n_s_depth, __pyx_n_s_int) < 0) __PYX_ERR(0, 285, __pyx_L1_error)
-  if (PyDict_SetItem(__pyx_t_3, __pyx_n_s_quantity, __pyx_n_s_int) < 0) __PYX_ERR(0, 285, __pyx_L1_error)
-  if (PyDict_SetItem(__pyx_t_3, __pyx_n_s_return, __pyx_kp_s_npt_NDArray_np_complex64) < 0) __PYX_ERR(0, 285, __pyx_L1_error)
-  __pyx_t_6 = __Pyx_CyFunction_New(&__pyx_mdef_23cssfinder_backend_numpy_6cython_10_complex64_27random_bs, 0, __pyx_n_s_random_bs, NULL, __pyx_n_s_cssfinder_backend_numpy_cython, __pyx_d, ((PyObject *)__pyx_codeobj__31)); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 285, __pyx_L1_error)
+  if (PyDict_SetItem(__pyx_t_3, __pyx_n_s_depth, __pyx_n_s_int) < 0) __PYX_ERR(0, 286, __pyx_L1_error)
+  if (PyDict_SetItem(__pyx_t_3, __pyx_n_s_quantity, __pyx_n_s_int) < 0) __PYX_ERR(0, 286, __pyx_L1_error)
+  if (PyDict_SetItem(__pyx_t_3, __pyx_n_s_return, __pyx_kp_s_npt_NDArray_np_complex64) < 0) __PYX_ERR(0, 286, __pyx_L1_error)
+  __pyx_t_6 = __Pyx_CyFunction_New(&__pyx_mdef_23cssfinder_backend_numpy_6cython_10_complex64_27random_bs, 0, __pyx_n_s_random_bs, NULL, __pyx_n_s_cssfinder_backend_numpy_cython, __pyx_d, ((PyObject *)__pyx_codeobj__31)); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 286, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_6);
   __Pyx_CyFunction_SetAnnotationsDict(__pyx_t_6, __pyx_t_3);
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
-  if (PyDict_SetItem(__pyx_d, __pyx_n_s_random_bs, __pyx_t_6) < 0) __PYX_ERR(0, 285, __pyx_L1_error)
+  if (PyDict_SetItem(__pyx_d, __pyx_n_s_random_bs, __pyx_t_6) < 0) __PYX_ERR(0, 286, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_6); __pyx_t_6 = 0;
 
-  /* "cssfinder_backend_numpy/_cython/_complex64.py":297
+  /* "cssfinder_backend_numpy/_cython/_complex64.py":298
  *
  *
  * def random_unitary_bs(depth: int, quantity: int) -> npt.NDArray[np.complex64]:             # <<<<<<<<<<<<<<
  *     """Draw random unitary for biseparable state."""
  *     random_vector = normalize(get_random_haar_1d(depth))
  */
-  __pyx_t_6 = __Pyx_PyDict_NewPresized(3); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 297, __pyx_L1_error)
+  __pyx_t_6 = __Pyx_PyDict_NewPresized(3); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 298, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_6);
-  if (PyDict_SetItem(__pyx_t_6, __pyx_n_s_depth, __pyx_n_s_int) < 0) __PYX_ERR(0, 297, __pyx_L1_error)
-  if (PyDict_SetItem(__pyx_t_6, __pyx_n_s_quantity, __pyx_n_s_int) < 0) __PYX_ERR(0, 297, __pyx_L1_error)
-  if (PyDict_SetItem(__pyx_t_6, __pyx_n_s_return, __pyx_kp_s_npt_NDArray_np_complex64) < 0) __PYX_ERR(0, 297, __pyx_L1_error)
-  __pyx_t_3 = __Pyx_CyFunction_New(&__pyx_mdef_23cssfinder_backend_numpy_6cython_10_complex64_29random_unitary_bs, 0, __pyx_n_s_random_unitary_bs, NULL, __pyx_n_s_cssfinder_backend_numpy_cython, __pyx_d, ((PyObject *)__pyx_codeobj__33)); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 297, __pyx_L1_error)
+  if (PyDict_SetItem(__pyx_t_6, __pyx_n_s_depth, __pyx_n_s_int) < 0) __PYX_ERR(0, 298, __pyx_L1_error)
+  if (PyDict_SetItem(__pyx_t_6, __pyx_n_s_quantity, __pyx_n_s_int) < 0) __PYX_ERR(0, 298, __pyx_L1_error)
+  if (PyDict_SetItem(__pyx_t_6, __pyx_n_s_return, __pyx_kp_s_npt_NDArray_np_complex64) < 0) __PYX_ERR(0, 298, __pyx_L1_error)
+  __pyx_t_3 = __Pyx_CyFunction_New(&__pyx_mdef_23cssfinder_backend_numpy_6cython_10_complex64_29random_unitary_bs, 0, __pyx_n_s_random_unitary_bs, NULL, __pyx_n_s_cssfinder_backend_numpy_cython, __pyx_d, ((PyObject *)__pyx_codeobj__33)); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 298, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
   __Pyx_CyFunction_SetAnnotationsDict(__pyx_t_3, __pyx_t_6);
   __Pyx_DECREF(__pyx_t_6); __pyx_t_6 = 0;
-  if (PyDict_SetItem(__pyx_d, __pyx_n_s_random_unitary_bs, __pyx_t_3) < 0) __PYX_ERR(0, 297, __pyx_L1_error)
+  if (PyDict_SetItem(__pyx_d, __pyx_n_s_random_unitary_bs, __pyx_t_3) < 0) __PYX_ERR(0, 298, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
 
-  /* "cssfinder_backend_numpy/_cython/_complex64.py":314
+  /* "cssfinder_backend_numpy/_cython/_complex64.py":315
  *
  *
  * def random_unitary_bs_reverse(depth: int, quantity: int) -> npt.NDArray[np.complex64]:             # <<<<<<<<<<<<<<
  *     """Draw random unitary for biseparable state."""
  *     random_vector = normalize(get_random_haar_1d(depth))
  */
-  __pyx_t_3 = __Pyx_PyDict_NewPresized(3); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 314, __pyx_L1_error)
+  __pyx_t_3 = __Pyx_PyDict_NewPresized(3); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 315, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
-  if (PyDict_SetItem(__pyx_t_3, __pyx_n_s_depth, __pyx_n_s_int) < 0) __PYX_ERR(0, 314, __pyx_L1_error)
-  if (PyDict_SetItem(__pyx_t_3, __pyx_n_s_quantity, __pyx_n_s_int) < 0) __PYX_ERR(0, 314, __pyx_L1_error)
-  if (PyDict_SetItem(__pyx_t_3, __pyx_n_s_return, __pyx_kp_s_npt_NDArray_np_complex64) < 0) __PYX_ERR(0, 314, __pyx_L1_error)
-  __pyx_t_6 = __Pyx_CyFunction_New(&__pyx_mdef_23cssfinder_backend_numpy_6cython_10_complex64_31random_unitary_bs_reverse, 0, __pyx_n_s_random_unitary_bs_reverse, NULL, __pyx_n_s_cssfinder_backend_numpy_cython, __pyx_d, ((PyObject *)__pyx_codeobj__34)); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 314, __pyx_L1_error)
+  if (PyDict_SetItem(__pyx_t_3, __pyx_n_s_depth, __pyx_n_s_int) < 0) __PYX_ERR(0, 315, __pyx_L1_error)
+  if (PyDict_SetItem(__pyx_t_3, __pyx_n_s_quantity, __pyx_n_s_int) < 0) __PYX_ERR(0, 315, __pyx_L1_error)
+  if (PyDict_SetItem(__pyx_t_3, __pyx_n_s_return, __pyx_kp_s_npt_NDArray_np_complex64) < 0) __PYX_ERR(0, 315, __pyx_L1_error)
+  __pyx_t_6 = __Pyx_CyFunction_New(&__pyx_mdef_23cssfinder_backend_numpy_6cython_10_complex64_31random_unitary_bs_reverse, 0, __pyx_n_s_random_unitary_bs_reverse, NULL, __pyx_n_s_cssfinder_backend_numpy_cython, __pyx_d, ((PyObject *)__pyx_codeobj__34)); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 315, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_6);
   __Pyx_CyFunction_SetAnnotationsDict(__pyx_t_6, __pyx_t_3);
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
-  if (PyDict_SetItem(__pyx_d, __pyx_n_s_random_unitary_bs_reverse, __pyx_t_6) < 0) __PYX_ERR(0, 314, __pyx_L1_error)
+  if (PyDict_SetItem(__pyx_d, __pyx_n_s_random_unitary_bs_reverse, __pyx_t_6) < 0) __PYX_ERR(0, 315, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_6); __pyx_t_6 = 0;
 
-  /* "cssfinder_backend_numpy/_cython/_complex64.py":331
+  /* "cssfinder_backend_numpy/_cython/_complex64.py":332
  *
  *
  * def optimize_bs(             # <<<<<<<<<<<<<<
  *     new_state: npt.NDArray[np.complex64],
  *     visibility_state: npt.NDArray[np.complex64],
  */
-  __pyx_t_6 = __Pyx_PyDict_NewPresized(6); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 331, __pyx_L1_error)
+  __pyx_t_6 = __Pyx_PyDict_NewPresized(6); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 332, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_6);
-  if (PyDict_SetItem(__pyx_t_6, __pyx_n_s_new_state, __pyx_kp_s_npt_NDArray_np_complex64) < 0) __PYX_ERR(0, 331, __pyx_L1_error)
-  if (PyDict_SetItem(__pyx_t_6, __pyx_n_s_visibility_state, __pyx_kp_s_npt_NDArray_np_complex64) < 0) __PYX_ERR(0, 331, __pyx_L1_error)
-  if (PyDict_SetItem(__pyx_t_6, __pyx_n_s_depth, __pyx_n_s_int) < 0) __PYX_ERR(0, 331, __pyx_L1_error)
-  if (PyDict_SetItem(__pyx_t_6, __pyx_n_s_quantity, __pyx_n_s_int) < 0) __PYX_ERR(0, 331, __pyx_L1_error)
-  if (PyDict_SetItem(__pyx_t_6, __pyx_n_s_updates_count, __pyx_n_s_int) < 0) __PYX_ERR(0, 331, __pyx_L1_error)
-  if (PyDict_SetItem(__pyx_t_6, __pyx_n_s_return, __pyx_kp_s_npt_NDArray_np_complex64) < 0) __PYX_ERR(0, 331, __pyx_L1_error)
-  __pyx_t_3 = __Pyx_CyFunction_New(&__pyx_mdef_23cssfinder_backend_numpy_6cython_10_complex64_33optimize_bs, 0, __pyx_n_s_optimize_bs, NULL, __pyx_n_s_cssfinder_backend_numpy_cython, __pyx_d, ((PyObject *)__pyx_codeobj__36)); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 331, __pyx_L1_error)
+  if (PyDict_SetItem(__pyx_t_6, __pyx_n_s_new_state, __pyx_kp_s_npt_NDArray_np_complex64) < 0) __PYX_ERR(0, 332, __pyx_L1_error)
+  if (PyDict_SetItem(__pyx_t_6, __pyx_n_s_visibility_state, __pyx_kp_s_npt_NDArray_np_complex64) < 0) __PYX_ERR(0, 332, __pyx_L1_error)
+  if (PyDict_SetItem(__pyx_t_6, __pyx_n_s_depth, __pyx_n_s_int) < 0) __PYX_ERR(0, 332, __pyx_L1_error)
+  if (PyDict_SetItem(__pyx_t_6, __pyx_n_s_quantity, __pyx_n_s_int) < 0) __PYX_ERR(0, 332, __pyx_L1_error)
+  if (PyDict_SetItem(__pyx_t_6, __pyx_n_s_updates_count, __pyx_n_s_int) < 0) __PYX_ERR(0, 332, __pyx_L1_error)
+  if (PyDict_SetItem(__pyx_t_6, __pyx_n_s_return, __pyx_kp_s_npt_NDArray_np_complex64) < 0) __PYX_ERR(0, 332, __pyx_L1_error)
+  __pyx_t_3 = __Pyx_CyFunction_New(&__pyx_mdef_23cssfinder_backend_numpy_6cython_10_complex64_33optimize_bs, 0, __pyx_n_s_optimize_bs, NULL, __pyx_n_s_cssfinder_backend_numpy_cython, __pyx_d, ((PyObject *)__pyx_codeobj__36)); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 332, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
   __Pyx_CyFunction_SetAnnotationsDict(__pyx_t_3, __pyx_t_6);
   __Pyx_DECREF(__pyx_t_6); __pyx_t_6 = 0;
-  if (PyDict_SetItem(__pyx_d, __pyx_n_s_optimize_bs, __pyx_t_3) < 0) __PYX_ERR(0, 331, __pyx_L1_error)
+  if (PyDict_SetItem(__pyx_d, __pyx_n_s_optimize_bs, __pyx_t_3) < 0) __PYX_ERR(0, 332, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
 
   /* "cssfinder_backend_numpy/_cython/_complex64.py":1

@@ -28,7 +28,7 @@ from typing import cast
 
 import numpy as np
 
-from cssfinder_backend_numpy.base import NumPyBase
+from cssfinder_backend_numpy.base import NumPyBase, NumPyJitBase
 from cssfinder_backend_numpy.impl import Implementation
 from cssfinder_backend_numpy.numpy import _complex64
 from cssfinder_backend_numpy.numpy_debug import _complex64 as _complex64_debug
@@ -57,7 +57,7 @@ class NumPyC64(NumPyBase[np.complex64, np.float32]):
     secondary_t: type[np.float32] = np.float32
 
 
-class NumPyC64Jit(NumPyBase[np.complex64, np.float32]):
+class NumPyC64Jit(NumPyJitBase[np.complex64, np.float32]):
     """Concrete numpy based backend for Gilbert algorithm using complex128 type."""
 
     impl: Implementation[np.complex64, np.float32] = cast(

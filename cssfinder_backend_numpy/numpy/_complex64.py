@@ -140,7 +140,8 @@ def rotate(
 
 
 def apply_symmetries(
-    rho: npt.NDArray[np.complex64], symmetries: list[list[npt.NDArray[np.complex64]]]
+    rho: npt.NDArray[np.complex64],
+    symmetries: list[list[npt.NDArray[np.complex64]]],
 ) -> npt.NDArray[np.complex64]:
     """Apply symmetries to density matrix.
 
