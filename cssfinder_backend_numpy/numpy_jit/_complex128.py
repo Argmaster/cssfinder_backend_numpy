@@ -42,7 +42,7 @@ from __future__ import annotations
 from typing import TYPE_CHECKING
 
 import numpy as np
-from numba import jit, types
+from numba import jit, types  # type: ignore[attr-defined]
 
 if TYPE_CHECKING:
     import numpy.typing as npt

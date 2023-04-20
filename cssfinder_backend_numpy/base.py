@@ -33,7 +33,7 @@ import numpy as np
 import numpy.typing as npt
 from cssfinder.algorithm.backend.base import BackendBase
 from cssfinder.cssfproject import AlgoMode
-from numba import jit, typed
+from numba import jit, typed  # type: ignore[attr-defined]
 
 if TYPE_CHECKING:
     from cssfinder.algorithm.backend.numpy.impl import Implementation
