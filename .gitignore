@@ -942,3 +942,5 @@ typechecking/
 \#*/
 *.env
 .ruff_cache
+cssfinder_backend_numpy/_cython/_complex64.cpp
+cssfinder_backend_numpy/_cython/_complex128.cpp
