@@ -12,6 +12,8 @@ jobs:
     if: github.repository_owner == 'Argmaster'
     name: Deploy 📦
     runs-on: ubuntu-latest
+    permissions:
+      contents: write
 
     steps:
       - name: Checkout code
