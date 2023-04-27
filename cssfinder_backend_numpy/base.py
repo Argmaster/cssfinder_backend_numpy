@@ -33,7 +33,7 @@ import numpy as np
 import numpy.typing as npt
 from cssfinder.algorithm.backend.base import BackendBase
 from cssfinder.cssfproject import AlgoMode
-from numba import jit
+from numba import jit, typed  # type: ignore[attr-defined]
 
 if TYPE_CHECKING:
     from cssfinder.algorithm.backend.numpy.impl import Implementation
@@ -105,9 +105,6 @@ class NumPyBase(Generic[PRIMARY, SECONDARY_co], BackendBase):
         elif self.mode == AlgoMode.SBiPa:
             self.optimize_callback = self.impl.optimize_bs
 
-        if not self.is_debug:
-            self.jit()
-
     def _create_visibility_matrix(self) -> npt.NDArray[PRIMARY]:
         vis_state = self.visibility * self.initial
         inv_vis_ident = (1 - self.visibility) * np.identity(
@@ -174,24 +171,6 @@ class NumPyBase(Generic[PRIMARY, SECONDARY_co], BackendBase):
     def get_corrections_count(self) -> int:
         """Return number of all corrections found during optimization."""
         return len(self._corrections)
-
-    def jit(self) -> None:
-        """JIT compile performance critical parts of backend with numba."""
-        _update_state = jit(  # type: ignore[assignment]
-            forceobj=True,
-            cache=True,
-            looplift=False,
-        )(
-            self.__class__._update_state,  # noqa: SLF001
-        )
-
-        self._update_state = MethodType(_update_state, self)  # type: ignore[assignment]
-
-        run_epoch = jit(forceobj=True, cache=True, looplift=False)(
-            self.__class__.run_epoch,
-        )
-
-        self.run_epoch = MethodType(run_epoch, self)  # type: ignore[assignment]
 
     def run_epoch(self, iterations: int, epoch_index: int) -> None:
         """Run sequence of iterations without stopping to check any stop conditions."""
@@ -277,3 +256,62 @@ class NumPyBase(Generic[PRIMARY, SECONDARY_co], BackendBase):
                     ),
                 ),
             )
+
+
+class NumPyJitBase(NumPyBase[PRIMARY, SECONDARY_co]):
+    """Base class for JIT compiled numpy backends."""
+
+    def __init__(  # noqa: PLR0913
+        self,
+        initial: npt.NDArray[np.complex128],
+        depth: int,
+        quantity: int,
+        mode: AlgoMode,
+        visibility: float,
+        *,
+        is_debug: bool = False,
+    ) -> None:
+        super().__init__(initial, depth, quantity, mode, visibility, is_debug=is_debug)
+        if not self.is_debug:
+            self.jit()
+
+    def set_symmetries(
+        self, symmetries: list[list[npt.NDArray[np.complex128]]]
+    ) -> None:
+        """Set symmetries to use during calculations.
+
+        This operation may involve type conversion and copying of symmetries, therefore
+        if may be slow and should should be done only once.
+
+        Parameters
+        ----------
+        symmetries : list[list[npt.NDArray[np.complex64]]]
+            Array of symmetries.
+
+        """
+        self._symmetries = typed.List(
+            typed.List(cell.astype(self.primary_t) for cell in row)
+            for row in symmetries
+        )
+        if self._symmetries:
+            self._intermediate = self.impl.apply_symmetries(
+                self._intermediate, self._symmetries
+            )
+
+    def jit(self) -> None:
+        """JIT compile performance critical parts of backend with numba."""
+        _update_state = jit(  # type: ignore[assignment]
+            forceobj=True,
+            cache=True,
+            looplift=False,
+        )(
+            self.__class__._update_state,  # noqa: SLF001
+        )
+
+        self._update_state = MethodType(_update_state, self)  # type: ignore[assignment]
+
+        run_epoch = jit(forceobj=True, cache=True, looplift=False)(
+            self.__class__.run_epoch,
+        )
+
+        self.run_epoch = MethodType(run_epoch, self)  # type: ignore[assignment]

@@ -181,7 +181,8 @@ def rotate(
 
 
 def apply_symmetries(
-    rho: npt.NDArray[np.complex64], symmetries: list[list[npt.NDArray[np.complex64]]]
+    rho: npt.NDArray[np.complex64],
+    symmetries: list[list[npt.NDArray[np.complex64]]],
 ) -> npt.NDArray[np.complex64]:
     """Apply symmetries to density matrix.
 
@@ -262,8 +263,8 @@ def optimize_d_fs(
             rotated_2 = rotate(new_state, unitary)
             assert_dtype(rotated_2, np.complex64)
 
-        while (new_product_2_3 := product_rot2_3) > product_2_3:
-            product_2_3 = new_product_2_3
+        while product_rot2_3 > product_2_3:
+            product_2_3 = product_rot2_3
             rotated_2 = rotate(rotated_2, unitary)
             assert_dtype(rotated_2, np.complex64)
 
@@ -306,7 +307,7 @@ def random_d_fs(depth: int, quantity: int) -> npt.NDArray[np.complex64]:
     vector = normalize(rand_vectors[0])
     assert_dtype(vector, np.complex64)
 
-    for i in range(quantity - 1):
+    for i in range(1, quantity):
         idx_vector = normalize(rand_vectors[i])
         assert_dtype(idx_vector, np.complex64)
 

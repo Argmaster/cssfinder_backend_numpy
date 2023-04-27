@@ -42,7 +42,7 @@ from __future__ import annotations
 from typing import TYPE_CHECKING
 
 import numpy as np
-from numba import jit
+from numba import jit, types  # type: ignore[attr-defined]
 
 if TYPE_CHECKING:
     import numpy.typing as npt
@@ -240,7 +240,12 @@ def rotate(
 
 {{ jit_nopython() }}
 def apply_symmetries(
-    rho: npt.NDArray[{{complex}}], symmetries: list[list[npt.NDArray[{{complex}}]]]
+    rho: npt.NDArray[{{complex}}],
+    {% if disable_jit %}
+    symmetries: list[list[npt.NDArray[{{complex}}]]],
+    {% else %}
+    symmetries: types.ListType[types.ListType[npt.NDArray[{{complex}}]]],
+    {% endif %}
 ) -> npt.NDArray[{{complex}}]:
     """Apply symmetries to density matrix.
 
@@ -323,8 +328,8 @@ def optimize_d_fs(
             rotated_2 = rotate(new_state, unitary)
             {% if debug_dtype_checks %}assert_dtype(rotated_2, {{complex}}){% endif %}
 
-        while (new_product_2_3 := product_rot2_3) > product_2_3:
-            product_2_3 = new_product_2_3
+        while product_rot2_3 > product_2_3:
+            product_2_3 = product_rot2_3
             rotated_2 = rotate(rotated_2, unitary)
             {% if debug_dtype_checks %}assert_dtype(rotated_2, {{complex}}){% endif %}
 
@@ -370,7 +375,7 @@ def random_d_fs(depth: int, quantity: int) -> npt.NDArray[{{complex}}]:
     vector = normalize(rand_vectors[0])
     {% if debug_dtype_checks %}assert_dtype(vector, {{complex}}){% endif %}
 
-    for i in range(quantity - 1):
+    for i in range(1, quantity):
         idx_vector = normalize(rand_vectors[i])
         {% if debug_dtype_checks %}assert_dtype(idx_vector, {{complex}}){% endif %}
 

@@ -136,7 +136,8 @@ def rotate(
 
 
 def apply_symmetries(
-    rho: npt.NDArray[np.complex128], symmetries: list[list[npt.NDArray[np.complex128]]]
+    rho: npt.NDArray[np.complex128],
+    symmetries: list[list[npt.NDArray[np.complex128]]],
 ) -> npt.NDArray[np.complex128]:
     """Apply symmetries to density matrix.
 
@@ -204,8 +205,8 @@ def optimize_d_fs(
             unitary = unitary.conj().T
             rotated_2 = rotate(new_state, unitary)
 
-        while (new_product_2_3 := product_rot2_3) > product_2_3:
-            product_2_3 = new_product_2_3
+        while product_rot2_3 > product_2_3:
+            product_2_3 = product_rot2_3
             rotated_2 = rotate(rotated_2, unitary)
 
             product_rot2_3 = product(rotated_2, visibility_state)
@@ -241,7 +242,7 @@ def random_d_fs(depth: int, quantity: int) -> npt.NDArray[np.complex128]:
     rand_vectors = get_random_haar_2d(depth, quantity)
     vector = normalize(rand_vectors[0])
 
-    for i in range(quantity - 1):
+    for i in range(1, quantity):
         idx_vector = normalize(rand_vectors[i])
 
         vector = np.outer(vector, idx_vector).flatten()
