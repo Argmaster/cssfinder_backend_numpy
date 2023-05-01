@@ -491,11 +491,14 @@ def random_3p(
 ) -> npt.NDArray[np.complex64]:
     """Draw random biseparable state."""
     if index == 0:
-        return random_bs(depth, depth * depth)
+        return random_bs(depth, depth * depth)  # type: ignore[no-any-return]
     if index == 1:
-        return rotate(random_bs(depth, depth * depth), swaps[0])
+        return rotate(  # type: ignore[no-any-return]
+            random_bs(depth, depth * depth),
+            swaps[0],
+        )
 
-    return random_bs(depth * depth, depth)
+    return random_bs(depth * depth, depth)  # type: ignore[no-any-return]
 
 
 OPTIMIZE_3P_OPT_0 = 0
@@ -548,4 +551,4 @@ def optimize_3p(
         assert_dtype(return_state, np.complex64)
 
     assert_dtype(return_state, np.complex64)
-    return return_state
+    return return_state  # type: ignore[no-any-return]

@@ -128,7 +128,6 @@ class Implementation(Generic[PRIMARY, SECONDARY_co], Protocol):
         visibility_state: npt.NDArray[PRIMARY],
         depth: int,
         quantity: int,
-        epochs: int,
     ) -> npt.NDArray[PRIMARY]:
         """Optimize implementation for FSnQd mode."""
         ...
