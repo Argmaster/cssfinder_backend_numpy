@@ -184,7 +184,6 @@ class Implementation(Generic[PRIMARY, SECONDARY_co], Protocol):
         visibility_state: npt.NDArray[PRIMARY],
         depth: int,
         quantity: int,
-        updates_count: int,
     ) -> npt.NDArray[PRIMARY]:
         """Run the minimization algorithm to optimize the biseparable state.
 
@@ -198,8 +197,6 @@ class Implementation(Generic[PRIMARY, SECONDARY_co], Protocol):
             Depth of analyzed system.
         quantity : int
             Quantity of quDits in system.
-        updates_count : int
-            Number of optimizer iterations to execute.
 
         Returns
         -------
@@ -207,4 +204,44 @@ class Implementation(Generic[PRIMARY, SECONDARY_co], Protocol):
             Optimized state.
 
         """
+        ...
+
+    @staticmethod
+    def optimize_3p(
+        new_state: npt.NDArray[PRIMARY],
+        visibility_state: npt.NDArray[PRIMARY],
+        depth: int,
+        swaps: list[npt.NDArray[PRIMARY]],
+        index: int,
+    ) -> npt.NDArray[PRIMARY]:
+        """Run the minimization algorithm to optimize the biseparable state.
+
+        Parameters
+        ----------
+        new_state : npt.NDArray[PRIMARY]
+            Randomly drawn state to be optimized.
+        visibility_state : npt.NDArray[PRIMARY]
+            Visibility matrix.
+        depth : int
+            Depth of analyzed system.
+        swaps : list[npt.NDArray[PRIMARY]]
+            Swap gates array.
+        index : int
+            Index of variant of unitary generator.
+
+        Returns
+        -------
+        npt.NDArray[PRIMARY]
+            Optimized state.
+
+        """
+        ...
+
+    @staticmethod
+    def random_3p(
+        depth: int,
+        swaps: list[npt.NDArray[PRIMARY]],
+        index: int,
+    ) -> npt.NDArray[PRIMARY]:
+        """Draw biseparable state with three quDits."""
         ...
