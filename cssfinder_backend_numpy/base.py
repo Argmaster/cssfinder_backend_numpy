@@ -111,7 +111,7 @@ class NumPyBase(Generic[PRIMARY, SECONDARY_co], BackendBase):
                 for k in range(depth):
                     swap_matrix[i * depth2 + j * depth + k][
                         j * depth2 + i * depth + k
-                    ] = (1.0 + 1.0j)
+                    ] = (1.0 + 0.0j)
         return swap_matrix
 
     def _create_visibility_matrix(self) -> npt.NDArray[PRIMARY]:
