@@ -25,6 +25,7 @@ algorithm.
 
 from __future__ import annotations
 
+from contextlib import suppress
 from typing import TYPE_CHECKING, Generic, TypeVar
 
 import numpy as np
@@ -271,3 +272,7 @@ class NumPyBaseSuite(Generic[PRIMARY, SECONDARY_co]):
         kronecker_product = self.impl.kronecker(matrix1, zero_matrix)
         expected = np.zeros((4, 4), dtype=self.primary_t)
         assert np.allclose(kronecker_product, expected)
+
+
+with suppress(AttributeError):
+    del NumPyBaseSuite.__new__

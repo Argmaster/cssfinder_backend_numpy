@@ -23,6 +23,7 @@
 
 from __future__ import annotations
 
+from contextlib import suppress
 from test.base_suite import NumPyBaseSuite
 from typing import TypeVar
 
@@ -43,6 +44,10 @@ class NumPyBaseSuiteJit(NumPyBaseSuite[PRIMARY, SECONDARY_co]):
         zero_vector = np.zeros(3, dtype=self.primary_t)
         with pytest.raises(ZeroDivisionError):
             print(self.impl.normalize(zero_vector))
+
+
+with suppress(AttributeError):
+    del NumPyBaseSuiteJit.__new__
 
 
 class TestNumPyJitImplementationF32(NumPyBaseSuiteJit):
