@@ -61,4 +61,4 @@ jobs:
         run: poetry install --no-cache --sync
 
       - name: Run system tests
-        run: poetry run poe test-system
+        run: poetry run poe test-unit
