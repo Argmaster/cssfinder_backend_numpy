@@ -1,6 +1,6 @@
 [tool.poetry] # ANCHOR: tool.poetry
 name = "cssfinder_backend_numpy"
-version = "0.4.0"
+version = "0.5.0"
 description = "Implementation of CSSFinder backend using NumPy library."
 authors = [
     "Krzysztof Wiśniewski <argmaster.world@gmail.com>",
@@ -58,8 +58,7 @@ build = [
     { cmd = "poetry build --format=sdist --no-ansi" },
 ]
 gen-numpy-impl = { script = "scripts.gen_numpy_impl:main" }
-test-system = { cmd = "pytest test/test_system -v --cov" }
-test-reports = { cmd = "pytest test/test_reports -v --cov" }
+test-unit = { cmd = "pytest test -v --cov" }
 type-check = [
     { cmd = "poetry install --sync --no-ansi" },
     { cmd = "mypy cssfinder_backend_numpy test scripts" },

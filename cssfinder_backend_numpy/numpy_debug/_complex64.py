@@ -234,43 +234,42 @@ def optimize_d_fs(
     visibility_state: npt.NDArray[np.complex64],
     depth: int,
     quantity: int,
-    updates_count: int,
 ) -> npt.NDArray[np.complex64]:
     """Optimize implementation for FSnQd mode."""
     assert_dtype(new_state, np.complex64)
     assert_dtype(visibility_state, np.complex64)
 
-    product_2_3 = product(new_state, visibility_state)
+    loss = product(new_state, visibility_state)
 
-    # To make sure rotated_2 is not unbound
+    # To make sure return_state is not unbound
     unitary = random_unitary_d_fs(depth, quantity, 0)
     assert_dtype(unitary, np.complex64)
 
-    rotated_2 = rotate(new_state, unitary)
+    return_state = rotate(new_state, unitary)
 
-    for idx in range(updates_count):
+    for idx in range(20 * depth * depth * quantity):
         idx_mod = idx % int(quantity)
         unitary = random_unitary_d_fs(depth, quantity, idx_mod)
         assert_dtype(unitary, np.complex64)
 
-        rotated_2 = rotate(new_state, unitary)
-        assert_dtype(rotated_2, np.complex64)
+        return_state = rotate(new_state, unitary)
+        assert_dtype(return_state, np.complex64)
 
-        product_rot2_3 = product(rotated_2, visibility_state)
+        new_loss = product(return_state, visibility_state)
 
-        if product_2_3 > product_rot2_3:
+        if loss > new_loss:
             unitary = unitary.conj().T
-            rotated_2 = rotate(new_state, unitary)
-            assert_dtype(rotated_2, np.complex64)
+            return_state = rotate(new_state, unitary)
+            assert_dtype(return_state, np.complex64)
 
-        while product_rot2_3 > product_2_3:
-            product_2_3 = product_rot2_3
-            rotated_2 = rotate(rotated_2, unitary)
-            assert_dtype(rotated_2, np.complex64)
+        while new_loss > loss:
+            loss = new_loss
+            return_state = rotate(return_state, unitary)
+            assert_dtype(return_state, np.complex64)
 
-            product_rot2_3 = product(rotated_2, visibility_state)
+            new_loss = product(return_state, visibility_state)
 
-    return rotated_2.astype(np.complex64, copy=False)  # type: ignore[no-any-return]
+    return return_state.astype(np.complex64, copy=False)  # type: ignore[no-any-return]
 
 
 def random_unitary_d_fs(
@@ -390,7 +389,7 @@ def random_unitary_bs(depth: int, quantity: int) -> npt.NDArray[np.complex64]:
     return retval  # type: ignore[no-any-return]
 
 
-def random_unitary_bs_reverse(depth: int, quantity: int) -> npt.NDArray[np.complex64]:
+def random_unitary_bs_reverse(quantity: int, depth: int) -> npt.NDArray[np.complex64]:
     """Draw random unitary for biseparable state."""
     random_vector = normalize(get_random_haar_1d(depth))
     assert_dtype(random_vector, np.complex64)
@@ -418,7 +417,6 @@ def optimize_bs(
     visibility_state: npt.NDArray[np.complex64],
     depth: int,
     quantity: int,
-    updates_count: int,
 ) -> npt.NDArray[np.complex64]:
     """Run the minimization algorithm to optimize the biseparable state.
 
@@ -444,11 +442,11 @@ def optimize_bs(
     assert_dtype(new_state, np.complex64)
     assert_dtype(visibility_state, np.complex64)
 
-    pp1 = product(new_state, visibility_state)
+    loss = product(new_state, visibility_state)
 
     return_state = new_state.copy()
 
-    for index in range(updates_count):
+    for index in range(5 * depth * quantity):
         if index % 2:
             unitary = random_unitary_bs(depth, quantity)
         else:
@@ -458,17 +456,17 @@ def optimize_bs(
         return_state = rotate(new_state, unitary)
         assert_dtype(return_state, np.complex64)
 
-        if pp1 > product(return_state, visibility_state):
+        if loss > product(return_state, visibility_state):
             unitary = unitary.conj().T
             return_state = rotate(new_state, unitary)
             assert_dtype(return_state, np.complex64)
 
-        pp2 = product(return_state, visibility_state)
+        new_loss = product(return_state, visibility_state)
 
-        while pp2 > pp1:
-            pp1 = pp2
+        while new_loss > loss:
+            loss = new_loss
             return_state = rotate(return_state, unitary)
-            pp2 = product(return_state, visibility_state)
+            new_loss = product(return_state, visibility_state)
             assert_dtype(return_state, np.complex64)
 
         assert_dtype(return_state, np.complex64)
@@ -476,3 +474,81 @@ def optimize_bs(
     assert_dtype(return_state, np.complex64)
 
     return return_state
+
+
+#    ███████   █████▄   ██████     █████    ███████   ██████▄    ██████    ██████
+#   ██             ██   ██   ██   ██   ██   ██             ██   ██    ██   ██   ██
+#   ██   ███   █████    ██████    ███████   █████      █████    ██    ██   ██   ██
+#   ██    ██       ██   ██        ██   ██   ██             ██   ██ ▄▄ ██   ██   ██
+#    ███████   █████▀   ██        ██   ██   ███████   ██████▀    ██████    ██████
+#                                                                   ▀▀
+
+
+def random_3p(
+    depth: int,
+    swaps: list[npt.NDArray[np.complex64]],
+    index: int,
+) -> npt.NDArray[np.complex64]:
+    """Draw random biseparable state."""
+    if index == 0:
+        return random_bs(depth, depth * depth)  # type: ignore[no-any-return]
+    if index == 1:
+        return rotate(  # type: ignore[no-any-return]
+            random_bs(depth, depth * depth),
+            swaps[0],
+        )
+
+    return random_bs(depth * depth, depth)  # type: ignore[no-any-return]
+
+
+OPTIMIZE_3P_OPT_0 = 0
+OPTIMIZE_3P_OPT_1 = 1
+OPTIMIZE_3P_OPT_2 = 2
+
+
+OPTIMIZE_3P_JUMP_TABLE = [random_unitary_bs, random_unitary_bs_reverse]
+
+
+def optimize_3p(
+    new_state: npt.NDArray[np.complex64],
+    visibility_state: npt.NDArray[np.complex64],
+    depth: int,
+    swaps: list[npt.NDArray[np.complex64]],
+    index: int,
+) -> npt.NDArray[np.complex64]:
+    return_state = new_state.copy()
+    loss = product(new_state, visibility_state)
+
+    for i in range(5 * depth**6):
+        if index == OPTIMIZE_3P_OPT_0:
+            unitary = OPTIMIZE_3P_JUMP_TABLE[i % 2](depth, depth * depth)
+
+        elif index == OPTIMIZE_3P_OPT_1:
+            unitary = OPTIMIZE_3P_JUMP_TABLE[i % 2](depth, depth * depth)
+            unitary = rotate(unitary, swaps[0])
+
+        elif index == OPTIMIZE_3P_OPT_2:
+            unitary = OPTIMIZE_3P_JUMP_TABLE[i % 2](depth * depth, depth)
+
+        else:
+            raise AssertionError(index)
+
+        return_state = rotate(new_state, unitary)
+
+        new_loss = product(return_state, visibility_state)
+
+        if loss > new_loss:
+            unitary = unitary.conj().T
+            return_state = rotate(new_state, unitary)
+            new_loss = product(return_state, visibility_state)
+
+        while new_loss > loss:
+            loss = new_loss
+            return_state = rotate(return_state, unitary)
+            assert_dtype(return_state, np.complex64)
+            new_loss = product(return_state, visibility_state)
+
+        assert_dtype(return_state, np.complex64)
+
+    assert_dtype(return_state, np.complex64)
+    return return_state  # type: ignore[no-any-return]

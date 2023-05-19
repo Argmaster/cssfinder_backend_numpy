@@ -27,7 +27,7 @@ from __future__ import annotations
 
 import logging
 from types import MethodType
-from typing import TYPE_CHECKING, Callable, Generic, Optional, TypeVar, cast
+from typing import TYPE_CHECKING, Generic, Optional, TypeVar, cast
 
 import numpy as np
 import numpy.typing as npt
@@ -36,7 +36,7 @@ from cssfinder.cssfproject import AlgoMode
 from numba import jit, typed  # type: ignore[attr-defined]
 
 if TYPE_CHECKING:
-    from cssfinder.algorithm.backend.numpy.impl import Implementation
+    from cssfinder_backend_numpy.impl import Implementation
 
 PRIMARY = TypeVar("PRIMARY", np.complex128, np.complex64)
 SECONDARY_co = TypeVar("SECONDARY_co", np.float64, np.float32, covariant=True)
@@ -57,10 +57,7 @@ class NumPyBase(Generic[PRIMARY, SECONDARY_co], BackendBase):
     primary_t: type[PRIMARY]
     secondary_t: type[SECONDARY_co]
 
-    optimize_callback: Callable[
-        [npt.NDArray[PRIMARY], npt.NDArray[PRIMARY], int, int, int],
-        npt.NDArray[PRIMARY],
-    ]
+    swaps: list[npt.NDArray[PRIMARY]]
 
     def __init__(  # noqa: PLR0913
         self,
@@ -99,11 +96,23 @@ class NumPyBase(Generic[PRIMARY, SECONDARY_co], BackendBase):
             self._intermediate,
             self._visibility_reduced,
         )
+        if self.mode == AlgoMode.G3PaE3qD:
+            self.swaps = [self._get_swap123(depth)]
+        elif self.mode == AlgoMode.G4PaE3qD:
+            self.swaps = []
+        else:
+            self.swaps = []
 
-        if self.mode == AlgoMode.FSnQd:
-            self.optimize_callback = self.impl.optimize_d_fs
-        elif self.mode == AlgoMode.SBiPa:
-            self.optimize_callback = self.impl.optimize_bs
+    def _get_swap123(self, depth: int) -> npt.NDArray[PRIMARY]:
+        swap_matrix = np.zeros((depth**3, depth**3), dtype=self.primary_t)
+        depth2 = depth**2
+        for i in range(depth):
+            for j in range(depth):
+                for k in range(depth):
+                    swap_matrix[i * depth2 + j * depth + k][
+                        j * depth2 + i * depth + k
+                    ] = (1.0 + 0.0j)
+        return swap_matrix
 
     def _create_visibility_matrix(self) -> npt.NDArray[PRIMARY]:
         vis_state = self.visibility * self.initial
@@ -176,13 +185,21 @@ class NumPyBase(Generic[PRIMARY, SECONDARY_co], BackendBase):
         """Run sequence of iterations without stopping to check any stop conditions."""
         depth = self.depth
         quantity = self.quantity
-        epochs = 20 * depth * depth * quantity
 
-        for iteration_index in range(iterations):
+        begin = epoch_index * iterations
+        end = epoch_index * iterations + iterations
+
+        for iteration_index in range(begin, end):
             if self.mode == AlgoMode.FSnQd:
                 alternative_state = self.impl.random_d_fs(depth, quantity)
+
             elif self.mode == AlgoMode.SBiPa:
                 alternative_state = self.impl.random_bs(depth, quantity)
+
+            elif self.mode == AlgoMode.G3PaE3qD:
+                alternative_state = self.impl.random_3p(
+                    depth, self.swaps, iteration_index % 3
+                )
 
             if (
                 self.impl.product(alternative_state, self._visibility_reduced)
@@ -190,30 +207,41 @@ class NumPyBase(Generic[PRIMARY, SECONDARY_co], BackendBase):
             ):
                 self._update_state(
                     alternative_state,
-                    iterations,
-                    epoch_index,
-                    epochs,
                     iteration_index,
                 )
 
-    def _update_state(  # noqa: PLR0913
+    def _update_state(
         self,
         alternative_state: npt.NDArray[PRIMARY],
-        iterations: int,
-        epoch_index: int,
-        epochs: int,
         iteration_index: int,
     ) -> None:
         depth = self.depth
         quantity = self.quantity
 
-        alternative_state = self.optimize_callback(
-            alternative_state,
-            self._visibility_reduced,
-            depth,
-            quantity,
-            epochs,
-        )
+        if self.mode == AlgoMode.FSnQd:
+            alternative_state = self.impl.optimize_d_fs(
+                alternative_state,
+                self._visibility_reduced,
+                depth,
+                quantity,
+            )
+
+        elif self.mode == AlgoMode.SBiPa:
+            alternative_state = self.impl.optimize_bs(
+                alternative_state,
+                self._visibility_reduced,
+                depth,
+                quantity,
+            )
+
+        elif self.mode == AlgoMode.G3PaE3qD:
+            alternative_state = self.impl.optimize_3p(
+                alternative_state,
+                self._visibility_reduced,
+                depth,
+                self.swaps,
+                iteration_index % 3,
+            )
 
         if self._symmetries:
             self._intermediate = self.impl.apply_symmetries(
@@ -246,7 +274,7 @@ class NumPyBase(Generic[PRIMARY, SECONDARY_co], BackendBase):
 
             self._corrections.append(
                 (
-                    epoch_index * iterations + iteration_index + 1,
+                    iteration_index + 1,
                     len(self._corrections) + 1,
                     float(
                         self.impl.product(
@@ -272,6 +300,7 @@ class NumPyJitBase(NumPyBase[PRIMARY, SECONDARY_co]):
         is_debug: bool = False,
     ) -> None:
         super().__init__(initial, depth, quantity, mode, visibility, is_debug=is_debug)
+        self.swaps = typed.List(s for s in self.swaps)
         if not self.is_debug:
             self.jit()
 
