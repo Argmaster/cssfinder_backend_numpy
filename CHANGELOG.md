@@ -3,6 +3,10 @@
 NOTE: cssfinder_backend_numpy follows the [semver](https://semver.org/)
 versioning standard.
 
+### 0.5.0 - 27 Apr 2023
+
+- Added G3PaE3qD mode implementation.
+
 ### 0.4.0 - 27 Apr 2023
 
 - Bump cssfinder from 0.4.0 to 0.5.0 (#9)
